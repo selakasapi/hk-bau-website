@@ -66,3 +66,38 @@ html {
   z-index: 9999;
   transition: opacity 0.3s ease;
 }
+
+
+
+/* === Responsive Utility Helpers === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .p-10 {
+    padding: 1.5rem;
+  }
+
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  #mobile-menu a {
+    padding: 1rem 0;
+    display: block;
+  }
+}

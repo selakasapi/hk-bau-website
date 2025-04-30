@@ -32,7 +32,7 @@
       </div>
       <nav class="hidden md:flex space-x-8 text-white font-medium">
         <a href="#home" class="hover:text-yellow-500 transition">Home</a>
-        <a href="#services" class="hover:text-yellow-500 transition">Dienstleistungen</a>
+        <a href="#services" class="hover:text-yellow-500 transition">Leistungen</a>
         <a href="#about" class="hover:text-yellow-500 transition">Über Uns</a>
         <a href="#projects" class="hover:text-yellow-500 transition">Projekte</a>
         <a href="#contact" class="hover:text-yellow-500 transition">Kontakt</a>
@@ -56,107 +56,79 @@
 </header>
 
 <!-- Hero Section -->
-<section id="home" class="relative h-screen flex items-center justify-center text-white parallax">
-  <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10"></div>
-
-  <!-- Background Image -->
+<section id="home" class="relative h-screen flex items-center justify-center text-white parallax overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/50 z-0"></div>
   <img src="images/pexels-sevenstormphotography-439416.jpg"
-       alt="Hero Image"
-       class="absolute inset-0 w-full h-full object-cover z-0"
+       alt="Bauprojekt HK Bau Hero"
+       class="absolute inset-0 w-full h-full object-cover -z-10"
        loading="lazy" aria-hidden="true"
        onerror="this.onerror=null; this.src='images/placeholder.png';">
-
-  <!-- Text Content -->
-  <div class="relative z-20 text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Ihr zuverlässiger Partner im Bauwesen</h1>
-    <p class="text-lg md:text-xl text-gray-200 mb-8">
-      Von der Planung bis zur Umsetzung – wir bauen mit Qualität.
-    </p>
-    <a href="#contact" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+  <div class="relative z-10 text-center px-6 sm:px-10 max-w-2xl mx-auto">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight transition duration-700 ease-in-out">Ihr zuverlässiger Partner im Bauwesen</h1>
+    <p class="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed transition duration-700 ease-in-out">Von der Planung bis zur Umsetzung – wir bauen mit Qualität.</p>
+    <a href="#contact" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-110">
       Jetzt kontaktieren
     </a>
   </div>
 </section>
 
-
-
 <!-- Services Section -->
-<section id="services" class="bg-gray-900 py-20 text-white" data-aos="fade-up">
+<section id="services" class="bg-gray-900 py-24 text-white" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Unsere Dienstleistungen</h2>
-    <p class="text-gray-400 mb-12 text-lg">Wir bieten Ihnen maßgeschneiderte Lösungen im Bauwesen.</p>
-    <div class="grid gap-10 md:grid-cols-3">
-      <div class="bg-white text-gray-900 rounded-xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="0">
-        <div class="mb-4">
-          <svg class="w-12 h-12 mx-auto text-orange-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M4 6h16M4 18h16" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Rohbau</h3>
-        <p class="text-gray-600">Maurerarbeiten und Betonbau für solide Grundstrukturen.</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Unsere Dienstleistungen</h2>
+    <p class="text-gray-400 mb-14 text-lg leading-relaxed">Wir bieten Ihnen maßgeschneiderte Lösungen im Bauwesen.</p>
+    <div class="grid gap-12 md:grid-cols-3">
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform transition duration-500 hover:-translate-y-2 hover:scale-105" data-aos="fade-up" data-aos-delay="0">
+        <h3 class="text-xl font-semibold mb-4">Rohbau</h3>
+        <p class="text-gray-600 leading-relaxed">Maurerarbeiten und Betonbau für solide Grundstrukturen.</p>
       </div>
-      <div class="bg-white text-gray-900 rounded-xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
-        <div class="mb-4">
-          <svg class="w-12 h-12 mx-auto text-yellow-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M9 21V7h6v14" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Sanierung</h3>
-        <p class="text-gray-600">Renovierungen jeglicher Art – innen und außen.</p>
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform transition duration-500 hover:-translate-y-2 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-4">Sanierung</h3>
+        <p class="text-gray-600 leading-relaxed">Renovierungen jeglicher Art – innen und außen.</p>
       </div>
-      <div class="bg-white text-gray-900 rounded-xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
-        <div class="mb-4">
-          <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 12l8-8 8 8M4 12v8h16v-8" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Ausbau</h3>
-        <p class="text-gray-600">Trockenbau und Innenausbau nach Maß.</p>
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform transition duration-500 hover:-translate-y-2 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-4">Ausbau</h3>
+        <p class="text-gray-600 leading-relaxed">Trockenbau und Innenausbau nach Maß.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="bg-gray-800 text-white py-20" data-aos="fade-right">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <img src="images/pexels-kawserhamid-176342.jpg" alt="Unser Bauteam bei der Arbeit" class="rounded-xl shadow-lg w-full h-auto" loading="lazy" width="600" height="400">
+<section id="about" class="bg-gray-800 text-white py-24" data-aos="fade-right">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="w-full">
+      <img src="images/about-team.jpg" alt="Unser Bauteam" class="rounded-xl shadow-lg w-full h-auto max-h-[400px] object-cover">
     </div>
     <div>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Über Uns</h2>
-      <p class="text-gray-300 text-lg mb-4">
-        HK Bau steht für Qualität, Zuverlässigkeit und Erfahrung im Bauwesen. Seit über einem Jahrzehnt realisieren wir Bauprojekte für private, gewerbliche und öffentliche Auftraggeber.
-      </p>
-      <p class="text-gray-400">
-        Unser engagiertes Team aus Fachleuten plant und setzt Bauprojekte mit höchster Präzision und modernsten Techniken um – vom Rohbau bis zur Sanierung.
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Über Uns</h2>
+      <p class="text-gray-300 text-lg mb-6 leading-relaxed">HK Bau steht für Qualität, Zuverlässigkeit und Erfahrung im Bauwesen. Seit über einem Jahrzehnt realisieren wir Bauprojekte für private, gewerbliche und öffentliche Auftraggeber.</p>
+      <p class="text-gray-400 leading-relaxed">Unser engagiertes Team plant und setzt Bauprojekte mit Präzision und modernsten Techniken um – vom Rohbau bis zur Sanierung.</p>
     </div>
   </div>
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="bg-white py-20" data-aos="zoom-in">
+<section id="projects" class="bg-white py-24" data-aos="zoom-in">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Unsere Projekte</h2>
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-10 md:grid-cols-3">
       <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="0">
-        <img src="images/pexels-kawserhamid-176342.jpg" alt="Mehrfamilienhaus in Mainz" class="w-full h-auto" loading="lazy" width="400" height="300">
+        <img src="images/project1.jpg" alt="Mehrfamilienhaus in Mainz" class="w-full h-auto" loading="lazy">
         <div class="p-4 bg-gray-50">
           <h3 class="font-semibold">Mehrfamilienhaus</h3>
           <p class="text-gray-600">Mainz, 2023</p>
         </div>
       </div>
       <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/pexels-sevenstormphotography-439416.jpg" alt="Bürogebäude in Frankfurt" class="w-full h-auto" loading="lazy" width="400" height="300">
+        <img src="images/project2.jpg" alt="Bürogebäude in Frankfurt" class="w-full h-auto" loading="lazy">
         <div class="p-4 bg-gray-50">
           <h3 class="font-semibold">Bürogebäude</h3>
           <p class="text-gray-600">Frankfurt, 2024</p>
         </div>
       </div>
       <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="200">
-        <img src="images/pexels-yury-kim-181374-585418.jpg" alt="Sanierung Altbau in Wiesbaden" class="w-full h-auto" loading="lazy" width="400" height="300">
+        <img src="images/project3.jpg" alt="Altbausanierung in Wiesbaden" class="w-full h-auto" loading="lazy">
         <div class="p-4 bg-gray-50">
           <h3 class="font-semibold">Altbausanierung</h3>
           <p class="text-gray-600">Wiesbaden, 2024</p>
@@ -166,15 +138,16 @@
   </div>
 </section>
 
+
 <!-- Contact Section -->
-<section id="contact" class="bg-gray-100 py-20" data-aos="fade-left">
+<section id="contact" class="bg-gray-100 py-24" data-aos="fade-left">
   <div class="max-w-7xl mx-auto px-6 text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">Kontaktieren Sie uns</h2>
     <div class="grid md:grid-cols-2 gap-12 text-left">
       <div class="space-y-6">
         <div>
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Adresse</h3>
-          <p class="text-gray-600">Musterstraße 123<br>55116 Mainz</p>
+          <p class="text-gray-600 leading-relaxed">Musterstraße 123<br>55116 Mainz</p>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Telefon</h3>
@@ -225,6 +198,7 @@
     </p>
   </div>
 </footer>
+
 
 
 <!-- Scroll to Top Button -->

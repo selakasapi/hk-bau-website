@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // === Image fallback for all <img> ===
-  const fallbackImage = "images/placeholder.jpg";
+  const fallbackImage = "images/placeholder.png";
   document.querySelectorAll("img").forEach(img => {
     img.addEventListener("error", () => {
       img.onerror = null;
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // === Mobile Menu Toggle ===
   const menuBtn = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
-
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener("click", () => {
       const expanded = mobileMenu.classList.toggle("hidden");
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === Scroll-to-top Button ===
   const scrollBtn = document.getElementById("scrollToTopBtn");
-
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
       scrollBtn?.classList.remove("hidden");
@@ -64,15 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", event => {
       const email = document.getElementById("email").value;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
       if (!emailRegex.test(email)) {
         event.preventDefault();
         alert("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
       }
-
-      // For demo mode – remove in production
-      event.preventDefault();
+      event.preventDefault(); // demo mode only
       alert("Formular erfolgreich gesendet! (Demo-Modus)");
     });
   }
+
+  // === Cinematic Hero Parallax Effect ===
+  const heroSection = document.querySelector('#home');
+  const heroImage = heroSection?.querySelector('img');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (heroImage && window.innerWidth > 768) {
+      heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
+  });
 });
