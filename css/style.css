@@ -1,0 +1,68 @@
+/* -----------------------------------------
+  General Layout & Utility Classes
+----------------------------------------- */
+
+/* Smooth Scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container sizing */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Hero background parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Overlay for dark backgrounds (used in hero) */
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Section padding */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Hover lift effect for cards and buttons */
+.lift-hover {
+  transition: transform 0.3s ease;
+}
+.lift-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Box shadow on hover */
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+.shadow-hover:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------------
+  Preloader
+----------------------------------------- */
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
