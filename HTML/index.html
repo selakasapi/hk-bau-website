@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HK Bau - Ihr zuverlässiger Partner im Bauwesen. Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
+  <meta property="og:title" content="HK Bau - Ihr Partner im Bauwesen">
+  <meta property="og:description" content="Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
+  <meta property="og:image" content="../images/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="../images/preview.jpg">
+  <title>HK Bau - Ihr Partner im Bauwesen</title>
+  <!-- Replace CDN with local build in production -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-white text-gray-900 font-[Inter]">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<script src="../js/app.js" defer></script>
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm transition duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <a href="#home" class="flex items-center">
+      <img src="../images/logo.png" alt="HK Bau Unternehmenslogo" class="h-12 w-12 rounded-full shadow" loading="lazy">
+    </a>
+    <nav role="navigation" class="hidden md:flex space-x-8 text-white font-medium">
+      <a href="#home" class="hover:text-yellow-500">Home</a>
+      <a href="#services" class="hover:text-yellow-500">Leistungen</a>
+      <a href="#about" class="hover:text-yellow-500">Über Uns</a>
+      <a href="#projects" class="hover:text-yellow-500">Projekte</a>
+      <a href="#contact" class="hover:text-yellow-500">Kontakt</a>
+    </nav>
+    <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Menü öffnen" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900-900 bg-opacity-90 px-4 pb-4">
+
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-90 px-4 pb-4">
+    <a href="#home" class="block py-2 text-white hover:text-yellow-500" tabindex="0">Home</a>
+    <a href="#services" class="block py-2 text-white hover:text-yellow-500" tabindex="0">Leistungen</a>
+    <a href="#about" class="block py-2 text-white hover:text-yellow-500" tabindex="0">Über Uns</a>
+    <a href="#projects" class="block py-2 text-white hover:text-yellow-500" tabindex="0">Projekte</a>
+    <a href="#contact" class="block py-2 text-white hover:text-yellow-500" tabindex="0">Kontakt</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="relative h-screen flex items-center justify-center text-white parallax">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 z-0"></div>
+  <!-- Optimize image with tools like TinyPNG -->
+  <img src="../images/pexels-sevenstormphotography-439416.jpg" alt="Bauarbeiten an einem modernen Bauprojekt" class="absolute inset-0 w-full h-full object-cover -z-10" loading="lazy">
+  <div class="relative z-10 text-center px-6 max-w-2xl">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Ihr zuverlässiger Partner im Bauwesen</h1>
+    <p class="text-lg md:text-xl mb-10">Von der Planung bis zur Umsetzung –wir bauen mit Qualität.</p>
+    <a href="#contact" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-lg transition transform hover:scale-110">Jetzt kontaktieren</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="bg-gray-900 py-24 text-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="section-title">Unsere Dienstleistungen</h2>
+    <p class="section-subtitle">Maßgeschneiderte Lösungen im Bauwesen</p>
+    <div class="grid gap-12 md:grid-cols-3">
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-4">Rohbau</h3>
+        <p>Maurerarbeiten und Betonbau für solide Grundstrukturen.</p>
+      </div>
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-4">Sanierung</h3>
+        <p>Renovierungen jeglicher Art – innen und außen.</p>
+      </div>
+      <div class="bg-white text-gray-900 rounded-xl p-10 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-4">Ausbau</h3>
+        <p>Trockenbau und Innenausbau nach Maß.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="bg-gray-800 text-white py-24" data-aos="fade-right">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
+    <!-- Optimize image -->
+    <img src="../images/about-team.jpg" alt="HK Bau Team bei der Arbeit auf einer Baustelle" class="rounded-xl shadow-lg w-full h-auto object-cover" loading="lazy">
+    <div>
+      <h2 class="section-title">Über Uns</h2>
+      <p class="mb-6">HK Bau steht für Qualität, Zuverlässigkeit und Erfahrung. Seit über einem Jahrzehnt realisieren wir Bauprojekte für private, gewerbliche und öffentliche Auftraggeber.</p>
+      <p>Unser engagiertes Team plant und setzt Projekte mit Präzision und modernsten Techniken um – vom Rohbau bis zur Sanierung.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="bg-gray-100 py-12" data-aos="zoom-in">
+  <h2 class="section-title">Unsere Partner & Kunden</h2>
+  <div class="flex justify-center space-x-8">
+    <!-- Update alt text with actual partner names -->
+    <img src="../images/client1.png" alt="Logo von Partnerunternehmen XYZ" class="h-12" loading="lazy">
+    <img src="../images/client2.png" alt="Logo von Partnerunternehmen ABC" class="h-12" loading="lazy">
+    <img src="../images/client3.png" alt="Logo von Partnerunternehmen DEF" class="h-12" loading="lazy">
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="bg-white py-24" data-aos="fade-left">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="section-title">Unsere Projekte</h2>
+    <div class="grid gap-10 md:grid-cols-3">
+      <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+        <!-- Optimize images -->
+        <img src="../images/project1.jpg" alt="Mehrfamilienhaus in Mainz, fertiggestellt 2023" class="w-full h-auto" loading="lazy">
+        <div class="p-4 bg-gray-50">
+          <h3 class="font-semibold">Mehrfamilienhaus</h3>
+          <p class="text-gray-600">Mainz, 2023</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+        <img src="../images/project2.jpg" alt="Modernes Bürogebäude in Frankfurt, 2024" class="w-full h-auto" loading="lazy">
+        <div class="p-4 bg-gray-50">
+          <h3 class="font-semibold">Bürogebäude</h3>
+          <p class="text-gray-600">Frankfurt, 2024</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+        <img src="../images/project3.jpg" alt="Sanierung eines Altbaus in Wiesbaden, 2024" class="w-full h-auto" loading="lazy">
+        <div class="p-4 bg-gray-50">
+          <h3 class="font-semibold">Altbausanierung</h3>
+          <p class="text-gray-600">Wiesbaden, 2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-gray-100 py-24">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="section-title">Kontaktieren Sie uns</h2>
+    <div class="grid md:grid-cols-2 gap-12 text-left">
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold">Adresse</h3>
+          <p>Musterstraße 123<br>55116 Mainz</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Telefon</h3>
+          <p><a href="tel:+49123456789" class="hover:text-yellow-600">+49 123 456789</a></p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">E-Mail</h3>
+          <p><a href="mailto:info@hk-bau.de" class="hover:text-yellow-600">info@hk-bau.de</a></p>
+        </div>
+      </div>
+      <form class="space-y-6" action="#" method="POST" id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Ihr Name" required class="w-full p-3 rounded-lg border">
+        <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded-lg border">
+        <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded-lg border"></textarea>
+        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition">Nachricht senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 py-10 text-center">
+  <div class="space-y-4">
+    <nav role="navigation" class="space-x-4">
+      <a href="#home" class="hover:text-white">Home</a>
+      <a href="#services" class="hover:text-white">Dienstleistungen</a>
+      <a href="#projects" class="hover:text-white">Projekte</a>
+      <a href="#contact" class="hover:text-white">Kontakt</a>
+    </nav>
+    <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs">
+      <a href="#" class="hover:underline">Impressum</a> | <a href="#" class="hover:underline">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
+<button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-yellow-500 text-black p-3 rounded-full shadow-lg hover:bg-yellow-600 transition" aria-label="Nach oben scrollen">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+</body>
+</html>

@@ -1,21 +1,56 @@
-/* -----------------------------------------
-  General Layout & Utility Classes
------------------------------------------ */
+/* Global Styles */
+:root {
+  --primary-color: #facc15;
+  --primary-hover: #f59e0b;
+}
 
-/* Smooth Scroll for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
-/* Container sizing */
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
-/* Hero background parallax effect */
+/* Navigation */
+header.sticky {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.active-link {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-divider {
+  height: 2px;
+  width: 80px;
+  background-color: var(--primary-color);
+  margin: 2rem auto;
+}
+
+/* Effects */
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -23,7 +58,12 @@ html {
   background-size: cover;
 }
 
-/* Overlay for dark backgrounds (used in hero) */
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
 .overlay-dark {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -31,71 +71,75 @@ html {
   z-index: 0;
 }
 
-/* Section padding */
-.section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.hover-scale {
+  transition: transform 0.3s ease;
 }
 
-/* Hover lift effect for cards and buttons */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
 .lift-hover {
   transition: transform 0.3s ease;
 }
+
 .lift-hover:hover {
   transform: translateY(-4px);
 }
 
-/* Box shadow on hover */
 .shadow-hover {
   transition: box-shadow 0.3s ease;
 }
+
 .shadow-hover:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* -----------------------------------------
-  Preloader
------------------------------------------ */
-#preloader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  background-color: white;
-  z-index: 9999;
-  transition: opacity 0.3s ease;
+.btn-lift {
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.btn-lift:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: var(--primary-hover);
+}
 
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* === Responsive Utility Helpers === */
+.hover-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img[alt]:not([alt=""]) {
+  border: none;
+}
+
+img[src*="placeholder"] {
+  border: 2px dashed var(--primary-color);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.875rem;
   }
-
   .text-lg {
     font-size: 1rem;
   }
-
-  .p-10 {
-    padding: 1.5rem;
-  }
-
-  .px-6 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-
+  .md\:grid-cols-2,
   .md\:grid-cols-3 {
     grid-template-columns: 1fr !important;
   }
-
   #mobile-menu a {
     padding: 1rem 0;
     display: block;
