@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kontaktieren Sie HK Bau – Ihr zuverlässiger Baupartner in Sindelfingen und Stuttgart.">
+  <meta name="keywords" content="Bauunternehmen Sindelfingen, Stuttgart, Baupartner, Kontakt">
+  <meta name="author" content="HK Bau GmbH" />
+  <title>HK Bau - Kontakt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="font-[Inter] text-gray-900 bg-white">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<script src="../js/app.js" defer></script>
+
+<!-- Navbar -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white transition duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <a href="../index.html" class="flex items-center space-x-2">
+      <img src="../images/logo.png" alt="HK Bau" class="h-10 w-10 rounded-full shadow" loading="lazy" />
+      <span class="font-bold text-lg">HK Bau</span>
+    </a>
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="../index.html" class="hover:text-yellow-400 transition">Startseite</a>
+      <a href="leistungen.html" class="hover:text-yellow-400 transition">Leistungen</a>
+      <a href="../index.html#about" class="hover:text-yellow-400 transition">Über Uns</a>
+      <a href="../index.html#projects" class="hover:text-yellow-400 transition">Projekte</a>
+      <a href="kontakt.html" class="text-yellow-400 font-semibold border-b-2 border-yellow-400">Kontakt</a>
+    </nav>
+    <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Menü öffnen" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95 px-4 pb-4 text-white">
+    <a href="../index.html" class="block py-2 hover:text-yellow-500">Startseite</a>
+    <a href="leistungen.html" class="block py-2 hover:text-yellow-500">Leistungen</a>
+    <a href="../index.html#about" class="block py-2 hover:text-yellow-500">Über Uns</a>
+    <a href="../index.html#projects" class="block py-2 hover:text-yellow-500">Projekte</a>
+    <a href="kontakt.html" class="block py-2 text-yellow-400">Kontakt</a>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('../images/hero-kontakt.jpg');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-center" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-bold text-yellow-400">Kontaktieren Sie uns</h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">Fragen, Angebote oder Partnerschaften? Wir freuen uns über Ihre Nachricht.</p>
+  </div>
+</section>
+
+<!-- Kontakt Info + Formular -->
+<main class="py-20 px-4 max-w-7xl mx-auto space-y-20">
+  <section class="grid md:grid-cols-2 gap-12" data-aos="fade-up">
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-secondary-color">Adresse</h3>
+        <p>Musterstraße 123<br>71063 Sindelfingen</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-secondary-color">Telefon</h3>
+        <p><a href="tel:+497123456789" class="hover:text-yellow-600">+49 7123 456789</a></p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-secondary-color">E-Mail</h3>
+        <p><a href="mailto:info@hk-bau.de" class="hover:text-yellow-600">info@hk-bau.de</a></p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-secondary-color">Standort</h3>
+        <iframe class="rounded-xl w-full h-64" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.668593426618!2d9.000000!3d48.700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDQyJzAwLjAiTiA5wrAwMCcwMC4wIkU!5e0!3m2!1sde!2sde!4v1680000000000">
+        </iframe>
+      </div>
+    </div>
+    <form class="space-y-6 bg-gray-50 p-6 rounded-xl shadow-md" action="#" method="POST" id="contactForm" data-aos="fade-left">
+      <input type="text" id="name" name="name" placeholder="Ihr Name" required class="w-full p-3 rounded-lg border">
+      <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded-lg border">
+      <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded-lg border"></textarea>
+      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition">Nachricht senden</button>
+    </form>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-10 text-center">
+  <nav role="navigation" class="space-x-4 mb-4">
+    <a href="../index.html" class="hover:text-white">Startseite</a>
+    <a href="leistungen.html" class="hover:text-white">Leistungen</a>
+    <a href="../index.html#projects" class="hover:text-white">Projekte</a>
+    <a href="kontakt.html" class="text-white">Kontakt</a>
+  </nav>
+  <p>© 2025 HK Bau GmbH Sindelfingen Stuttgart. Alle Rechte vorbehalten.</p>
+</footer>
+
+<button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-yellow-500 text-black p-3 rounded-full shadow-lg hover:bg-yellow-600 transition" aria-label="Nach oben scrollen">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+</script>
+
+</body>
+</html>

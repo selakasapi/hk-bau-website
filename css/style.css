@@ -1,7 +1,9 @@
 /* Global Styles */
 :root {
-  --primary-color: #facc15;
+  --primary-color: #facc15; /* Bright Yellow/Gold from Logo */
   --primary-hover: #f59e0b;
+  --secondary-color: #374151; /* Dark Gray/Black from Logo */
+  --text-color: #374151; /* Default text color: Dark Gray/Black */
 }
 
 html {
@@ -21,7 +23,7 @@ header.sticky {
 }
 
 .active-link {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color); /* Yellow for active link */
 }
 
 /* Sections */
@@ -34,6 +36,7 @@ header.sticky {
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+  color: var(--secondary-color); /* Dark Gray/Black for section titles */
 }
 
 .section-subtitle {
@@ -46,11 +49,88 @@ header.sticky {
 .section-divider {
   height: 2px;
   width: 80px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Yellow/Gold for dividers */
   margin: 2rem auto;
 }
 
-/* Effects */
+/* Hero */
+#home h1 {
+  color: var(--primary-color); /* Make the main heading in Hero yellow */
+}
+
+/* Services Section Background */
+#services {
+  background-color: #f3f4f6; /* A light gray for contrast */
+  color: var(--secondary-color); /* Dark text on light background */
+}
+
+#services .section-title,
+#services h3 {
+  color: var(--secondary-color); /* Dark gray titles in services */
+}
+
+/* About Section Background */
+#about {
+  background-color: var(--secondary-color); /* Dark Gray/Black background */
+  color: white; /* White text on dark background */
+}
+
+#about .section-title {
+  color: white; /* White title in about section */
+}
+
+/* Projects Section Title */
+#projects .section-title {
+  color: var(--secondary-color); /* Dark gray title in projects */
+}
+
+#projects h3 {
+  color: var(--secondary-color); /* Dark gray project titles */
+}
+
+/* Contact Section Title */
+#contact .section-title {
+  color: var(--secondary-color); /* Dark gray title in contact */
+}
+
+#contact h3 {
+  color: var(--secondary-color); /* Dark gray contact info titles */
+}
+
+#contact button {
+  background-color: var(--primary-color); /* Yellow contact button */
+  color: var(--secondary-color); /* Dark text on yellow button */
+}
+
+#contact button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color); /* Dark Gray/Black footer */
+  color: #d1d5db; /* Light gray text in footer */
+}
+
+footer a {
+  color: #9ca3af;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  background-color: var(--primary-color); /* Yellow scroll to top button */
+  color: var(--secondary-color); /* Dark icon on yellow button */
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Effects (No color changes here) */
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -113,7 +193,7 @@ header.sticky {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Images */
+/* Images (No color changes here) */
 img {
   display: block;
   max-width: 100%;
@@ -128,7 +208,7 @@ img[src*="placeholder"] {
   border: 2px dashed var(--primary-color);
 }
 
-/* Responsive */
+/* Responsive (No color changes here) */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.875rem;
@@ -144,4 +224,14 @@ img[src*="placeholder"] {
     padding: 1rem 0;
     display: block;
   }
+}
+
+/* Custom Animations (No color changes here) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
 }
