@@ -235,3 +235,4 @@ img[src*="placeholder"] {
 .animate-fadeIn {
   animation: fadeIn 1s ease-out forwards;
 }
+

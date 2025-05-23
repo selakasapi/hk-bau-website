@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Referenzen - HK Bau Projekte aus Sindelfingen & Stuttgart: Erdbau, Kanalbau, Rohbau & mehr.">
+  <meta name="keywords" content="Referenzen, Bauprojekte, HK Bau, Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holzbau, Stahlbau, Ausbau, Rohbau, Sindelfingen, Stuttgart">
+  <meta name="author" content="HK Bau GmbH">
+  <title>Referenzen – HK Bau</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body class="bg-white text-gray-900 font-[Inter]">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true, offset: 100 });
+  document.addEventListener("DOMContentLoaded", () => {
+    GLightbox({ selector: '.glightbox' });
+  });
+</script>
+<script src="../js/app.js" defer></script>
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm transition duration-300">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+    <a href="../index.html" class="flex items-center">
+      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 rounded-full shadow" loading="lazy">
+      <span class="text-white font-bold ml-2">HK Bau</span>
+    </a>
+    <nav class="hidden md:flex space-x-6 text-white font-medium">
+      <a href="../index.html" class="hover:text-yellow-400">Home</a>
+      <a href="leistungen.html" class="hover:text-yellow-400">Leistungen</a>
+      <a href="referenzen.html" class="text-yellow-400 border-b-2 border-yellow-400">Referenzen</a>
+      <a href="../index.html#contact" class="hover:text-yellow-400">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="relative h-[80vh] flex items-center justify-center bg-cover bg-center text-white parallax" style="background-image: url('../images/referenzen-hero.jpg');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-center px-4" data-aos="fade-down">
+    <h1 class="text-4xl md:text-6xl font-bold">Unsere Referenzen</h1>
+    <p class="mt-4 text-lg">Einblicke in unsere Leistungen – vom Rohbau bis zum Holzbau</p>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto py-16 px-4">
+  <div class="flex flex-wrap justify-center gap-4 mb-12">
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="all">Alle</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Erdbau">Erdbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Kanalbau">Kanalbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Stahlbetonbau">Stahlbetonbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Mauerwerksbau">Mauerwerksbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Holzbau">Holzbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Stahlbau">Stahlbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Rohbau">Rohbau</button>
+    <button class="filter-btn bg-gray-200 px-4 py-2 rounded" data-filter="Ausbau">Ausbau</button>
+  </div>
+
+  <div id="project-grid" class="space-y-16">
+    <div class="project-item" data-category="Erdbau" data-aos="fade-right">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Erdbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-erdbau.jpg" alt="Erdbau Beispiel" class="rounded-lg shadow-md">
+          <p>Baugrubenaushub und Geländemodellierung für Wohn- & Gewerbeobjekte.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Kanalbau" data-aos="fade-left">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Kanalbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-kanalbau.jpg" alt="Kanalbau Beispiel" class="rounded-lg shadow-md">
+          <p>Verlegung von Abwasserleitungen auf Baustellen in Stuttgart und Umgebung.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Stahlbetonbau" data-aos="fade-right">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Stahlbetonbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-stahlbeton.jpg" alt="Stahlbetonbau" class="rounded-lg shadow-md">
+          <p>Massivbau mit bewehrtem Beton – Fundamentplatten, Decken, Wände.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Mauerwerksbau" data-aos="fade-left">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Mauerwerksbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-mauerwerk.jpg" alt="Mauerwerksbau" class="rounded-lg shadow-md">
+          <p>Ziegel- & Kalksandsteinwände für Mehrfamilienhäuser und Einfamilienhäuser.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Holzbau" data-aos="fade-right">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Holzbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-holzbau.jpg" alt="Holzbau" class="rounded-lg shadow-md">
+          <p>Nachhaltige Holzkonstruktionen für moderne Anbauten und Aufstockungen.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Stahlbau" data-aos="fade-left">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Stahlbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-stahlbau.jpg" alt="Stahlbau" class="rounded-lg shadow-md">
+          <p>Stahlrahmen- und Trägerkonstruktionen für Industriehallen und Dächer.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Rohbau" data-aos="fade-right">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Rohbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-rohbau.jpg" alt="Rohbau" class="rounded-lg shadow-md">
+          <p>Gesamter Rohbau: Bodenplatte, Wände, Decken – alles aus einer Hand.</p>
+        </div>
+      </details>
+    </div>
+    <div class="project-item" data-category="Ausbau" data-aos="fade-left">
+      <details class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <summary class="text-2xl font-semibold cursor-pointer">Ausbau</summary>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <img src="../images/referenz-ausbau.jpg" alt="Ausbau" class="rounded-lg shadow-md">
+          <p>Innenausbau: Trockenbau, Estrich, Putzarbeiten für Ihr Projekt.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 py-16 px-6" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-secondary-color">Baustellen-Galerie</h2>
+    <p class="mb-8">Einblicke in unsere tägliche Arbeit auf der Baustelle.</p>
+    <div class="grid gap-6 md:grid-cols-3">
+      <a href="../images/gallery1.jpg" class="glightbox">
+        <img src="../images/gallery1.jpg" alt="Baustelle 1" class="rounded-lg shadow-md">
+      </a>
+      <a href="../images/gallery2.jpg" class="glightbox">
+        <img src="../images/gallery2.jpg" alt="Baustelle 2" class="rounded-lg shadow-md">
+      </a>
+      <a href="../images/gallery3.jpg" class="glightbox">
+        <img src="../images/gallery3.jpg" alt="Baustelle 3" class="rounded-lg shadow-md">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-yellow-400 py-16 text-center" data-aos="zoom-in-up">
+  <h2 class="text-3xl font-bold mb-4 text-secondary-color">Haben Sie ein Bauvorhaben?</h2>
+  <p class="mb-6 text-gray-800">Kontaktieren Sie uns jetzt und lassen Sie uns gemeinsam Ihre Vision verwirklichen.</p>
+  <a href="../index.html#contact" class="inline-block bg-black text-yellow-400 hover:bg-gray-900 font-semibold py-3 px-8 rounded-lg transition">Jetzt Kontakt aufnehmen</a>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 py-10 text-center">
+  <nav class="space-x-4 mb-4">
+    <a href="../index.html" class="hover:text-white">Startseite</a>
+    <a href="leistungen.html" class="hover:text-white">Leistungen</a>
+    <a href="referenzen.html" class="text-white">Referenzen</a>
+    <a href="../index.html#contact" class="hover:text-white">Kontakt</a>
+  </nav>
+  <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.project-item').forEach(item => {
+        item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
