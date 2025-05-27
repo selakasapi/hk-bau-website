@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="HK Bau - Ihr zuverlässiger Partner im Bauwesen. Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
-  <meta property="og:title" content="HK Bau - Ihr Partner im Bauwesen">
-  <meta property="og:description" content="Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
-  <meta property="og:image" content="../images/preview.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="../images/preview.jpg">
-  <title>HK Bau - Ihr Partner im Bauwesen</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    .zoom-parallax {
-      animation: zoomParallax 8s ease-in-out infinite alternate;
-    }
-    @keyframes zoomParallax {
-      0% {
-        transform: scale(1) translateY(0);
-      }
-      100% {
-        transform: scale(1.05) translateY(-10px);
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HK Bau - Ihr zuverlässiger Partner im Bauwesen. Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
+    <meta property="og:title" content="HK Bau - Ihr Partner im Bauwesen">
+    <meta property="og:description" content="Wir bieten Rohbau, Sanierung und Ausbau mit höchster Qualität.">
+    <meta property="og:image" content="../images/preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="../images/preview.jpg">
+    <title>HK Bau - Ihr Partner im Bauwesen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="bg-white text-gray-900 font-[Inter]">
+<body class="font-[Inter]">
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 <script src="../js/app.js" defer></script>
 
-<header class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm transition duration-300" id="navbar">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-    <a href="#home" class="flex items-center">
-      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 rounded-full shadow" loading="lazy" />
-    </a>
-    <nav class="hidden md:flex space-x-8 text-white font-medium">
-      <a href="#home" class="hover:text-yellow-500">Home</a>
-      <a href="#services" class="hover:text-yellow-500">Leistungen</a>
-      <a href="#about" class="hover:text-yellow-500">Über Uns</a>
-      <a href="#projects" class="hover:text-yellow-500">Referenzen</a>
-      <a href="#contact" class="hover:text-yellow-500">Kontakt</a>
-    </nav>
-  </div>
+<header class="fixed top-0 left-0 w-full z-50 transition duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center">
+            <img src="../images/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow" loading="lazy" />
+            <span class="text-white font-bold ml-2">HK Bau</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html">Startseite</a>
+            <a href="leistungen.html">Leistungen</a>
+            <a href="referenzen.html">Referenzen</a>
+            <a href="#">Wissen</a>
+            <a href="#">Karriere</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-500" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
+            <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
+            <a href="referenzen.html" class="block py-2 px-3 text-base font-medium">Referenzen</a>
+            <a href="#" class="block py-2 px-3 text-base font-medium">Wissen</a>
+            <a href="#" class="block py-2 px-3 text-base font-medium">Karriere</a>
+            <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
+        </div>
+    </div>
 </header>
 
-<section id="home" class="relative h-screen flex items-center justify-center text-white parallax">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 z-0"></div>
-  <img src="../images/pexels-sevenstormphotography-439416.jpg" alt="Bauprojekt" class="absolute inset-0 w-full h-full object-cover -z-10 zoom-parallax" loading="lazy" />
-  <div class="relative z-10 text-center px-6 max-w-2xl" data-aos="fade-down">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Ihr zuverlässiger Partner im Bauwesen</h1>
-    <p class="text-lg md:text-xl mb-10">Von der Planung bis zur Umsetzung – wir bauen mit Qualität.</p>
-    <a href="#contact" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-lg transition transform hover:scale-110">Jetzt kontaktieren</a>
-  </div>
-</section>
+<main>
+    <section class="relative h-screen overflow-hidden flex items-center justify-center parallax leistungen-hero">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="../images/hero-leistungen.jpg" alt="Hero Hintergrund" class="w-full h-full object-cover zoom-parallax" />
+            <div class="absolute inset-0 bg-[var(--secondary-color)]/60"></div>
+        </div>
 
-<!-- Kontakt Info + Formular -->
-<main class="py-20 px-4 max-w-7xl mx-auto space-y-20">
-  <section class="grid md:grid-cols-2 gap-12">
-    <div class="space-y-6">
-      <div data-aos="fade-left" data-aos-delay="200">
-        <h3 class="text-xl font-semibold text-secondary-color">Adresse</h3>
-        <p>Musterstraße 123<br>71063 Sindelfingen</p>
-      </div>
-      <div data-aos="fade-right" data-aos-delay="300">
-        <h3 class="text-xl font-semibold text-secondary-color">Telefon</h3>
-        <p><a href="tel:+497123456789" class="hover:text-yellow-600">+49 7123 456789</a></p>
-      </div>
-      <div data-aos="fade-left" data-aos-delay="400">
-        <h3 class="text-xl font-semibold text-secondary-color">E-Mail</h3>
-        <p><a href="mailto:info@hk-bau.de" class="hover:text-yellow-600">info@hk-bau.de</a></p>
-      </div>
-      <div data-aos="fade-up" data-aos-delay="500">
-        <h3 class="text-xl font-semibold text-secondary-color">Standort</h3>
-        <iframe class="rounded-xl w-full h-64" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.668593426618!2d9.000000!3d48.700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDQyJzAwLjAiTiA5wrAwMCcwMC4wIkU!5e0!3m2!1sde!2sde!4v1680000000000">
-        </iframe>
-      </div>
-    </div>
-    <form class="space-y-6 bg-gray-50 p-6 rounded-xl shadow-md" action="#" method="POST" id="contactForm" data-aos="zoom-in-up" data-aos-delay="600">
-      <input type="text" id="name" name="name" placeholder="Ihr Name" required class="w-full p-3 rounded-lg border" data-aos="fade-up" data-aos-delay="700">
-      <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded-lg border" data-aos="fade-up" data-aos-delay="800">
-      <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded-lg border" data-aos="fade-up" data-aos-delay="900"></textarea>
-      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition" data-aos="fade-up" data-aos-delay="1000">Nachricht senden</button>
-    </form>
-  </section>
+        <div class="relative z-10 text-center hero-content" data-aos="zoom-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Kontaktieren Sie uns</h1>
+            <p class="text-lg max-w-2xl mx-auto">Wir freuen uns auf Ihre Nachricht und Ihr Bauprojekt.</p>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="space-y-6">
+            <div data-aos="fade-left" data-aos-delay="200">
+                <h3 class="text-xl font-semibold">Adresse</h3>
+                <p>Musterstraße 123<br>71063 Sindelfingen</p>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="300">
+                <h3 class="text-xl font-semibold">Telefon</h3>
+                <p><a href="tel:+497123456789"> +49 7123 456789</a></p>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h3 class="text-xl font-semibold">E-Mail</h3>
+                <p><a href="mailto:info@hk-bau.de">info@hk-bau.de</a></p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-xl font-semibold">Standort</h3>
+                <iframe class="rounded-xl w-full h-64" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.668593426618!2d9.000000!3d48.700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDQyJzAwLjAiTiA5wrAwMCcwMC4wIkU!5e0!3m2!1sde!2sde!4v1680000000000">
+                </iframe>
+            </div>
+        </div>
+        <form class="space-y-6 bg-white p-6 rounded-xl shadow-md" action="#" method="POST" id="contactForm" data-aos="zoom-in-up" data-aos-delay="600">
+            <input type="text" id="name" name="name" placeholder="Ihr Name" required class="w-full p-3 rounded-lg border">
+            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded-lg border">
+            <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded-lg border"></textarea>
+            <button type="submit" class="w-full bg-primary-color text-secondary-color font-semibold py-3 px-6 rounded-lg transition" data-aos="fade-up" data-aos-delay="1000">Nachricht senden</button>
+        </form>
+    </section>
 </main>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 py-10 text-center">
-  <nav role="navigation" class="space-x-4 mb-4" data-aos="fade-in" data-aos-delay="300">
-    <a href="../index.html" class="hover:text-white">Startseite</a>
-    <a href="leistungen.html" class="hover:text-white">Leistungen</a>
-    <a href="../index.html#projects" class="hover:text-white">Projekte</a>
-    <a href="kontakt.html" class="text-white">Kontakt</a>
-  </nav>
-  <p data-aos="fade-in" data-aos-delay="400">© 2025 HK Bau GmbH Sindelfingen Stuttgart. Alle Rechte vorbehalten.</p>
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+    <nav role="navigation" class="space-x-4 mb-4" data-aos="fade-in" data-aos-delay="300">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <p data-aos="fade-in" data-aos-delay="400">© 2025 HK Bau GmbH Sindelfingen Stuttgart. Alle Rechte vorbehalten.</p>
 </footer>
 
-<button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-yellow-500 text-black p-3 rounded-full shadow-lg hover:bg-yellow-600 transition" aria-label="Nach oben scrollen">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-  </svg>
+<button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition" aria-label="Nach oben scrollen">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
 </button>
-
-<script>
-  AOS.init({ duration: 1000, once: true, offset: 100 });
-</script>
 
 </body>
 </html>
