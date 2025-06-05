@@ -1,23 +1,35 @@
 /* Global Styles */
 :root {
-    --primary-color: #FBBA21; /* Your bright yellow/gold */
-    --primary-hover: #e0a800; /* Slightly darker yellow for hover */
-    --secondary-color: #1C2127; /* Your dark gray/black */
-    --tertiary-color: #3B454E; /* Your medium gray */
-    --light-gray-bg: #F3F4F6; /* Light gray background for sections */
+    --primary-color: #FBBA21;
+    /* Your bright yellow/gold */
+    --primary-hover: #e0a800;
+    /* Slightly darker yellow for hover */
+    --secondary-color: #1C2127;
+    /* Your dark gray/black */
+    --tertiary-color: #3B454E;
+    /* Your medium gray */
+    --light-gray-bg: #F3F4F6;
+    /* Light gray background for sections */
     --white: #ffffff;
-    --text-on-dark: #d1d5db; /* Light gray text for dark backgrounds (e.g., footer) */
+    --text-on-dark: #d1d5db;
+    /* Light gray text for dark backgrounds (e.g., footer) */
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
+
 body {
-    background-color: var(--white); /* Default body background */
-    color: var(--secondary-color); /* Default text color: Dark gray/black */
-    font-family: 'Inter', sans-serif; /* Ensure Inter font is applied */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: var(--white);
+    /* Default body background */
+    color: var(--secondary-color);
+    /* Default text color: Dark gray/black */
+    font-family: 'Inter', sans-serif;
+    /* Ensure Inter font is applied */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 /* Page Transition Overlay */
@@ -27,11 +39,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color); /* Yellow wipe color */
-    z-index: 9999; /* Ensure it's on top of everything */
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    pointer-events: none; /* Allows clicks to pass through when hidden */
+    background-color: var(--primary-color);
+    /* Yellow wipe color */
+    z-index: 9999;
+    /* Ensure it's on top of everything */
+    opacity: 0;
+    /* Initially hidden */
+    visibility: hidden;
+    /* Initially hidden */
+    pointer-events: none;
+    /* Allows clicks to pass through when hidden */
 }
 
 /* Animations for the overlay */
@@ -41,6 +58,7 @@ body {
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -54,6 +72,7 @@ body {
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         transform: translateX(100%);
         opacity: 0;
@@ -62,59 +81,73 @@ body {
 }
 
 .page-transition-overlay.is-wiping-in {
-    animation: wipeIn 0.5s ease-out forwards; /* Wipe in from left */
+    animation: wipeIn 0.5s ease-out forwards;
+    /* Wipe in from left */
 }
 
 .page-transition-overlay.is-wiping-out {
-    animation: wipeOut 0.5s ease-out forwards; /* Wipe out to right */
+    animation: wipeOut 0.5s ease-out forwards;
+    /* Wipe out to right */
 }
 
 
 /* Navigation Header */
 header#navbar {
-    position: fixed; /* Keep it fixed */
+    position: fixed;
+   
     top: 0;
     left: 0;
     width: 100%;
     z-index: 50;
-    transition: duration-300;
-    background-color: transparent; /* Start transparent */
-    backdrop-filter: blur(0px); /* No blur initially */
-    box-shadow: none; /* No shadow initially */
-    color: var(--white); /* Default text color for transparent header */
+      transition: all 0.3s ease;
+    background-color: transparent;
+    /* Start transparent */
+    backdrop-filter: blur(0px);
+    /* No blur initially */
+    box-shadow: none;
+    /* No shadow initially */
+    color: var(--white);
+    /* Default text color for transparent header */
 }
 
 @media (max-width: 768px) {
     header#navbar {
-        background-color: rgba(28, 33, 39, 0.9); /* Apply dark background on mobile */
+        background-color: rgba(28, 33, 39, 0.9);
+        /* Apply dark background on mobile */
     }
 }
 
 header#navbar.sticky {
-    background-color: rgba(28, 33, 39, 0.9); /* Your dark gray/black with transparency */
-    backdrop-filter: blur(10px); /* Blur effect on scroll */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on sticky */
+  background-color: rgba(28, 33, 39, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header#navbar .flex.items-center a { /* Target the logo link */
+header#navbar .flex.items-center a {
+    /* Target the logo link */
     display: flex;
     align-items: center;
 }
 
-header#navbar .flex.items-center a img { /* Style the logo image */
-    height: 4rem; /* Consistent logo height */
+header#navbar .flex.items-center a img {
+    /* Style the logo image */
+    height: 4rem;
+    /* Consistent logo height */
     width: auto;
-    border-radius: 9999px; /* Full rounded */
+    border-radius: 9999px;
+    /* Full rounded */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
-header#navbar .flex.items-center a span { /* Style the logo text */
+header#navbar .flex.items-center a span {
+    /* Style the logo text */
     color: var(--white);
     font-weight: bold;
     margin-left: 0.5rem;
 }
 
-header#navbar nav.hidden.md\:flex a { /* Desktop nav links */
+header#navbar nav.hidden.md\:flex a {
+    /* Desktop nav links */
     color: var(--white);
     transition: color 0.3s ease;
     text-decoration: none;
@@ -127,45 +160,52 @@ header#navbar nav.hidden.md\:flex a:hover {
 .active-link {
     color: var(--primary-color) !important;
     border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
+
 
 /* Mobile Menu Styles */
 #mobile-menu {
     position: absolute;
-    top: 100%; /* Position it below the header */
+    top: 100%;
+    /* Position it below the header */
     left: 0;
     width: 100%;
-    background-color: var(--secondary-color); /* Dark gray/black background */
-    z-index: 50; /* Ensure it's above other content */
+    background-color: var(--secondary-color);
+    /* Dark gray/black background */
+    z-index: 50;
+    /* Ensure it's above other content */
     padding: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Subtle shadow */
 }
 
 #mobile-menu a {
-    color: var(--white) !important; /* White text for better readability */
+    color: var(--white) !important;
+    /* White text for better readability */
     padding: 0.75rem 1rem;
     display: block;
     text-decoration: none;
-    border-radius: 0.5rem; /* Rounded corners for menu items */
+    border-radius: 0.5rem;
+    /* Rounded corners for menu items */
 }
 
 #mobile-menu a:hover {
-    background-color: var(--tertiary-color); /* Medium gray hover effect */
+    background-color: var(--tertiary-color);
+    /* Medium gray hover effect */
 }
 
-/* Ensure the mobile menu is initially hidden by default Tailwind classes */
-.md\:hidden.hidden {
-    display: none !important;
-}
 
 /* Style the hamburger icon */
 #mobile-menu-button svg {
-    fill: var(--white) !important; /* White fill for the icon */
+    fill: var(--white) !important;
+    /* White fill for the icon */
 }
 
 header#navbar.sticky #mobile-menu-button svg {
-    fill: var(--white) !important; /* Ensure icon is white on sticky header too */
+    fill: var(--white) !important;
+    /* Ensure icon is white on sticky header too */
 }
 
 
@@ -175,12 +215,14 @@ header#navbar.sticky #mobile-menu-button svg {
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--secondary-color); /* Dark Gray/Black for section titles */
+    color: var(--secondary-color);
+    /* Dark Gray/Black for section titles */
 }
 
 .section-subtitle {
     font-size: 1.125rem;
-    color: var(--tertiary-color); /* Medium gray for subtitles */
+    color: var(--tertiary-color);
+    /* Medium gray for subtitles */
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -188,22 +230,28 @@ header#navbar.sticky #mobile-menu-button svg {
 .section-divider {
     height: 2px;
     width: 80px;
-    background-color: var(--primary-color); /* Yellow/Gold for dividers */
+    background-color: var(--primary-color);
+    /* Yellow/Gold for dividers */
     margin: 2rem auto;
 }
 
 /* Hero Section (Applies to #home, and hero sections on other pages) */
 .hero-content h1 {
-    color: var(--primary-color) !important; /* Make the main heading in Hero yellow */
+    color: var(--primary-color) !important;
+    /* Make the main heading in Hero yellow */
 }
-.hero-content p { /* Ensure paragraph text is white on hero */
+
+.hero-content p {
+    /* Ensure paragraph text is white on hero */
     color: var(--white) !important;
 }
 
 /* Hero Section specific overlays (e.g., on index.html) */
 #home .bg-gradient-to-b {
-    background-image: linear-gradient(to bottom, rgba(28, 33, 39, 0.7), rgba(28, 33, 39, 0.3)) !important; /* Darker overlay for hero */
+    background-image: linear-gradient(to bottom, rgba(28, 33, 39, 0.7), rgba(28, 33, 39, 0.3)) !important;
+    /* Darker overlay for hero */
 }
+
 /* Hero section for leistungen.html and kontakt.html */
 section.parallax .bg-\[var\(--secondary-color\)\]\/60 {
     background-color: rgba(28, 33, 39, 0.6) !important;
@@ -220,10 +268,12 @@ section.parallax .bg-\[var\(--secondary-color\)\]\/60 {
 
 
 /* Hero button styling (applies to buttons with bg-primary-color) */
-a.bg-primary-color { /* Hero button */
+a.bg-primary-color {
+    /* Hero button */
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
 }
+
 a.bg-primary-color:hover {
     background-color: var(--primary-hover) !important;
 }
@@ -231,96 +281,144 @@ a.bg-primary-color:hover {
 
 /* Services Section Background */
 #services {
-    background-color: var(--light-gray-bg); /* A light gray for contrast */
-    color: var(--secondary-color); /* Dark text on light background */
+    background-color: var(--light-gray-bg);
+    /* A light gray for contrast */
+    color: var(--secondary-color);
+    /* Dark text on light background */
 }
+
 #services .section-title,
 #services h3 {
-    color: var(--secondary-color); /* Dark gray titles in services */
+    color: var(--secondary-color);
+    /* Dark gray titles in services */
 }
+
 /* Adjusted padding for service cards to make them smaller */
-#services .p-6 { /* Target the padding directly */
-    padding: 1.25rem; /* Reduced from 1.5rem (p-6) to 1.25rem (p-5) */
+#services .p-6 {
+    /* Target the padding directly */
+    padding: 1.25rem;
+    /* Reduced from 1.5rem (p-6) to 1.25rem (p-5) */
 }
-#services .bg-white { /* Service cards */
+
+#services .bg-white {
+    /* Service cards */
     background-color: var(--white);
 }
-#services p { /* Ensure paragraph text color in service cards */
+
+#services p {
+    /* Ensure paragraph text color in service cards */
     color: var(--tertiary-color);
 }
 
 
 /* About Section Background */
 #about {
-    background-color: var(--secondary-color); /* Dark Gray/Black background */
-    color: var(--white); /* White text on dark background */
+    background-color: var(--secondary-color);
+    /* Dark Gray/Black background */
+    color: var(--white);
+    /* White text on dark background */
 }
+
 #about .section-title {
-    color: var(--white); /* White title in about section */
+    color: var(--white);
+    /* White title in about section */
 }
-#about p { /* Ensure paragraph text color in about section */
+
+#about p {
+    /* Ensure paragraph text color in about section */
     color: var(--white);
 }
 
 
 /* Projects Section Title */
 #projects {
-    background-color: var(--white); /* White background for projects */
+    background-color: var(--white);
+    /* White background for projects */
 }
+
 #projects .section-title {
-    color: var(--secondary-color); /* Dark gray title in projects */
+    color: var(--secondary-color);
+    /* Dark gray title in projects */
 }
+
 #projects h3 {
-    color: var(--secondary-color); /* Dark gray project titles */
+    color: var(--secondary-color);
+    /* Dark gray project titles */
 }
-#projects .bg-light-gray-bg { /* Project card background */
+
+#projects .bg-light-gray-bg {
+    /* Project card background */
     background-color: var(--light-gray-bg);
 }
-#projects p { /* Project location/date text */
+
+#projects p {
+    /* Project location/date text */
     color: var(--tertiary-color) !important;
 }
 
 
 /* Contact Section Title */
 #contact {
-    background-color: var(--light-gray-bg); /* Light gray background for contact */
+    background-color: var(--light-gray-bg);
+    /* Light gray background for contact */
 }
+
 #contact .section-title {
-    color: var(--secondary-color); /* Dark gray title in contact */
+    color: var(--secondary-color);
+    /* Dark gray title in contact */
 }
+
 #contact h3 {
-    color: var(--secondary-color); /* Dark gray contact info titles */
+    color: var(--secondary-color);
+    /* Dark gray contact info titles */
 }
-#contact a { /* Contact links */
-    color: var(--secondary-color); /* Default text color for links */
+
+#contact a {
+    /* Contact links */
+    color: var(--secondary-color);
+    /* Default text color for links */
 }
+
 #contact a:hover {
-    color: var(--primary-color); /* Yellow hover for links */
+    color: var(--primary-color);
+    /* Yellow hover for links */
 }
-#contact form .bg-white { /* Contact form background */
+
+#contact form .bg-white {
+    /* Contact form background */
     background-color: var(--white);
 }
+
 #contact button {
-    background-color: var(--primary-color) !important; /* Yellow contact button */
-    color: var(--secondary-color) !important; /* Dark text on yellow button */
+    background-color: var(--primary-color) !important;
+    /* Yellow contact button */
+    color: var(--secondary-color) !important;
+    /* Dark text on yellow button */
 }
+
 #contact button:hover {
     background-color: var(--primary-hover) !important;
 }
+
 #contact form input,
 #contact form textarea {
-    border-color: var(--tertiary-color); /* Border color for form fields */
+    border-color: var(--tertiary-color);
+    /* Border color for form fields */
 }
 
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color); /* Dark Gray/Black footer */
-    color: var(--text-on-dark); /* Light gray text in footer */
+    background-color: var(--secondary-color);
+    /* Dark Gray/Black footer */
+    color: var(--text-on-dark);
+    /* Light gray text in footer */
 }
+
 footer a {
     color: var(--text-on-dark);
 }
+
 footer a:hover {
     color: var(--white);
 }
@@ -328,9 +426,12 @@ footer a:hover {
 
 /* Scroll to Top Button */
 #scrollToTopBtn {
-    background-color: var(--primary-color) !important; /* Yellow scroll to top button */
-    color: var(--secondary-color) !important; /* Dark icon on yellow button */
+    background-color: var(--primary-color) !important;
+    /* Yellow scroll to top button */
+    color: var(--secondary-color) !important;
+    /* Dark icon on yellow button */
 }
+
 #scrollToTopBtn:hover {
     background-color: var(--primary-hover) !important;
 }
@@ -340,13 +441,19 @@ footer a:hover {
 .zoom-parallax {
     animation: zoomParallax 8s ease-in-out infinite alternate;
 }
+
 @keyframes zoomParallax {
     0% {
         transform: scale(1) translateY(0);
     }
+
     100% {
         transform: scale(1.05) translateY(-10px);
     }
+}
+
+body, html {
+    overflow-x: hidden;
 }
 
 .parallax {
@@ -355,15 +462,30 @@ footer a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 @media (max-width: 768px) {
     .parallax {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
+        background-position: center !important;
+        background-size: cover !important;
+        overflow-x: hidden !important;
+    }
+
+    .zoom-parallax {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    html, body {
+        overflow-x: hidden !important;
     }
 }
+
 
 .hover-scale {
     transition: transform 0.3s ease;
 }
+
 .hover-scale:hover {
     transform: scale(1.05);
 }
@@ -371,6 +493,7 @@ footer a:hover {
 .lift-hover {
     transition: transform 0.3s ease;
 }
+
 .lift-hover:hover {
     transform: translateY(-4px);
 }
@@ -378,13 +501,15 @@ footer a:hover {
 .shadow-hover {
     transition: box-shadow 0.3s ease;
 }
+
 .shadow-hover:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .btn-lift {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .btn-lift:hover {
     transform: translateY(-3px) scale(1.05);
     background-color: var(--primary-hover);
@@ -393,9 +518,10 @@ footer a:hover {
 .hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .hover-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Images (No color changes here) */
@@ -404,9 +530,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 img[alt]:not([alt=""]) {
     border: none;
 }
+
 img[src*="placeholder"] {
     border: 2px dashed var(--primary-color);
 }
@@ -416,9 +544,11 @@ img[src*="placeholder"] {
     h1 {
         font-size: 1.875rem;
     }
+
     .text-lg {
         font-size: 1rem;
     }
+
     .md\:grid-cols-2,
     .md\:grid-cols-3 {
         grid-template-columns: 1fr !important;
@@ -427,22 +557,30 @@ img[src*="placeholder"] {
 
 /* Custom Animations (No color changes here) */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .animate-fadeIn {
     animation: fadeIn 1s ease-out forwards;
 }
 
-#services > div.max-w-7xl > div.grid {
-    max-width: 900px; /* Adjust as needed */
+#services>div.max-w-7xl>div.grid {
+    max-width: 900px;
+    /* Adjust as needed */
     margin: 2rem auto;
 }
 
 #services .bg-white {
-    padding: 1.5rem; /* Equivalent to Tailwind's p-6 */
-    border-radius: 0.75rem; /* If you have rounded corners */
+    padding: 1.5rem;
+    /* Equivalent to Tailwind's p-6 */
+    border-radius: 0.75rem;
+    /* If you have rounded corners */
 }
 
 .projects-overlay {
@@ -451,7 +589,8 @@ img[src*="placeholder"] {
     background-color: var(--primary-color);
     opacity: 0;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    transform: translateX(-100%); /* Start off to the left */
+    transform: translateX(-100%);
+    /* Start off to the left */
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -459,8 +598,10 @@ img[src*="placeholder"] {
 }
 
 .overflow-hidden:hover .projects-overlay {
-    transform: translateX(0); /* Slide in from left */
-    opacity: 0.8; /* Make it visible */
+    transform: translateX(0);
+    /* Slide in from left */
+    opacity: 0.8;
+    /* Make it visible */
 }
 
 .projects-overlay .text-white {
@@ -476,5 +617,271 @@ img[src*="placeholder"] {
     font-size: 0.9rem;
 }
 
-.overflow-hidden .p-4 { /* Style the bottom info area to stay visible */
-    z-index: 10; /* Ensure it's above the overlay */
+.overflow-hidden .p-4 {
+    /* Style the bottom info area to stay visible */
+    z-index: 10;
+}
+
+/* Ensure it's above the overlay */
+
+.project-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    background-color: var(--light-gray-bg);
+    /* Use light gray background */
+}
+
+.carousel-wrapper {
+    display: flex !important;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.project-image-container {
+    flex: 0 0 40%;
+    /* Adjusted: Image takes 40% of the width */
+    margin-right: 20px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    display: block;
+}
+
+
+.project-info {
+    flex: 0 0 60%;
+    /* Adjusted: Text takes 60% of the width */
+    text-align: left;
+    padding: 1rem;
+}
+
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    /* Use secondary logo color */
+}
+
+
+.project-description {
+    font-size: 1em;
+    color: var(--tertiary-color);
+    /* Use tertiary color */
+}
+
+
+.carousel-prev-btn,
+.carousel-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    /* Remove background */
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    /* Slightly larger icons */
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.carousel-prev-btn:hover,
+.carousel-next-btn:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    /* Use your primary color on hover */
+}
+
+.carousel-prev-btn svg,
+.carousel-next-btn svg {
+    fill: currentColor;
+    /* Inherit color from the button text */
+}
+
+.carousel-prev-btn {
+    left: 1rem;
+}
+
+.carousel-next-btn {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--tertiary-color);
+}
+
+.carousel-indicator-btn {
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+     background-color: #5a646e; /* Slightly lighter gray */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.project-carousel .carousel-wrapper {
+    display: flex !important;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--primary-color);
+    /* Use your primary color */
+}
+
+
+.carousel-indicator-btn:hover {
+    background-color: #aaa;
+    /* Slightly darker on hover */
+}
+
+.image-container {
+    width: 300px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Or 'cover' depending on the desired effect */
+    border: 1px solid #ccc;
+    /* Optional: Adds a border to make it look boxier */
+}
+
+.text-container {
+    padding: 10px;
+    /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    }
+
+    .zoom-parallax {
+        transform: scale(1) !important; /* Reset any zoom on mobile */
+    }
+
+    #home img {
+        width: 100%; /* Ensure image doesn't exceed viewport width */
+        max-width: none !important; /* Override any max-width that might be causing issues */
+    }
+}
+
+#contact .grid {
+    grid-template-columns: 1fr 1fr; /* Force side-by-side on wider screens */
+    align-items: start; /* Align items to the top */
+    gap: 6rem; /* Increase the gap */
+}
+
+@media (max-width: 768px) {
+    #contact .grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        gap: 4rem; /* Adjust gap for stacking */
+    }
+}
+
+#contact .space-y-6 > div {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none(0, 0, 0, 0.05);
+}
+
+#contact h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+#contact p {
+    line-height: 1.6;
+    color: var(--tertiary-color);
+    margin-bottom: 1rem; /* Add some margin below each info item */
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+#contact form input[type="text"]:focus,
+#contact form input[type="email"]:focus,
+#contact form textarea:focus {
+    border-color: var(--primary-color);
+   box-shadow: 0 0 0 0.1rem rgba(251, 186, 33, 0.25); /* Yellow glow */
+
+    outline: none;
+}
+
+#contact button[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+}
+/* Prevent transparent header on Impressum page */
+.impressum-page #navbar {
+  background-color: #1f1f1f !important;
+}
+
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#parallax-hero {
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+
