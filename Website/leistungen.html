@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+   <!-- Recommended favicon links -->
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
     <meta name="description"
         content="Entdecken Sie unsere Leistungen: Erdbau, Rohbau, Kanalbau, Stahlbeton, Ausbau – alles aus einer Hand mit HK Bau." />
     <meta name="keywords" content="Bauleistungen, Rohbau, Erdbau, Kanalbau, Ausbau, Bauunternehmen Stuttgart, HK Bau" />
@@ -26,6 +29,7 @@
     <meta name="twitter:image" content="https://www.hk-bau.net/images/preview.jpg" />
 
     <title>Leistungen – HK Bau</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -33,9 +37,50 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/lightbox.css" />
  
+    <!-- Cookie Consent by Osano -->
+<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script defer>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#2b2b2b" },
+        button: { background: "#fbb03b" }
+      },
+      theme: "classic",
+      content: {
+        message: "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.",
+        dismiss: "Verstanden!",
+        link: "Mehr erfahren",
+        href: "datenschutzerklaerung.html"
+      }
+    });
+  });
+</script>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
+</script>
+
 </head>
 
 <body class="font-[Inter] text-gray-800">
+<div class="page-transition-overlay flex items-center justify-center">
+  <div class="flex flex-col items-center space-y-4 animate-fade-in">
+    <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" />
+    </div>
+    <span class="text-white text-sm tracking-wide">Lädt...</span>
+  </div>
+</div>
+
+
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
     <header class="fixed top-0 left-0 w-full z-50 transition duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
@@ -48,7 +93,7 @@
                 <a href="index.html" class="hover:text-primary-color transition">Startseite</a>
                 <a href="leistungen.html" class="hover:text-primary-color transition">Leistungen</a>
                 <a href="referenzen.html" class="hover:text-primary-color transition">Referenzen</a>
-                <a href="/wissen.html" class="hover:text-primary-color transition">Wissen</a> <a href="karriere.html"
+                <a href="wissen.html" class="hover:text-primary-color transition">Wissen</a> <a href="karriere.html"
                     class="hover:text-primary-color transition">Karriere</a>
                 <a href="kontakt.html" class="hover:text-primary-color transition">Kontakt</a>
             </nav>
@@ -177,10 +222,10 @@
 
   <!-- Erdbau -->
   <div id="erdbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg group" data-aos="fade-up">
-    <img src="../images/erdbau.jpg" alt="Erdbau" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Erdbau+Bild';" />
+    <img src="../images/erdbau.jpg" alt="Erdbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Erdbau+Bild';" />
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 10h8l3-10h4" /></svg>
+        
         Erdbau – Fundament für Ihr Bauprojekt
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Als Spezialisten im Erdbau legen wir das essenzielle Fundament für jedes Bauvorhaben. Wir übernehmen den <strong>präzisen Baugrubenaushub</strong>, die fachgerechte <strong>Bodenentsorgung</strong> und die <strong>exakte Verfüllung</strong> gemäß den höchsten Standards.</p>
@@ -195,7 +240,7 @@
   <div id="kanalbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg group" data-aos="fade-up" data-aos-delay="100">
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17v-1a4 4 0 00-4-4H5V7" /></svg>
+        
         Kanalbau – Langlebige Infrastruktur
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Von der <strong>Sanierung bestehender Leitungen</strong> bis zur <strong>Neuverlegung komplexer Kanalsysteme</strong> – wir sorgen für eine zuverlässige Entwässerungslösung mit Fokus auf Umweltstandards und Nachhaltigkeit.</p>
@@ -204,16 +249,16 @@
       </ul>
       <a href="kontakt.html" class="inline-block bg-[var(--primary-color)] text-white font-semibold py-3 px-8 rounded-full shadow hover:shadow-xl transition duration-300 hover:bg-[var(--primary-hover)]">Unverbindliches Angebot anfragen</a>
     </div>
-    <img src="../images/kanalbau.jpg" alt="Kanalbau" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Kanalbau+Bild';" />
+    <img src="../images/kanalbau.jpg" alt="Kanalbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Kanalbau+Bild';" />
   </div>
 
 
  <!-- Stahlbetonbau -->
   <div id="stahlbetonbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg group" data-aos="fade-up" data-aos-delay="150">
-    <img src="../images/stahlbetonbau.jpg" alt="Stahlbetonbau" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Stahlbetonbau+Bild';" />
+    <img src="../images/stahlbetonbau.jpg" alt="Stahlbetonbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Stahlbetonbau+Bild';" />
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        
         Stahlbetonbau – Robuste Konstruktionen
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Wir realisieren <strong>hochfeste und langlebige Stahlbetonkonstruktionen</strong> mit höchsten statischen Anforderungen und präziser Ausführung – vom Fundament bis zur Decke.</p>
@@ -228,7 +273,7 @@
   <div id="mauerwerksbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg group" data-aos="fade-up" data-aos-delay="200">
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        
         Mauerwerksbau – Präzision für nachhaltige Gebäude
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Wir bauen <strong>hochwertige und energieeffiziente Wandkonstruktionen</strong>, die sowohl langlebig als auch ästhetisch überzeugen – vom klassischen Ziegel bis zur modernen Lösung.</p>
@@ -242,10 +287,10 @@
 
   <!-- Holzbau -->
   <div id="holzbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg group" data-aos="fade-up" data-aos-delay="250">
-    <img src="../images/holzbau.webp" alt="Holzbau" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Holzbau+Bild';" />
+    <img src="../images/holzbau.webp" alt="Holzbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Holzbau+Bild';" />
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" /></svg>
+        
         Holzbau – Ökologisch und modern
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Wir kombinieren <strong>traditionelle Handwerkskunst mit moderner Technik</strong> für ökologische Bauprojekte mit exzellenter Energiebilanz und angenehmem Raumklima.</p>
@@ -260,7 +305,7 @@
   <div id="stahlbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg group" data-aos="fade-up" data-aos-delay="300">
     <div>
       <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        <svg class="w-8 h-8 text-[var(--primary-color)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4z" /></svg>
+        
         Stahlbau – Maßgeschneiderte Industrielösungen
       </h3>
       <p class="text-lg text-dark-gray leading-relaxed mb-6">Individuelle <strong>Stahlkonstruktionen für Industrie & Gewerbe</strong> – von Hallen über Bühnen bis zu Speziallösungen, stets mit höchstem Qualitäts- und Sicherheitsanspruch.</p>
@@ -269,7 +314,7 @@
       </ul>
       <a href="kontakt.html" class="inline-block bg-[var(--primary-color)] text-white font-semibold py-3 px-8 rounded-full shadow hover:shadow-xl transition duration-300 hover:bg-[var(--primary-hover)]">Unverbindliches Angebot anfragen</a>
     </div>
-    <img src="../images/stahlbau.jpg" alt="Stahlbau" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Stahlbau+Bild';" />
+    <img src="../images/stahlbau.jpg" alt="Stahlbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x480?text=Stahlbau+Bild';" />
   </div>
 </section>
 
@@ -293,22 +338,35 @@
 
     </main>
 
-    <footer class="bg-secondary-color text-text-on-dark py-10 text-center">
-        <div class="space-y-4">
-            <nav class="space-x-4 text-lg font-medium">
-                <a href="index.html" class="hover:text-primary-color transition">Startseite</a>
-                <a href="leistungen.html" class="hover:text-primary-color transition">Leistungen</a>
-                <a href="referenzen.html" class="hover:text-primary-color transition">Referenzen</a>
-                <a href="karriere.html" class="hover:text-primary-color transition">Karriere</a>
-                <a href="kontakt.html" class="hover:text-primary-color transition">Kontakt</a>
-            </nav>
-            <p class="text-sm opacity-80">&copy; 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
-            <p class="text-xs opacity-70">
-                <a href="impressum.html" class="hover:text-primary-color transition">Impressum</a> | <a
-                    href="datenschutzerklaerung.html" class="hover:text-primary-color transition">Datenschutz</a>
-            </p>
-        </div>
-    </footer>
+   <!-- Footer -->
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+  <div class="space-y-4">
+    <nav class="space-x-4">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="wissen.html">Wissen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="flex justify-center space-x-6 text-xl mt-4">
+      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/hk.bau/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs">
+      <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
     <button id="scrollToTopBtn"
         class="hidden fixed bottom-6 right-6 bg-primary-color text-white p-4 rounded-full shadow-lg hover:bg-primary-hover transition duration-300 z-50"
         aria-label="Nach oben scrollen">

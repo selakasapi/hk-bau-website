@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <!-- Recommended favicon links -->
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
     <meta name="description"
         content="Referenzen – HK Bau Projekte aus Sindelfingen & Stuttgart: Erdbau, Kanalbau, Rohbau & mehr." />
     <meta name="keywords"
@@ -30,15 +32,57 @@
     <meta name="twitter:image" content="https://www.hk-bau.net/images/preview.jpg" />
 
     <title>Referenzen – HK Bau</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- Cookie Consent by Osano -->
+<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script defer>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#2b2b2b" },
+        button: { background: "#fbb03b" }
+      },
+      theme: "classic",
+      content: {
+        message: "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.",
+        dismiss: "Verstanden!",
+        link: "Mehr erfahren",
+        href: "datenschutzerklaerung.html"
+      }
+    });
+  });
+</script>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
+</script>
+
 </head>
 
 
 <body class="font-[Inter]">
+
+<div class="page-transition-overlay flex items-center justify-center">
+  <div class="flex flex-col items-center space-y-4 animate-fade-in">
+    <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" />
+    </div>
+    <span class="text-white text-sm tracking-wide">Lädt...</span>
+  </div>
+</div>
+
+
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
@@ -60,7 +104,8 @@
                 <a href="index.html">Startseite</a>
                 <a href="leistungen.html">Leistungen</a>
                 <a href="referenzen.html">Referenzen</a>
-                <a href="#">Wissen</a> <a href="karriere.html">Karriere</a>
+                <a href="wissen.html">Wissen</a>
+                 <a href="karriere.html">Karriere</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-500"
@@ -76,8 +121,8 @@
                 <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
                 <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
                 <a href="referenzen.html" class="block py-2 px-3 text-base font-medium">Referenzen</a>
-                <a href="#" class="block py-2 px-3 text-base font-medium">Wissen</a>
-                <a href="#" class="block py-2 px-3 text-base font-medium">Karriere</a>
+                <a href="wissen.html" class="block py-2 px-3 text-base font-medium">Wissen</a>
+                <a href="karriere.html" class="block py-2 px-3 text-base font-medium">Karriere</a>
                 <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
             </div>
         </div>
@@ -159,7 +204,7 @@
     <!-- Template Card with overlay -->
     <a href="../images/gallery-erdbau-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="erdbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-erdbau.jpg" alt="Erdbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-erdbau.jpg" alt="Erdbau" loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -179,7 +224,7 @@
    
     <a href="../images/gallery-kanalbau-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="kanalbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-kanalbau.jpg" alt="Kanalbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-kanalbau.jpg" alt="Kanalbau" loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -198,7 +243,7 @@
 
     <a href="../images/gallery-stahlbeton-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="stahlbetonbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-stahlbeton.jpg" alt="Stahlbetonbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-stahlbeton.jpg" alt="Stahlbetonbau" loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -217,7 +262,7 @@
 
     <a href="../images/gallery-mauerwerk-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="mauerwerksbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-mauerwerk.jpg" alt="Mauerwerksbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-mauerwerk.jpg" alt="Mauerwerksbau" loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -236,7 +281,7 @@
 
     <a href="../images/gallery-holzbau-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="holzbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-holzbau.jpg" alt="Holzbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-holzbau.jpg" alt="Holzbau"  loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -255,7 +300,7 @@
 
     <a href="../images/gallery-stahlbau-1.jpg" class="glightbox group block bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-gallery="stahlbau">
       <div class="relative overflow-hidden">
-        <img src="../images/referenz-stahlbau.jpg" alt="Stahlbau" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        <img src="../images/referenz-stahlbau.jpg" alt="Stahlbau"  loading="lazy" class="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span class="text-[var(--primary-color)] text-sm font-semibold">Mehr Bilder ansehen</span>
         </div>
@@ -295,22 +340,34 @@
 
 
     </main>
-    <footer class="bg-secondary-color text-text-on-dark py-10 text-center">
-        <div class="space-y-4">
-            <nav class="space-x-4">
-                <a href="index.html">Startseite</a>
-                <a href="leistungen.html">Leistungen</a>
-                <a href="referenzen.html">Referenzen</a>
-                <a href="karriere.html">Karriere</a>
-                <a href="kontakt.html">Kontakt</a>
-            </nav>
-            <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
-            <p class="text-xs">
-                <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
-            </p>
-        </div>
-    </footer>
-
+ <!-- Footer -->
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+  <div class="space-y-4">
+    <nav class="space-x-4">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="wissen.html">Wissen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="flex justify-center space-x-6 text-xl mt-4">
+      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/hk.bau/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs">
+      <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>
     <button id="scrollToTopBtn"
         class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition"
         aria-label="Nach oben scrollen">

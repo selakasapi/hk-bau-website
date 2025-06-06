@@ -311,3 +311,50 @@ function initProjectFilters() {
     });
   });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.querySelector(".page-transition-overlay");
+
+  if (!overlay) return;
+
+  const links = document.querySelectorAll("a[href]");
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (
+      !href ||
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("#") ||
+      href.endsWith(".pdf")
+    ) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Trigger fade with requestAnimationFrame
+      requestAnimationFrame(() => {
+        overlay.classList.add("is-fading-in");
+
+        // Delay nav just enough to let transition visibly begin
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // Match CSS transition duration
+      });
+    });
+  });
+});
+
+window.addEventListener("load", () => {
+  const overlay = document.querySelector(".page-transition-overlay");
+  if (overlay) {
+    overlay.classList.remove("is-fading-in");
+    overlay.classList.add("is-fading-out");
+
+    setTimeout(() => {
+      overlay.classList.remove("is-fading-out");
+    }, 500);
+  }
+});

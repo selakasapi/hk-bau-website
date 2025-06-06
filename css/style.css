@@ -34,61 +34,65 @@ body {
 
 /* Page Transition Overlay */
 .page-transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    /* Yellow wipe color */
-    z-index: 9999;
-    /* Ensure it's on top of everything */
-    opacity: 0;
-    /* Initially hidden */
-    visibility: hidden;
-    /* Initially hidden */
-    pointer-events: none;
-    /* Allows clicks to pass through when hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 9999;
+  opacity: 0;
+  transform: scale(1.05);
+  visibility: hidden;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
 
 /* Animations for the overlay */
 @keyframes wipeIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @keyframes wipeOut {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-        visibility: hidden;
-    }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-.page-transition-overlay.is-wiping-in {
-    animation: wipeIn 0.5s ease-out forwards;
-    /* Wipe in from left */
+.page-transition-overlay.is-fading-in {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.page-transition-overlay.is-wiping-out {
-    animation: wipeOut 0.5s ease-out forwards;
-    /* Wipe out to right */
+.page-transition-overlay.is-fading-out {
+   opacity: 0;
+  transform: scale(1.03);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.7s ease-in, transform 0.7s ease-in;
 }
+
 
 
 /* Navigation Header */
@@ -637,7 +641,23 @@ img[src*="placeholder"] {
 .carousel-wrapper {
     display: flex !important;
     transition: transform 0.5s ease-in-out;
+   
 }
+.carousel-indicators {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.carousel-indicators::before,
+.carousel-indicators::after {
+  display: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+
+
 
 .carousel-slide {
     display: flex;
@@ -885,3 +905,70 @@ img[src*="placeholder"] {
 }
 
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in-out;
+}
+
+.page-transition-overlay img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes spin-slower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slower {
+  animation: spin-slower 4s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in-out;
+}
+
+.page-transition-overlay > div {
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+.page-transition-overlay.is-fading-in > div {
+  transform: scale(1.03);
+}
+
+.hero-section {
+  padding-top: 4rem; /* match navbar height */
+}
