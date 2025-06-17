@@ -173,16 +173,20 @@
         <!-- Contact Form -->
         <form id="contactForm" class="space-y-6 bg-white p-6 rounded-xl shadow-md" action="#" method="POST"
             data-aos="zoom-in-up" data-aos-delay="600">
+            <label for="name" class="block text-sm font-semibold">Name</label>
             <input type="text" id="name" name="name" placeholder="Ihr Name" required
                 class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]" />
 
+            <label for="email" class="block text-sm font-semibold">E-Mail</label>
             <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required
                 class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]" />
 
+            <label for="phone" class="block text-sm font-semibold">Telefon</label>
             <input type="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer" required
                 class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]"
                 pattern="^[0-9+ ()-]+$" title="Bitte geben Sie eine gültige Telefonnummer ein" />
 
+            <label for="message" class="block text-sm font-semibold">Nachricht</label>
             <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required
                 class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]"></textarea>
 
@@ -238,7 +242,7 @@
         <i aria-hidden="true" class="fab fa-linkedin-in"></i>
       </a>
     </div>
-    <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p>© <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
     <p class="text-xs">
       <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
     </p>
