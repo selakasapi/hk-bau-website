@@ -107,6 +107,9 @@ function setActiveLink() {
 
 // ========== Page Transitions with Overlay ============
 function setupPageTransitions() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return; // Skip transitions for reduced motion users
+    }
     let overlay = document.getElementById("pageTransitionOverlay");
     if (!overlay) {
         overlay = document.createElement("div");
@@ -262,7 +265,12 @@ function initProjectCarousel() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 1000, once: true, offset: 100 });
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
 
     initMobileMenu("mobile-menu-button", "mobile-menu");
     initStickyHeader("navbar");
@@ -275,6 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
     initParallaxHero();
 
     window.addEventListener("hashchange", setActiveLink);
+
+    document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
 
     const overlay = document.querySelector(".page-transition-overlay");
     if (overlay) {
