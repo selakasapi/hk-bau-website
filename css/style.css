@@ -972,3 +972,15 @@ img[src*="placeholder"] {
 .hero-section {
   padding-top: 4rem; /* match navbar height */
 }
+
+/* Inline form error messages */
+.error-message {
+  color: #dc2626; /* red-600 */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message.visible {
+  display: block;
+}
