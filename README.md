@@ -18,4 +18,4 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 Öffnen Sie `index.html` im Browser oder hosten Sie das Projekt über Live Server (VSCode).
 
 ## Lizenz
-MIT
+Veröffentlicht unter der [MIT-Lizenz](LICENSE).
