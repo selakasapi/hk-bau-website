@@ -1,21 +1,22 @@
 # HK Bau Website
 
-Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CSS, und JavaScript.
+Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CSS und JavaScript.
+Professional website for the construction company HK Bau – built with HTML, Tailwind CSS and JavaScript.
 
-## Features
+## Features / Eigenschaften
 - Moderne responsive Gestaltung
 - Parallax Hero Section
 - AOS-Animationen
 - Bild-Fallback für defekte Bilder
 - Scroll-to-Top Button
 
-## Projektstruktur
-/css/style.css  
-/js/app.js  
-/images/  
+## Projektstruktur / Project structure
+/css/style.css
+/js/app.js
+/images/
 
-## Lokale Entwicklung
-Öffnen Sie `index.html` im Browser oder hosten Sie das Projekt über Live Server (VSCode).
+## Lokale Entwicklung / Local preview
+Öffnen Sie `index.html` direkt im Browser oder starten Sie einen lokalen Server über VSCode Live Server oder `npx serve`.
 
-## Lizenz
-MIT
+## Lizenz / License
+Siehe [LICENSE](LICENSE)
