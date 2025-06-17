@@ -71,18 +71,75 @@ function initFormValidation(formId) {
     const form = document.getElementById(formId);
     if (!form) return;
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function showError(input, message) {
+        let errorEl = input.nextElementSibling;
+        if (!errorEl || !errorEl.classList.contains("error-message")) {
+            errorEl = document.createElement("div");
+            errorEl.className = "error-message";
+            input.after(errorEl);
+        }
+        errorEl.textContent = message;
+        errorEl.classList.add("visible");
+    }
+
+    function clearError(input) {
+        const errorEl = input.nextElementSibling;
+        if (errorEl && errorEl.classList.contains("error-message")) {
+            errorEl.textContent = "";
+            errorEl.classList.remove("visible");
+        }
+    }
+
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-        const name = form.querySelector("#name").value.trim();
-        const email = form.querySelector("#email").value.trim();
-        const message = form.querySelector("#message").value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const nameInput = form.querySelector("#name");
+        const emailInput = form.querySelector("#email");
+        const messageInput = form.querySelector("#message");
 
-        if (name.length < 2) return console.error("Name muss mindestens 2 Zeichen lang sein.");
-        if (!emailRegex.test(email)) return console.error("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
-        if (message.length < 10) return console.error("Nachricht muss mindestens 10 Zeichen lang sein.");
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        let hasError = false;
+
+        if (name.length < 2) {
+            showError(nameInput, "Name muss mindestens 2 Zeichen lang sein.");
+            hasError = true;
+        } else {
+            clearError(nameInput);
+        }
+
+        if (!emailRegex.test(email)) {
+            showError(emailInput, "Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+            hasError = true;
+        } else {
+            clearError(emailInput);
+        }
+
+        if (message.length < 10) {
+            showError(messageInput, "Nachricht muss mindestens 10 Zeichen lang sein.");
+            hasError = true;
+        } else {
+            clearError(messageInput);
+        }
+
+        if (hasError) return;
 
         console.log("Formular erfolgreich gesendet! (Demo-Modus)");
+        form.reset();
+    });
+
+    ["#name", "#email", "#message"].forEach(selector => {
+        const input = form.querySelector(selector);
+        input.addEventListener("input", () => {
+            if (input.nextElementSibling && input.nextElementSibling.classList.contains("error-message")) {
+                if (selector === "#email" ? emailRegex.test(input.value.trim()) : input.value.trim().length >= (selector === "#message" ? 10 : 2)) {
+                    clearError(input);
+                }
+            }
+        });
     });
 }
 
