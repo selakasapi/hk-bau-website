@@ -82,7 +82,25 @@ function initFormValidation(formId) {
         if (!emailRegex.test(email)) return console.error("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
         if (message.length < 10) return console.error("Nachricht muss mindestens 10 Zeichen lang sein.");
 
-        console.log("Formular erfolgreich gesendet! (Demo-Modus)");
+    console.log("Formular erfolgreich gesendet! (Demo-Modus)");
+    });
+}
+
+// ========== Contact Form Demo Handler ============
+function handleContactDemo(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.classList.add("animate-pulse");
+
+        setTimeout(() => {
+            form.classList.remove("animate-pulse");
+            form.reset();
+            const success = document.getElementById("formSuccess");
+            if (success) success.classList.remove("hidden");
+        }, 1000);
     });
 }
 

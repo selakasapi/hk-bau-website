@@ -201,16 +201,8 @@
 </main>
 
                 <script>
-                    document.getElementById("contactForm").addEventListener("submit", function (e) {
-                        e.preventDefault();
-                        const form = e.target;
-                        form.classList.add("animate-pulse");
-
-                        setTimeout(() => {
-                            form.classList.remove("animate-pulse");
-                            form.reset();
-                            document.getElementById("formSuccess").classList.remove("hidden");
-                        }, 1000);
+                    document.addEventListener("DOMContentLoaded", () => {
+                        handleContactDemo("contactForm");
                     });
                 </script>
                
