@@ -295,6 +295,7 @@ function initServicesCarousel() {
     if (!wrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
 
     let currentIndex = 0;
+    let slideWidth = slides[0].offsetWidth;
     let autoSlideInterval;
 
     indicatorsContainer.innerHTML = '';
@@ -311,8 +312,12 @@ function initServicesCarousel() {
 
     const indicators = carousel.querySelectorAll('.services-dot');
 
+    function updateSlideWidth() {
+        slideWidth = slides[0].offsetWidth;
+    }
+
     function updateCarousel() {
-        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         indicators.forEach((dot, i) => {
             dot.classList.toggle('bg-[#fbb03b]', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
@@ -358,8 +363,12 @@ function initServicesCarousel() {
         resetAutoSlide();
     });
 
-    window.addEventListener('resize', updateCarousel);
+    window.addEventListener('resize', () => {
+        updateSlideWidth();
+        updateCarousel();
+    });
 
+    updateSlideWidth();
     updateCarousel();
     startAutoSlide();
 }
