@@ -284,10 +284,8 @@ function initProjectCarousel() {
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init({
-        duration: 1000,
         once: true,
-        offset: 100,
-        disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        duration: 800
     });
 
     initMobileMenu("mobile-menu-button", "mobile-menu");
