@@ -82,7 +82,25 @@ function initFormValidation(formId) {
         if (!emailRegex.test(email)) return console.error("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
         if (message.length < 10) return console.error("Nachricht muss mindestens 10 Zeichen lang sein.");
 
-        console.log("Formular erfolgreich gesendet! (Demo-Modus)");
+    console.log("Formular erfolgreich gesendet! (Demo-Modus)");
+    });
+}
+
+// ========== Contact Form Demo Handler ============
+function handleContactDemo(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.classList.add("animate-pulse");
+
+        setTimeout(() => {
+            form.classList.remove("animate-pulse");
+            form.reset();
+            const success = document.getElementById("formSuccess");
+            if (success) success.classList.remove("hidden");
+        }, 1000);
     });
 }
 
@@ -107,6 +125,9 @@ function setActiveLink() {
 
 // ========== Page Transitions with Overlay ============
 function setupPageTransitions() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return; // Skip transitions for reduced motion users
+    }
     let overlay = document.getElementById("pageTransitionOverlay");
     if (!overlay) {
         overlay = document.createElement("div");
@@ -262,7 +283,10 @@ function initProjectCarousel() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 1000, once: true, offset: 100 });
+    AOS.init({
+        once: true,
+        duration: 800
+    });
 
     initMobileMenu("mobile-menu-button", "mobile-menu");
     initStickyHeader("navbar");
@@ -275,6 +299,10 @@ document.addEventListener("DOMContentLoaded", () => {
     initParallaxHero();
 
     window.addEventListener("hashchange", setActiveLink);
+
+    document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
 
     const overlay = document.querySelector(".page-transition-overlay");
     if (overlay) {

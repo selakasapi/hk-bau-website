@@ -18,7 +18,7 @@
     <meta property="og:title" content="Leistungen – HK Bau" />
     <meta property="og:description"
         content="HK Bau bietet umfassende Leistungen im Hoch- und Tiefbau: Erdbau, Rohbau, Ausbau u.v.m." />
-    <meta property="og:image" content="https://www.hk-bau.net/images/preview.jpg" />
+    <meta property="og:image" content="/images/logo.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.hk-bau.net/leistungen.html" />
 
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Leistungen – HK Bau" />
     <meta name="twitter:description"
         content="HK Bau bietet umfassende Leistungen im Hoch- und Tiefbau: Erdbau, Rohbau, Ausbau u.v.m." />
-    <meta name="twitter:image" content="https://www.hk-bau.net/images/preview.jpg" />
+    <meta name="twitter:image" content="/images/logo.png" />
 
     <title>Leistungen – HK Bau</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -35,7 +35,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/lightbox.css" />
  
     <!-- Cookie Consent by Osano -->
 <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
@@ -67,9 +66,10 @@
   gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
 </script>
 
+  <meta name="theme-color" content="#FFD600">
 </head>
 
-<body class="font-[Inter] text-gray-800">
+<body class="font-[Inter] text-gray-800 overflow-x-hidden">
 <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4 animate-fade-in">
     <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
@@ -360,7 +360,7 @@
         <i aria-hidden="true" class="fab fa-linkedin-in"></i>
       </a>
     </div>
-    <p>© 2025 HK Bau GmbH. Alle Rechte vorbehalten.</p>
+      <p>© <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
     <p class="text-xs">
       <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
     </p>
@@ -377,97 +377,6 @@
     
 
     <script src="../js/app.js" defer></script>
-    <script>
-        // AOS initialization
-        AOS.init({
-            once: true, // Animation happens only once when element enters viewport
-            mirror: false, // Elements do not animate out when scrolling past them
-            duration: 1000, // Duration of animation in ms
-            easing: 'ease-out-cubic', // Easing type for animations
-        });
-
-        // Intersection Observer for fade-in/slide-in animations
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target); // Animation plays only once
-                }
-            });
-        }, { threshold: 0.2 }); // Increased threshold slightly to trigger sooner
-
-        document.querySelectorAll(".fade-in, .slide-in").forEach(el => observer.observe(el));
-
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                // Check if the target element exists before scrolling
-                if (targetElement) {
-                    // Make sure 'navbar' is defined before trying to access its offsetHeight
-                    const navbar = document.getElementById('navbar');
-                    const offset = navbar ? navbar.offsetHeight : 0; // Fallback to 0 if navbar not found
-                    window.scrollTo({
-                        top: targetElement.offsetTop - (offset - 1), // Adjust for fixed navbar height
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        // Initial state for transparent navbar if at top
-        if (window.scrollY === 0) {
-            navbar.classList.add('bg-transparent');
-            // Assuming nav links default to white, no need to explicitly add text-white here
-        }
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 80) { // Adjust scroll threshold as needed
-                navbar.classList.add('bg-secondary-color', 'shadow-md');
-                navbar.classList.remove('bg-transparent');
-            } else {
-                navbar.classList.remove('bg-secondary-color', 'shadow-md');
-                navbar.classList.add('bg-transparent');
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
-                mobileMenuButton.setAttribute('aria-expanded', !expanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Scroll to top button functionality
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-        if (scrollToTopBtn) { // Always check if element exists before attaching listener
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) { // Show after scrolling 300px down, for example
-                    scrollToTopBtn.classList.remove('hidden');
-                } else {
-                    scrollToTopBtn.classList.add('hidden');
-                }
-            });
-
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    </script>
 </body>
 
 </html>
