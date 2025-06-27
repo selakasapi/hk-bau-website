@@ -10,12 +10,13 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 - Scroll-to-Top Button
 
 ## Projektstruktur
-/css/style.css  
-/js/app.js  
-/images/  
+/Website/ (enthält alle HTML-Dateien)
+/css/style.css
+/js/app.js
+/images/
 
 ## Lokale Entwicklung
-Öffnen Sie `index.html` im Browser oder hosten Sie das Projekt über Live Server (VSCode).
+Öffnen Sie `Website/index.html` im Browser (z.B. `file:///pfad/zum/projekt/Website/index.html`) oder hosten Sie das Projekt über Live Server (VSCode).
 
 ## Lizenz
 Veröffentlicht unter der [MIT-Lizenz](LICENSE).
