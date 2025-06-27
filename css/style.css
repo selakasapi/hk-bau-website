@@ -838,7 +838,7 @@ img[src*="placeholder"] {
     padding: 0;
     background-color: transparent;
     border-radius: 0;
-    box-shadow: none(0, 0, 0, 0.05);
+    box-shadow: none;
 }
 
 #contact h3 {
