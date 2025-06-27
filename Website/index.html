@@ -49,7 +49,7 @@
     window.cookieconsent.initialise({
       palette: {
         popup: { background: "#2b2b2b" },
-        button: { background: "#fbb03b" }
+        button: { background: "var(--primary-color)" }
       },
       theme: "classic",
       content: {
@@ -223,8 +223,8 @@
       </div>
 
       <!-- Navigation -->
-      <button class="services-carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-[#fbb03b] text-white px-3 py-2 rounded-full shadow" aria-label="Previous slide">‹</button>
-      <button class="services-carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-[#fbb03b] text-white px-3 py-2 rounded-full shadow" aria-label="Next slide">›</button>
+      <button class="services-carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-[var(--primary-color)] text-white px-3 py-2 rounded-full shadow" aria-label="Previous slide">‹</button>
+      <button class="services-carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-[var(--primary-color)] text-white px-3 py-2 rounded-full shadow" aria-label="Next slide">›</button>
 
       <!-- Dots -->
       <div class="services-carousel-indicators flex justify-center space-x-2 mt-6"></div>
@@ -453,7 +453,7 @@
                   Dieses Projekt zeigt unsere Expertise im Bereich Hochbau. Präzision, Qualität und termingerechte
                   Ausführung standen im Mittelpunkt.
                 </p>
-                <a href="#" class="text-[#fbb03b] hover:underline font-semibold">Mehr erfahren →</a>
+                <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
               </div>
             </div>
 
@@ -468,7 +468,7 @@
                   Im Bereich Tiefbau wurde mit innovativen Verfahren gearbeitet, um langlebige und nachhaltige
                   Infrastrukturen zu schaffen.
                 </p>
-                <a href="#" class="text-[#fbb03b] hover:underline font-semibold">Mehr erfahren →</a>
+                <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
               </div>
             </div>
 
@@ -483,19 +483,19 @@
                   Ein anspruchsvolles Bauvorhaben mit Fokus auf Nachhaltigkeit und Energieeffizienz – von der Planung
                   bis zur Übergabe.
                 </p>
-                <a href="#" class="text-[#fbb03b] hover:underline font-semibold">Mehr erfahren →</a>
+                <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
               </div>
             </div>
           </div>
 
           <!-- Arrows -->
           <button
-            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#fbb03b] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-prev-btn z-10"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-prev-btn z-10"
             aria-label="Zurück">
             ‹
           </button>
           <button
-            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#fbb03b] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-next-btn z-10"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-next-btn z-10"
             aria-label="Weiter">
             ›
           </button>
@@ -512,7 +512,7 @@
         <!-- CTA -->
         <div class="mt-12 text-center">
           <a href="referenzen.html"
-            class="bg-[#fbb03b] text-white py-3 px-6 rounded-xl font-semibold hover:brightness-110 transition">
+            class="bg-[var(--primary-color)] text-white py-3 px-6 rounded-xl font-semibold hover:brightness-110 transition">
             Alle Projekte ansehen
           </a>
         </div>
@@ -605,7 +605,7 @@
         wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 
         document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-          dot.classList.toggle('bg-[#fbb03b]', i === currentIndex);
+          dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
           dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
       };

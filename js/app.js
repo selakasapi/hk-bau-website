@@ -218,7 +218,7 @@ function initProjectCarousel() {
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
-        dot.className = 'carousel-indicator-btn w-4 h-4 rounded-full bg-gray-300 hover:bg-[#fbb03b] transition-all duration-300';
+        dot.className = 'carousel-indicator-btn w-4 h-4 rounded-full bg-gray-300 hover:bg-[var(--primary-color)] transition-all duration-300';
         dot.setAttribute('aria-label', `Projekt ${i + 1}`);
         dot.addEventListener('click', () => {
             currentIndex = i;
@@ -233,7 +233,7 @@ function initProjectCarousel() {
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-[#fbb03b]', i === currentIndex);
+            dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
     }
@@ -319,7 +319,7 @@ function initServicesCarousel() {
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-[#fbb03b]', i === currentIndex);
+            dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
     }
@@ -447,9 +447,9 @@ function initProjectFilters() {
 
       // Update active button styling
       filterButtons.forEach(btn =>
-        btn.classList.remove("bg-[#fbb03b]", "text-white", "ring", "ring-offset-2", "ring-[#fbb03b]")
+        btn.classList.remove("bg-[var(--primary-color)]", "text-white", "ring", "ring-offset-2", "ring-[var(--primary-color)]")
       );
-      button.classList.add("bg-[#fbb03b]", "text-white", "ring", "ring-offset-2", "ring-[#fbb03b]");
+      button.classList.add("bg-[var(--primary-color)]", "text-white", "ring", "ring-offset-2", "ring-[var(--primary-color)]");
     });
 
     // Optional: keyboard accessibility
