@@ -786,6 +786,12 @@ img[src*="placeholder"] {
     /* Use your primary color */
 }
 
+.services-carousel .carousel-indicators {
+    position: static;
+    margin-top: 1.5rem;
+    background-color: transparent;
+}
+
 
 .carousel-indicator-btn:hover {
     background-color: #aaa;
