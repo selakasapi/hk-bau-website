@@ -282,105 +282,68 @@ function initProjectCarousel() {
 }
 
 // ========== Services Carousel ============
+
 function initServicesCarousel() {
-    const carousel = document.querySelector('.services-carousel');
-    if (!carousel) return;
+    const carouselWrapper = document.querySelector('.services-carousel .carousel-wrapper');
+    const slides = document.querySelectorAll('.services-carousel .carousel-slide');
+    const prevBtn = document.querySelector('.services-carousel .carousel-prev-btn');
+    const nextBtn = document.querySelector('.services-carousel .carousel-next-btn');
+    const indicators = document.querySelector('.services-carousel .carousel-indicators');
 
-    const wrapper = carousel.querySelector('.carousel-wrapper');
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const prevBtn = carousel.querySelector('.carousel-prev-btn');
-    const nextBtn = carousel.querySelector('.carousel-next-btn');
-    const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+    if (!carouselWrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicators) return;
 
-    if (!wrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
-
+    const slidesPerView = 3;
+    const totalSlides = slides.length;
+    const totalGroups = Math.ceil(totalSlides / slidesPerView);
     let currentIndex = 0;
-    let cardsPerView = getCardsPerView();
-    let autoSlideInterval;
 
-    function getCardsPerView() {
-        const width = window.innerWidth;
-        if (width >= 1024) return 3;
-        if (width >= 768) return 2;
-        return 1;
-    }
-
-    function updateIndicators() {
-        const totalPages = Math.ceil(slides.length / cardsPerView);
-        indicatorsContainer.innerHTML = '';
-        for (let i = 0; i < totalPages; i++) {
-            const dot = document.createElement('button');
-            dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 transition-all duration-300';
-            dot.addEventListener('click', () => {
-                currentIndex = i;
-                updateCarousel();
-                resetAutoSlide();
-            });
-            indicatorsContainer.appendChild(dot);
+    function updateDots() {
+        indicators.innerHTML = '';
+        for (let i = 0; i < totalGroups; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot', 'w-3', 'h-3', 'rounded-full', 'bg-gray-300', 'cursor-pointer', 'mx-1');
+            if (i === currentIndex) dot.classList.replace('bg-gray-300', 'bg-yellow-400');
+            indicators.appendChild(dot);
         }
     }
 
     function updateCarousel() {
-        const offset = currentIndex * cardsPerView * slides[0].offsetWidth;
-        wrapper.style.transform = `translateX(-${offset}px)`;
-
-        const dots = indicatorsContainer.querySelectorAll('.carousel-indicator-btn');
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
-            dot.classList.toggle('bg-gray-300', i !== currentIndex);
-        });
+        const offset = currentIndex * (100 / slidesPerView);
+        carouselWrapper.style.transform = `translateX(-${offset}%)`;
+        updateDots();
     }
 
-    function nextSlide() {
-        const totalPages = Math.ceil(slides.length / cardsPerView);
-        currentIndex = (currentIndex + 1) % totalPages;
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalGroups) % totalGroups;
         updateCarousel();
-    }
-
-    function prevSlide() {
-        const totalPages = Math.ceil(slides.length / cardsPerView);
-        currentIndex = (currentIndex - 1 + totalPages) % totalPages;
-        updateCarousel();
-    }
-
-    function startAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextSlide, 7000);
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        startAutoSlide();
-    }
-
-    let touchStartX = 0;
-    wrapper.addEventListener('touchstart', e => (touchStartX = e.touches[0].clientX));
-    wrapper.addEventListener('touchend', e => {
-        const deltaX = e.changedTouches[0].clientX - touchStartX;
-        if (deltaX < -50) nextSlide();
-        if (deltaX > 50) prevSlide();
-        resetAutoSlide();
     });
 
     nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoSlide();
-    });
-
-    window.addEventListener('resize', () => {
-        cardsPerView = getCardsPerView();
-        updateIndicators();
+        currentIndex = (currentIndex + 1) % totalGroups;
         updateCarousel();
     });
 
-    updateIndicators();
+    // \uD83D\uDFE1 OPTIONAL: Autoplay
+    // setInterval(() => {
+    //     currentIndex = (currentIndex + 1) % totalGroups;
+    //     updateCarousel();
+    // }, 6000); // Change time (ms) as needed
+
+    let startX = 0;
+    carouselWrapper.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carouselWrapper.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+            nextBtn.click();
+        } else if (endX - startX > 50) {
+            prevBtn.click();
+        }
+    });
+
     updateCarousel();
-    startAutoSlide();
 }
 
 
