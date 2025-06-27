@@ -228,7 +228,7 @@ function initProjectCarousel() {
         indicatorsContainer.appendChild(dot);
     });
 
-    const indicators = document.querySelectorAll('.carousel-indicator-btn');
+    const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator-btn');
 
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
