@@ -288,29 +288,60 @@ function initServicesCarousel() {
     const slides = document.querySelectorAll('.services-carousel .carousel-slide');
     const prevBtn = document.querySelector('.services-carousel .carousel-prev-btn');
     const nextBtn = document.querySelector('.services-carousel .carousel-next-btn');
-    const indicators = document.querySelector('.services-carousel .carousel-indicators');
+    const indicatorsContainer = document.querySelector('.services-carousel .carousel-indicators');
 
-    if (!carouselWrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicators) return;
+    if (!carouselWrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
 
-    const slidesPerView = 3;
-    const totalSlides = slides.length;
-    const totalGroups = Math.ceil(totalSlides / slidesPerView);
+    function getCardsPerView() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
+
+    let cardsPerView = getCardsPerView();
     let currentIndex = 0;
+    let totalGroups = Math.ceil(slides.length / cardsPerView);
+    let indicators = [];
 
-    function updateDots() {
-        indicators.innerHTML = '';
+    function createIndicators() {
+        indicatorsContainer.innerHTML = '';
         for (let i = 0; i < totalGroups; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('dot', 'w-3', 'h-3', 'rounded-full', 'bg-gray-300', 'cursor-pointer', 'mx-1');
-            if (i === currentIndex) dot.classList.replace('bg-gray-300', 'bg-yellow-400');
-            indicators.appendChild(dot);
+            const dot = document.createElement('button');
+            dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 mx-1';
+            dot.setAttribute('aria-label', `Gruppe ${i + 1}`);
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel();
+            });
+            indicatorsContainer.appendChild(dot);
         }
+        indicators = indicatorsContainer.querySelectorAll('.carousel-indicator-btn');
+    }
+
+    function updateIndicators() {
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('bg-yellow-400', i === currentIndex);
+            dot.classList.toggle('bg-gray-300', i !== currentIndex);
+        });
     }
 
     function updateCarousel() {
-        const offset = currentIndex * (100 / slidesPerView);
-        carouselWrapper.style.transform = `translateX(-${offset}%)`;
-        updateDots();
+        const offset = currentIndex * cardsPerView * slides[0].offsetWidth;
+        carouselWrapper.style.transform = `translateX(-${offset}px)`;
+        updateIndicators();
+    }
+
+    function handleResize() {
+        const newCardsPerView = getCardsPerView();
+        if (newCardsPerView !== cardsPerView) {
+            cardsPerView = newCardsPerView;
+            totalGroups = Math.ceil(slides.length / cardsPerView);
+            createIndicators();
+            currentIndex = Math.min(currentIndex, totalGroups - 1);
+            updateCarousel();
+        } else {
+            updateCarousel();
+        }
     }
 
     prevBtn.addEventListener('click', () => {
@@ -343,7 +374,9 @@ function initServicesCarousel() {
         }
     });
 
+    createIndicators();
     updateCarousel();
+    window.addEventListener('resize', handleResize);
 }
 
 
