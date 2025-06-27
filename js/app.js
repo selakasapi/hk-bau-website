@@ -286,22 +286,21 @@ function initServicesCarousel() {
     const carousel = document.querySelector('.services-carousel');
     if (!carousel) return;
 
-    const wrapper = carousel.querySelector('.services-carousel-wrapper');
-    const slides = carousel.querySelectorAll('.services-carousel-slide');
-    const prevBtn = carousel.querySelector('.services-carousel-prev');
-    const nextBtn = carousel.querySelector('.services-carousel-next');
-    const indicatorsContainer = carousel.querySelector('.services-carousel-indicators');
+    const wrapper = carousel.querySelector('.carousel-wrapper');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev-btn');
+    const nextBtn = carousel.querySelector('.carousel-next-btn');
+    const indicatorsContainer = carousel.querySelector('.carousel-indicators');
 
     if (!wrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
 
     let currentIndex = 0;
-    let slideWidth = slides[0].offsetWidth;
     let autoSlideInterval;
 
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
-        dot.className = 'services-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300';
+        dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 transition-all duration-300';
         dot.addEventListener('click', () => {
             currentIndex = i;
             updateCarousel();
@@ -310,14 +309,10 @@ function initServicesCarousel() {
         indicatorsContainer.appendChild(dot);
     });
 
-    const indicators = carousel.querySelectorAll('.services-dot');
-
-    function updateSlideWidth() {
-        slideWidth = slides[0].offsetWidth;
-    }
+    const indicators = carousel.querySelectorAll('.carousel-indicator-btn');
 
     function updateCarousel() {
-        wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((dot, i) => {
             dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
@@ -363,12 +358,8 @@ function initServicesCarousel() {
         resetAutoSlide();
     });
 
-    window.addEventListener('resize', () => {
-        updateSlideWidth();
-        updateCarousel();
-    });
+    window.addEventListener('resize', updateCarousel);
 
-    updateSlideWidth();
     updateCarousel();
     startAutoSlide();
 }
