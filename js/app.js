@@ -163,15 +163,11 @@ function setupPageTransitions() {
         const linkUrl = new URL(link.href);
         const isSameOrigin = linkUrl.origin === currentUrl.origin;
         const isSamePage = linkUrl.pathname === currentUrl.pathname;
-        const isHomePage = linkUrl.pathname === "/" || linkUrl.pathname.endsWith("/index.html");
 
         if (isSameOrigin && !isSamePage) {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
-                if (isHomePage) {
-                    window.location.href = linkUrl.href;
-                    return;
-                }
+                // Allow transition animation for all pages including the homepage
 
                 Object.assign(overlay.style, {
                     opacity: "1",
