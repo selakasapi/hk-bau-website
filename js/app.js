@@ -295,43 +295,57 @@ function initServicesCarousel() {
     if (!wrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
 
     let currentIndex = 0;
+    let cardsPerView = getCardsPerView();
     let autoSlideInterval;
 
-    indicatorsContainer.innerHTML = '';
-    slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 transition-all duration-300';
-        dot.addEventListener('click', () => {
-            currentIndex = i;
-            updateCarousel();
-            resetAutoSlide();
-        });
-        indicatorsContainer.appendChild(dot);
-    });
+    function getCardsPerView() {
+        const width = window.innerWidth;
+        if (width >= 1024) return 3;
+        if (width >= 768) return 2;
+        return 1;
+    }
 
-    const indicators = carousel.querySelectorAll('.carousel-indicator-btn');
+    function updateIndicators() {
+        const totalPages = Math.ceil(slides.length / cardsPerView);
+        indicatorsContainer.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 transition-all duration-300';
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel();
+                resetAutoSlide();
+            });
+            indicatorsContainer.appendChild(dot);
+        }
+    }
 
     function updateCarousel() {
-        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-        indicators.forEach((dot, i) => {
+        const offset = currentIndex * cardsPerView * slides[0].offsetWidth;
+        wrapper.style.transform = `translateX(-${offset}px)`;
+
+        const dots = indicatorsContainer.querySelectorAll('.carousel-indicator-btn');
+        dots.forEach((dot, i) => {
             dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
+        const totalPages = Math.ceil(slides.length / cardsPerView);
+        currentIndex = (currentIndex + 1) % totalPages;
         updateCarousel();
     }
 
     function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        const totalPages = Math.ceil(slides.length / cardsPerView);
+        currentIndex = (currentIndex - 1 + totalPages) % totalPages;
         updateCarousel();
     }
 
     function startAutoSlide() {
         clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextSlide, 6000);
+        autoSlideInterval = setInterval(nextSlide, 7000);
     }
 
     function resetAutoSlide() {
@@ -348,6 +362,98 @@ function initServicesCarousel() {
         resetAutoSlide();
     });
 
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    window.addEventListener('resize', () => {
+        cardsPerView = getCardsPerView();
+        updateIndicators();
+        updateCarousel();
+    });
+
+    updateIndicators();
+    updateCarousel();
+    startAutoSlide();
+}
+
+
+function initWirSchaffenCarousel() {
+    const carousel = document.querySelector('.wir-schaffen-carousel');
+    if (!carousel) return;
+
+    const wrapper = carousel.querySelector('.carousel-wrapper');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev-btn');
+    const nextBtn = carousel.querySelector('.carousel-next-btn');
+    const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+
+    if (!wrapper || slides.length === 0 || !prevBtn || !nextBtn || !indicatorsContainer) return;
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    // Create indicators
+    indicatorsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-indicator-btn w-2.5 h-2.5 rounded-full bg-gray-300';
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+            resetAutoSlide();
+        });
+        indicatorsContainer.appendChild(dot);
+    });
+
+    const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator-btn');
+
+    function updateCarousel() {
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('bg-yellow-400', i === currentIndex);
+            dot.classList.toggle('bg-gray-300', i !== currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Swipe support
+    let touchStartX = 0;
+    wrapper.addEventListener('touchstart', e => (touchStartX = e.touches[0].clientX));
+    wrapper.addEventListener('touchend', e => {
+        const deltaX = e.changedTouches[0].clientX - touchStartX;
+        if (deltaX < -50) nextSlide();
+        if (deltaX > 50) prevSlide();
+        resetAutoSlide();
+    });
+
+    // Button handlers
     nextBtn.addEventListener('click', () => {
         nextSlide();
         resetAutoSlide();
@@ -381,6 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProjectCarousel();
     initServicesCarousel();
     initParallaxHero();
+       initWirSchaffenCarousel();
 
     window.addEventListener("hashchange", setActiveLink);
 

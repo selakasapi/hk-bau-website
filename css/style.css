@@ -95,6 +95,13 @@ body {
 
 
 
+.dot {
+  transition: background-color 0.3s;
+}
+.dot.bg-yellow-400 {
+  background-color: #fbbf24 !important; /* Tailwind yellow-400 */
+}
+
 /* Navigation Header */
 header#navbar {
     position: fixed;
