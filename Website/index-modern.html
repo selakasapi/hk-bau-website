@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="HK Bau" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="HK Bau – Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. Erdbau, Rohbau, Ausbau & mehr." />
+  <meta name="keywords" content="Bauunternehmen Stuttgart, Rohbau, Ausbau, HK Bau, Erdbau, Kanalbau, Sanierung, Bauprojekte, Sindelfingen" />
+  <meta name="author" content="HK Bau GmbH" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.hk-bau.net/index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HK Bau – Hoch- und Tiefbau aus einer Hand" />
+  <meta property="og:description" content="Ihr Bauunternehmen für Stuttgart & Region. Rohbau, Sanierung, Ausbau." />
+  <meta property="og:image" content="/images/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.hk-bau.net/index.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HK Bau – Hoch- und Tiefbau aus einer Hand" />
+  <meta name="twitter:description" content="Ihr Bauunternehmen für Stuttgart & Region. Rohbau, Sanierung, Ausbau." />
+  <meta name="twitter:image" content="/images/logo.png" />
+
+  <title>HK Bau – Hoch- und Tiefbau aus einer Hand</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/modern-style.css" />
+  
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
+  </script>
+
+  <meta name="theme-color" content="#f59e0b">
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollProgress"></div>
+
+  <!-- Modern Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <img src="../images/logo.png" alt="HK Bau Logo" class="w-8 h-8 rounded-lg" />
+          </div>
+          <span class="text-xl font-bold text-neutral-800">HK Bau</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="index.html" class="nav-link active">Startseite</a>
+          <a href="leistungen.html" class="nav-link">Leistungen</a>
+          <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="wissen.html" class="nav-link">Wissen</a>
+          <a href="karriere.html" class="nav-link">Karriere</a>
+          <a href="kontakt.html" class="btn btn-primary">Kontakt</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-neutral-200 py-4">
+        <div class="flex flex-col space-y-2">
+          <a href="index.html" class="nav-link">Startseite</a>
+          <a href="leistungen.html" class="nav-link">Leistungen</a>
+          <a href="referenzen.html" class="nav-link">Referenzen</a>
+          <a href="wissen.html" class="nav-link">Wissen</a>
+          <a href="karriere.html" class="nav-link">Karriere</a>
+          <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Modern Hero Section -->
+    <section class="hero">
+      <div class="absolute inset-0 z-0">
+        <img src="../images/pexels-sevenstormphotography-439416.jpg" 
+             alt="Bauprojekt" 
+             class="w-full h-full object-cover opacity-30" />
+        <div class="absolute inset-0 bg-gradient-to-br from-neutral-900/80 via-neutral-800/60 to-neutral-900/80"></div>
+      </div>
+      
+      <div class="hero-content animate-fade-in-up">
+        <p class="text-amber-400 font-semibold text-lg mb-4 tracking-wide">Ihr zuverlässiger Partner im Bauwesen</p>
+        <h1 class="hero-title text-balance">
+          Wo Vision auf Fundament trifft
+        </h1>
+        <p class="hero-subtitle text-balance">
+          Seit über 30 Jahren realisieren wir Bauprojekte mit höchster Präzision und Qualität in Stuttgart und Umgebung
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="leistungen.html" class="btn btn-primary text-lg px-8 py-4">
+            <i class="fas fa-tools"></i>
+            Unsere Leistungen
+          </a>
+          <a href="kontakt.html" class="btn btn-secondary text-lg px-8 py-4">
+            <i class="fas fa-phone"></i>
+            Jetzt kontaktieren
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Services Section -->
+    <section class="section bg-gradient-to-b from-neutral-50 to-white">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-display-md gradient-text mb-6">Wir schaffen</h2>
+          <p class="text-body-lg text-neutral-600 max-w-2xl mx-auto">
+            Von der ersten Idee bis zur Schlüsselübergabe – wir begleiten Sie durch alle Phasen Ihres Bauprojekts
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Wohnungsbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Wohnanlagen, Ein- & Mehrfamilienhäuser mit modernsten Standards und nachhaltigen Materialien
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Gewerblicher Hochbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Bürogebäude, Einkaufshäuser und Industriebauten für die Zukunft des Arbeitens
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Öffentlicher Hochbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Rathäuser, Gesundheitszentren und Schulgebäude für die Gemeinschaft
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-warehouse"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Hallenbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Produktionshallen, Lagerhallen und Parkhäuser mit optimaler Funktionalität
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-cubes"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Modul- & Fertigteilbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Pflegewohnheime, Studentenwohnheime und Appartements in modularer Bauweise
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="service-card group">
+            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-heading-sm mb-3">Sanierung & Umbau</h3>
+            <p class="text-body-md text-neutral-600 mb-4">
+              Sanierungs- & Umbaumaßnahmen sowie fachgerechte Abrissarbeiten
+            </p>
+            <a href="leistungen.html" class="btn btn-ghost">
+              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Strategy Section -->
+    <section class="section bg-gradient-to-br from-neutral-800 to-neutral-900 text-white">
+      <div class="container">
+        <div class="grid grid-2 items-center gap-16">
+          <div class="animate-fade-in-up">
+            <h2 class="text-display-sm mb-6">
+              Unsere <span class="text-amber-400">Strategie</span>
+            </h2>
+            <p class="text-body-lg mb-8 opacity-90">
+              Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen geprägt. 
+              Wir optimieren den Materialeinsatz, indem wir jeden Baustoff dort einsetzen, wo er seine besten Eigenschaften entfaltet.
+            </p>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-cube text-amber-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-heading-sm mb-2">Beton</h3>
+                  <p class="text-neutral-300">Für maximale Stabilität und Langlebigkeit</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-industry text-amber-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-heading-sm mb-2">Stahl</h3>
+                  <p class="text-neutral-300">Für tragende Konstruktionen und Flexibilität</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-tree text-amber-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-heading-sm mb-2">Holz</h3>
+                  <p class="text-neutral-300">Für nachhaltiges und klimafreundliches Bauen</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-th-large text-amber-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-heading-sm mb-2">Mauerwerk</h3>
+                  <p class="text-neutral-300">Für optimale Wärmedämmung und Raumklima</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl transform rotate-3"></div>
+            <img src="../images/pexels-yury-kim-181374-585418.jpg" 
+                 alt="HK Bau Team" 
+                 class="relative rounded-3xl shadow-2xl w-full h-96 object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Why Choose Us Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-display-md mb-6">Warum HK Bau?</h2>
+          <p class="text-body-lg text-neutral-600 max-w-2xl mx-auto">
+            Über drei Jahrzehnte Erfahrung, modernste Technik und ein Team von Experten machen uns zu Ihrem idealen Baupartner
+          </p>
+        </div>
+
+        <div class="grid grid-3 gap-8">
+          <div class="text-center group">
+            <div class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-award text-3xl text-amber-600"></i>
+            </div>
+            <h3 class="text-heading-sm mb-4">30+ Jahre Erfahrung</h3>
+            <p class="text-neutral-600">
+              Drei Jahrzehnte Expertise im Baugewerbe mit hunderten erfolgreich abgeschlossenen Projekten
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-handshake text-3xl text-blue-600"></i>
+            </div>
+            <h3 class="text-heading-sm mb-4">Zuverlässigkeit & Präzision</h3>
+            <p class="text-neutral-600">
+              Termingerechte Ausführung und höchste Qualitätsstandards bei jedem einzelnen Projekt
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-users text-3xl text-green-600"></i>
+            </div>
+            <h3 class="text-heading-sm mb-4">Individuelle Beratung</h3>
+            <p class="text-neutral-600">
+              Persönliche Betreuung vom ersten Gespräch bis zur finalen Übergabe Ihres Projekts
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern CTA Section -->
+    <section class="section bg-gradient-to-br from-amber-500 to-amber-600 text-white">
+      <div class="container text-center">
+        <h2 class="text-display-md mb-6">Bereit für Ihr nächstes Projekt?</h2>
+        <p class="text-body-lg mb-8 opacity-90 max-w-2xl mx-auto">
+          Lassen Sie uns gemeinsam Ihre Vision verwirklichen. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="kontakt.html" class="btn bg-white text-amber-600 hover:bg-neutral-50 text-lg px-8 py-4">
+            <i class="fas fa-phone"></i>
+            Jetzt kontaktieren
+          </a>
+          <a href="referenzen.html" class="btn btn-ghost border-white text-white hover:bg-white/10 text-lg px-8 py-4">
+            <i class="fas fa-eye"></i>
+            Projekte ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Footer -->
+  <footer class="bg-neutral-900 text-white">
+    <div class="container py-16">
+      <div class="grid grid-4 gap-8 mb-12">
+        <!-- Company Info -->
+        <div class="col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
+              <img src="../images/logo.png" alt="HK Bau Logo" class="w-8 h-8 rounded-lg" />
+            </div>
+            <span class="text-xl font-bold">HK Bau</span>
+          </div>
+          <p class="text-neutral-400 mb-6 max-w-md">
+            Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. 
+            Seit über 30 Jahren bauen wir Ihre Träume.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" 
+               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/hk.bau/" 
+               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" 
+               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-neutral-400 hover:text-white transition-colors">Startseite</a></li>
+            <li><a href="leistungen.html" class="text-neutral-400 hover:text-white transition-colors">Leistungen</a></li>
+            <li><a href="referenzen.html" class="text-neutral-400 hover:text-white transition-colors">Referenzen</a></li>
+            <li><a href="wissen.html" class="text-neutral-400 hover:text-white transition-colors">Wissen</a></li>
+            <li><a href="karriere.html" class="text-neutral-400 hover:text-white transition-colors">Karriere</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+          <div class="space-y-3 text-neutral-400">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt mt-1 text-amber-400"></i>
+              <div>
+                <p>Esslingerstr. 91</p>
+                <p>70734 Fellbach</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone text-amber-400"></i>
+              <a href="tel:+497119065270" class="hover:text-white transition-colors">0711 90 65 27 0</a>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-amber-400"></i>
+              <a href="mailto:info@hk-bau.net" class="hover:text-white transition-colors">info@hk-bau.net</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-neutral-400 text-sm">
+          © <span class="current-year">2025</span> HK Bau GmbH. Alle Rechte vorbehalten.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="impressum.html" class="text-neutral-400 hover:text-white text-sm transition-colors">Impressum</a>
+          <a href="datenschutzerklaerung.html" class="text-neutral-400 hover:text-white text-sm transition-colors">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" 
+          class="fixed bottom-6 right-6 w-12 h-12 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 opacity-0 invisible">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+    // Modern JavaScript for enhanced functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Scroll progress indicator
+      const scrollProgress = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function() {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+      });
+
+      // Scroll to top button
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+          scrollToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Update current year
+      document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.service-card, .card').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>
