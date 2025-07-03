@@ -305,7 +305,7 @@ function initServicesCarousel() {
 
     function updateIndicators() {
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-yellow-400', i === currentIndex);
+            dot.classList.toggle('bg-primary-color', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
     }
@@ -399,7 +399,7 @@ function initWirSchaffenCarousel() {
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-yellow-400', i === currentIndex);
+            dot.classList.toggle('bg-primary-color', i === currentIndex);
             dot.classList.toggle('bg-gray-300', i !== currentIndex);
         });
     }
