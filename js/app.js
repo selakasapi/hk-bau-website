@@ -32,7 +32,7 @@ function initStickyHeader(navbarId) {
 
     const isImpressum = document.body.classList.contains("impressum-page");
     if (isImpressum) {
-        navbar.classList.add("bg-[#1f1f1f]");
+        navbar.style.backgroundColor = "var(--secondary-color)";
         return;
     }
 
