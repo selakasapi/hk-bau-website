@@ -105,8 +105,10 @@ body {
 .dot {
   transition: background-color 0.3s;
 }
+
 .dot.bg-primary-color {
   background-color: var(--primary-color) !important;
+
 }
 
 /* Navigation Header */
