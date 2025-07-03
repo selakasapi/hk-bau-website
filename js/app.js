@@ -186,17 +186,6 @@ function setupPageTransitions() {
     });
 }
 
-// ========== Hero Section Parallax Background ============
-function initParallaxHero() {
-    const bg = document.getElementById('parallax-bg');
-    if (!bg) return;
-
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        bg.style.transform = `translateY(${scrollY * 0.4}px)`;
-    });
-}
-
 // ========== Project Carousel (Autoplay, Swipe, Indicators) ============
 function initProjectCarousel() {
     const wrapper = document.querySelector('.project-carousel .carousel-wrapper');
@@ -478,7 +467,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setupPageTransitions();
     initProjectCarousel();
     initServicesCarousel();
-    initParallaxHero();
        initWirSchaffenCarousel();
 
     window.addEventListener("hashchange", setActiveLink);
