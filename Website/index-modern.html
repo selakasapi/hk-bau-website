@@ -4,18 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="HK Bau" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Recommended favicon links -->
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="HK Bau – Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. Erdbau, Rohbau, Ausbau & mehr." />
-  <meta name="keywords" content="Bauunternehmen Stuttgart, Rohbau, Ausbau, HK Bau, Erdbau, Kanalbau, Sanierung, Bauprojekte, Sindelfingen" />
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="HK Bau" />
+<link rel="manifest" href="/site.webmanifest" />
+
+  <meta name="description"
+    content="HK Bau – Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. Erdbau, Rohbau, Ausbau & mehr." />
+  <meta name="keywords"
+    content="Bauunternehmen Stuttgart, Rohbau, Ausbau, HK Bau, Erdbau, Kanalbau, Sanierung, Bauprojekte, Sindelfingen" />
   <meta name="author" content="HK Bau GmbH" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.hk-bau.net/index.html" />
@@ -34,500 +36,577 @@
   <meta name="twitter:image" content="/images/logo.png" />
 
   <title>HK Bau – Hoch- und Tiefbau aus einer Hand</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/modern-style.css" />
-  
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
-  </script>
+  <!-- Cookie Consent by Osano -->
+<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script defer>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#2b2b2b" },
+        button: { background: "var(--primary-color)" }
+      },
+      theme: "classic",
+      content: {
+        message: "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.",
+        dismiss: "Verstanden!",
+        link: "Mehr erfahren",
+        href: "datenschutzerklaerung.html"
+      }
+    });
+  });
+</script>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
+</script>
 
   <meta name="theme-color" content="#f59e0b">
 </head>
 
-<body>
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-indicator" id="scrollProgress"></div>
 
-  <!-- Modern Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center space-x-3 group">
-          <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-            <img src="../images/logo.png" alt="HK Bau Logo" class="w-8 h-8 rounded-lg" />
-          </div>
-          <span class="text-xl font-bold text-neutral-800">HK Bau</span>
+<body class="font-[Inter] overflow-x-hidden modern-site">
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="../js/app.js" defer></script>
+
+  <div class="page-transition-overlay flex items-center justify-center">
+    <div class="flex flex-col items-center space-y-4 animate-fade-in">
+      <div
+        class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+        <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" />
+      </div>
+      <span class="text-white text-sm tracking-wide">Lädt...</span>
+    </div>
+  </div>
+
+
+  <header class="fixed top-0 left-0 w-full z-50 transition duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="logo-container"> <a href="index.html" class="flex items-center relative z-20">
+          <img src="../images/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" loading="lazy" />
+          <span class="text-white font-bold ml-2">HK Bau</span>
         </a>
+      </div>
+      <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="wissen.html">Wissen</a>
+        <a href="karriere.html">Karriere</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        </svg>
+      </button>
+    </div>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-1">
-          <a href="index.html" class="nav-link active">Startseite</a>
-          <a href="leistungen.html" class="nav-link">Leistungen</a>
-          <a href="referenzen.html" class="nav-link">Referenzen</a>
-          <a href="wissen.html" class="nav-link">Wissen</a>
-          <a href="karriere.html" class="nav-link">Karriere</a>
-          <a href="kontakt.html" class="btn btn-primary">Kontakt</a>
+    <nav id="mobile-menu" aria-label="Mobile Navigation" class="md:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
+        <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
+        <a href="referenzen.html" class="block py-2 px-3 text-base font-medium">Referenzen</a>
+        <a href="wissen.html" class="block py-2 px-3 text-base font-medium">Wissen</a>
+        <a href="karriere.html" class="block py-2 px-3 text-base font-medium">Karriere</a>
+        <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="relative h-screen flex items-center justify-center parallax">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[var(--secondary-color)]/70 to-[var(--secondary-color)]/30 z-0">
+      </div>
+      <img src="../images/pexels-sevenstormphotography-439416.jpg" alt="Bauprojekt"
+        class="absolute inset-0 w-full h-full object-cover -z-10 zoom-parallax" loading="lazy" />
+      <div class="relative z-10 text-center px-6 max-w-2xl hero-content" data-aos="fade-down">
+        <p class="text-lg md:text-xl mb-6">Ihr zuverlässiger Partner im Bauwesen</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-10">Wo vision auf fundament trifft.</h1>
+      </div>
+    </section>    
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-10 relative inline-block">
+      Wir schaffen
+      <span class="block w-full h-1 bg-yellow-400 mx-auto mt-2 rounded-full"></span>
+    </h2>
+
+    <div class="relative services-carousel">
+      <div class="overflow-hidden">
+        <div class="carousel-wrapper flex transition-transform duration-700 ease-in-out">
+          <!-- Repeat these slides (7 total as needed) -->
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Wohnungsbau</h3>
+              <p class="text-sm text-gray-600">Wohnanlagen, Ein- & Mehrfamilienhäuser</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Gewerblicher Hochbau</h3>
+              <p class="text-sm text-gray-600">Bürogebäude, Einkaufshäuser, Industriebauten</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Öffentlicher Hochbau</h3>
+              <p class="text-sm text-gray-600">Rathäuser, Gesundheitszentren, Schulgebäude</p>
+            </div>
+          </div>
+
+          <!-- Add more blocks below (up to 7-8 total) -->
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Hallenbau</h3>
+              <p class="text-sm text-gray-600">Produktionshallen, Lagerhallen, Parkhäuser</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Modul- & Fertigteilbau</h3>
+              <p class="text-sm text-gray-600">Pflegewohnheime, Studentenwohnheime, Appartements</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Sanierung & Umbau</h3>
+              <p class="text-sm text-gray-600">Sanierungs- & Umbaumaßnahmen, Abrissarbeiten</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide w-full md:w-1/3 px-4 flex-shrink-0">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <div class="w-full h-48 bg-gray-200 rounded-lg mb-4"></div>
+              <h3 class="text-xl font-semibold mb-2">Schlüsselfertigbau</h3>
+              <p class="text-sm text-gray-600">Schlüsselfertiges Bauen im Wohnbau</p>
+            </div>
+          </div>
         </div>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
       </div>
 
-      <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-neutral-200 py-4">
-        <div class="flex flex-col space-y-2">
-          <a href="index.html" class="nav-link">Startseite</a>
-          <a href="leistungen.html" class="nav-link">Leistungen</a>
-          <a href="referenzen.html" class="nav-link">Referenzen</a>
-          <a href="wissen.html" class="nav-link">Wissen</a>
-          <a href="karriere.html" class="nav-link">Karriere</a>
-          <a href="kontakt.html" class="nav-link">Kontakt</a>
-        </div>
+      <!-- Navigation Buttons -->
+      <button class="carousel-prev-btn absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-yellow-400 text-white rounded-full w-10 h-10 shadow hover:bg-yellow-500 transition">‹</button>
+      <button class="carousel-next-btn absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-yellow-400 text-white rounded-full w-10 h-10 shadow hover:bg-yellow-500 transition">›</button>
+
+      <!-- Dots -->
+      <div class="carousel-indicators flex justify-center space-x-2 mt-6"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="strategie" class="py-28 bg-gradient-to-b from-gray-100 to-white" data-aos="fade-right">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4 tracking-tight" data-aos="zoom-in" data-aos-delay="100">
+      Unsere Strategie
+    </h2>
+    <p class="text-2xl font-medium text-gray-900 italic mb-6" data-aos="fade-up" data-aos-delay="200">Beton – Stahl – Holz – Mauerwerk</p>
+    <div class="mt-6 bg-white shadow-2xl rounded-3xl p-8 md:p-14 max-w-5xl mx-auto border-t-4 border-yellow-400 hover:shadow-yellow-300 transition-shadow duration-300">
+      <div class="space-y-8 text-gray-700 text-lg md:text-xl leading-relaxed text-justify">
+        <p class="transition duration-500 ease-in-out transform hover:scale-105 rounded-xl p-2" data-aos="fade-up" data-aos-delay="300">Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen und Bauarten geprägt.</p>
+        <p class="transition duration-500 ease-in-out transform hover:scale-105 rounded-xl p-2" data-aos="fade-up" data-aos-delay="400">Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren, indem die verschiedenen Baustoffe im Sinne ihrer besten Eignung für das Tragwerk eingesetzt werden.</p>
+        <p class="transition duration-500 ease-in-out transform hover:scale-105 rounded-xl p-2" data-aos="fade-up" data-aos-delay="500">In unserer modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen. In der Regel werden mehrere Baustoffe in einem Tragwerk eingesetzt, da sich der einzelne Baustoff für verschiedene Beanspruchungen in einem Tragwerk mehr oder weniger gut eignet.</p>
+        <p class="transition duration-500 ease-in-out transform hover:scale-105 rounded-xl p-2" data-aos="fade-up" data-aos-delay="600">Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung, um maßgeschneiderte Lösungen für Ihr Bauvorhaben zu entwickeln.</p>
+        <p class="transition duration-500 ease-in-out transform hover:scale-105 rounded-xl p-2" data-aos="fade-up" data-aos-delay="700">Wir legen großen Wert auf fachliche Kompetenz und arbeiten ausschließlich mit hochwertigen Materialien und Werkzeugen, um Ihnen eine langlebige und robuste Lösung zu garantieren.</p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <main>
-    <!-- Modern Hero Section -->
-    <section class="hero">
-      <div class="absolute inset-0 z-0">
-        <img src="../images/pexels-sevenstormphotography-439416.jpg" 
-             alt="Bauprojekt" 
-             class="w-full h-full object-cover opacity-30" />
-        <div class="absolute inset-0 bg-gradient-to-br from-neutral-900/80 via-neutral-800/60 to-neutral-900/80"></div>
+
+
+
+    <section
+      class="space-y-16 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
+
+      <!-- Headline and Description -->
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
+        <p class="text-lg text-gray-600">Entdecken Sie unser vielseitiges Bauangebot – von Erdbau bis Stahlbau –
+          präzise, zuverlässig und auf höchstem Niveau.</p>
       </div>
-      
-      <div class="hero-content animate-fade-in-up">
-        <p class="text-amber-400 font-semibold text-lg mb-4 tracking-wide">Ihr zuverlässiger Partner im Bauwesen</p>
-        <h1 class="hero-title text-balance">
-          Wo Vision auf Fundament trifft
-        </h1>
-        <p class="hero-subtitle text-balance">
-          Seit über 30 Jahren realisieren wir Bauprojekte mit höchster Präzision und Qualität in Stuttgart und Umgebung
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="leistungen.html" class="btn btn-primary text-lg px-8 py-4">
-            <i class="fas fa-tools"></i>
-            Unsere Leistungen
-          </a>
-          <a href="kontakt.html" class="btn btn-secondary text-lg px-8 py-4">
-            <i class="fas fa-phone"></i>
-            Jetzt kontaktieren
-          </a>
+
+      <!-- Icon Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
+
+        <a href="#erdbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Erdbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M3 10h18M3 14h18M5 6h14M7 18h10" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Erdbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Fundament für jedes Bauprojekt.</p>
+        </a>
+
+        <a href="#kanalbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Kanalbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M5 12h14M5 16h14M5 8h14" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Kanalbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Langlebige Infrastruktur sichern.</p>
+        </a>
+
+        <a href="#stahlbetonbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Stahlbetonbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M4 4h16v16H4z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbetonbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Robuste Konstruktionen.</p>
+        </a>
+
+        <a href="#mauerwerksbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Mauerwerksbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Mauerwerksbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Nachhaltige Gebäude präzise bauen.</p>
+        </a>
+
+        <a href="#holzbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Holzbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Holzbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Ökologisch und modern.</p>
+        </a>
+
+        <a href="#stahlbau-details"
+          class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          tabindex="0" aria-label="Mehr über Stahlbau erfahren">
+          <div
+            class="p-3 rounded-full bg-gradient-to-br from-white via-white to-yellow-50 shadow-md transition duration-300 group-hover:bg-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M6 3v18M18 3v18M3 6h18M3 18h18" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbau</h3>
+          <p class="text-sm text-gray-600 group-hover:text-white">Maßgeschneiderte Industrielösungen.</p>
+        </a>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Warum Uns Section -->
+    <section class="bg-[var(--secondary-color)] text-white py-24 px-4" data-aos="fade-up">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
+        <div class="md:pr-12" data-aos="fade-right" data-aos-delay="200">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Warum HK Bau?</h2>
+          <ul class="space-y-4 text-lg leading-relaxed">
+            <li><span class="text-[var(--primary-color)] font-semibold">30+ Jahre Erfahrung</span> im
+              Baugewerbe
+            </li>
+            <li><span class="font-semibold">Zuverlässigkeit & Präzision</span> bei jedem Projekt</li>
+            <li><span class="font-semibold">Individuelle Beratung</span> vom ersten Gespräch bis zur
+              Übergabe
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        <div class="md:pl-12" data-aos="fade-left" data-aos-delay="400">
+          <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="HK Bau Mitarbeiter mit Plan" loading="lazy"
+            class="rounded-xl shadow-xl" />
         </div>
       </div>
     </section>
 
-    <!-- Modern Services Section -->
-    <section class="section bg-gradient-to-b from-neutral-50 to-white">
-      <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="text-display-md gradient-text mb-6">Wir schaffen</h2>
-          <p class="text-body-lg text-neutral-600 max-w-2xl mx-auto">
-            Von der ersten Idee bis zur Schlüsselübergabe – wir begleiten Sie durch alle Phasen Ihres Bauprojekts
-          </p>
-        </div>
+    <!-- Kundenarten Section -->
+    <section id="message-to-clients" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12" data-aos="fade-up">
+          Für wen wir bauen
+        </h2>
 
-        <div class="service-grid">
-          <!-- Service Card 1 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-home"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Privatkunden Card -->
+          <div class="group flex flex-col bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-[var(--primary-color)] text-4xl mb-4" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-home" aria-hidden="true"></i>
             </div>
-            <h3 class="text-heading-sm mb-3">Wohnungsbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Wohnanlagen, Ein- & Mehrfamilienhäuser mit modernsten Standards und nachhaltigen Materialien
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            <h3 class="text-xl font-semibold mb-2">Privatkunden</h3>
+            <p class="text-gray-600 mb-6">Von der Planung bis zur Schlüsselübergabe begleiten wir Ihr persönliches Bauprojekt.</p>
+            <a href="leistungen/privatkunden.html" class="mt-auto inline-flex items-center text-[var(--primary-color)] font-semibold group hover:underline" aria-label="Mehr über Privatkunden erfahren">
+              Mehr erfahren
+              <span class="ml-1 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </a>
           </div>
 
-          <!-- Service Card 2 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-building"></i>
+          <!-- Architekten Card -->
+          <div class="group flex flex-col bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-[var(--primary-color)] text-4xl mb-4" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-drafting-compass" aria-hidden="true"></i>
             </div>
-            <h3 class="text-heading-sm mb-3">Gewerblicher Hochbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Bürogebäude, Einkaufshäuser und Industriebauten für die Zukunft des Arbeitens
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            <h3 class="text-xl font-semibold mb-2">Architekten</h3>
+            <p class="text-gray-600 mb-6">Gemeinsam realisieren wir anspruchsvolle Entwürfe und setzen auf Präzision.</p>
+            <a href="leistungen/architekten.html" class="mt-auto inline-flex items-center text-[var(--primary-color)] font-semibold group hover:underline" aria-label="Mehr über Architekten erfahren">
+              Mehr erfahren
+              <span class="ml-1 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </a>
           </div>
 
-          <!-- Service Card 3 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-university"></i>
+          <!-- Investoren Card -->
+          <div class="group flex flex-col bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-[var(--primary-color)] text-4xl mb-4" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
             </div>
-            <h3 class="text-heading-sm mb-3">Öffentlicher Hochbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Rathäuser, Gesundheitszentren und Schulgebäude für die Gemeinschaft
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
+            <h3 class="text-xl font-semibold mb-2">Investoren</h3>
+            <p class="text-gray-600 mb-6">Wir schaffen wertbeständige Bauten, die wirtschaftlich überzeugen.</p>
+            <a href="leistungen/investoren.html" class="mt-auto inline-flex items-center text-[var(--primary-color)] font-semibold group hover:underline" aria-label="Mehr über Investoren erfahren">
+              Mehr erfahren
+              <span class="ml-1 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </a>
-          </div>
-
-          <!-- Service Card 4 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-warehouse"></i>
-            </div>
-            <h3 class="text-heading-sm mb-3">Hallenbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Produktionshallen, Lagerhallen und Parkhäuser mit optimaler Funktionalität
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Service Card 5 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h3 class="text-heading-sm mb-3">Modul- & Fertigteilbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Pflegewohnheime, Studentenwohnheime und Appartements in modularer Bauweise
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Service Card 6 -->
-          <div class="service-card group">
-            <div class="service-icon group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-tools"></i>
-            </div>
-            <h3 class="text-heading-sm mb-3">Sanierung & Umbau</h3>
-            <p class="text-body-md text-neutral-600 mb-4">
-              Sanierungs- & Umbaumaßnahmen sowie fachgerechte Abrissarbeiten
-            </p>
-            <a href="leistungen.html" class="btn btn-ghost">
-              Mehr erfahren <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modern Strategy Section -->
-    <section class="section bg-gradient-to-br from-neutral-800 to-neutral-900 text-white">
-      <div class="container">
-        <div class="grid grid-2 items-center gap-16">
-          <div class="animate-fade-in-up">
-            <h2 class="text-display-sm mb-6">
-              Unsere <span class="text-amber-400">Strategie</span>
-            </h2>
-            <p class="text-body-lg mb-8 opacity-90">
-              Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen geprägt. 
-              Wir optimieren den Materialeinsatz, indem wir jeden Baustoff dort einsetzen, wo er seine besten Eigenschaften entfaltet.
-            </p>
-            
-            <div class="space-y-6">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-cube text-amber-400"></i>
-                </div>
-                <div>
-                  <h3 class="text-heading-sm mb-2">Beton</h3>
-                  <p class="text-neutral-300">Für maximale Stabilität und Langlebigkeit</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-industry text-amber-400"></i>
-                </div>
-                <div>
-                  <h3 class="text-heading-sm mb-2">Stahl</h3>
-                  <p class="text-neutral-300">Für tragende Konstruktionen und Flexibilität</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-tree text-amber-400"></i>
-                </div>
-                <div>
-                  <h3 class="text-heading-sm mb-2">Holz</h3>
-                  <p class="text-neutral-300">Für nachhaltiges und klimafreundliches Bauen</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-th-large text-amber-400"></i>
-                </div>
-                <div>
-                  <h3 class="text-heading-sm mb-2">Mauerwerk</h3>
-                  <p class="text-neutral-300">Für optimale Wärmedämmung und Raumklima</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl transform rotate-3"></div>
-            <img src="../images/pexels-yury-kim-181374-585418.jpg" 
-                 alt="HK Bau Team" 
-                 class="relative rounded-3xl shadow-2xl w-full h-96 object-cover" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Modern Why Choose Us Section -->
-    <section class="section">
-      <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="text-display-md mb-6">Warum HK Bau?</h2>
-          <p class="text-body-lg text-neutral-600 max-w-2xl mx-auto">
-            Über drei Jahrzehnte Erfahrung, modernste Technik und ein Team von Experten machen uns zu Ihrem idealen Baupartner
-          </p>
+
+    <section id="projects" class="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-secondary-color mb-12" data-aos="fade-down">
+          Unsere Projekte
+        </h2>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white project-carousel">
+          <div class="carousel-wrapper flex transition-transform duration-700 ease-in-out">
+
+            <!-- Slide 1 -->
+            <div
+              class="carousel-slide flex-shrink-0 w-full px-4 py-4 lg:py-6 flex flex-col lg:flex-row items-center gap-6">
+              <img src="../images/pexels-kawserhamid-176342.jpg" alt="Projekt 1" loading="lazy"
+                class="w-full lg:w-1/2 h-64 lg:h-80 object-cover rounded-lg shadow-md">
+              <div class="text-left w-full lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary-color mb-2">Projekt 1 Titel</h3>
+                <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                  Dieses Projekt zeigt unsere Expertise im Bereich Hochbau. Präzision, Qualität und termingerechte
+                  Ausführung standen im Mittelpunkt.
+                </p>
+                <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="carousel-slide flex-shrink-0 w-full px-4 py-4 lg:py-6 flex flex-col lg:flex-row items-center gap-6">
+              <img src="../images/pexels-sevenstormphotography-439416.jpg" alt="Projekt 2" loading="lazy"
+                class="w-full lg:w-1/2 h-64 lg:h-80 object-cover rounded-lg shadow-md">
+              <div class="text-left w-full lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary-color mb-2">Projekt 2 Titel</h3>
+                <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                  Im Bereich Tiefbau wurde mit innovativen Verfahren gearbeitet, um langlebige und nachhaltige
+                  Infrastrukturen zu schaffen.
+                </p>
+                <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="carousel-slide flex-shrink-0 w-full px-4 py-4 lg:py-6 flex flex-col lg:flex-row items-center gap-6">
+              <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="Projekt 3" loading="lazy"
+                class="w-full lg:w-1/2 h-64 lg:h-80 object-cover rounded-lg shadow-md">
+              <div class="text-left w-full lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary-color mb-2">Projekt 3 Titel</h3>
+                <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                  Ein anspruchsvolles Bauvorhaben mit Fokus auf Nachhaltigkeit und Energieeffizienz – von der Planung
+                  bis zur Übergabe.
+                </p>
+                <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline font-semibold">Mehr erfahren →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <button
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-prev-btn z-10"
+            aria-label="Zurück">
+            ‹
+          </button>
+          <button
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-next-btn z-10"
+            aria-label="Weiter">
+            ›
+          </button>
+
+          <!-- Dots -->
+          <div class="mt-8 flex justify-center space-x-3">
+
+            <div class="carousel-indicators relative flex space-x-2 mt-6"></div>
+
+
+          </div>
         </div>
 
-        <div class="grid grid-3 gap-8">
-          <div class="text-center group">
-            <div class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-award text-3xl text-amber-600"></i>
-            </div>
-            <h3 class="text-heading-sm mb-4">30+ Jahre Erfahrung</h3>
-            <p class="text-neutral-600">
-              Drei Jahrzehnte Expertise im Baugewerbe mit hunderten erfolgreich abgeschlossenen Projekten
-            </p>
-          </div>
-
-          <div class="text-center group">
-            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-handshake text-3xl text-blue-600"></i>
-            </div>
-            <h3 class="text-heading-sm mb-4">Zuverlässigkeit & Präzision</h3>
-            <p class="text-neutral-600">
-              Termingerechte Ausführung und höchste Qualitätsstandards bei jedem einzelnen Projekt
-            </p>
-          </div>
-
-          <div class="text-center group">
-            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-users text-3xl text-green-600"></i>
-            </div>
-            <h3 class="text-heading-sm mb-4">Individuelle Beratung</h3>
-            <p class="text-neutral-600">
-              Persönliche Betreuung vom ersten Gespräch bis zur finalen Übergabe Ihres Projekts
-            </p>
-          </div>
+        <!-- CTA -->
+        <div class="mt-12 text-center">
+          <a href="referenzen.html"
+            class="bg-[var(--primary-color)] text-white py-3 px-6 rounded-xl font-semibold hover:brightness-110 transition">
+            Alle Projekte ansehen
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Modern CTA Section -->
-    <section class="section bg-gradient-to-br from-amber-500 to-amber-600 text-white">
-      <div class="container text-center">
-        <h2 class="text-display-md mb-6">Bereit für Ihr nächstes Projekt?</h2>
-        <p class="text-body-lg mb-8 opacity-90 max-w-2xl mx-auto">
-          Lassen Sie uns gemeinsam Ihre Vision verwirklichen. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="kontakt.html" class="btn bg-white text-amber-600 hover:bg-neutral-50 text-lg px-8 py-4">
-            <i class="fas fa-phone"></i>
-            Jetzt kontaktieren
-          </a>
-          <a href="referenzen.html" class="btn btn-ghost border-white text-white hover:bg-white/10 text-lg px-8 py-4">
-            <i class="fas fa-eye"></i>
-            Projekte ansehen
-          </a>
+
+    <section id="contact" class="bg-light-gray-bg py-24" data-aos="fade-up">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="section-title text-center">Kontaktieren Sie uns</h2>
+        <div class="grid md:grid-cols-2 gap-12 mt-12">
+          <div class="space-y-10 text-[var(--secondary-color)]">
+            <div data-aos="fade-left" data-aos-delay="100">
+              <h3 class="text-xl font-semibold mb-2">Büro Fellbach</h3>
+              <p>Esslingerstr. 91<br />70734 Fellbach</p>
+              <p class="mt-1">Telefon: <a href="tel:+497119065270" class="text-[var(--primary-color)] hover:underline">0711 90 65 27 0</a></p>
+              <p>E-Mail: <a href="mailto:info@hk-bau.net" class="text-[var(--primary-color)] hover:underline">info@hk-bau.net</a></p>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="200">
+              <h3 class="text-xl font-semibold mb-2">Büro Magstadt</h3>
+              <p>Blumenstr. 33a<br />71106 Magstadt</p>
+              <p class="mt-1">Telefon: <a href="tel:+497119065270" class="text-[var(--primary-color)] hover:underline">0711 90 65 27 0</a></p>
+              <p>E-Mail: <a href="mailto:info@hk-bau.net" class="text-[var(--primary-color)] hover:underline">info@hk-bau.net</a></p>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="300">
+              <h3 class="text-xl font-semibold mb-2">Folgen Sie uns</h3>
+              <div class="flex space-x-4 text-[var(--primary-color)] text-2xl">
+                <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" aria-label="Facebook">
+                  <i aria-hidden="true" class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com/hk.bau/" target="_blank" aria-label="Instagram">
+                  <i aria-hidden="true" class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                  <i aria-hidden="true" class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <form id="contactForm" class="space-y-6 bg-white p-6 rounded-xl shadow-md" action="#" method="POST">
+            <input type="text" placeholder="Ihr Name" required class="w-full p-3 rounded-lg border">
+            <input type="email" placeholder="Ihre E-Mail-Adresse" required class="w-full p-3 rounded-lg border">
+            <textarea rows="5" placeholder="Ihre Nachricht" required class="w-full p-3 rounded-lg border"></textarea>
+            <button type="submit"
+              class="w-full bg-primary-color text-secondary-color font-semibold py-3 px-6 rounded-lg transition">Nachricht
+              senden</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Modern Footer -->
-  <footer class="bg-neutral-900 text-white">
-    <div class="container py-16">
-      <div class="grid grid-4 gap-8 mb-12">
-        <!-- Company Info -->
-        <div class="col-span-2">
-          <div class="flex items-center space-x-3 mb-6">
-            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-              <img src="../images/logo.png" alt="HK Bau Logo" class="w-8 h-8 rounded-lg" />
-            </div>
-            <span class="text-xl font-bold">HK Bau</span>
-          </div>
-          <p class="text-neutral-400 mb-6 max-w-md">
-            Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. 
-            Seit über 30 Jahren bauen wir Ihre Träume.
-          </p>
-          <div class="flex space-x-4">
-            <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" 
-               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/hk.bau/" 
-               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" 
-               class="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Navigation</h3>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-neutral-400 hover:text-white transition-colors">Startseite</a></li>
-            <li><a href="leistungen.html" class="text-neutral-400 hover:text-white transition-colors">Leistungen</a></li>
-            <li><a href="referenzen.html" class="text-neutral-400 hover:text-white transition-colors">Referenzen</a></li>
-            <li><a href="wissen.html" class="text-neutral-400 hover:text-white transition-colors">Wissen</a></li>
-            <li><a href="karriere.html" class="text-neutral-400 hover:text-white transition-colors">Karriere</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
-          <div class="space-y-3 text-neutral-400">
-            <div class="flex items-start space-x-3">
-              <i class="fas fa-map-marker-alt mt-1 text-amber-400"></i>
-              <div>
-                <p>Esslingerstr. 91</p>
-                <p>70734 Fellbach</p>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-phone text-amber-400"></i>
-              <a href="tel:+497119065270" class="hover:text-white transition-colors">0711 90 65 27 0</a>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-envelope text-amber-400"></i>
-              <a href="mailto:info@hk-bau.net" class="hover:text-white transition-colors">info@hk-bau.net</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-neutral-400 text-sm">
-          © <span class="current-year">2025</span> HK Bau GmbH. Alle Rechte vorbehalten.
-        </p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="impressum.html" class="text-neutral-400 hover:text-white text-sm transition-colors">Impressum</a>
-          <a href="datenschutzerklaerung.html" class="text-neutral-400 hover:text-white text-sm transition-colors">Datenschutz</a>
-        </div>
-      </div>
+ <!-- Footer -->
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+  <div class="space-y-4">
+    <nav class="space-x-4">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="wissen.html">Wissen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="flex justify-center space-x-6 text-xl mt-4">
+      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" aria-label="Facebook">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/hk.bau/" target="_blank" aria-label="Instagram">
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+      </a>
     </div>
-  </footer>
+      <p>© <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs">
+      <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" 
-          class="fixed bottom-6 right-6 w-12 h-12 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 opacity-0 invisible">
-    <i class="fas fa-arrow-up"></i>
+  <button id="scrollToTopBtn"
+    class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition"
+    aria-label="Nach oben scrollen">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
   </button>
 
-  <!-- Scripts -->
-  <script>
-    // Modern JavaScript for enhanced functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
 
-      // Navbar scroll effect
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
 
-      // Scroll progress indicator
-      const scrollProgress = document.getElementById('scrollProgress');
-      window.addEventListener('scroll', function() {
-        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
-      });
-
-      // Scroll to top button
-      const scrollToTopBtn = document.getElementById('scrollToTop');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-          scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-        } else {
-          scrollToTopBtn.classList.add('opacity-0', 'invisible');
-        }
-      });
-
-      scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Update current year
-      document.querySelectorAll('.current-year').forEach(el => {
-        el.textContent = new Date().getFullYear();
-      });
-
-      // Intersection Observer for animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      }, observerOptions);
-
-      // Observe elements for animation
-      document.querySelectorAll('.service-card, .card').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
 </body>
 
 </html>
