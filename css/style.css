@@ -1,13 +1,13 @@
 /* Global Styles */
 :root {
-    --primary-color: #FBBA21;
-    /* Your bright yellow/gold */
+    --primary-color: #fbbb21;
+    /* Brand yellow */
     --primary-hover: #e0a800;
     /* Slightly darker yellow for hover */
-    --secondary-color: #1C2127;
-    /* Your dark gray/black */
+    --secondary-color: #3B454E;
+    /* Brand dark gray */
     --tertiary-color: #3B454E;
-    /* Your medium gray */
+    /* Brand dark gray */
     --light-gray-bg: #F3F4F6;
     /* Light gray background for sections */
     --white: #ffffff;
