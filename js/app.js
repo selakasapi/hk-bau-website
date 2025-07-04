@@ -66,14 +66,27 @@ function initImageFallback() {
     });
 }
 
-// ========== Apply Theme Color from CSS Variable ============
+// ======== Apply Theme Color from CSS Variable ============
 function applyThemeColor() {
-    const primaryColor = getComputedStyle(document.documentElement)
-        .getPropertyValue('--primary-color').trim();
-    document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
-        meta.setAttribute('content', primaryColor);
-    });
+  const primaryColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--primary-color').trim();
+  document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
+    meta.setAttribute('content', primaryColor);
+  });
 }
+
+// ======== GLightbox Initialization ============
+function initLightbox() {
+  GLightbox({
+    selector: '.glightbox',
+    openEffect: 'zoom',
+    closeEffect: 'fade',
+    slideEffect: 'slide',
+    touchNavigation: true,
+    loop: true
+  });
+}
+
 
 // ========== Contact Form Validation ============
 function initFormValidation(formId) {
@@ -471,7 +484,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initStickyHeader("navbar");
     initScrollToTop("scrollToTopBtn");
     initImageFallback();
-    applyThemeColor();
+  applyThemeColor();
+  initLightbox();
+
     initFormValidation("contactForm");
     setActiveLink();
     setupPageTransitions();
