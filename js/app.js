@@ -66,6 +66,15 @@ function initImageFallback() {
     });
 }
 
+// ========== Apply Theme Color from CSS Variable ============
+function applyThemeColor() {
+    const primaryColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--primary-color').trim();
+    document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
+        meta.setAttribute('content', primaryColor);
+    });
+}
+
 // ========== Contact Form Validation ============
 function initFormValidation(formId) {
     const form = document.getElementById(formId);
@@ -462,6 +471,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initStickyHeader("navbar");
     initScrollToTop("scrollToTopBtn");
     initImageFallback();
+    applyThemeColor();
     initFormValidation("contactForm");
     setActiveLink();
     setupPageTransitions();
