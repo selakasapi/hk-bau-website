@@ -1,16 +1,16 @@
 /* Modern CSS Variables with Extended Color Palette */
 :root {
     /* Primary Colors */
-    --primary-50: #fffbeb;
-    --primary-100: #fef3c7;
-    --primary-200: #fde68a;
-    --primary-300: #fcd34d;
-    --primary-400: #fbbf24;
-    --primary-500: #fbbb21;
-    --primary-600: #d97706;
-    --primary-700: #b45309;
-    --primary-800: #92400e;
-    --primary-900: #78350f;
+    --primary-50: var(--primary-color);
+    --primary-100: var(--primary-color);
+    --primary-200: var(--primary-color);
+    --primary-300: var(--primary-color);
+    --primary-400: var(--primary-color);
+    --primary-500: var(--primary-color);
+    --primary-600: var(--primary-color);
+    --primary-700: var(--primary-color);
+    --primary-800: var(--primary-color);
+    --primary-900: var(--primary-color);
     
     /* Neutral Colors */
     --neutral-50: #fafafa;
@@ -26,7 +26,7 @@
     
     /* Semantic Colors */
     --success: #10b981;
-    --warning: #fbbb21;
+    --warning: var(--primary-color);
     --error: #ef4444;
     --info: #3b82f6;
     
