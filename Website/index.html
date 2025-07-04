@@ -557,11 +557,11 @@
           <form id="contactForm" class="space-y-6 bg-white p-6 rounded-xl shadow-md" action="#" method="POST">
             <label for="name" class="block text-sm font-semibold">Name</label>
             <input type="text" id="name" name="name" placeholder="Ihr Name" required
-              class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]">
+              class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]" />
 
             <label for="email" class="block text-sm font-semibold">E-Mail</label>
             <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required
-              class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]">
+              class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-[var(--primary-color)]" />
 
             <label for="message" class="block text-sm font-semibold">Nachricht</label>
             <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required
@@ -570,6 +570,7 @@
             <button type="submit"
               class="w-full bg-primary-color text-secondary-color font-semibold py-3 px-6 rounded-lg transition">Nachricht
               senden</button>
+            <p id="formSuccess" class="hidden text-green-600 font-semibold text-center">Vielen Dank für Ihre Nachricht! Wir melden uns bald.</p>
           </form>
         </div>
       </div>
