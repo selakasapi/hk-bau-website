@@ -66,6 +66,18 @@ function initImageFallback() {
     });
 }
 
+// ========== GLightbox Initialization ============
+function initLightbox() {
+    GLightbox({
+        selector: '.glightbox',
+        openEffect: 'zoom',
+        closeEffect: 'fade',
+        slideEffect: 'slide',
+        touchNavigation: true,
+        loop: true
+    });
+}
+
 // ========== Contact Form Validation ============
 function initFormValidation(formId) {
     const form = document.getElementById(formId);
@@ -462,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initStickyHeader("navbar");
     initScrollToTop("scrollToTopBtn");
     initImageFallback();
+    initLightbox();
     initFormValidation("contactForm");
     setActiveLink();
     setupPageTransitions();
