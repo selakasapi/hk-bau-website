@@ -158,7 +158,7 @@ function setupPageTransitions() {
         });
     }
 
-    document.querySelectorAll('a[href$=".html"], a[href$=".html#"], a[href^="./"], a[href^="../"]').forEach(link => {
+    document.querySelectorAll('a[href$=".html"]:not(.glightbox), a[href$=".html#"]:not(.glightbox), a[href^="./"]:not(.glightbox), a[href^="../"]:not(.glightbox)').forEach(link => {
         const currentUrl = new URL(window.location.href);
         const linkUrl = new URL(link.href);
         const isSameOrigin = linkUrl.origin === currentUrl.origin;
