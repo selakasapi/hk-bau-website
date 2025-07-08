@@ -488,140 +488,52 @@ function initWirSchaffenCarousel() {
     startAutoSlide();
 }
 
-// ========== Animated Counters ============
-function initAnimatedCounters() {
-    const counters = document.querySelectorAll('.counter');
-    if (counters.length === 0) return;
-
-    const animate = (el) => {
-        const target = parseInt(el.getAttribute('data-count'), 10) || 0;
-        const duration = 2000;
-        const startTime = performance.now();
-
-        const update = (time) => {
-            const progress = Math.min((time - startTime) / duration, 1);
-            el.textContent = Math.floor(progress * target);
-            if (progress < 1) requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    };
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animate(entry.target);
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    counters.forEach(counter => {
-        counter.textContent = '0';
-        observer.observe(counter);
-    });
-}
-
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({
-        once: true,
-        duration: 800
-    });
+  AOS.init({ once: true, duration: 800 });
 
-    initMobileMenu("mobile-menu-button", "mobile-menu");
-    initStickyHeader("navbar");
-    initScrollToTop("scrollToTopBtn");
-    initImageFallback();
+  initMobileMenu("mobile-menu-button", "mobile-menu");
+  initStickyHeader("navbar");
+  initScrollToTop("scrollToTopBtn");
+  initImageFallback();
   applyThemeColor();
   initLightbox();
+  initFormValidation("contactForm");
+  setActiveLink();
+  setupPageTransitions();
+  initProjectCarousel();
+  initServicesCarousel();
+  initWirSchaffenCarousel();
+  initAnimatedCounters(); // ✅ Make sure this is the correct one
 
-    initFormValidation("contactForm");
-    setActiveLink();
-    setupPageTransitions();
-    initProjectCarousel();
-    initServicesCarousel();
-       initWirSchaffenCarousel();
-    initAnimatedCounters();
+  window.addEventListener("hashchange", setActiveLink);
 
-    window.addEventListener("hashchange", setActiveLink);
-
-    document.querySelectorAll('.current-year').forEach(el => {
-        el.textContent = new Date().getFullYear();
-    });
-
-    const overlay = document.querySelector(".page-transition-overlay");
-    if (overlay) {
-        const links = document.querySelectorAll("a[href]:not(.glightbox)");
-        links.forEach(link => {
-            const href = link.getAttribute("href");
-            if (
-                !href ||
-                href.startsWith("http") ||
-                href.startsWith("mailto:") ||
-                href.startsWith("#") ||
-                href.endsWith(".pdf")
-            ) return;
-
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                // Trigger fade with requestAnimationFrame
-                requestAnimationFrame(() => {
-                    overlay.classList.add("is-fading-in");
-
-                    // Delay nav just enough to let transition visibly begin
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 500); // Match CSS transition duration
-                });
-            });
-        });
-    }
-});
-
-
-function initProjectFilters() {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectItems = document.querySelectorAll(".project-item");
-
-  filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const selected = button.getAttribute("data-filter");
-
-      // Show/hide items
-      let anyVisible = false;
-      projectItems.forEach(item => {
-        const category = item.getAttribute("data-category");
-        const shouldShow = selected === "all" || category === selected;
-        item.classList.toggle("hidden", !shouldShow);
-        if (shouldShow) anyVisible = true;
-      });
-
-      // Update active button styling
-      filterButtons.forEach(btn =>
-        btn.classList.remove("bg-[var(--primary-color)]", "text-white", "ring", "ring-offset-2", "ring-[var(--primary-color)]")
-      );
-      button.classList.add("bg-[var(--primary-color)]", "text-white", "ring", "ring-offset-2", "ring-[var(--primary-color)]");
-    });
-
-    // Optional: keyboard accessibility
-    button.addEventListener("keydown", (e) => {
-      if (["Enter", " "].includes(e.key)) {
-        e.preventDefault();
-        button.click();
-      }
-    });
+  document.querySelectorAll('.current-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
   });
-}
 
-window.addEventListener("load", () => {
   const overlay = document.querySelector(".page-transition-overlay");
   if (overlay) {
-    overlay.classList.remove("is-fading-in");
-    overlay.classList.add("is-fading-out");
+    const links = document.querySelectorAll("a[href]:not(.glightbox)");
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (
+        !href ||
+        href.startsWith("http") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("#") ||
+        href.endsWith(".pdf")
+      ) return;
 
-    setTimeout(() => {
-      overlay.classList.remove("is-fading-out");
-    }, 500);
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        requestAnimationFrame(() => {
+          overlay.classList.add("is-fading-in");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);
+        });
+      });
+    });
   }
 });
