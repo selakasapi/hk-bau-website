@@ -77,6 +77,7 @@ function applyThemeColor() {
 
 // ======== GLightbox Initialization ============
 function initLightbox() {
+  if (typeof window.GLightbox !== 'function') return;
   GLightbox({
     selector: '.glightbox',
     openEffect: 'zoom',
@@ -358,7 +359,7 @@ function initServicesCarousel() {
         autoSlideInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % totalGroups;
             updateCarousel();
-        }, 6000);
+        }, 5000);
     }
 
     function resetAutoSlide() {
