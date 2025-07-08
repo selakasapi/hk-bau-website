@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const overlay = document.querySelector(".page-transition-overlay");
     if (overlay) {
-        const links = document.querySelectorAll("a[href]");
+        const links = document.querySelectorAll("a[href]:not(.glightbox)");
         links.forEach(link => {
             const href = link.getAttribute("href");
             if (
