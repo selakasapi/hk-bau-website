@@ -488,6 +488,39 @@ function initWirSchaffenCarousel() {
     startAutoSlide();
 }
 
+// ========== Animated Counters ============
+function initAnimatedCounters() {
+    const counters = document.querySelectorAll('.counter');
+    if (counters.length === 0) return;
+
+    const animate = (el) => {
+        const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        const duration = 2000;
+        const startTime = performance.now();
+
+        const update = (time) => {
+            const progress = Math.min((time - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * target);
+            if (progress < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    counters.forEach(counter => {
+        counter.textContent = '0';
+        observer.observe(counter);
+    });
+}
+
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init({
@@ -508,6 +541,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProjectCarousel();
     initServicesCarousel();
        initWirSchaffenCarousel();
+    initAnimatedCounters();
 
     window.addEventListener("hashchange", setActiveLink);
 
