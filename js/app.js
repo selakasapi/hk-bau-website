@@ -309,6 +309,7 @@ function initServicesCarousel() {
     let currentIndex = 0;
     let totalGroups = Math.ceil(slides.length / cardsPerView);
     let indicators = [];
+    let autoSlideInterval;
 
     function createIndicators() {
         indicatorsContainer.innerHTML = '';
@@ -319,6 +320,7 @@ function initServicesCarousel() {
             dot.addEventListener('click', () => {
                 currentIndex = i;
                 updateCarousel();
+                resetAutoSlide();
             });
             indicatorsContainer.appendChild(dot);
         }
@@ -351,21 +353,31 @@ function initServicesCarousel() {
         }
     }
 
+    function startAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalGroups;
+            updateCarousel();
+        }, 6000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + totalGroups) % totalGroups;
         updateCarousel();
+        resetAutoSlide();
     });
 
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % totalGroups;
         updateCarousel();
+        resetAutoSlide();
     });
 
-    // \uD83D\uDFE1 OPTIONAL: Autoplay
-    // setInterval(() => {
-    //     currentIndex = (currentIndex + 1) % totalGroups;
-    //     updateCarousel();
-    // }, 6000); // Change time (ms) as needed
 
     let startX = 0;
     carouselWrapper.addEventListener('touchstart', (e) => {
@@ -379,11 +391,13 @@ function initServicesCarousel() {
         } else if (endX - startX > 50) {
             prevBtn.click();
         }
+        resetAutoSlide();
     });
 
     createIndicators();
     updateCarousel();
     window.addEventListener('resize', handleResize);
+    startAutoSlide();
 }
 
 
