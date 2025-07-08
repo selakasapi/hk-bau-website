@@ -540,32 +540,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function initAnimatedCounters() {
-  const counters = document.querySelectorAll(".counter");
-
+  const counters = document.querySelectorAll('.counter');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-count');
+        let count = 0;
+        const duration = 1500;
+        const step = Math.ceil(target / (duration / 16));
 
-      const counter = entry.target;
-      const target = +counter.getAttribute("data-count");
-      const duration = 1500;
-      const start = 0;
-      const startTime = performance.now();
+        const update = () => {
+          count += step;
+          if (count >= target) {
+            counter.textContent = target;
+            observer.unobserve(counter);
+          } else {
+            counter.textContent = count;
+            requestAnimationFrame(update);
+          }
+        };
 
-      const step = (timestamp) => {
-        const progress = Math.min((timestamp - startTime) / duration, 1);
-        counter.textContent = Math.floor(progress * target);
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        }
-      };
-
-      requestAnimationFrame(step);
-      observer.unobserve(counter);
+        requestAnimationFrame(update);
+      }
     });
-  }, {
-    threshold: 0.6,
-  });
+  }, { threshold: 0.6 });
 
   counters.forEach(counter => observer.observe(counter));
 }
