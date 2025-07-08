@@ -517,6 +517,35 @@ function initCounters() {
     counters.forEach(counter => observer.observe(counter));
 }
 
+// ========== Animated Counters (IntersectionObserver) ============
+function initAnimatedCounters() {
+    const counters = document.querySelectorAll('.counter');
+    if (counters.length === 0) return;
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+                let current = 0;
+                const increment = Math.max(1, Math.floor(target / 50));
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = target;
+                        clearInterval(interval);
+                    } else {
+                        el.textContent = current;
+                    }
+                }, 30);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.6 });
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init({
@@ -537,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProjectCarousel();
     initServicesCarousel();
        initWirSchaffenCarousel();
-    initCounters();
+    initAnimatedCounters();
 
     window.addEventListener("hashchange", setActiveLink);
 
