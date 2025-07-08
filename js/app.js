@@ -539,3 +539,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function initAnimatedCounters() {
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const counter = entry.target;
+      const target = +counter.getAttribute("data-count");
+      const duration = 1500;
+      const start = 0;
+      const startTime = performance.now();
+
+      const step = (timestamp) => {
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        counter.textContent = Math.floor(progress * target);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+
+      requestAnimationFrame(step);
+      observer.unobserve(counter);
+    });
+  }, {
+    threshold: 0.6,
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+}
