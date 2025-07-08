@@ -160,18 +160,18 @@ function setupPageTransitions() {
     }
 
     if (sessionStorage.getItem("isTransitioning") === "true") {
-        overlay.classList.remove("is-wiping-in");
-        overlay.classList.add("is-wiping-out");
+        overlay.classList.remove("is-fading-in");
+        overlay.classList.add("is-fading-out");
 
-        overlay.addEventListener("animationend", function handler() {
-            overlay.classList.remove("is-wiping-out");
+        overlay.addEventListener("transitionend", function handler() {
+            overlay.classList.remove("is-fading-out");
             Object.assign(overlay.style, {
                 opacity: "0",
                 visibility: "hidden",
                 pointerEvents: "none"
             });
             sessionStorage.removeItem("isTransitioning");
-            overlay.removeEventListener("animationend", handler);
+            overlay.removeEventListener("transitionend", handler);
         }, { once: true });
     } else {
         Object.assign(overlay.style, {
@@ -181,31 +181,36 @@ function setupPageTransitions() {
         });
     }
 
-    document.querySelectorAll('a[href$=".html"]:not(.glightbox), a[href$=".html#"]:not(.glightbox), a[href^="./"]:not(.glightbox), a[href^="../"]:not(.glightbox)').forEach(link => {
+    document.querySelectorAll('a[href]:not(.glightbox)').forEach(link => {
+        const href = link.getAttribute('href');
+        if (
+            !href ||
+            href.startsWith('http') ||
+            href.startsWith('mailto:') ||
+            href.startsWith('#') ||
+            href.endsWith('.pdf')
+        ) return;
+
         const currentUrl = new URL(window.location.href);
-        const linkUrl = new URL(link.href);
-        const isSameOrigin = linkUrl.origin === currentUrl.origin;
-        const isSamePage = linkUrl.pathname === currentUrl.pathname;
+        const linkUrl = new URL(link.href, currentUrl);
+        if (linkUrl.origin !== currentUrl.origin || linkUrl.pathname === currentUrl.pathname) return;
 
-        if (isSameOrigin && !isSamePage) {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                // Allow transition animation for all pages including the homepage
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
 
-                Object.assign(overlay.style, {
-                    opacity: "1",
-                    visibility: "visible",
-                    pointerEvents: "auto"
-                });
-                overlay.classList.remove("is-wiping-out");
-                overlay.classList.add("is-wiping-in");
-
-                sessionStorage.setItem("isTransitioning", "true");
-                setTimeout(() => {
-                    window.location.href = linkUrl.href;
-                }, 500);
+            Object.assign(overlay.style, {
+                opacity: "1",
+                visibility: "visible",
+                pointerEvents: "auto"
             });
-        }
+            overlay.classList.remove("is-fading-out");
+            overlay.classList.add("is-fading-in");
+
+            sessionStorage.setItem("isTransitioning", "true");
+            setTimeout(() => {
+                window.location.href = linkUrl.href;
+            }, 500);
+        });
     });
 }
 
@@ -545,34 +550,6 @@ document.addEventListener("DOMContentLoaded", () => {
         el.textContent = new Date().getFullYear();
     });
 
-    const overlay = document.querySelector(".page-transition-overlay");
-    if (overlay) {
-        const links = document.querySelectorAll("a[href]:not(.glightbox)");
-        links.forEach(link => {
-            const href = link.getAttribute("href");
-            if (
-                !href ||
-                href.startsWith("http") ||
-                href.startsWith("mailto:") ||
-                href.startsWith("#") ||
-                href.endsWith(".pdf")
-            ) return;
-
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                // Trigger fade with requestAnimationFrame
-                requestAnimationFrame(() => {
-                    overlay.classList.add("is-fading-in");
-
-                    // Delay nav just enough to let transition visibly begin
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 500); // Match CSS transition duration
-                });
-            });
-        });
-    }
 });
 
 
