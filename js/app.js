@@ -5,13 +5,13 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-            menuBtn.setAttribute("aria-expanded", !mobileMenu.classList.contains("hidden"));
+            const isHidden = mobileMenu.classList.toggle("translate-x-full");
+            menuBtn.setAttribute("aria-expanded", !isHidden);
         });
 
         mobileMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.add("translate-x-full");
                 menuBtn.setAttribute("aria-expanded", "false");
             });
 
@@ -110,19 +110,23 @@ function initFormValidation(formId) {
 }
 
 // ========== Contact Form Demo Handler ============
+// Show simple feedback message after submitting the demo form
 function handleContactDemo(formId) {
     const form = document.getElementById(formId);
-    if (!form) return;
+    const feedback = document.getElementById("formFeedback");
+    if (!form || !feedback) return;
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         form.classList.add("animate-pulse");
+        feedback.classList.add("hidden", "opacity-0");
 
         setTimeout(() => {
             form.classList.remove("animate-pulse");
             form.reset();
-            const success = document.getElementById("formSuccess");
-            if (success) success.classList.remove("hidden");
+            feedback.textContent = "Vielen Dank für Ihre Nachricht!";
+            feedback.classList.remove("hidden");
+            requestAnimationFrame(() => feedback.classList.remove("opacity-0"));
         }, 1000);
     });
 }
@@ -539,32 +543,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Animate counters when the section scrolls into view
 function initAnimatedCounters() {
+  const section = document.querySelector('.counter-section');
   const counters = document.querySelectorAll('.counter');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = +counter.getAttribute('data-count');
-        let count = 0;
-        const duration = 1500;
-        const step = Math.ceil(target / (duration / 16));
+  if (!section || counters.length === 0) return;
 
-        const update = () => {
-          count += step;
-          if (count >= target) {
-            counter.textContent = target;
-            observer.unobserve(counter);
-          } else {
-            counter.textContent = count;
-            requestAnimationFrame(update);
-          }
-        };
+  const animate = (counter) => {
+    const target = parseInt(counter.dataset.target, 10);
+    const duration = 2000;
+    let start = null;
 
-        requestAnimationFrame(update);
-      }
-    });
-  }, { threshold: 0.6 });
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      counter.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+    };
 
-  counters.forEach(counter => observer.observe(counter));
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      counters.forEach(animate);
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(section);
 }
