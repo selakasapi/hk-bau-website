@@ -599,3 +599,4 @@ function initAnimatedCounters() {
 
   observer.observe(section);
 }
+
