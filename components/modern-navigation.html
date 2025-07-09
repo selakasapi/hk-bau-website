@@ -1,0 +1,210 @@
+<!-- Modern Navigation with Better UX -->
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
+  <div class="container">
+    <nav class="flex items-center justify-between h-20" aria-label="Hauptnavigation">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="relative">
+          <img 
+            src="/images/logo.png" 
+            alt="HK Bau Logo" 
+            class="h-12 w-12 rounded-full shadow-lg transition-transform group-hover:scale-105"
+            loading="eager"
+          />
+          <div class="absolute inset-0 rounded-full bg-primary-400/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="hidden sm:block">
+          <span class="text-xl font-bold text-white group-hover:text-primary-300 transition-colors">HK Bau</span>
+          <div class="text-xs text-neutral-400">Bauunternehmung GmbH</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="index.html" class="nav-link">
+          <span>Startseite</span>
+        </a>
+        <div class="relative group">
+          <button class="nav-link flex items-center">
+            <span>Leistungen</span>
+            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-neutral-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="p-2">
+              <a href="leistungen.html" class="block px-4 py-3 text-sm text-neutral-700 hover:bg-neutral-50 rounded-lg transition-colors">
+                <div class="font-medium">Alle Leistungen</div>
+                <div class="text-xs text-neutral-500">Komplette Übersicht</div>
+              </a>
+              <a href="leistungen.html#erdbau" class="block px-4 py-3 text-sm text-neutral-700 hover:bg-neutral-50 rounded-lg transition-colors">
+                <div class="font-medium">Erdbau</div>
+                <div class="text-xs text-neutral-500">Fundament für Ihr Projekt</div>
+              </a>
+              <a href="leistungen.html#stahlbetonbau" class="block px-4 py-3 text-sm text-neutral-700 hover:bg-neutral-50 rounded-lg transition-colors">
+                <div class="font-medium">Stahlbetonbau</div>
+                <div class="text-xs text-neutral-500">Robuste Konstruktionen</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="referenzen.html" class="nav-link">
+          <span>Referenzen</span>
+        </a>
+        <a href="wissen.html" class="nav-link">
+          <span>Wissen</span>
+        </a>
+        <a href="karriere.html" class="nav-link">
+          <span>Karriere</span>
+        </a>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a href="kontakt.html" class="btn btn-primary">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Kontakt
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button" 
+        class="lg:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400"
+        aria-expanded="false" 
+        aria-controls="mobile-menu"
+        aria-label="Navigation öffnen"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div 
+    id="mobile-menu" 
+    class="lg:hidden fixed inset-y-0 right-0 w-80 bg-white transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl"
+  >
+    <div class="flex flex-col h-full">
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between p-6 border-b border-neutral-200">
+        <div class="flex items-center space-x-3">
+          <img src="/images/logo.png" alt="HK Bau Logo" class="h-10 w-10 rounded-full" />
+          <div>
+            <div class="font-bold text-neutral-900">HK Bau</div>
+            <div class="text-xs text-neutral-500">Bauunternehmung GmbH</div>
+          </div>
+        </div>
+        <button 
+          id="mobile-menu-close" 
+          class="p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+          aria-label="Navigation schließen"
+        >
+          <svg class="w-6 h-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Links -->
+      <nav class="flex-1 px-6 py-6 space-y-2">
+        <a href="index.html" class="mobile-nav-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+          <span>Startseite</span>
+        </a>
+        <a href="leistungen.html" class="mobile-nav-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+          <span>Leistungen</span>
+        </a>
+        <a href="referenzen.html" class="mobile-nav-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          <span>Referenzen</span>
+        </a>
+        <a href="wissen.html" class="mobile-nav-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+          <span>Wissen</span>
+        </a>
+        <a href="karriere.html" class="mobile-nav-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
+          </svg>
+          <span>Karriere</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Footer -->
+      <div class="p-6 border-t border-neutral-200">
+        <a href="kontakt.html" class="btn btn-primary w-full justify-center">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Jetzt kontaktieren
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+/* Navigation Styles */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-lg);
+}
+
+.nav-link:hover {
+  color: var(--primary-300);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: var(--primary-400);
+  background-color: rgba(251, 187, 33, 0.1);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  space-x: 0.75rem;
+  padding: 1rem;
+  color: var(--neutral-700);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--neutral-100);
+  color: var(--primary-600);
+}
+
+/* Navbar background transition */
+#navbar {
+  background-color: transparent;
+}
+
+#navbar.scrolled {
+  background-color: rgba(24, 24, 27, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+</style>
