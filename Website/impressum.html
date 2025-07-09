@@ -72,7 +72,7 @@
 <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4 animate-fade-in">
     <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
-      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" />
+      <img src="../images/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" loading="lazy" />
     </div>
     <span class="text-white text-sm tracking-wide">Lädt...</span>
   </div>
@@ -104,7 +104,7 @@
         </svg>
       </button>
     </div>
-    <div class="md:hidden hidden" id="mobile-menu">
+    <div id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
         <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
