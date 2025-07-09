@@ -2,17 +2,28 @@
 function initMobileMenu(menuBtnId, mobileMenuId) {
     const menuBtn = document.getElementById(menuBtnId);
     const mobileMenu = document.getElementById(mobileMenuId);
+    const backdrop = document.getElementById('nav-backdrop');
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
             const isHidden = mobileMenu.classList.toggle("translate-x-full");
             menuBtn.setAttribute("aria-expanded", !isHidden);
+            if (backdrop) backdrop.classList.toggle('hidden', isHidden);
         });
+
+        if (backdrop) {
+            backdrop.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                backdrop.classList.add('hidden');
+            });
+        }
 
         mobileMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
                 mobileMenu.classList.add("translate-x-full");
                 menuBtn.setAttribute("aria-expanded", "false");
+                if (backdrop) backdrop.classList.add('hidden');
             });
 
             link.addEventListener("keydown", (e) => {
@@ -110,24 +121,26 @@ function initFormValidation(formId) {
 }
 
 // ========== Contact Form Demo Handler ============
-// Show simple feedback message after submitting the demo form
+const baseMsgClass = "text-center mt-4 p-2 rounded transition-opacity duration-300";
 function handleContactDemo(formId) {
     const form = document.getElementById(formId);
-    const feedback = document.getElementById("formFeedback");
-    if (!form || !feedback) return;
+    const msg = document.getElementById('form-message');
+    if (!form || !msg) return;
 
-    form.addEventListener("submit", (e) => {
+    async function fakeSend() {
+        return new Promise(res => setTimeout(res, 500));
+    }
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        form.classList.add("animate-pulse");
-        feedback.classList.add("hidden", "opacity-0");
-
-        setTimeout(() => {
-            form.classList.remove("animate-pulse");
-            form.reset();
-            feedback.textContent = "Vielen Dank für Ihre Nachricht!";
-            feedback.classList.remove("hidden");
-            requestAnimationFrame(() => feedback.classList.remove("opacity-0"));
-        }, 1000);
+        try {
+            await fakeSend(); // replace with real fetch()
+            msg.textContent = 'Vielen Dank für Ihre Nachricht!';
+            msg.className = 'text-green-700 bg-green-100 ' + baseMsgClass;
+        } catch {
+            msg.textContent = 'Fehler – bitte versuchen Sie es erneut.';
+            msg.className = 'text-red-700 bg-red-100 ' + baseMsgClass;
+        }
     });
 }
 
@@ -509,6 +522,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initServicesCarousel();
   initWirSchaffenCarousel();
   initAnimatedCounters(); // ✅ Make sure this is the correct one
+
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    let startX = 0;
+    container.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
+    container.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      let diff = endX - startX;
+      if (diff > 50) container.querySelector('.carousel-prev')?.click();
+      else if (diff < -50) container.querySelector('.carousel-next')?.click();
+    });
+  });
 
   window.addEventListener("hashchange", setActiveLink);
 

@@ -14,8 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="HK Bau" />
 <link rel="manifest" href="/site.webmanifest" />
 
-  <meta name="description"
-    content="HK Bau – Ihr zuverlässiger Partner für Hoch- und Tiefbau in Stuttgart und Umgebung. Erdbau, Rohbau, Ausbau & mehr." />
+  <meta name="description" content="HK Bau – Ihr Bauunternehmen in Fellbach für Rohbau, Erdarbeiten und schlüsselfertiges Bauen." />
   <meta name="keywords"
     content="Bauunternehmen Stuttgart, Rohbau, Ausbau, HK Bau, Erdbau, Kanalbau, Sanierung, Bauprojekte, Sindelfingen" />
   <meta name="author" content="HK Bau GmbH" />
@@ -23,9 +22,9 @@
   <link rel="canonical" href="https://www.hk-bau.net/index.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="HK Bau – Hoch- und Tiefbau aus einer Hand" />
-  <meta property="og:description" content="Ihr Bauunternehmen für Stuttgart & Region. Rohbau, Sanierung, Ausbau." />
-  <meta property="og:image" content="/images/logo.png" />
+  <meta property="og:title" content="HK Bauunternehmung GmbH" />
+  <meta property="og:description" content="Zuverlässiger Partner für Rohbau, Erd- und Betonarbeiten in Stuttgart und Umgebung." />
+  <meta property="og:image" content="/images/og-preview.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.hk-bau.net/index.html" />
 
@@ -148,7 +147,7 @@
       </div>
 
       <!-- Carousel -->
-      <div class="relative wir-schaffen-carousel">
+      <div class="relative wir-schaffen-carousel carousel-container">
         <div class="overflow-hidden">
           <div class="carousel-wrapper flex transition-transform duration-700 ease-in-out touch-pan-x">
             <!-- Slide 1 -->
@@ -208,8 +207,8 @@
         </div>
 
         <!-- Navigation Buttons -->
-        <button class="carousel-prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-[var(--primary-color)] text-white rounded-full w-8 h-8 shadow hover:bg-[var(--primary-hover)] transition">‹</button>
-        <button class="carousel-next-btn absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-[var(--primary-color)] text-white rounded-full w-8 h-8 shadow hover:bg-[var(--primary-hover)] transition">›</button>
+        <button class="carousel-prev-btn carousel-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-[var(--primary-color)] text-white rounded-full w-8 h-8 shadow hover:bg-[var(--primary-hover)] transition">‹</button>
+        <button class="carousel-next-btn carousel-next absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-[var(--primary-color)] text-white rounded-full w-8 h-8 shadow hover:bg-[var(--primary-hover)] transition">›</button>
 
         <!-- Dots -->
         <div class="carousel-indicators flex justify-center gap-2 mt-6 sticky bottom-2 z-20 bg-white/80 dark:bg-neutral-900/80 backdrop-blur rounded-full py-2 px-4 w-fit mx-auto shadow-md"></div>
@@ -454,7 +453,7 @@
         </h2>
 
         <!-- Carousel Container -->
-        <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white project-carousel">
+        <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white project-carousel carousel-container">
           <div class="carousel-wrapper flex transition-transform duration-700 ease-in-out">
 
             <!-- Slide 1 -->
@@ -505,12 +504,12 @@
 
           <!-- Arrows -->
           <button
-            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-prev-btn z-10"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-prev-btn carousel-prev z-10"
             aria-label="Zurück">
             ‹
           </button>
           <button
-            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-next-btn z-10"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[var(--primary-color)] text-white text-xl px-4 py-2 rounded-full shadow-md hover:scale-110 transition carousel-next-btn carousel-next z-10"
             aria-label="Weiter">
             ›
           </button>
@@ -593,7 +592,7 @@
   </main>
 
  <!-- Footer -->
-<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
   <div class="space-y-4">
     <nav class="space-x-4">
       <a href="index.html">Startseite</a>
@@ -628,8 +627,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
   </button>
-
-
+  <div id="nav-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
 
 </body>
 
