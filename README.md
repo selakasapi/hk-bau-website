@@ -8,6 +8,9 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 - AOS-Animationen
 - Bild-Fallback für defekte Bilder
 - Scroll-to-Top Button
+- Lazy Loading für Bilder
+- Slide-in Mobile Navigation
+- Animierte Counter
 
 ## Projektstruktur
 /Website/ (enthält alle HTML-Dateien)

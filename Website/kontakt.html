@@ -8,18 +8,16 @@
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
-    <meta name="description"
-        content="Nehmen Sie Kontakt auf mit HK Bau in Sindelfingen. Wir beraten Sie gern zu Ihrem Bauvorhaben." />
+    <meta name="description" content="HK Bau – Ihr Bauunternehmen in Fellbach für Rohbau, Erdarbeiten und schlüsselfertiges Bauen." />
     <meta name="keywords" content="Kontakt, Bauunternehmen, HK Bau, Bauanfrage, Angebot, Sindelfingen, Stuttgart" />
     <meta name="author" content="HK Bau GmbH" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.hk-bau.net/kontakt.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Kontakt – HK Bau" />
-    <meta property="og:description"
-        content="Sie möchten bauen? Kontaktieren Sie HK Bau für Ihr Projekt in Stuttgart und Umgebung." />
-    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:title" content="HK Bauunternehmung GmbH" />
+    <meta property="og:description" content="Zuverlässiger Partner für Rohbau, Erd- und Betonarbeiten in Stuttgart und Umgebung." />
+    <meta property="og:image" content="/images/og-preview.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.hk-bau.net/kontakt.html" />
 
@@ -77,7 +75,7 @@
  <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4 animate-fade-in">
     <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
-      <img src="../images/logo.png" alt="HK Bau Logo"  class="h-12 w-12 animate-spin-slower" />
+      <img src="../images/logo.png" alt="HK Bau Logo"  class="h-12 w-12 animate-spin-slower" loading="lazy" />
     </div>
     <span class="text-white text-sm tracking-wide">Lädt...</span>
   </div>
@@ -111,7 +109,7 @@
             </button>
         </div>
 
-        <div class="md:hidden hidden" id="mobile-menu">
+        <div id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
                 <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
@@ -127,11 +125,12 @@
     <section class="relative h-screen overflow-hidden flex items-center justify-center parallax leistungen-hero">
         <div class="absolute inset-0 z-0 overflow-hidden">
             <img src="../images/hero-leistungen.jpg" alt="Hero Hintergrund"
-                class="w-full h-full object-cover zoom-parallax" />
+                class="w-full h-full object-cover zoom-parallax" loading="lazy" />
             <div class="absolute inset-0 bg-[var(--secondary-color)]/60"></div>
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
         </div>
 
-        <div class="relative z-10 text-center hero-content" data-aos="zoom-in">
+        <div class="relative z-20 text-center hero-content" data-aos="zoom-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Kontaktieren Sie uns</h1>
             <p class="text-lg md:text-xl max-w-2xl mx-auto">Wir freuen uns auf Ihre Nachricht und Ihr Bauprojekt.</p>
         </div>
@@ -196,7 +195,7 @@
                 data-aos="fade-up" data-aos-delay="1000">
                 Nachricht senden
             </button>
-            <p id="formSuccess" class="hidden text-green-600 font-semibold text-center">Vielen Dank für Ihre Nachricht! Wir melden uns bald.</p>
+            <div id="form-message" class="hidden"></div>
         </form>
     </section>
 </main>
@@ -214,7 +213,7 @@
     
 
     <!-- Footer -->
-<footer class="bg-secondary-color text-text-on-dark py-10 text-center">
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
   <div class="space-y-4">
     <nav class="space-x-4">
       <a href="index.html">Startseite</a>
@@ -249,6 +248,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
     </button>
+
+    <div id="nav-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
 
 </body>
 

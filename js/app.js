@@ -2,17 +2,28 @@
 function initMobileMenu(menuBtnId, mobileMenuId) {
     const menuBtn = document.getElementById(menuBtnId);
     const mobileMenu = document.getElementById(mobileMenuId);
+    const backdrop = document.getElementById('nav-backdrop');
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-            menuBtn.setAttribute("aria-expanded", !mobileMenu.classList.contains("hidden"));
+            const isHidden = mobileMenu.classList.toggle("translate-x-full");
+            menuBtn.setAttribute("aria-expanded", !isHidden);
+            if (backdrop) backdrop.classList.toggle('hidden', isHidden);
         });
+
+        if (backdrop) {
+            backdrop.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                backdrop.classList.add('hidden');
+            });
+        }
 
         mobileMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.add("translate-x-full");
                 menuBtn.setAttribute("aria-expanded", "false");
+                if (backdrop) backdrop.classList.add('hidden');
             });
 
             link.addEventListener("keydown", (e) => {
@@ -110,20 +121,26 @@ function initFormValidation(formId) {
 }
 
 // ========== Contact Form Demo Handler ============
+const baseMsgClass = "text-center mt-4 p-2 rounded transition-opacity duration-300";
 function handleContactDemo(formId) {
     const form = document.getElementById(formId);
-    if (!form) return;
+    const msg = document.getElementById('form-message');
+    if (!form || !msg) return;
 
-    form.addEventListener("submit", (e) => {
+    async function fakeSend() {
+        return new Promise(res => setTimeout(res, 500));
+    }
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        form.classList.add("animate-pulse");
-
-        setTimeout(() => {
-            form.classList.remove("animate-pulse");
-            form.reset();
-            const success = document.getElementById("formSuccess");
-            if (success) success.classList.remove("hidden");
-        }, 1000);
+        try {
+            await fakeSend(); // replace with real fetch()
+            msg.textContent = 'Vielen Dank für Ihre Nachricht!';
+            msg.className = 'text-green-700 bg-green-100 ' + baseMsgClass;
+        } catch {
+            msg.textContent = 'Fehler – bitte versuchen Sie es erneut.';
+            msg.className = 'text-red-700 bg-red-100 ' + baseMsgClass;
+        }
     });
 }
 
@@ -506,6 +523,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initWirSchaffenCarousel();
   initAnimatedCounters(); // ✅ Make sure this is the correct one
 
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    let startX = 0;
+    container.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
+    container.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      let diff = endX - startX;
+      if (diff > 50) container.querySelector('.carousel-prev')?.click();
+      else if (diff < -50) container.querySelector('.carousel-next')?.click();
+    });
+  });
+
   window.addEventListener("hashchange", setActiveLink);
 
   document.querySelectorAll('.current-year').forEach(el => {
@@ -539,32 +569,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Animate counters when the section scrolls into view
 function initAnimatedCounters() {
+  const section = document.querySelector('.counter-section');
   const counters = document.querySelectorAll('.counter');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = +counter.getAttribute('data-count');
-        let count = 0;
-        const duration = 1500;
-        const step = Math.ceil(target / (duration / 16));
+  if (!section || counters.length === 0) return;
 
-        const update = () => {
-          count += step;
-          if (count >= target) {
-            counter.textContent = target;
-            observer.unobserve(counter);
-          } else {
-            counter.textContent = count;
-            requestAnimationFrame(update);
-          }
-        };
+  const animate = (counter) => {
+    const target = parseInt(counter.dataset.target, 10);
+    const duration = 2000;
+    let start = null;
 
-        requestAnimationFrame(update);
-      }
-    });
-  }, { threshold: 0.6 });
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      counter.textContent = Math.floor(progress * target);
+      if (progress < 1) requestAnimationFrame(step);
+    };
 
-  counters.forEach(counter => observer.observe(counter));
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      counters.forEach(animate);
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(section);
 }
