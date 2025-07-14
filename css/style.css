@@ -986,7 +986,8 @@ img[src*="placeholder"] {
 }
 
 .animate-scroll-referenzen {
-  animation: scroll-referenzen 40s linear infinite;
+  animation: scroll-referenzen linear infinite;
+  display: flex;
 }
 
 
