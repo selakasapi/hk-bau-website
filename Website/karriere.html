@@ -68,6 +68,45 @@
 </script>
 
   <meta name="theme-color" content="#fbbb21">
+
+
+  <style>
+   .job-icon {
+      transition: transform 0.4s ease, color 0.3s ease;
+      display: inline-block;
+    }
+    .job-card:hover .job-icon {
+      transform: scale(1.25) rotate(8deg);
+      color: var(--primary-hover);
+    }
+    .job-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    }
+    .highlight-box {
+      background: white;
+      border-left: 4px solid var(--primary-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .highlight-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+    .why-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .highlight-box:hover .why-icon {
+      transform: scale(1.2) rotate(-6deg);
+    }
+  </style>
+
 </head>
 
 <body class="text-[var(--secondary-color)] overflow-x-hidden">
@@ -141,36 +180,67 @@
          
        
 
-        <!-- Warum HK Bau Section -->
-        <section class="py-20 px-4 bg-gray-50">
-            <div class="max-w-6xl mx-auto" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">Warum HK Bau?
-                </h2>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-xl font-semibold mb-2">Sicherer Arbeitsplatz</h3>
-                        <p class="text-gray-700">Wir bieten eine langfristige Perspektive mit attraktiven
-                            Rahmenbedingungen
-                            und modernem Arbeitsumfeld.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-xl font-semibold mb-2">Teamkultur & Zusammenhalt</h3>
-                        <p class="text-gray-700">Bei uns steht das Miteinander im Vordergrund – echte Teamarbeit ist
-                            unser
-                            Fundament.</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="text-xl font-semibold mb-2">Vielfältige Entwicklung</h3>
-                        <p class="text-gray-700">Ob Ausbildung, Weiterbildung oder neue Aufgaben – bei uns wachsen Sie
-                            mit
-                            Ihren Herausforderungen.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+         <!-- Warum HK Bau Section -->
+    <section class="py-20 px-4 bg-gray-50 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5 bg-[url('../images/background-pattern-light.svg')] bg-center bg-repeat"></div>
+      <div class="max-w-6xl mx-auto relative z-10" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">Warum HK Bau?</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="highlight-box rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Sicherer Arbeitsplatz</h3>
+            <p class="text-gray-700">Wir bieten eine langfristige Perspektive mit attraktiven Rahmenbedingungen und modernem Arbeitsumfeld.</p>
+          </div>
+          <div class="highlight-box rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-icon"><i class="fas fa-users"></i></div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Teamkultur & Zusammenhalt</h3>
+            <p class="text-gray-700">Bei uns steht das Miteinander im Vordergrund – echte Teamarbeit ist unser Fundament.</p>
+          </div>
+          <div class="highlight-box rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Vielfältige Entwicklung</h3>
+            <p class="text-gray-700">Ob Ausbildung, Weiterbildung oder neue Aufgaben – bei uns wachsen Sie mit Ihren Herausforderungen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+       <!-- Job Listings Section -->
+    <section class="max-w-7xl mx-auto px-4 mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-4">Offene Stellen</h2>
+      <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">Werde Teil unseres engagierten Teams! Hier findest du aktuelle Jobangebote mit spannenden Aufgaben und Entwicklungsmöglichkeiten.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Job Card 1 -->
+        <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Polier (m/w/d)</h3>
+          <p class="text-gray-700 mb-4">Leitung der Baustelle, Koordination der Teams und Qualitätssicherung direkt vor Ort.</p>
+          <a href="#contactForm" class="text-[var(--primary-color)] font-medium hover:underline">Jetzt bewerben →</a>
+        </div>
+        <!-- Job Card 2 -->
+        <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Maurer (m/w/d)</h3>
+          <p class="text-gray-700 mb-4">Ausführung von Rohbauarbeiten im Hoch- und Tiefbau. Erfahrung und Teamgeist erwünscht.</p>
+          <a href="#contactForm" class="text-[var(--primary-color)] font-medium hover:underline">Jetzt bewerben →</a>
+        </div>
+        <!-- Job Card 3 -->
+        <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Bauleiter (m/w/d)</h3>
+          <p class="text-gray-700 mb-4">Verantwortung für Projektplanung, Kostenkontrolle und reibungslose Umsetzung der Bauvorhaben.</p>
+          <a href="#contactForm" class="text-[var(--primary-color)] font-medium hover:underline">Jetzt bewerben →</a>
+        </div>
+      </div>
+    </section>
+
 
         <!-- Bewerbungsformular -->
         <section id="bewerbung" class="py-20 px-4 bg-white">
