@@ -974,3 +974,17 @@ img[src*="placeholder"] {
 .hero-section {
   padding-top: 4rem; /* match navbar height */
 }
+
+
+@keyframes scroll-referenzen {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-referenzen {
+  animation: scroll-referenzen 40s linear infinite;
+}
