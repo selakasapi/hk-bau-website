@@ -600,3 +600,34 @@ function initAnimatedCounters() {
   observer.observe(section);
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const referenzenCarousel = document.getElementById('referenzen-carousel');
+  if (!referenzenCarousel) return;
+
+  let scrollAmount = 0;
+  let isHovered = false;
+
+  referenzenCarousel.addEventListener("mouseenter", () => isHovered = true);
+  referenzenCarousel.addEventListener("mouseleave", () => isHovered = false);
+
+  function autoScrollReferenzen() {
+    if (isHovered) return;
+
+    const slideWidth = referenzenCarousel.children[0].offsetWidth + 24; // slide + spacing
+    scrollAmount += slideWidth;
+
+    if (scrollAmount >= referenzenCarousel.scrollWidth - referenzenCarousel.clientWidth) {
+      scrollAmount = 0;
+    }
+
+    referenzenCarousel.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  setInterval(autoScrollReferenzen, 3500);
+});
+
+
