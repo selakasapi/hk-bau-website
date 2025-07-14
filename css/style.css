@@ -988,3 +988,8 @@ img[src*="placeholder"] {
 .animate-scroll-referenzen {
   animation: scroll-referenzen 40s linear infinite;
 }
+
+
+.animate-scroll-referenzen:hover {
+  animation-play-state: paused;
+}
