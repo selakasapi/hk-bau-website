@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stahlbetonbau – HK Bau</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="theme-color" content="#fbbb21" />
+</head>
+<body class="font-[Inter] text-gray-800 overflow-x-hidden">
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-secondary-color text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center">
+        <img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-auto rounded-full shadow" loading="lazy" />
+        <span class="font-bold ml-2">HK Bau</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-[var(--primary-color)]">Startseite</a>
+        <a href="leistungen.html" class="hover:text-[var(--primary-color)]">Leistungen</a>
+        <a href="kontakt.html" class="hover:text-[var(--primary-color)]">Kontakt</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
+        <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
+        <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-16">
+    <section class="relative h-80 md:h-[500px] flex items-center justify-center overflow-hidden">
+      <img src="../images/hero-stahlbetonbau.jpg" alt="Stahlbetonbau" class="absolute inset-0 w-full h-full object-cover -z-10" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h1 class="relative z-10 text-4xl md:text-6xl font-bold text-white">Stahlbetonbau</h1>
+    </section>
+
+    <section class="py-12 max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-secondary-color mb-4">Unsere Arbeiten im Bereich Stahlbetonbau</h2>
+      <p class="text-center text-gray-700 mb-8">Massive Fundamente und Betonkonstruktionen.</p>
+      <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
+        <a href="../images/stahlbetonbau1.jpg"><img src="../images/stahlbetonbau1.jpg" alt="Stahlbetonbau Bild 1" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau2.jpg"><img src="../images/stahlbetonbau2.jpg" alt="Stahlbetonbau Bild 2" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau3.jpg"><img src="../images/stahlbetonbau3.jpg" alt="Stahlbetonbau Bild 3" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau4.jpg"><img src="../images/stahlbetonbau4.jpg" alt="Stahlbetonbau Bild 4" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau5.jpg"><img src="../images/stahlbetonbau5.jpg" alt="Stahlbetonbau Bild 5" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau6.jpg"><img src="../images/stahlbetonbau6.jpg" alt="Stahlbetonbau Bild 6" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau7.jpg"><img src="../images/stahlbetonbau7.jpg" alt="Stahlbetonbau Bild 7" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau8.jpg"><img src="../images/stahlbetonbau8.jpg" alt="Stahlbetonbau Bild 8" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau9.jpg"><img src="../images/stahlbetonbau9.jpg" alt="Stahlbetonbau Bild 9" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau10.jpg"><img src="../images/stahlbetonbau10.jpg" alt="Stahlbetonbau Bild 10" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau11.jpg"><img src="../images/stahlbetonbau11.jpg" alt="Stahlbetonbau Bild 11" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau12.jpg"><img src="../images/stahlbetonbau12.jpg" alt="Stahlbetonbau Bild 12" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau13.jpg"><img src="../images/stahlbetonbau13.jpg" alt="Stahlbetonbau Bild 13" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau14.jpg"><img src="../images/stahlbetonbau14.jpg" alt="Stahlbetonbau Bild 14" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau15.jpg"><img src="../images/stahlbetonbau15.jpg" alt="Stahlbetonbau Bild 15" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau16.jpg"><img src="../images/stahlbetonbau16.jpg" alt="Stahlbetonbau Bild 16" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau17.jpg"><img src="../images/stahlbetonbau17.jpg" alt="Stahlbetonbau Bild 17" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau18.jpg"><img src="../images/stahlbetonbau18.jpg" alt="Stahlbetonbau Bild 18" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau19.jpg"><img src="../images/stahlbetonbau19.jpg" alt="Stahlbetonbau Bild 19" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau20.jpg"><img src="../images/stahlbetonbau20.jpg" alt="Stahlbetonbau Bild 20" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau21.jpg"><img src="../images/stahlbetonbau21.jpg" alt="Stahlbetonbau Bild 21" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau22.jpg"><img src="../images/stahlbetonbau22.jpg" alt="Stahlbetonbau Bild 22" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau23.jpg"><img src="../images/stahlbetonbau23.jpg" alt="Stahlbetonbau Bild 23" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau24.jpg"><img src="../images/stahlbetonbau24.jpg" alt="Stahlbetonbau Bild 24" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau25.jpg"><img src="../images/stahlbetonbau25.jpg" alt="Stahlbetonbau Bild 25" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau26.jpg"><img src="../images/stahlbetonbau26.jpg" alt="Stahlbetonbau Bild 26" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau27.jpg"><img src="../images/stahlbetonbau27.jpg" alt="Stahlbetonbau Bild 27" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau28.jpg"><img src="../images/stahlbetonbau28.jpg" alt="Stahlbetonbau Bild 28" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau29.jpg"><img src="../images/stahlbetonbau29.jpg" alt="Stahlbetonbau Bild 29" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau30.jpg"><img src="../images/stahlbetonbau30.jpg" alt="Stahlbetonbau Bild 30" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau31.jpg"><img src="../images/stahlbetonbau31.jpg" alt="Stahlbetonbau Bild 31" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau32.jpg"><img src="../images/stahlbetonbau32.jpg" alt="Stahlbetonbau Bild 32" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau33.jpg"><img src="../images/stahlbetonbau33.jpg" alt="Stahlbetonbau Bild 33" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau34.jpg"><img src="../images/stahlbetonbau34.jpg" alt="Stahlbetonbau Bild 34" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau35.jpg"><img src="../images/stahlbetonbau35.jpg" alt="Stahlbetonbau Bild 35" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau36.jpg"><img src="../images/stahlbetonbau36.jpg" alt="Stahlbetonbau Bild 36" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau37.jpg"><img src="../images/stahlbetonbau37.jpg" alt="Stahlbetonbau Bild 37" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau38.jpg"><img src="../images/stahlbetonbau38.jpg" alt="Stahlbetonbau Bild 38" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau39.jpg"><img src="../images/stahlbetonbau39.jpg" alt="Stahlbetonbau Bild 39" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/stahlbetonbau40.jpg"><img src="../images/stahlbetonbau40.jpg" alt="Stahlbetonbau Bild 40" class="w-full h-auto rounded-lg shadow-md"></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    AOS.init();
+    lightGallery(document.getElementById('lightgallery'), {
+      selector: 'a',
+      plugins: [lgZoom, lgFullscreen],
+      speed: 300
+    });
+  </script>
+</body>
+</html>

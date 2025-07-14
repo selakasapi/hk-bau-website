@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erdbau – HK Bau</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="theme-color" content="#fbbb21" />
+</head>
+<body class="font-[Inter] text-gray-800 overflow-x-hidden">
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-secondary-color text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center">
+        <img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-auto rounded-full shadow" loading="lazy" />
+        <span class="font-bold ml-2">HK Bau</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-[var(--primary-color)]">Startseite</a>
+        <a href="leistungen.html" class="hover:text-[var(--primary-color)]">Leistungen</a>
+        <a href="kontakt.html" class="hover:text-[var(--primary-color)]">Kontakt</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
+        <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
+        <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-16">
+    <section class="relative h-80 md:h-[500px] flex items-center justify-center overflow-hidden">
+      <img src="../images/hero-erdbau.jpg" alt="Erdbau" class="absolute inset-0 w-full h-full object-cover -z-10" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h1 class="relative z-10 text-4xl md:text-6xl font-bold text-white">Erdbau</h1>
+    </section>
+
+    <section class="py-12 max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-secondary-color mb-4">Unsere Arbeiten im Bereich Erdbau</h2>
+      <p class="text-center text-gray-700 mb-8">Baugrubenaushub und Geländemodellierung.</p>
+      <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
+        <a href="../images/erdbau1.jpg"><img src="../images/erdbau1.jpg" alt="Erdbau Bild 1" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau2.jpg"><img src="../images/erdbau2.jpg" alt="Erdbau Bild 2" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau3.jpg"><img src="../images/erdbau3.jpg" alt="Erdbau Bild 3" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau4.jpg"><img src="../images/erdbau4.jpg" alt="Erdbau Bild 4" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau5.jpg"><img src="../images/erdbau5.jpg" alt="Erdbau Bild 5" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau6.jpg"><img src="../images/erdbau6.jpg" alt="Erdbau Bild 6" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau7.jpg"><img src="../images/erdbau7.jpg" alt="Erdbau Bild 7" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau8.jpg"><img src="../images/erdbau8.jpg" alt="Erdbau Bild 8" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau9.jpg"><img src="../images/erdbau9.jpg" alt="Erdbau Bild 9" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau10.jpg"><img src="../images/erdbau10.jpg" alt="Erdbau Bild 10" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau11.jpg"><img src="../images/erdbau11.jpg" alt="Erdbau Bild 11" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau12.jpg"><img src="../images/erdbau12.jpg" alt="Erdbau Bild 12" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau13.jpg"><img src="../images/erdbau13.jpg" alt="Erdbau Bild 13" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau14.jpg"><img src="../images/erdbau14.jpg" alt="Erdbau Bild 14" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau15.jpg"><img src="../images/erdbau15.jpg" alt="Erdbau Bild 15" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau16.jpg"><img src="../images/erdbau16.jpg" alt="Erdbau Bild 16" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau17.jpg"><img src="../images/erdbau17.jpg" alt="Erdbau Bild 17" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau18.jpg"><img src="../images/erdbau18.jpg" alt="Erdbau Bild 18" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau19.jpg"><img src="../images/erdbau19.jpg" alt="Erdbau Bild 19" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau20.jpg"><img src="../images/erdbau20.jpg" alt="Erdbau Bild 20" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau21.jpg"><img src="../images/erdbau21.jpg" alt="Erdbau Bild 21" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau22.jpg"><img src="../images/erdbau22.jpg" alt="Erdbau Bild 22" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau23.jpg"><img src="../images/erdbau23.jpg" alt="Erdbau Bild 23" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau24.jpg"><img src="../images/erdbau24.jpg" alt="Erdbau Bild 24" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau25.jpg"><img src="../images/erdbau25.jpg" alt="Erdbau Bild 25" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau26.jpg"><img src="../images/erdbau26.jpg" alt="Erdbau Bild 26" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau27.jpg"><img src="../images/erdbau27.jpg" alt="Erdbau Bild 27" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau28.jpg"><img src="../images/erdbau28.jpg" alt="Erdbau Bild 28" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau29.jpg"><img src="../images/erdbau29.jpg" alt="Erdbau Bild 29" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau30.jpg"><img src="../images/erdbau30.jpg" alt="Erdbau Bild 30" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau31.jpg"><img src="../images/erdbau31.jpg" alt="Erdbau Bild 31" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau32.jpg"><img src="../images/erdbau32.jpg" alt="Erdbau Bild 32" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau33.jpg"><img src="../images/erdbau33.jpg" alt="Erdbau Bild 33" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau34.jpg"><img src="../images/erdbau34.jpg" alt="Erdbau Bild 34" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau35.jpg"><img src="../images/erdbau35.jpg" alt="Erdbau Bild 35" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau36.jpg"><img src="../images/erdbau36.jpg" alt="Erdbau Bild 36" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau37.jpg"><img src="../images/erdbau37.jpg" alt="Erdbau Bild 37" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau38.jpg"><img src="../images/erdbau38.jpg" alt="Erdbau Bild 38" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau39.jpg"><img src="../images/erdbau39.jpg" alt="Erdbau Bild 39" class="w-full h-auto rounded-lg shadow-md"></a>
+        <a href="../images/erdbau40.jpg"><img src="../images/erdbau40.jpg" alt="Erdbau Bild 40" class="w-full h-auto rounded-lg shadow-md"></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    AOS.init();
+    lightGallery(document.getElementById('lightgallery'), {
+      selector: 'a',
+      plugins: [lgZoom, lgFullscreen],
+      speed: 300
+    });
+  </script>
+</body>
+</html>
