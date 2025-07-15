@@ -521,42 +521,6 @@
   </div>
 </section>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector("#referenzen-carousel .animate-scroll-referenzen");
-    const template = document.querySelector("#carousel-duplicate");
-    if (container && template) {
-      for (let i = 0; i < 3; i++) {
-        const clone = template.content.cloneNode(true);
-        container.appendChild(clone);
-      }
-    }
-
-    // Auto zoom logic for center element
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const img = entry.target.querySelector('img');
-        if (entry.isIntersecting) {
-          img.classList.add('scale-[1.15]');
-        } else {
-          img.classList.remove('scale-[1.15]');
-        }
-      });
-    }, {
-      root: document.querySelector('#referenzen-carousel'),
-      threshold: 0.6
-    });
-
-    document.querySelectorAll('#referenzen-carousel .snap-center').forEach(el => {
-      observer.observe(el);
-    });
-  });
-</script>
-
-
-    <!-- Kundenarten Section -->
-    <section id="message-to-clients" class="py-24 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl sm:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12" data-aos="fade-up">
           Für wen wir bauen
         </h2>

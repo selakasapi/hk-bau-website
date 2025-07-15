@@ -522,6 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initServicesCarousel();
   initWirSchaffenCarousel();
   initAnimatedCounters(); // ✅ Make sure this is the correct one
+  initReferenzenCarousel();
 
   document.querySelectorAll('.carousel-container').forEach(container => {
     let startX = 0;
@@ -600,102 +601,69 @@ function initAnimatedCounters() {
   observer.observe(section);
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const referenzenCarousel = document.getElementById('referenzen-carousel');
-  if (!referenzenCarousel) return;
+// Initialize the scrolling references carousel
+function initReferenzenCarousel() {
+  const carousel = document.getElementById('referenzen-carousel');
+  if (!carousel) return;
 
   let scrollAmount = 0;
   let isHovered = false;
 
-  referenzenCarousel.addEventListener("mouseenter", () => isHovered = true);
-  referenzenCarousel.addEventListener("mouseleave", () => isHovered = false);
+  carousel.addEventListener('mouseenter', () => (isHovered = true));
+  carousel.addEventListener('mouseleave', () => (isHovered = false));
 
-  function autoScrollReferenzen() {
+  function autoScroll() {
     if (isHovered) return;
-
-    const slideWidth = referenzenCarousel.children[0].offsetWidth + 24; // slide + spacing
+    const slideWidth = carousel.children[0].offsetWidth + 24;
     scrollAmount += slideWidth;
-
-    if (scrollAmount >= referenzenCarousel.scrollWidth - referenzenCarousel.clientWidth) {
+    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
       scrollAmount = 0;
     }
-
-    referenzenCarousel.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
+    carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   }
 
-  setInterval(autoScrollReferenzen, 3500);
-});
+  setInterval(autoScroll, 3500);
 
-
- const carousel = document.getElementById('referenzen-carousel');
   const track = carousel.querySelector('.flex');
   const images = track.querySelectorAll('img');
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();
     const centerX = carouselRect.left + carouselRect.width / 2;
-
     let closestImg = null;
     let closestDistance = Infinity;
-
     images.forEach(img => {
       const imgRect = img.getBoundingClientRect();
       const imgCenter = imgRect.left + imgRect.width / 2;
       const distance = Math.abs(centerX - imgCenter);
-
       if (distance < closestDistance) {
         closestDistance = distance;
         closestImg = img;
       }
     });
-
     images.forEach(img => img.classList.remove('center-zoom'));
     if (closestImg) closestImg.classList.add('center-zoom');
   }
 
   setInterval(updateCenterZoom, 300);
 
-   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector("#referenzen-carousel .animate-scroll-referenzen");
-    const template = document.querySelector("#carousel-duplicate");
-    if (container && template) {
-      // Clone the template twice for smooth looping
-      for (let i = 0; i < 3; i++) {
-        const clone = template.content.cloneNode(true);
-        container.appendChild(clone);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const img = entry.target.querySelector('img');
+      if (entry.isIntersecting) {
+        img.classList.add('scale-110');
+      } else {
+        img.classList.remove('scale-110');
       }
-    }
+    });
+  }, {
+    root: carousel,
+    threshold: 0.6
   });
 
-   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector("#referenzen-carousel .animate-scroll-referenzen");
-    const template = document.querySelector("#carousel-duplicate");
-    if (container && template) {
-      for (let i = 0; i < 3; i++) {
-        const clone = template.content.cloneNode(true);
-        container.appendChild(clone);
-      }
-    }
-
-    // Auto zoom logic for center element
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelector('img').classList.add('scale-110');
-        } else {
-          entry.target.querySelector('img').classList.remove('scale-110');
-        }
-      });
-    }, {
-      root: document.querySelector('#referenzen-carousel'),
-      threshold: 0.6
-    });
-
-    document.querySelectorAll('#referenzen-carousel .snap-center').forEach(el => {
-      observer.observe(el);
-    });
+  carousel.querySelectorAll('.snap-center').forEach(el => {
+    observer.observe(el);
   });
+}
+
+
