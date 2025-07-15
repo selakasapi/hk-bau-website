@@ -606,25 +606,22 @@ function initReferenzenCarousel() {
   const carousel = document.getElementById('referenzen-carousel');
   if (!carousel) return;
 
-  let scrollAmount = 0;
-  let isHovered = false;
-
-  carousel.addEventListener('mouseenter', () => (isHovered = true));
-  carousel.addEventListener('mouseleave', () => (isHovered = false));
-
-  function autoScroll() {
-    if (isHovered) return;
-    const slideWidth = carousel.children[0].offsetWidth + 24;
-    scrollAmount += slideWidth;
-    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-      scrollAmount = 0;
-    }
-    carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-  }
-
-  setInterval(autoScroll, 3500);
-
   const track = carousel.querySelector('.flex');
+  if (!track) return;
+
+  carousel.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  carousel.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
+  });
+  carousel.addEventListener('touchstart', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  carousel.addEventListener('touchend', () => {
+    track.style.animationPlayState = 'running';
+  });
+
   const images = track.querySelectorAll('img');
 
   function updateCenterZoom() {
@@ -645,25 +642,8 @@ function initReferenzenCarousel() {
     if (closestImg) closestImg.classList.add('center-zoom');
   }
 
+  // Update zoom on an interval since the track is animated
   setInterval(updateCenterZoom, 300);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const img = entry.target.querySelector('img');
-      if (entry.isIntersecting) {
-        img.classList.add('scale-110');
-      } else {
-        img.classList.remove('scale-110');
-      }
-    });
-  }, {
-    root: carousel,
-    threshold: 0.6
-  });
-
-  carousel.querySelectorAll('.snap-center').forEach(el => {
-    observer.observe(el);
-  });
 }
 
 

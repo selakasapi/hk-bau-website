@@ -987,8 +987,10 @@ img[src*="placeholder"] {
   width: max-content;
 }
 
-.hover\:paused:hover {
+.hover\:paused:hover,
+.group:hover .group-hover\:paused {
   animation-play-state: paused;
+  transition: transform 0.5s ease-out;
 }
 
 /* Hide scrollbar */
