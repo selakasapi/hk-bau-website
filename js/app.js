@@ -615,7 +615,8 @@ function initReferenzenCarousel() {
   let startX = 0;
   let startScroll = 0;
 
-  const defaultSpeed = 0.3; // slower pixels per frame
+  // Increased default scrolling speed for a snappier carousel
+  const defaultSpeed = 1.0; // pixels per frame
 
   let currentSpeed = defaultSpeed;
 
