@@ -100,7 +100,9 @@
   <script src="../js/app.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      AOS.init();
+      if (window.AOS) {
+        AOS.init();
+      }
       lightGallery(document.getElementById('lightgallery'), {
         selector: 'a',
         plugins: [lgZoom, lgFullscreen],
