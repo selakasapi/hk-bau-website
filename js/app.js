@@ -610,7 +610,7 @@ function initReferenzenCarousel() {
   const slides = Array.from(track.children);
   slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
   const images = track.querySelectorAll('img');
-
+  
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
@@ -655,9 +655,11 @@ function initReferenzenCarousel() {
     isDragging = false;
   });
 
+  const speed = 0.4;
+
   function autoScrollStep() {
-    if (!isDragging) {
-      carousel.scrollLeft += currentSpeed;
+    if (!isHovered && !isDragging) {
+      carousel.scrollLeft += speed;
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
         carousel.scrollLeft -= track.scrollWidth / 2;
       }
@@ -718,9 +720,23 @@ function initReferenzenCarousel() {
 
   visibilityObserver.observe(carousel);
 
-  // Removed IntersectionObserver that zoomed images as they
-  // scrolled through the carousel so only the center image
-  // receives the zoom effect.
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const img = entry.target.querySelector('img');
+      if (entry.isIntersecting) {
+        img.classList.add('scale-110');
+      } else {
+        img.classList.remove('scale-110');
+      }
+    });
+  }, {
+    root: carousel,
+    threshold: 0.6
+  });
+
+  carousel.querySelectorAll('.snap-center').forEach(el => {
+    observer.observe(el);
+  });
 }
 
 
