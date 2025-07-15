@@ -976,20 +976,6 @@ img[src*="placeholder"] {
 }
 
 
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
-}
-
-.animate-scroll-referenzen {
-  animation: scroll-left 70s linear infinite;
-  display: flex;
-  width: max-content;
-}
-
-.hover\:paused:hover {
-  animation-play-state: paused;
-}
 
 /* Hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
