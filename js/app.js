@@ -607,9 +607,12 @@ function initReferenzenCarousel() {
   if (!carousel) return;
 
   const track = carousel.querySelector('.flex');
+  const slides = Array.from(track.children);
+  slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
   const images = track.querySelectorAll('img');
-
   let scrollAmount = 0;
+  let isHovered = false;
+
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
@@ -649,21 +652,22 @@ function initReferenzenCarousel() {
 
   carousel.addEventListener('touchend', () => {
     isDragging = false;
-    scrollAmount = carousel.scrollLeft;
   });
 
-  function autoScroll() {
-    if (!isDragging) {
-      scrollAmount += currentSpeed;
-      if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
-        scrollAmount = 0;
+  const speed = 0.4;
+
+  function autoScrollStep() {
+    if (!isHovered && !isDragging) {
+      carousel.scrollLeft += speed;
+      if (carousel.scrollLeft >= track.scrollWidth / 2) {
+        carousel.scrollLeft -= track.scrollWidth / 2;
       }
-      carousel.scrollLeft = scrollAmount;
     }
-    requestAnimationFrame(autoScroll);
+    requestAnimationFrame(autoScrollStep);
   }
 
-  requestAnimationFrame(autoScroll);
+  requestAnimationFrame(autoScrollStep);
+
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();
@@ -683,7 +687,37 @@ function initReferenzenCarousel() {
     if (closestImg) closestImg.classList.add('center-zoom');
   }
 
-  setInterval(updateCenterZoom, 300);
+  let zoomRafId = null;
+
+  function zoomLoop() {
+    updateCenterZoom();
+    zoomRafId = requestAnimationFrame(zoomLoop);
+  }
+
+  function startZoomLoop() {
+    if (zoomRafId === null) {
+      zoomLoop();
+    }
+  }
+
+  function stopZoomLoop() {
+    if (zoomRafId !== null) {
+      cancelAnimationFrame(zoomRafId);
+      zoomRafId = null;
+    }
+  }
+
+  const visibilityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startZoomLoop();
+      } else {
+        stopZoomLoop();
+      }
+    });
+  }, { threshold: 0 });
+
+  visibilityObserver.observe(carousel);
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
