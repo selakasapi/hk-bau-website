@@ -982,13 +982,18 @@ img[src*="placeholder"] {
 }
 
 .animate-scroll-referenzen {
-  animation: scroll-left 70s linear infinite;
+  --scroll-speed: 70s;
+  animation-name: scroll-left;
+  animation-duration: var(--scroll-speed);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   display: flex;
   width: max-content;
+  transition: animation-duration 0.5s ease-out;
 }
 
-.hover\:paused:hover {
-  animation-play-state: paused;
+#referenzen-carousel:hover .animate-scroll-referenzen {
+  --scroll-speed: 140s;
 }
 
 /* Hide scrollbar */
