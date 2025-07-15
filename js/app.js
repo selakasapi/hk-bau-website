@@ -609,15 +609,34 @@ function initReferenzenCarousel() {
   const track = carousel.querySelector('.flex');
   const slides = Array.from(track.children);
   slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
-
   const images = track.querySelectorAll('img');
+  let scrollAmount = 0;
   let isHovered = false;
+
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
+  const defaultSpeed = 1; // pixels per frame
+  let currentSpeed = defaultSpeed;
 
-  carousel.addEventListener('mouseenter', () => (isHovered = true));
-  carousel.addEventListener('mouseleave', () => (isHovered = false));
+  function slowDown() {
+    if (currentSpeed > 0) {
+      currentSpeed -= defaultSpeed / 20;
+      if (currentSpeed < 0) currentSpeed = 0;
+      requestAnimationFrame(slowDown);
+    }
+  }
+
+  function speedUp() {
+    if (currentSpeed < defaultSpeed) {
+      currentSpeed += defaultSpeed / 20;
+      if (currentSpeed > defaultSpeed) currentSpeed = defaultSpeed;
+      requestAnimationFrame(speedUp);
+    }
+  }
+
+  carousel.addEventListener('mouseenter', slowDown);
+  carousel.addEventListener('mouseleave', speedUp);
 
   carousel.addEventListener('touchstart', (e) => {
     isDragging = true;
@@ -636,16 +655,19 @@ function initReferenzenCarousel() {
   });
 
   const speed = 0.4;
-  function step() {
+
+  function autoScrollStep() {
     if (!isHovered && !isDragging) {
       carousel.scrollLeft += speed;
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
         carousel.scrollLeft -= track.scrollWidth / 2;
       }
     }
-    requestAnimationFrame(step);
+    requestAnimationFrame(autoScrollStep);
   }
-  requestAnimationFrame(step);
+
+  requestAnimationFrame(autoScrollStep);
+
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();
