@@ -984,6 +984,18 @@ img[src*="placeholder"] {
 /* Swipe support */
 #referenzen-carousel {
   touch-action: pan-x;
+    scroll-behavior: smooth;
+  cursor: grab;
+}
+#referenzen-carousel:active {
+  cursor: grabbing;
+}
+
+#referenzen-track {
+  display: flex;
+  gap: 2rem; /* Or use Tailwind: gap-8 */
+  width: max-content;
+  will-change: transform;
 }
 
 /* Center image zoom effect */

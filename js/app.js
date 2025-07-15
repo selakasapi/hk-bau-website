@@ -660,7 +660,7 @@ function initReferenzenCarousel() {
     isDragging = false;
   });
 
-  const speed = 0.4;
+  const speed = 0.6;
 
   function autoScrollStep() {
     if (!isHovered && !isDragging) {
