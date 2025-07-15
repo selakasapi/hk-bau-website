@@ -615,8 +615,10 @@ function initReferenzenCarousel() {
   let startX = 0;
   let startScroll = 0;
 
-  // Increased default scrolling speed for a snappier carousel
-  const defaultSpeed = 1.0; // pixels per frame
+  // Determine default scrolling speed from data attribute
+  // Example: <div id="referenzen-carousel" data-speed="1.5">
+  const attrSpeed = parseFloat(carousel.dataset.speed);
+  const defaultSpeed = isNaN(attrSpeed) ? 1.0 : attrSpeed; // pixels per frame
 
   let currentSpeed = defaultSpeed;
 
