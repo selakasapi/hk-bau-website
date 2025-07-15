@@ -665,7 +665,37 @@ function initReferenzenCarousel() {
     if (closestImg) closestImg.classList.add('center-zoom');
   }
 
-  setInterval(updateCenterZoom, 300);
+  let zoomRafId = null;
+
+  function zoomLoop() {
+    updateCenterZoom();
+    zoomRafId = requestAnimationFrame(zoomLoop);
+  }
+
+  function startZoomLoop() {
+    if (zoomRafId === null) {
+      zoomLoop();
+    }
+  }
+
+  function stopZoomLoop() {
+    if (zoomRafId !== null) {
+      cancelAnimationFrame(zoomRafId);
+      zoomRafId = null;
+    }
+  }
+
+  const visibilityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startZoomLoop();
+      } else {
+        stopZoomLoop();
+      }
+    });
+  }, { threshold: 0 });
+
+  visibilityObserver.observe(carousel);
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
