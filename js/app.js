@@ -604,7 +604,8 @@ function initAnimatedCounters() {
 // Initialize the scrolling references carousel
 function initReferenzenCarousel() {
   const carousel = document.getElementById('referenzen-carousel');
-  if (!carousel) return;
+  if (!carousel || carousel.dataset.initialized) return;
+  carousel.dataset.initialized = 'true';
 
   const track = carousel.querySelector('.flex');
   const slides = Array.from(track.children);
