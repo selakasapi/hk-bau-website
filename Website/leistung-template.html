@@ -96,14 +96,16 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.umd.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="../js/app.js"></script>
   <script>
-    AOS.init();
-    lightGallery(document.getElementById('lightgallery'), {
-      selector: 'a',
-      plugins: [lgZoom, lgFullscreen],
-      speed: 300
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init();
+      lightGallery(document.getElementById('lightgallery'), {
+        selector: 'a',
+        plugins: [lgZoom, lgFullscreen],
+        speed: 300
+      });
     });
   </script>
 </body>
