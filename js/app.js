@@ -610,8 +610,6 @@ function initReferenzenCarousel() {
   const slides = Array.from(track.children);
   slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
   const images = track.querySelectorAll('img');
-  let scrollAmount = 0;
-  let isHovered = false;
 
   let isDragging = false;
   let startX = 0;
@@ -654,11 +652,9 @@ function initReferenzenCarousel() {
     isDragging = false;
   });
 
-  const speed = 0.4;
-
   function autoScrollStep() {
-    if (!isHovered && !isDragging) {
-      carousel.scrollLeft += speed;
+    if (!isDragging) {
+      carousel.scrollLeft += currentSpeed;
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
         carousel.scrollLeft -= track.scrollWidth / 2;
       }
