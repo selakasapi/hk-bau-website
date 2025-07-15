@@ -614,7 +614,7 @@ function initReferenzenCarousel() {
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
-  const defaultSpeed = 0.5; // slower pixels per frame
+  const defaultSpeed = 0.4; // slightly slower pixels per frame
   let currentSpeed = defaultSpeed;
 
   function slowDown() {
