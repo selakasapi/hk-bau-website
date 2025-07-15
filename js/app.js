@@ -614,7 +614,7 @@ function initReferenzenCarousel() {
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
-  const defaultSpeed = 1; // pixels per frame
+  const defaultSpeed = 0.5; // pixels per frame
   let currentSpeed = defaultSpeed;
 
   function slowDown() {
@@ -715,23 +715,7 @@ function initReferenzenCarousel() {
 
   visibilityObserver.observe(carousel);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const img = entry.target.querySelector('img');
-      if (entry.isIntersecting) {
-        img.classList.add('scale-110');
-      } else {
-        img.classList.remove('scale-110');
-      }
-    });
-  }, {
-    root: carousel,
-    threshold: 0.6
-  });
-
-  carousel.querySelectorAll('.snap-center').forEach(el => {
-    observer.observe(el);
-  });
+  // Hover scaling is handled with CSS, so the observer for scaling has been removed
 }
 
 

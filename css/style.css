@@ -999,3 +999,17 @@ img[src*="placeholder"] {
 .carousel-image {
   transition: transform 1s ease-in-out;
 }
+#referenzen-carousel .carousel-image:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+#referenzen-carousel .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
