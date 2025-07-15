@@ -607,9 +607,10 @@ function initReferenzenCarousel() {
   if (!carousel) return;
 
   const track = carousel.querySelector('.flex');
-  const images = track.querySelectorAll('img');
+  const slides = Array.from(track.children);
+  slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
 
-  let scrollAmount = 0;
+  const images = track.querySelectorAll('img');
   let isHovered = false;
   let isDragging = false;
   let startX = 0;
@@ -632,22 +633,19 @@ function initReferenzenCarousel() {
 
   carousel.addEventListener('touchend', () => {
     isDragging = false;
-    scrollAmount = carousel.scrollLeft;
   });
 
-  function autoScroll() {
-if (isHovered || isDragging) return;
-const gap = parseInt(getComputedStyle(track).gap) || 24;
-const slideWidth = track.children[0].offsetWidth + gap;
-
-    scrollAmount += slideWidth;
-    if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
-      scrollAmount = 0;
+  const speed = 0.4;
+  function step() {
+    if (!isHovered && !isDragging) {
+      carousel.scrollLeft += speed;
+      if (carousel.scrollLeft >= track.scrollWidth / 2) {
+        carousel.scrollLeft -= track.scrollWidth / 2;
+      }
     }
-    carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    requestAnimationFrame(step);
   }
-
-  setInterval(autoScroll, 3500);
+  requestAnimationFrame(step);
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();

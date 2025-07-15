@@ -664,9 +664,6 @@ img[src*="placeholder"] {
   background: none !important;
 }
 
-
-
-
 .carousel-slide {
     display: flex;
     align-items: center;
@@ -974,32 +971,6 @@ img[src*="placeholder"] {
 .hero-section {
   padding-top: 4rem; /* match navbar height */
 }
-
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.3333%);
-  }
-}
-
-.animate-scroll-referenzen {
-  --scroll-speed: 70s;
-  animation-name: scroll-left;
-  animation-duration: var(--scroll-speed);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  display: flex;
-  width: max-content;
-  transition: animation-duration 0.5s ease-out;
-}
-
-#referenzen-carousel:hover .animate-scroll-referenzen {
-  --scroll-speed: 140s;
-}
-
 
 /* Hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
