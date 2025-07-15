@@ -621,7 +621,7 @@ function initReferenzenCarousel() {
   // Determine default scrolling speed from data attribute
   // Example: <div id="referenzen-carousel" data-speed="1.5">
   const attrSpeed = parseFloat(carousel.dataset.speed);
-  const defaultSpeed = isNaN(attrSpeed) ? 1.0 : attrSpeed; // pixels per frame
+  const defaultSpeed = !isNaN(attrSpeed) && attrSpeed > 0 ? attrSpeed : 1.0; // pixels per frame
 
   let currentSpeed = defaultSpeed;
 
