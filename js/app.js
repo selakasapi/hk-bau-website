@@ -606,6 +606,9 @@ function initReferenzenCarousel() {
   const carousel = document.getElementById('referenzen-carousel');
   if (!carousel) return;
 
+  const track = carousel.querySelector('.flex');
+  const images = track.querySelectorAll('img');
+
   let scrollAmount = 0;
   let isHovered = false;
   let isDragging = false;
@@ -633,19 +636,18 @@ function initReferenzenCarousel() {
   });
 
   function autoScroll() {
-    if (isHovered || isDragging) return;
-    const slideWidth = carousel.children[0].offsetWidth + 24;
+if (isHovered || isDragging) return;
+const gap = parseInt(getComputedStyle(track).gap) || 24;
+const slideWidth = track.children[0].offsetWidth + gap;
+
     scrollAmount += slideWidth;
-    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+    if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
       scrollAmount = 0;
     }
     carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   }
 
   setInterval(autoScroll, 3500);
-
-  const track = carousel.querySelector('.flex');
-  const images = track.querySelectorAll('img');
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();
