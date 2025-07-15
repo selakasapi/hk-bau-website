@@ -1007,13 +1007,14 @@ img[src*="placeholder"] {
 
 /* Center image zoom effect */
 #referenzen-carousel .flex > img {
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease-in-out;
 }
 #referenzen-carousel .flex > img.center-zoom {
-  transform: scale(1.12);
+  transform: scale(1.15);
+  transition: transform 0.6s ease-in-out;
   z-index: 1;
 }
 
 .carousel-image {
-  transition: transform 1s ease;
+  transition: transform 1s ease-in-out;
 }
