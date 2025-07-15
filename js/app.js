@@ -608,12 +608,32 @@ function initReferenzenCarousel() {
 
   let scrollAmount = 0;
   let isHovered = false;
+  let isDragging = false;
+  let startX = 0;
+  let startScroll = 0;
 
   carousel.addEventListener('mouseenter', () => (isHovered = true));
   carousel.addEventListener('mouseleave', () => (isHovered = false));
 
+  carousel.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startScroll = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const deltaX = startX - e.touches[0].clientX;
+    carousel.scrollLeft = startScroll + deltaX;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    isDragging = false;
+    scrollAmount = carousel.scrollLeft;
+  });
+
   function autoScroll() {
-    if (isHovered) return;
+    if (isHovered || isDragging) return;
     const slideWidth = carousel.children[0].offsetWidth + 24;
     scrollAmount += slideWidth;
     if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
