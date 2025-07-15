@@ -507,7 +507,9 @@ function initWirSchaffenCarousel() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({ once: true, duration: 800 });
+  if (window.AOS) {
+    AOS.init({ once: true, duration: 800 });
+  }
 
   initMobileMenu("mobile-menu-button", "mobile-menu");
   initStickyHeader("navbar");
