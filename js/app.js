@@ -610,13 +610,30 @@ function initReferenzenCarousel() {
   const images = track.querySelectorAll('img');
 
   let scrollAmount = 0;
-  let isHovered = false;
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
+  const defaultSpeed = 1; // pixels per frame
+  let currentSpeed = defaultSpeed;
 
-  carousel.addEventListener('mouseenter', () => (isHovered = true));
-  carousel.addEventListener('mouseleave', () => (isHovered = false));
+  function slowDown() {
+    if (currentSpeed > 0) {
+      currentSpeed -= defaultSpeed / 20;
+      if (currentSpeed < 0) currentSpeed = 0;
+      requestAnimationFrame(slowDown);
+    }
+  }
+
+  function speedUp() {
+    if (currentSpeed < defaultSpeed) {
+      currentSpeed += defaultSpeed / 20;
+      if (currentSpeed > defaultSpeed) currentSpeed = defaultSpeed;
+      requestAnimationFrame(speedUp);
+    }
+  }
+
+  carousel.addEventListener('mouseenter', slowDown);
+  carousel.addEventListener('mouseleave', speedUp);
 
   carousel.addEventListener('touchstart', (e) => {
     isDragging = true;
@@ -636,18 +653,17 @@ function initReferenzenCarousel() {
   });
 
   function autoScroll() {
-if (isHovered || isDragging) return;
-const gap = parseInt(getComputedStyle(track).gap) || 24;
-const slideWidth = track.children[0].offsetWidth + gap;
-
-    scrollAmount += slideWidth;
-    if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
-      scrollAmount = 0;
+    if (!isDragging) {
+      scrollAmount += currentSpeed;
+      if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
+        scrollAmount = 0;
+      }
+      carousel.scrollLeft = scrollAmount;
     }
-    carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    requestAnimationFrame(autoScroll);
   }
 
-  setInterval(autoScroll, 3500);
+  requestAnimationFrame(autoScroll);
 
   function updateCenterZoom() {
     const carouselRect = carousel.getBoundingClientRect();
