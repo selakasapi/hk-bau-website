@@ -611,14 +611,35 @@ function initReferenzenCarousel() {
 
   let scrollAmount = 0;
   let isHovered = false;
+  let isDragging = false;
+  let startX = 0;
+  let startScroll = 0;
 
   carousel.addEventListener('mouseenter', () => (isHovered = true));
   carousel.addEventListener('mouseleave', () => (isHovered = false));
 
+  carousel.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startScroll = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const deltaX = startX - e.touches[0].clientX;
+    carousel.scrollLeft = startScroll + deltaX;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    isDragging = false;
+    scrollAmount = carousel.scrollLeft;
+  });
+
   function autoScroll() {
-    if (isHovered) return;
-    const gap = parseInt(getComputedStyle(track).gap) || 0;
-    const slideWidth = track.children[0].offsetWidth + gap;
+if (isHovered || isDragging) return;
+const gap = parseInt(getComputedStyle(track).gap) || 24;
+const slideWidth = track.children[0].offsetWidth + gap;
+
     scrollAmount += slideWidth;
     if (scrollAmount >= track.scrollWidth - carousel.clientWidth) {
       scrollAmount = 0;
