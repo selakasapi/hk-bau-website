@@ -631,3 +631,71 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+ const carousel = document.getElementById('referenzen-carousel');
+  const track = carousel.querySelector('.flex');
+  const images = track.querySelectorAll('img');
+
+  function updateCenterZoom() {
+    const carouselRect = carousel.getBoundingClientRect();
+    const centerX = carouselRect.left + carouselRect.width / 2;
+
+    let closestImg = null;
+    let closestDistance = Infinity;
+
+    images.forEach(img => {
+      const imgRect = img.getBoundingClientRect();
+      const imgCenter = imgRect.left + imgRect.width / 2;
+      const distance = Math.abs(centerX - imgCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestImg = img;
+      }
+    });
+
+    images.forEach(img => img.classList.remove('center-zoom'));
+    if (closestImg) closestImg.classList.add('center-zoom');
+  }
+
+  setInterval(updateCenterZoom, 300);
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("#referenzen-carousel .animate-scroll-referenzen");
+    const template = document.querySelector("#carousel-duplicate");
+    if (container && template) {
+      // Clone the template twice for smooth looping
+      for (let i = 0; i < 3; i++) {
+        const clone = template.content.cloneNode(true);
+        container.appendChild(clone);
+      }
+    }
+  });
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("#referenzen-carousel .animate-scroll-referenzen");
+    const template = document.querySelector("#carousel-duplicate");
+    if (container && template) {
+      for (let i = 0; i < 3; i++) {
+        const clone = template.content.cloneNode(true);
+        container.appendChild(clone);
+      }
+    }
+
+    // Auto zoom logic for center element
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelector('img').classList.add('scale-110');
+        } else {
+          entry.target.querySelector('img').classList.remove('scale-110');
+        }
+      });
+    }, {
+      root: document.querySelector('#referenzen-carousel'),
+      threshold: 0.6
+    });
+
+    document.querySelectorAll('#referenzen-carousel .snap-center').forEach(el => {
+      observer.observe(el);
+    });
+  });

@@ -976,21 +976,112 @@ img[src*="placeholder"] {
 }
 
 
-@keyframes scroll-referenzen {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-scroll-referenzen {
-  animation: scroll-referenzen linear infinite;
+  animation: scroll-left 60s linear infinite;
   display: flex;
+  width: max-content;
 }
 
-
-.animate-scroll-referenzen:hover {
+.hover\:paused:hover {
   animation-play-state: paused;
 }
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Swipe support */
+#referenzen-carousel {
+  touch-action: pan-x;
+}
+
+/* Center image zoom effect */
+#referenzen-carousel .flex > img {
+  transition: transform 0.5s ease;
+}
+#referenzen-carousel .flex > img.center-zoom {
+  transform: scale(1.12);
+  z-index: 1;
+}
+
+ @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.3333%); }
+  }
+
+  .animate-scroll-referenzen {
+    animation: scroll-left 70s linear infinite;
+    display: flex;
+  }
+
+  .hover\:paused:hover {
+    animation-play-state: paused;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+   @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.3333%); }
+  }
+
+  .animate-scroll-referenzen {
+    animation: scroll-left 70s linear infinite;
+    display: flex;
+  }
+
+  .group-hover\:paused:hover {
+    animation-play-state: paused;
+    transition: transform 1s ease-out;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.3333%); }
+  }
+
+  .animate-scroll-referenzen {
+    animation: scroll-left 70s linear infinite;
+    display: flex;
+  }
+
+  .group-hover\:paused:hover {
+    animation-play-state: paused;
+    transition: transform 1s ease-out;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .carousel-image {
+    transition: transform 1s ease;
+  }
