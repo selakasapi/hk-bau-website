@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Recommended favicon links -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="HK Bau" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>Erdbau – Projektgalerie</title>
+  <meta name="description" content="Beispiele unserer Arbeiten im Bereich Erdbau" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="font-[Inter] overflow-x-hidden">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <div class="page-transition-overlay flex items-center justify-center">
+    <div class="flex flex-col items-center space-y-4 animate-fade-in">
+      <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+        <img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" loading="lazy" />
+      </div>
+      <span class="text-white text-sm tracking-wide">Lädt...</span>
+    </div>
+  </div>
+  <header class="fixed top-0 left-0 w-full z-50 transition duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="logo-container">
+        <a href="index.html" class="flex items-center relative z-20">
+          <img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow" loading="lazy" />
+          <span class="text-white font-bold ml-2">HK Bau</span>
+        </a>
+      </div>
+      <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="wissen.html">Wissen</a>
+        <a href="karriere.html">Karriere</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" aria-label="Mobile Navigation" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
+        <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
+        <a href="referenzen.html" class="block py-2 px-3 text-base font-medium">Referenzen</a>
+        <a href="wissen.html" class="block py-2 px-3 text-base font-medium">Wissen</a>
+        <a href="karriere.html" class="block py-2 px-3 text-base font-medium">Karriere</a>
+        <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-16">
+    <section class="relative h-80 md:h-[500px] flex items-center justify-center overflow-hidden">
+      <img src="../images/erdbau.jpg" alt="Erdbau" class="absolute inset-0 w-full h-full object-cover -z-10" loading="lazy" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h1 class="relative z-10 text-4xl md:text-6xl font-bold text-white">Erdbau – Projektgalerie</h1>
+    </section>
+    <section class="px-6 py-20 max-w-7xl mx-auto">
+      <a href="referenzen.html" class="inline-block mb-8 text-[var(--primary-color)] hover:underline font-semibold">&larr; Zurück zur Übersicht</a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img src="../images/erdbau.jpg" alt="Erdbau Bild 1" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        <img src="../images/kanalbau.jpg" alt="Erdbau Bild 2" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        <img src="../images/stahlbetonbau.jpg" alt="Erdbau Bild 3" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        <img src="../images/mauerwerksbau.jpg" alt="Erdbau Bild 4" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        <img src="../images/holzbau.webp" alt="Erdbau Bild 5" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="Erdbau Bild 6" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+      </div>
+    </section>
+  </main>
+  <footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
+    <div class="space-y-4">
+      <nav class="space-x-4">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="wissen.html">Wissen</a>
+        <a href="karriere.html">Karriere</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="flex justify-center space-x-6 text-xl mt-4">
+        <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" aria-label="Facebook">
+          <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/hk.bau/" target="_blank" aria-label="Instagram">
+          <i aria-hidden="true" class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <p>© <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
+      <p class="text-xs">
+        <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+  <button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition" aria-label="Nach oben scrollen">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+  <div id="nav-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+</body>
+</html>
