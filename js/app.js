@@ -177,6 +177,12 @@ function setupPageTransitions() {
     }
 
     if (sessionStorage.getItem("isTransitioning") === "true") {
+Object.assign(overlay.style, {
+    opacity: "1",
+    visibility: "visible",
+    pointerEvents: "auto"
+});
+
         overlay.classList.remove("is-fading-in");
         overlay.classList.add("is-fading-out");
 
@@ -215,7 +221,15 @@ function setupPageTransitions() {
                     pointerEvents: "auto"
                 });
                 overlay.classList.remove("is-fading-out");
-        overlay.classList.add("is-fading-in");
+link.addEventListener("click", (e) => {
+  e.preventDefault();
+  requestAnimationFrame(() => {
+    overlay.classList.add("is-fading-in");
+    setTimeout(() => {
+      window.location.href = href;
+    }, 500);
+  });
+});
 
                 sessionStorage.setItem("isTransitioning", "true");
                 setTimeout(() => {
@@ -545,33 +559,31 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.current-year').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
+const overlay = document.getElementById("pageTransitionOverlay");
+if (overlay && !overlay.dataset.listenersAdded) {
+  const links = document.querySelectorAll("a[href]:not(.glightbox)");
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (
+      !href ||
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("#") ||
+      href.endsWith(".pdf")
+    ) return;
 
-  const overlay = document.getElementById("pageTransitionOverlay");
-  if (overlay && !overlay.dataset.listenersAdded) {
-    const links = document.querySelectorAll("a[href]:not(.glightbox)");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (
-        !href ||
-        href.startsWith("http") ||
-        href.startsWith("mailto:") ||
-        href.startsWith("#") ||
-        href.endsWith(".pdf")
-      ) return;
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        requestAnimationFrame(() => {
-          overlay.classList.add("is-fading-in");
-          setTimeout(() => {
-            window.location.href = href;
-          }, 500);
-        });
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      requestAnimationFrame(() => {
+        overlay.classList.add("is-fading-in");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
       });
     });
-    overlay.dataset.listenersAdded = 'true';
-  }
-});
+  });
+  overlay.dataset.listenersAdded = 'true';
+}
 
 
 // Animate counters when the section scrolls into view
