@@ -177,11 +177,16 @@ function setupPageTransitions() {
     }
 
     if (sessionStorage.getItem("isTransitioning") === "true") {
-        overlay.classList.remove("is-wiping-in");
-        overlay.classList.add("is-wiping-out");
+        Object.assign(overlay.style, {
+            opacity: "1",
+            visibility: "visible",
+            pointerEvents: "auto"
+        });
+        overlay.classList.remove("is-fading-in");
+        overlay.classList.add("is-fading-out");
 
         overlay.addEventListener("animationend", function handler() {
-            overlay.classList.remove("is-wiping-out");
+            overlay.classList.remove("is-fading-out");
             Object.assign(overlay.style, {
                 opacity: "0",
                 visibility: "hidden",
@@ -214,8 +219,8 @@ function setupPageTransitions() {
                     visibility: "visible",
                     pointerEvents: "auto"
                 });
-                overlay.classList.remove("is-wiping-out");
-                overlay.classList.add("is-wiping-in");
+                overlay.classList.remove("is-fading-out");
+                overlay.classList.add("is-fading-in");
 
                 sessionStorage.setItem("isTransitioning", "true");
                 setTimeout(() => {
@@ -544,31 +549,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.current-year').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
-
-  const overlay = document.querySelector(".page-transition-overlay");
-  if (overlay) {
-    const links = document.querySelectorAll("a[href]:not(.glightbox)");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (
-        !href ||
-        href.startsWith("http") ||
-        href.startsWith("mailto:") ||
-        href.startsWith("#") ||
-        href.endsWith(".pdf")
-      ) return;
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        requestAnimationFrame(() => {
-          overlay.classList.add("is-fading-in");
-          setTimeout(() => {
-            window.location.href = href;
-          }, 500);
-        });
-      });
-    });
-  }
 });
 
 
