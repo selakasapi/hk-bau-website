@@ -613,10 +613,11 @@ function initReferenzenCarousel() {
   const slides = Array.from(track.children);
   slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
   const images = track.querySelectorAll('img');
-  
+
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
+  let isHovered = false;
 
   // Determine default scrolling speed from data attribute
   // Example: <div id="referenzen-carousel" data-speed="1.5">
@@ -641,8 +642,15 @@ function initReferenzenCarousel() {
     }
   }
 
-  carousel.addEventListener('mouseenter', slowDown);
-  carousel.addEventListener('mouseleave', speedUp);
+  carousel.addEventListener('mouseenter', () => {
+    isHovered = true;
+    slowDown();
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isHovered = false;
+    speedUp();
+  });
 
   carousel.addEventListener('touchstart', (e) => {
     isDragging = true;
