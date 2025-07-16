@@ -10,16 +10,18 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="HK Bau" />
   <link rel="manifest" href="/site.webmanifest" />
-  <title>Erdbau – Projektgalerie</title>
+  <title>Erdbau Projekte</title>
   <meta name="description" content="Beispiele unserer Arbeiten im Bereich Erdbau" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="font-[Inter] overflow-x-hidden">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
   <script src="../js/app.js" defer></script>
   <div class="page-transition-overlay flex items-center justify-center">
     <div class="flex flex-col items-center space-y-4 animate-fade-in">
@@ -66,17 +68,29 @@
     <section class="relative h-80 md:h-[500px] flex items-center justify-center overflow-hidden">
       <img src="../images/erdbau.jpg" alt="Erdbau" class="absolute inset-0 w-full h-full object-cover -z-10" loading="lazy" />
       <div class="absolute inset-0 bg-black/50"></div>
-      <h1 class="relative z-10 text-4xl md:text-6xl font-bold text-white">Erdbau – Projektgalerie</h1>
+      <h1 class="relative z-10 text-4xl md:text-6xl font-bold text-white" data-aos="zoom-in">Erdbau Projekte</h1>
     </section>
     <section class="px-6 py-20 max-w-7xl mx-auto">
       <a href="referenzen.html" class="inline-block mb-8 text-[var(--primary-color)] hover:underline font-semibold">&larr; Zurück zur Übersicht</a>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <img src="../images/erdbau.jpg" alt="Erdbau Bild 1" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
-        <img src="../images/kanalbau.jpg" alt="Erdbau Bild 2" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
-        <img src="../images/stahlbetonbau.jpg" alt="Erdbau Bild 3" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
-        <img src="../images/mauerwerksbau.jpg" alt="Erdbau Bild 4" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
-        <img src="../images/holzbau.webp" alt="Erdbau Bild 5" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
-        <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="Erdbau Bild 6" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+        <a href="../images/erdbau.jpg" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/erdbau.jpg" alt="Erdbau Bild 1" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
+        <a href="../images/kanalbau.jpg" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/kanalbau.jpg" alt="Erdbau Bild 2" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
+        <a href="../images/stahlbetonbau.jpg" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/stahlbetonbau.jpg" alt="Erdbau Bild 3" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
+        <a href="../images/mauerwerksbau.jpg" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/mauerwerksbau.jpg" alt="Erdbau Bild 4" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
+        <a href="../images/holzbau.webp" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/holzbau.webp" alt="Erdbau Bild 5" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
+        <a href="../images/pexels-yury-kim-181374-585418.jpg" class="glightbox" data-gallery="erdbau-gallery">
+          <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="Erdbau Bild 6" loading="lazy" class="rounded-xl shadow-md hover:scale-105 transition-transform" />
+        </a>
       </div>
     </section>
   </main>
