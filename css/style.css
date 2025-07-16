@@ -993,7 +993,7 @@ img[src*="placeholder"] {
 
 #referenzen-track {
   display: flex;
-  gap: 2.5rem; /* Increased spacing between slides */
+  gap: 2rem; /* Increased spacing between slides */
   width: max-content;
   will-change: transform;
 }
