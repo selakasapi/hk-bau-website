@@ -1033,3 +1033,15 @@ img[src*="placeholder"] {
   border-bottom-right-radius: 0.5rem;
   backdrop-filter: blur(4px);
 }
+
+
+
+.masonry {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
