@@ -993,7 +993,7 @@ img[src*="placeholder"] {
 
 #referenzen-track {
   display: flex;
-  gap: 2rem; /* Or use Tailwind: gap-8 */
+  gap: 2.5rem; /* Increased spacing between slides */
   width: max-content;
   will-change: transform;
 }
@@ -1025,7 +1025,7 @@ img[src*="placeholder"] {
   left: 0;
   right: 0;
   padding: 0.5rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
   color: #fff;
   text-align: center;
   font-size: 1rem;
