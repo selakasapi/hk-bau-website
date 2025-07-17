@@ -131,21 +131,22 @@
     <main>
 
 <section id="home" class="relative h-screen flex items-center justify-center parallax pt-16">
-    <div class="absolute inset-0 z-0 overflow-hidden">
-        <img src="../images/pexels-kawserhamid-176342.jpg" alt="Bauprojekt"
-            class="w-full h-full object-cover zoom-parallax" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-b from-[var(--secondary-color)]/70 to-[var(--secondary-color)]/30"></div>
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-    </div>
-
-    <div class="relative z-20 text-center px-6 max-w-2xl text-white hero-content" data-aos="zoom-in">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Einblicke in unsere Leistungen</h1>
-        <p class="text-lg md:text-xl mb-10"> – von der Baugrube bis zur obersten Decke, unabhängig vom Nutzungstyp – </p>
-        <a href="kontakt.html"
-            class="inline-block bg-primary-color text-secondary-color font-semibold py-3 px-8 rounded-lg transition transform hover:scale-110">
-            Jetzt kontaktieren
-      </a>
+  <!-- Video Background -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+      <source src="../images/hero/hero-referenzen.mp4" type="video/mp4" />
+      Ihr Browser unterstützt keine HTML5-Videos.
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-[var(--secondary-color)]/50 to-transparent z-10"></div>
   </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-20 text-center px-6 max-w-2xl text-white hero-content" data-aos="zoom-in">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Unsere Projekte. Unsere Handschrift.</h1>
+<p class="text-lg md:text-xl opacity-90">
+  Vom ersten Spatenstich bis zur Fertigstellung – entdecken Sie Bauwerke, die für Qualität, Präzision und Zuverlässigkeit stehen.
+</p>
+
 </section>
 
 
