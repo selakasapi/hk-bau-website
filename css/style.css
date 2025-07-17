@@ -1045,3 +1045,15 @@ img[src*="placeholder"] {
   break-inside: avoid;
   margin-bottom: 1.5rem;
 }
+
+
+@media (max-width: 640px) {
+  .gallery > a {
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+}
+
+.fade-parallax {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.95) 100%);
+}
