@@ -100,49 +100,78 @@ function initLightbox() {
 }
 
 
-// ========== Contact Form Validation ============
-function initFormValidation(formId) {
-    const form = document.getElementById(formId);
-    if (!form) return;
+// ========== Contact Form Validation with Animation ============
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const name = form.querySelector("#name").value.trim();
-        const email = form.querySelector("#email").value.trim();
-        const message = form.querySelector("#message").value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function showMessage(msgElement, text, isSuccess = true) {
+  msgElement.textContent = text;
+  msgElement.classList.remove("hidden", "opacity-0", "text-red-600", "text-green-600");
+  msgElement.classList.add("opacity-100", isSuccess ? "text-green-600" : "text-red-600");
 
-        if (name.length < 2) return console.error("Name muss mindestens 2 Zeichen lang sein.");
-        if (!emailRegex.test(email)) return console.error("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
-        if (message.length < 10) return console.error("Nachricht muss mindestens 10 Zeichen lang sein.");
-
-    console.log("Formular erfolgreich gesendet! (Demo-Modus)");
-    });
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    msgElement.classList.remove("opacity-100");
+    msgElement.classList.add("opacity-0");
+    setTimeout(() => {
+      msgElement.classList.add("hidden");
+    }, 500); // wait for fade-out to complete
+  }, 5000);
 }
 
-// ========== Contact Form Demo Handler ============
-const baseMsgClass = "text-center mt-4 p-2 rounded transition-opacity duration-300";
-function handleContactDemo(formId) {
-    const form = document.getElementById(formId);
-    const msg = document.getElementById('form-message');
-    if (!form || !msg) return;
+function initFormValidation(formId) {
+  const form = document.getElementById(formId);
+  const msg = document.getElementById("form-message");
+  if (!form || !msg) return;
 
-    async function fakeSend() {
-        return new Promise(res => setTimeout(res, 500));
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector("#name").value.trim();
+    const email = form.querySelector("#email").value.trim();
+    const phone = form.querySelector("#phone").value.trim();
+    const message = form.querySelector("#message").value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Basic validation
+    if (name.length < 2 || !emailRegex.test(email) || message.length < 10) {
+      showMessage(msg, "Bitte füllen Sie das Formular korrekt aus.", false);
+      return;
     }
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        try {
-            await fakeSend(); // replace with real fetch()
-            msg.textContent = 'Vielen Dank für Ihre Nachricht!';
-            msg.className = 'text-green-700 bg-green-100 ' + baseMsgClass;
-        } catch {
-            msg.textContent = 'Fehler – bitte versuchen Sie es erneut.';
-            msg.className = 'text-red-700 bg-red-100 ' + baseMsgClass;
-        }
-    });
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("message", message);
+    formData.append("_subject", "Neue Nachricht über Kontaktformular");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xblklllg", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData,
+      });
+
+      if (response.ok) {
+        form.reset();
+        showMessage(msg, "Vielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.", true);
+      } else {
+        showMessage(msg, "Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.", false);
+      }
+    } catch (error) {
+      showMessage(msg, "Netzwerkfehler. Bitte später erneut versuchen.", false);
+      console.error(error);
+    }
+  });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  initFormValidation("contactForm");
+});
+
+
+
+
+
 
 // ========== Highlight Active Navigation Links ============
 function markActiveLinks(containerSelector, currentPath) {
