@@ -644,6 +644,46 @@ function initAnimatedCounters() {
     slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
     const images = track.querySelectorAll('img');
 
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    const computeScrollAmount = () => {
+      const firstSlide = slides[0];
+      if (!firstSlide) return 0;
+      const slideWidth = firstSlide.getBoundingClientRect().width;
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.gap || style.columnGap || 0);
+      return slideWidth + gap;
+    };
+
+    let scrollAmount = computeScrollAmount();
+    window.addEventListener('resize', () => {
+      scrollAmount = computeScrollAmount();
+    });
+
+    let autoResumeTimeout;
+    const stopAndResumeAuto = () => {
+      isHovered = true;
+      clearTimeout(autoResumeTimeout);
+      autoResumeTimeout = setTimeout(() => {
+        isHovered = false;
+      }, 2000);
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        stopAndResumeAuto();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        stopAndResumeAuto();
+      });
+    }
+
     let isDragging = false;
     let startX = 0;
     let startScroll = 0;
