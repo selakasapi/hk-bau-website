@@ -198,7 +198,7 @@ function setupPageTransitions() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return; // Skip transitions for reduced motion users
     }
-    let overlay = document.getElementById("pageTransitionOverlay");
+    let overlay = document.querySelector('#pageTransitionOverlay, .page-transition-overlay');
     if (!overlay) {
         overlay = document.createElement("div");
         overlay.id = "pageTransitionOverlay";
