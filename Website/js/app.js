@@ -226,6 +226,7 @@ function setupPageTransitions() {
                     pointerEvents: "none"
                 });
                 sessionStorage.removeItem("isTransitioning");
+                document.documentElement.classList.remove("is-transitioning");
                 overlay.removeEventListener("transitionend", handler);
             }, { once: true });
         }, { once: true });
