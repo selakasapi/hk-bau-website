@@ -212,7 +212,9 @@ function setupPageTransitions() {
             visibility: "visible",
             pointerEvents: "auto"
         });
-        overlay.classList.add("is-fading-in");
+        if (!document.documentElement.classList.contains("is-transitioning")) {
+            overlay.classList.add("is-fading-in");
+        }
 
         window.addEventListener("load", () => {
             overlay.classList.remove("is-fading-in");
@@ -226,6 +228,7 @@ function setupPageTransitions() {
                     pointerEvents: "none"
                 });
                 sessionStorage.removeItem("isTransitioning");
+                document.documentElement.classList.remove("is-transitioning");
                 overlay.removeEventListener("transitionend", handler);
             }, { once: true });
         }, { once: true });
