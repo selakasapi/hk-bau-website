@@ -212,9 +212,17 @@ function setupPageTransitions() {
             visibility: "visible",
             pointerEvents: "auto"
         });
-        overlay.classList.add("is-fading-in");
+        if (!document.documentElement.classList.contains("is-transitioning")) {
+            overlay.classList.add("is-fading-in");
+        }
 
-        window.addEventListener("load", () => {
+        const heroMedia = document.querySelector(
+            '#home video, #home img[loading="eager"], ' +
+            '#karriere-hero img[loading="eager"], .leistungen-hero img[loading="eager"], .leistungen-hero video, ' +
+            'section.relative img[loading="eager"], section.relative video'
+        );
+
+        const hideOverlay = () => {
             overlay.classList.remove("is-fading-in");
             overlay.classList.add("is-fading-out");
 
@@ -226,9 +234,23 @@ function setupPageTransitions() {
                     pointerEvents: "none"
                 });
                 sessionStorage.removeItem("isTransitioning");
+                document.documentElement.classList.remove("is-transitioning");
                 overlay.removeEventListener("transitionend", handler);
             }, { once: true });
-        }, { once: true });
+        };
+
+        if (heroMedia) {
+            const isVideo = heroMedia.tagName === 'VIDEO';
+            const isLoaded = isVideo ? heroMedia.readyState >= 3 : heroMedia.complete;
+            if (isLoaded) {
+                hideOverlay();
+            } else {
+                heroMedia.addEventListener(isVideo ? 'loadeddata' : 'load', hideOverlay, { once: true });
+                window.addEventListener("load", hideOverlay, { once: true });
+            }
+        } else {
+            window.addEventListener("load", hideOverlay, { once: true });
+        }
     } else {
         Object.assign(overlay.style, {
             opacity: "0",
