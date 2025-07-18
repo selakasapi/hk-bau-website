@@ -11,8 +11,8 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 - Lazy Loading für Bilder
 - Slide-in Mobile Navigation
 - Animierte Counter
-- Referenzen-Karussell mit anpassbarem Tempo 
-  über das `data-speed`-Attribut am Element `#referenzen-carousel`
+- Referenzen-Karussell, das endlos automatisch scrollt
+  (Tempo kann über `data-speed` am Element `#referenzen-carousel` angepasst werden)
 
 ## Projektstruktur
 /Website/ (enthält alle HTML-Dateien)
