@@ -90,7 +90,7 @@
   </div>
 
 
-  <header class="fixed top-0 left-0 w-full z-50 transition duration-300" id="navbar">
+  <header class="fixed top-0 left-0 w-full z-30  transition duration-300" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
       <div class="logo-container"> <a href="index.html" class="flex items-center relative z-20">
           <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" loading="lazy" />
@@ -105,24 +105,33 @@
         <a href="karriere.html">Karriere</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
-        aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
-        </svg>
-      </button>
-    </div>
 
-    <nav id="mobile-menu" aria-label="Mobile Navigation" class="md:hidden fixed inset-y-0 right-0 w-64 bg-secondary-color text-white transform translate-x-full transition-transform duration-300 ease-in-out">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="block py-2 px-3 text-base font-medium">Startseite</a>
-        <a href="leistungen.html" class="block py-2 px-3 text-base font-medium">Leistungen</a>
-        <a href="referenzen.html" class="block py-2 px-3 text-base font-medium">Referenzen</a>
-        <!-- <a href="wissen.html" class="block py-2 px-3 text-base font-medium">Wissen</a> -->
-        <a href="karriere.html" class="block py-2 px-3 text-base font-medium">Karriere</a>
-        <a href="kontakt.html" class="block py-2 px-3 text-base font-medium">Kontakt</a>
-      </div>
-    </nav>
+
+<!-- Hamburger Menu Button -->
+<button id="mobile-menu-button"
+        class="md:hidden z-[100] p-2 focus:outline-none"
+        aria-label="Menü öffnen"
+        aria-expanded="false">
+  <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+  </svg>
+</button>
+<!-- Backdrop Overlay -->
+<div id="nav-backdrop"
+     class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
+
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-secondary-color text-white z-[99] p-6">
+
+  <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
+  <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
+  <a href="referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Referenzen</a>
+  <a href="karriere.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Karriere</a>
+  <a href="kontakt.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Kontakt</a>
+</div>
+
   </header>
   <main>
 
@@ -303,22 +312,42 @@
 
 
 
- <!-- Unsere Strategie -->
-<section class="bg-[var(--secondary-color)] text-white py-24">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+ <section class="bg-[var(--secondary-color)] text-white py-24">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-12 items-stretch">
 
-    <!-- Text Content (placed first for mobile) -->
-    <div class="order-2 md:order-1" data-aos="fade-left">
-      <h2 class="text-4xl font-bold mb-2">
+    <!-- Mobile Heading Above Image -->
+    <div class="md:hidden text-center mb-6">
+      <h2 class="text-3xl font-bold">
         Unsere <span class="text-[var(--primary-color)]">Strategie</span>
       </h2>
-      <p class="italic text-lg text-gray-300 mb-6">Beton – Stahl – Holz – Mauerwerk</p>
+      <p class="italic text-base text-gray-300">Beton – Stahl – Holz – Mauerwerk</p>
+    </div>
+
+    <!-- Image -->
+    <div data-aos="fade-right" class="flex items-center justify-center mb-12 md:mb-0">
+      <img src="images/unsere_strategie_2.png"
+           alt="Strategie bei HK Bau"
+           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
+           loading="lazy" />
+    </div>
+
+    <!-- Text Content -->
+    <div data-aos="fade-left">
+      <!-- Desktop Heading -->
+      <div class="hidden md:block mb-6">
+        <h2 class="text-4xl font-bold">
+          Unsere <span class="text-[var(--primary-color)]">Strategie</span>
+        </h2>
+        <p class="italic text-lg text-gray-300">Beton – Stahl – Holz – Mauerwerk</p>
+      </div>
+
       <div class="text-lg text-gray-200 space-y-4 max-w-prose">
         <p>In unserer modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen...</p>
         <p>Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen und Bauarten geprägt.</p>
         <p>Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren...</p>
         <p>Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung...</p>
       </div>
+
       <div class="mt-8 space-y-4">
         <h3 class="text-xl font-semibold text-white mb-2">Unsere Schwerpunkte</h3>
         <div class="flex items-center gap-3">
@@ -335,15 +364,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Image -->
-    <div class="order-1 md:order-2 flex items-center justify-center" data-aos="fade-right">
-      <img src="images/unsere_strategie_2.png"
-           alt="Strategie bei HK Bau"
-           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
-           loading="lazy" />
-    </div>
-
   </div>
 </section>
 

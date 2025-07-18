@@ -6,7 +6,7 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
-            const isHidden = mobileMenu.classList.toggle("translate-x-full");
+            const isHidden = mobileMenu.classList.toggle("hidden");
             menuBtn.setAttribute("aria-expanded", !isHidden);
             if (backdrop) backdrop.classList.toggle('hidden', isHidden);
         });
@@ -35,6 +35,7 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
         });
     }
 }
+
 
 // ========== Sticky Navbar Scroll Effect ============
 function initStickyHeader(navbarId) {
