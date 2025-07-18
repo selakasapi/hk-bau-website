@@ -584,30 +584,6 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = new Date().getFullYear();
   });
 
-  const overlay = document.querySelector(".page-transition-overlay");
-  if (overlay) {
-    const links = document.querySelectorAll("a[href]:not(.glightbox)");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (
-        !href ||
-        href.startsWith("http") ||
-        href.startsWith("mailto:") ||
-        href.startsWith("#") ||
-        href.endsWith(".pdf")
-      ) return;
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        requestAnimationFrame(() => {
-          overlay.classList.add("is-fading-in");
-          setTimeout(() => {
-            window.location.href = href;
-          }, 500);
-        });
-      });
-    });
-  }
 });
 
 
