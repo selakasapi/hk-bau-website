@@ -263,7 +263,8 @@ function setupPageTransitions() {
         if (isSameOrigin && !isSamePage) {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
-                // Allow transition animation for all pages including the homepage
+
+                if (sessionStorage.getItem("isTransitioning") === "true") return;
 
                 Object.assign(overlay.style, {
                     opacity: "1",
