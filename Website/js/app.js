@@ -216,7 +216,9 @@ function setupPageTransitions() {
             overlay.classList.add("is-fading-in");
         }
 
-        window.addEventListener("load", () => {
+        const heroMedia = document.querySelector('[data-hero-media]');
+
+        const hideOverlay = () => {
             overlay.classList.remove("is-fading-in");
             overlay.classList.add("is-fading-out");
 
@@ -231,7 +233,19 @@ function setupPageTransitions() {
                 document.documentElement.classList.remove("is-transitioning");
                 overlay.removeEventListener("transitionend", handler);
             }, { once: true });
-        }, { once: true });
+        };
+
+        if (heroMedia) {
+            if (heroMedia.tagName === 'VIDEO') {
+                if (heroMedia.readyState >= 3) hideOverlay();
+                else heroMedia.addEventListener('loadeddata', hideOverlay, { once: true });
+            } else {
+                if (heroMedia.complete) hideOverlay();
+                else heroMedia.addEventListener('load', hideOverlay, { once: true });
+            }
+        } else {
+            window.addEventListener('load', hideOverlay, { once: true });
+        }
     } else {
         Object.assign(overlay.style, {
             opacity: "0",
