@@ -116,6 +116,7 @@
 </head>
 
 <body class="font-[Inter] overflow-x-hidden">
+  <script>if (sessionStorage.getItem("isTransitioning") === "true") document.documentElement.classList.add("is-transitioning");</script>
 
   <!-- Page Transition Overlay -->
   <div class="page-transition-overlay flex items-center justify-center">
