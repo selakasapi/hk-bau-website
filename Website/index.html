@@ -174,8 +174,63 @@
          <span class="text-neutral-900 dark:text-white">im:</span>
       </h2>
     </div>
+
+    
+    <!-- Mobile/Tablet Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:hidden">
+      <!-- Card 1 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/wohnbau.jpg" alt="Wohnungsbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Wohnungsbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Wohnanlagen, Ein- & Mehrfamilienhäuser</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/gewerblichen_hochbau.jpg" alt="Gewerblicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Gewerblichen Hochbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Bürogebäude, Einkaufshäuser, Industriebauten</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/offentlichen_hochbau.png" alt="Öffentlicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Öffentlichen Hochbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Rathäuser, Gesundheitszentren, Schulgebäude</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/hallenbau.jpg" alt="Hallenbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Hallenbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Produktionshallen, Lagerhallen, Parkhäuser</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/fertigteil.jpg" alt="Modul- & Fertigteilbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Modul- & Fertigteilbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Pflegewohnheime, Studentenwohnheime, Appartements</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/sanierung.png" alt="Sanierung & Umbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Sanierung & Umbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Sanierungs- & Umbaumaßnahmen, Abrissarbeiten</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
+        <img src="images/schafen/schlussfertigbau.jpg" alt="Schlüsselfertigbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Schlüsselfertigbau</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Schlüsselfertiges Bauen im Wohnbau</p>
+      </div>
+    </div>
       <!-- Carousel -->
-      <div class="relative wir-schaffen-carousel carousel-container">
+    <!-- Carousel (Desktop only) -->
+<div class="hidden lg:block relative wir-schaffen-carousel carousel-container mt-10">
+
         <div class="overflow-hidden">
           <div class="carousel-wrapper flex transition-transform duration-700 ease-in-out touch-pan-x">
             <!-- Slide 1 -->
@@ -249,47 +304,48 @@
 
 
  <!-- Unsere Strategie -->
-  <section class="bg-[var(--secondary-color)] text-white py-24">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
-   <div data-aos="fade-right" class="flex h-full items-stretch">
-  <img src="images/unsere_strategie_2.png"
-       alt="Strategie bei HK Bau"
-       class="rounded-2xl shadow-lg w-full h-full object-contain"
-       loading="lazy" />
-</div>
+<section class="bg-[var(--secondary-color)] text-white py-24">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-12 items-stretch">
 
+    <!-- Image -->
+    <div data-aos="fade-right" class="flex items-center justify-center mb-12 md:mb-0">
+      <img src="images/unsere_strategie_2.png"
+           alt="Strategie bei HK Bau"
+           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
+           loading="lazy" />
+    </div>
 
-      <div data-aos="fade-left">
-<h2 class="text-4xl font-bold mb-2">
-  Unsere <span class="text-[var(--primary-color)]">Strategie</span>
-</h2>
-        <p class="italic text-lg text-gray-300 mb-6">Beton – Stahl – Holz – Mauerwerk</p>
-        <div class="text-lg text-gray-200 space-y-4 max-w-prose">
-          <p>In unseren modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen. In der Regel werden mehrere Baustoffe in einem Tragwerk eingesetzt, da sich der einzelne Baustoff für verschiedenen Beanspruchungen  in einem Tragwerk mehr oder weniger  gut eignet.</p>
-          <p>Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen und Bauarten geprägt.</p>
-          <p>Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren, indem die verschiedene Baustoffe im Sinne ihrer besten Eignung für das Tragwerk eingesetzt werden.</p>
-          
-          <p>Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung, um maßgeschneiderte Lösungen für ihr Bauvorhaben zu entwicklen.</p>
-        
+    <!-- Text Content -->
+    <div data-aos="fade-left">
+      <h2 class="text-4xl font-bold mb-2">
+        Unsere <span class="text-[var(--primary-color)]">Strategie</span>
+      </h2>
+      <p class="italic text-lg text-gray-300 mb-6">Beton – Stahl – Holz – Mauerwerk</p>
+      <div class="text-lg text-gray-200 space-y-4 max-w-prose">
+        <p>In unserer modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen. In der Regel werden mehrere Baustoffe in einem Tragwerk eingesetzt, da sich der einzelne Baustoff für verschiedene Beanspruchungen in einem Tragwerk mehr oder weniger gut eignet.</p>
+        <p>Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen und Bauarten geprägt.</p>
+        <p>Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren, indem die verschiedenen Baustoffe im Sinne ihrer besten Eignung für das Tragwerk eingesetzt werden.</p>
+        <p>Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung, um maßgeschneiderte Lösungen für Ihr Bauvorhaben zu entwickeln.</p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        <h3 class="text-xl font-semibold text-white mb-2">Unsere Schwerpunkte</h3>
+        <div class="flex items-center gap-3">
+          <i class="fas fa-cubes text-[var(--primary-color)] text-xl w-6"></i>
+          <span>Intelligente Kombination von Baustoffen</span>
         </div>
-        <div class="mt-8 space-y-4">
-          <h3 class="text-xl font-semibold text-white mb-2">Unsere Schwerpunkte</h3>
-          <div class="flex items-center gap-3">
-            <i class="fas fa-cubes text-[var(--primary-color)] text-xl w-6"></i>
-            <span>Intelligente Kombination von Baustoffen</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <i class="fas fa-user-check text-[var(--primary-color)] text-xl w-6"></i>
-            <span>Erfahrene Fachkräfte & individuelle Lösungen</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <i class="fas fa-tools text-[var(--primary-color)] text-xl w-6"></i>
-            <span>Hochwertige Materialien & Werkzeuge</span>
-          </div>
+        <div class="flex items-center gap-3">
+          <i class="fas fa-user-check text-[var(--primary-color)] text-xl w-6"></i>
+          <span>Erfahrene Fachkräfte & individuelle Lösungen</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fas fa-tools text-[var(--primary-color)] text-xl w-6"></i>
+          <span>Hochwertige Materialien & Werkzeuge</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
    <!-- Unsere Leistungen -->
 <section class="space-y-16 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
@@ -468,11 +524,15 @@
 
 
 
+<!-- Unsere Projekte -->
+
 <section class="py-20 bg-white text-neutral-900">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-   <h2 class="text-4xl font-bold text-center text-secondary-color mb-12">
-  Unsere <span class="text-[var(--primary-color)]">Projekte</span>
-</h2>
+    <h2 class="text-4xl font-bold text-center text-secondary-color mb-12">
+      Unsere <span class="text-[var(--primary-color)]">Projekte</span>
+    </h2>
+  </div>
+
 
   </div>
 
@@ -481,8 +541,21 @@
     <div class="absolute left-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-r from-[#fbb034] to-transparent z-10 pointer-events-none"></div>
     <div class="absolute right-0 top-0 bottom-0 w-6 sm:w-12 bg-gradient-to-l from-[#fbb034] to-transparent z-10 pointer-events-none"></div>
 
+
+
+
     <!-- Continuous Scrolling Carousel -->
-    <div class="overflow-hidden scrollbar-hide touch-pan-x group" id="referenzen-carousel">
+   <div class="overflow-hidden scrollbar-hide touch-pan-x group" id="referenzen-carousel">
+
+
+<!-- Carousel Navigation Buttons -->
+<button id="carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white rounded-full shadow p-2 hover:scale-110 transition">
+  ‹
+</button>
+<button id="carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white rounded-full shadow p-2 hover:scale-110 transition">
+  ›
+</button>
+
 
       <div class="flex gap-8 w-max px-4 sm:px-6 lg:px-8 transition-transform duration-700 ease-linear" id="referenzen-track">
 
@@ -494,9 +567,30 @@
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Wohnhäuser in Filderstadt-Plattenhardt</div>
         </div>
         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/2. Neubau MFH in Waibingen.JPG" alt="Neubau MFH in Waibingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2"> Neubau MFH in Waibingen</div>
+          <img src="images/projekten/2. Neubau MFH in Waibingen.JPG" alt="Neubau MFH in Waiblingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2"> Neubau MFH in Waiblingen</div>
         </div>
+        <!-- Fellbach-Öffingen (3x same image) -->
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/18. Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau von 3 MFH in Fellbach-Öffingen
+  </div>
+</div>
+
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/19.Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau von 3 MFH in Fellbach-Öffingen
+  </div>
+</div>
+
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/20.Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau von 3 MFH in Fellbach-Öffingen
+  </div>
+</div>
         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
           <img src="images/projekten/3. Neubau MFH in Waldenbuch.JPG" alt="Neubau MFH in Waldenbuch" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Waldenbuch</div>
@@ -542,35 +636,32 @@
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Winnenden</div>
         </div>
         
-        <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/15.Neubau von 3 Wohnhäuser in Uhingen.JPG" alt="Neubau Wohnhäuser in Uhingen 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau Wohnhäuser in Uhingen</div>
+        <!-- Uhingen -->
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/15.Neubau von 3 Wohnhäuser in Uhingen.JPG" alt="Neubau Wohnhäuser in Uhingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau Wohnhäuser in Uhingen
+  </div>
+</div>
+
+<!-- Lörrach 1 -->
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/16.Neubau Villa mit Pool in Lörrach.jpeg" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau Villa mit Pool in Lörrach
+  </div>
+</div>
+
+<!-- Lörrach 2 -->
+<div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
+  <img src="images/projekten/17.Neubau Villa mit Pool in Lörrach.jpeg" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
+  <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
+    Neubau Villa mit Pool in Lörrach
+  </div>
+</div>
 
 
-          <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/16.Neubau Villa mit Pool in Lörrach.jpeg" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau Villa mit Pool in Lörrach</div>
-        </div>
 
-        <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/17.Neubau Villa mit Pool in Lörrach.jpeg" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau Villa mit Pool in Lörrach</div>
-        </div>
-
-         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/18. Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau von 3 MFH in Fellbach-Öffingen</div>
-        </div>
-
-         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/18. Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau von 3 MFH in Fellbach-Öffingen</div>
-        </div>
-
-         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-          <img src="images/projekten/18. Neubau von 3 MFH in Fellbach-Öffingen.jpg" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700" />
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau von 3 MFH in Fellbach-Öffingen</div>
-        </div>
         </div>
       </div>
     </div>

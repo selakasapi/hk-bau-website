@@ -632,153 +632,153 @@ function initAnimatedCounters() {
   observer.observe(section);
 }
 
-// Initialize the scrolling references carousel
-function initReferenzenCarousel() {
-  const carousel = document.getElementById('referenzen-carousel');
-  if (!carousel || carousel.dataset.initialized) return;
-  carousel.dataset.initialized = 'true';
+  // Initialize the scrolling references carousel
+  function initReferenzenCarousel() {
+    const carousel = document.getElementById('referenzen-carousel');
+    if (!carousel || carousel.dataset.initialized) return;
+    carousel.dataset.initialized = 'true';
 
-  const track = carousel.querySelector('.flex');
-  const slides = Array.from(track.children);
-  slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
-  const images = track.querySelectorAll('img');
+    const track = carousel.querySelector('.flex');
+    const slides = Array.from(track.children);
+    slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
+    const images = track.querySelectorAll('img');
 
-  let isDragging = false;
-  let startX = 0;
-  let startScroll = 0;
-  let isHovered = false;
+    let isDragging = false;
+    let startX = 0;
+    let startScroll = 0;
+    let isHovered = false;
 
-  // Determine default scrolling speed from data attribute
-  // Example: <div id="referenzen-carousel" data-speed="1.5">
-  const attrSpeed = parseFloat(carousel.dataset.speed);
-  const defaultSpeed = !isNaN(attrSpeed) && attrSpeed > 0 ? attrSpeed : 1.0; // pixels per frame
+    // Determine default scrolling speed from data attribute
+    // Example: <div id="referenzen-carousel" data-speed="1.5">
+    const attrSpeed = parseFloat(carousel.dataset.speed);
+    const defaultSpeed = !isNaN(attrSpeed) && attrSpeed > 0 ? attrSpeed : 1.0; // pixels per frame
 
-  let currentSpeed = defaultSpeed;
+    let currentSpeed = defaultSpeed;
 
-  function slowDown() {
-    if (currentSpeed > 0) {
-      currentSpeed -= defaultSpeed / 20;
-      if (currentSpeed < 0) currentSpeed = 0;
-      requestAnimationFrame(slowDown);
-    }
-  }
-
-  function speedUp() {
-    if (currentSpeed < defaultSpeed) {
-      currentSpeed += defaultSpeed / 20;
-      if (currentSpeed > defaultSpeed) currentSpeed = defaultSpeed;
-      requestAnimationFrame(speedUp);
-    }
-  }
-
-  carousel.addEventListener('mouseenter', () => {
-    isHovered = true;
-    slowDown();
-  });
-
-  carousel.addEventListener('mouseleave', () => {
-    isHovered = false;
-    speedUp();
-  });
-
-  carousel.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    startScroll = carousel.scrollLeft;
-  });
-
-  carousel.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const deltaX = startX - e.touches[0].clientX;
-    carousel.scrollLeft = startScroll + deltaX;
-  });
-
-  carousel.addEventListener('touchend', () => {
-    isDragging = false;
-  });
-
-  const speed = 0.6;
-
-  function autoScrollStep() {
-    if (!isHovered && !isDragging) {
-      carousel.scrollLeft += speed;
-      if (carousel.scrollLeft >= track.scrollWidth / 2) {
-        carousel.scrollLeft -= track.scrollWidth / 2;
+    function slowDown() {
+      if (currentSpeed > 0) {
+        currentSpeed -= defaultSpeed / 20;
+        if (currentSpeed < 0) currentSpeed = 0;
+        requestAnimationFrame(slowDown);
       }
     }
+
+    function speedUp() {
+      if (currentSpeed < defaultSpeed) {
+        currentSpeed += defaultSpeed / 20;
+        if (currentSpeed > defaultSpeed) currentSpeed = defaultSpeed;
+        requestAnimationFrame(speedUp);
+      }
+    }
+
+    carousel.addEventListener('mouseenter', () => {
+      isHovered = true;
+      slowDown();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      isHovered = false;
+      speedUp();
+    });
+
+    carousel.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      startScroll = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const deltaX = startX - e.touches[0].clientX;
+      carousel.scrollLeft = startScroll + deltaX;
+    });
+
+    carousel.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    const speed = 0.6;
+
+    function autoScrollStep() {
+      if (!isHovered && !isDragging) {
+        carousel.scrollLeft += speed;
+        if (carousel.scrollLeft >= track.scrollWidth / 2) {
+          carousel.scrollLeft -= track.scrollWidth / 2;
+        }
+      }
+      requestAnimationFrame(autoScrollStep);
+    }
+
     requestAnimationFrame(autoScrollStep);
-  }
-
-  requestAnimationFrame(autoScrollStep);
 
 
-  function updateCenterZoom() {
-    const carouselRect = carousel.getBoundingClientRect();
-    const centerX = carouselRect.left + carouselRect.width / 2;
-    let closestImg = null;
-    let closestDistance = Infinity;
-    images.forEach(img => {
-      const imgRect = img.getBoundingClientRect();
-      const imgCenter = imgRect.left + imgRect.width / 2;
-      const distance = Math.abs(centerX - imgCenter);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestImg = img;
-      }
-    });
-    images.forEach(img => img.classList.remove('center-zoom'));
-    if (closestImg) closestImg.classList.add('center-zoom');
-  }
-
-  let zoomRafId = null;
-
-  function zoomLoop() {
-    updateCenterZoom();
-    zoomRafId = requestAnimationFrame(zoomLoop);
-  }
-
-  function startZoomLoop() {
-    if (zoomRafId === null) {
-      zoomLoop();
+    function updateCenterZoom() {
+      const carouselRect = carousel.getBoundingClientRect();
+      const centerX = carouselRect.left + carouselRect.width / 2;
+      let closestImg = null;
+      let closestDistance = Infinity;
+      images.forEach(img => {
+        const imgRect = img.getBoundingClientRect();
+        const imgCenter = imgRect.left + imgRect.width / 2;
+        const distance = Math.abs(centerX - imgCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestImg = img;
+        }
+      });
+      images.forEach(img => img.classList.remove('center-zoom'));
+      if (closestImg) closestImg.classList.add('center-zoom');
     }
-  }
 
-  function stopZoomLoop() {
-    if (zoomRafId !== null) {
-      cancelAnimationFrame(zoomRafId);
-      zoomRafId = null;
+    let zoomRafId = null;
+
+    function zoomLoop() {
+      updateCenterZoom();
+      zoomRafId = requestAnimationFrame(zoomLoop);
     }
+
+    function startZoomLoop() {
+      if (zoomRafId === null) {
+        zoomLoop();
+      }
+    }
+
+    function stopZoomLoop() {
+      if (zoomRafId !== null) {
+        cancelAnimationFrame(zoomRafId);
+        zoomRafId = null;
+      }
+    }
+
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startZoomLoop();
+        } else {
+          stopZoomLoop();
+        }
+      });
+    }, { threshold: 0 });
+
+    visibilityObserver.observe(carousel);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const img = entry.target.querySelector('img');
+        if (entry.isIntersecting) {
+          img.classList.add('scale-110');
+        } else {
+          img.classList.remove('scale-110');
+        }
+      });
+    }, {
+      root: carousel,
+      threshold: 0.6
+    });
+
+    carousel.querySelectorAll('.snap-center').forEach(el => {
+      observer.observe(el);
+    });
   }
-
-  const visibilityObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startZoomLoop();
-      } else {
-        stopZoomLoop();
-      }
-    });
-  }, { threshold: 0 });
-
-  visibilityObserver.observe(carousel);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const img = entry.target.querySelector('img');
-      if (entry.isIntersecting) {
-        img.classList.add('scale-110');
-      } else {
-        img.classList.remove('scale-110');
-      }
-    });
-  }, {
-    root: carousel,
-    threshold: 0.6
-  });
-
-  carousel.querySelectorAll('.snap-center').forEach(el => {
-    observer.observe(el);
-  });
-}
 
 
