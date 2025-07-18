@@ -717,11 +717,9 @@ function initAnimatedCounters() {
       isDragging = false;
     });
 
-    const speed = 0.6;
-
     function autoScrollStep() {
       if (!isHovered && !isDragging) {
-        carousel.scrollLeft += speed * direction;
+        carousel.scrollLeft += currentSpeed * direction;
         if (carousel.scrollLeft >= track.scrollWidth / 2) {
           carousel.scrollLeft -= track.scrollWidth / 2;
         }
