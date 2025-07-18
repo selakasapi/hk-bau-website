@@ -19,6 +19,7 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 /Website/ (enthält alle HTML-Dateien)
 /css/style.css
 /js/app.js
+/js/init-transition.js
 /images/
 
 ## Lokale Entwicklung
