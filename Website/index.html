@@ -305,29 +305,20 @@
 
  <!-- Unsere Strategie -->
 <section class="bg-[var(--secondary-color)] text-white py-24">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-12 items-stretch">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
 
-    <!-- Image -->
-    <div data-aos="fade-right" class="flex items-center justify-center mb-12 md:mb-0">
-      <img src="images/unsere_strategie_2.png"
-           alt="Strategie bei HK Bau"
-           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
-           loading="lazy" />
-    </div>
-
-    <!-- Text Content -->
-    <div data-aos="fade-left">
+    <!-- Text Content (placed first for mobile) -->
+    <div class="order-2 md:order-1" data-aos="fade-left">
       <h2 class="text-4xl font-bold mb-2">
         Unsere <span class="text-[var(--primary-color)]">Strategie</span>
       </h2>
       <p class="italic text-lg text-gray-300 mb-6">Beton – Stahl – Holz – Mauerwerk</p>
       <div class="text-lg text-gray-200 space-y-4 max-w-prose">
-        <p>In unserer modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen. In der Regel werden mehrere Baustoffe in einem Tragwerk eingesetzt, da sich der einzelne Baustoff für verschiedene Beanspruchungen in einem Tragwerk mehr oder weniger gut eignet.</p>
+        <p>In unserer modernen Welt gibt es wenige Tragwerke, die nur Bauteile eines einzigen Baustoffs umfassen...</p>
         <p>Die moderne Baupraxis ist stark durch Mischkonstruktionen aus verschiedenen Baustoffen und Bauarten geprägt.</p>
-        <p>Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren, indem die verschiedenen Baustoffe im Sinne ihrer besten Eignung für das Tragwerk eingesetzt werden.</p>
-        <p>Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung, um maßgeschneiderte Lösungen für Ihr Bauvorhaben zu entwickeln.</p>
+        <p>Mit Mischkonstruktionen versucht man den Materialeinsatz zu optimieren...</p>
+        <p>Unser erfahrenes und hochqualifiziertes Team von Fachleuten steht Ihnen zur Verfügung...</p>
       </div>
-
       <div class="mt-8 space-y-4">
         <h3 class="text-xl font-semibold text-white mb-2">Unsere Schwerpunkte</h3>
         <div class="flex items-center gap-3">
@@ -344,8 +335,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Image -->
+    <div class="order-1 md:order-2 flex items-center justify-center" data-aos="fade-right">
+      <img src="images/unsere_strategie_2.png"
+           alt="Strategie bei HK Bau"
+           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
+           loading="lazy" />
+    </div>
+
   </div>
 </section>
+
 
    <!-- Unsere Leistungen -->
 <section class="space-y-16 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
