@@ -218,7 +218,10 @@ function setupPageTransitions() {
 
         const heroMedia = document.querySelector('[data-hero-media]');
 
+        let overlayHidden = false;
         const hideOverlay = () => {
+            if (overlayHidden) return;
+            overlayHidden = true;
             overlay.classList.remove("is-fading-in");
             overlay.classList.add("is-fading-out");
 
@@ -237,8 +240,19 @@ function setupPageTransitions() {
 
         if (heroMedia) {
             if (heroMedia.tagName === 'VIDEO') {
-                if (heroMedia.readyState >= 3) hideOverlay();
-                else heroMedia.addEventListener('loadeddata', hideOverlay, { once: true });
+                const posterSrc = heroMedia.getAttribute('poster');
+                if (posterSrc) {
+                    const posterImg = new Image();
+                    posterImg.src = posterSrc;
+                    if (posterImg.complete) hideOverlay();
+                    else posterImg.addEventListener('load', hideOverlay, { once: true });
+                }
+
+                if (heroMedia.readyState >= 3) {
+                    hideOverlay();
+                } else {
+                    heroMedia.addEventListener('loadeddata', hideOverlay, { once: true });
+                }
             } else {
                 if (heroMedia.complete) hideOverlay();
                 else heroMedia.addEventListener('load', hideOverlay, { once: true });
@@ -281,6 +295,14 @@ function setupPageTransitions() {
             });
         }
     });
+}
+
+// ======== Delayed Hero Video Load ===========
+function loadHeroVideo() {
+    const video = document.querySelector('[data-hero-media][data-load-after]');
+    if (video) {
+        video.load();
+    }
 }
 
 // ========== Project Carousel (Autoplay, Swipe, Indicators) ============
@@ -582,6 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initWirSchaffenCarousel();
   initAnimatedCounters();
   initReferenzenCarousel();
+  loadHeroVideo();
 
   document.querySelectorAll('.carousel-container').forEach(container => {
     let startX = 0;
