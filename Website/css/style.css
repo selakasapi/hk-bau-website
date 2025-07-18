@@ -277,14 +277,6 @@ section.parallax .bg-\[var\(--secondary-color\)\]\/60 {
     background-color: rgba(28, 33, 39, 0.6) !important;
 }
 
-/* Specific background images for hero sections */
-.leistungen-hero {
-    background-image: url('../images/hero-leistungen.jpg');
-}
-
-.referenzen-hero {
-    background-image: url('../images/referenzen-hero.jpg');
-}
 
 
 /* Hero button styling (applies to buttons with bg-primary-color) */
