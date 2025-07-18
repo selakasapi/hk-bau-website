@@ -565,7 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectCarousel();
   initServicesCarousel();
   initWirSchaffenCarousel();
-  initAnimatedCounters(); // ✅ Make sure this is the correct one
+  initAnimatedCounters();
   initReferenzenCarousel();
 
   document.querySelectorAll('.carousel-container').forEach(container => {
