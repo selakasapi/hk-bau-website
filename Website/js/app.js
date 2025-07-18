@@ -647,40 +647,19 @@ function initAnimatedCounters() {
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
 
-    const computeScrollAmount = () => {
-      const firstSlide = slides[0];
-      if (!firstSlide) return 0;
-      const slideWidth = firstSlide.getBoundingClientRect().width;
-      const style = getComputedStyle(track);
-      const gap = parseFloat(style.gap || style.columnGap || 0);
-      return slideWidth + gap;
-    };
+    // Direction control for continuous scrolling
+    let direction = 1; // 1 = forward (next), -1 = backward (previous)
 
-    let scrollAmount = computeScrollAmount();
-    window.addEventListener('resize', () => {
-      scrollAmount = computeScrollAmount();
-    });
-
-    let autoResumeTimeout;
-    const stopAndResumeAuto = () => {
-      isHovered = true;
-      clearTimeout(autoResumeTimeout);
-      autoResumeTimeout = setTimeout(() => {
-        isHovered = false;
-      }, 2000);
-    };
 
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        stopAndResumeAuto();
+        direction = -1;
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        stopAndResumeAuto();
+        direction = 1;
       });
     }
 
@@ -742,9 +721,12 @@ function initAnimatedCounters() {
 
     function autoScrollStep() {
       if (!isHovered && !isDragging) {
-        carousel.scrollLeft += speed;
+        carousel.scrollLeft += speed * direction;
         if (carousel.scrollLeft >= track.scrollWidth / 2) {
           carousel.scrollLeft -= track.scrollWidth / 2;
+        }
+        if (carousel.scrollLeft <= 0) {
+          carousel.scrollLeft += track.scrollWidth / 2;
         }
       }
       requestAnimationFrame(autoScrollStep);

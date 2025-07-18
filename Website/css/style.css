@@ -976,7 +976,9 @@ img[src*="placeholder"] {
 /* Swipe support */
 #referenzen-carousel {
   touch-action: pan-x;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 50%;
   cursor: grab;
 }
 #referenzen-carousel:active {
@@ -988,6 +990,10 @@ img[src*="placeholder"] {
   gap: 2.5rem; /* Increased spacing between slides */
   width: max-content;
   will-change: transform;
+}
+
+#referenzen-track > * {
+  scroll-snap-align: center;
 }
 
 /* Center image zoom effect */
