@@ -126,29 +126,39 @@
   </header>
   <main>
 
-<!-- Hero -->
-<section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden sm:min-h-screen">
+<!-- Hero Section -->
+<section id="home" class="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
 
   <!-- Video Background -->
-  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-10">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover object-center -z-10">
     <source src="images/videos/hero-3.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[var(--secondary-color)]/70 to-[var(--secondary-color)]/30 z-0"></div>
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[var(--secondary-color)]/80 to-[var(--secondary-color)]/30 z-0"></div>
 
   <!-- Hero Content -->
-  <div class="relative z-10 text-center px-4 sm:px-6 max-w-2xl hero-content" data-aos="zoom-in">
-    <p class="text-base sm:text-lg mb-4 sm:mb-6 text-white">
+  <div class="relative z-10 text-center px-4 sm:px-6 w-full max-w-full" data-aos="zoom-in">
+    <p class="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-white">
       Ihr zuverlässiger Partner im Bauwesen
     </p>
-    <h1 class="text-3xl sm:text-5xl font-bold mb-6 sm:mb-10 text-[var(--primary-color)] leading-tight sm:leading-tight break-words">
-      Wo Vision auf Fundament trifft.
-    </h1>
+
+    <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-10 text-[var(--primary-color)] leading-tight text-balance max-w-full sm:max-w-[90%] md:max-w-[80%] xl:max-w-[70%] mx-auto">
+  <span class="block sm:inline">Wo Vision auf</span> <span class="block sm:inline">Fundament trifft.</span>
+</h1>
+
   </div>
 
 </section>
+
+
 
 
 <!-- Wir schaffen Section -->
