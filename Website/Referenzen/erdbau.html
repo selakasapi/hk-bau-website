@@ -48,21 +48,24 @@
   </div>
 
 
-<header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar">
+<header class="fixed top-0 left-0 w-full z-30 transition duration-300 bg-black/60 backdrop-blur-md shadow-md" id="navbar">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <!-- Logo -->
     <div class="logo-container">
       <a href="../index.html" class="flex items-center relative z-20">
         <img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" width="64" height="64" />
         <span class="text-white font-bold ml-2">HK Bau</span>
       </a>
     </div>
-    <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium">
-      <a href="../index.html">Startseite</a>
-      <a href="../leistungen.html">Leistungen</a>
-      <a href="../referenzen.html">Referenzen</a>
+
+    <!-- Desktop Navigation -->
+    <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium text-white">
+      <a href="../index.html" class="hover:text-yellow-400 transition">Startseite</a>
+      <a href="../leistungen.html" class="hover:text-yellow-400 transition">Leistungen</a>
+      <a href="../referenzen.html" class="hover:text-yellow-400 transition">Referenzen</a>
       <!-- <a href="wissen.html">Wissen</a> -->
-      <a href="../karriere.html">Karriere</a>
-      <a href="../kontakt.html">Kontakt</a>
+      <a href="../karriere.html" class="hover:text-yellow-400 transition">Karriere</a>
+      <a href="../kontakt.html" class="hover:text-yellow-400 transition">Kontakt</a>
     </nav>
 
     <!-- Hamburger Menu Button -->
@@ -83,11 +86,11 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6">
-    <a href="../index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
-    <a href="../leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
-    <a href="../referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Referenzen</a>
-    <a href="../karriere.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Karriere</a>
-    <a href="../kontakt.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Kontakt</a>
+    <a href="../index.html" class="block py-2 px-3 text-base font-medium hover:text-yellow-400">Startseite</a>
+    <a href="../leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-yellow-400">Leistungen</a>
+    <a href="../referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-yellow-400">Referenzen</a>
+    <a href="../karriere.html" class="block py-2 px-3 text-base font-medium hover:text-yellow-400">Karriere</a>
+    <a href="../kontakt.html" class="block py-2 px-3 text-base font-medium hover:text-yellow-400">Kontakt</a>
   </div>
 </header>
 
@@ -95,20 +98,21 @@
 
 
 
+
   <main>
   <!-- HERO SECTION -->
-<section class="relative h-[90vh] md:h-[600px] flex items-center justify-center overflow-hidden bg-black text-white">
-  <img src="/Website/images/erdbau_referenzen/erdbau_13.jpg"
+<section class="relative h-[90vh] md:h-[600px] flex items-center justify-center overflow-hidden text-white">
+  <img src="../images/erdbau_referenzen/erdbau_13.jpg"
        alt="Erdbau"
-       class="absolute inset-0 w-full h-full object-cover -z-0"
+       class="absolute inset-0 w-full h-full object-cover z-[-1]"
        data-hero-media />
 
-  <!-- Gradient Overlay like homepage -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[var(--secondary-color)]/60 via-black/40 to-black/80 z-0"></div>
+  <!-- Stronger dark overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-black/20 via-black/60 to-black/80 z-0"></div>
 
   <!-- Hero Text -->
   <div class="relative z-10 text-center px-6 max-w-3xl" data-aos="zoom-in">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-md">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-md text-[var(--primary-color)]">
       Erdarbeiten mit Präzision
     </h1>
     <p class="text-lg md:text-xl opacity-90 leading-relaxed">
@@ -116,6 +120,7 @@
     </p>
   </div>
 </section>
+
   
 <section class="w-full py-20 bg-gray-50 fade-parallax">
   <div class="px-4 sm:px-6 lg:px-8 mb-10">
