@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2');
+  src: url('/Website/fonts/Poppins-Regular.ttf') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2');
+  src: url('/Website/fonts/Inter-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,11 +33,12 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2');
+  src: url('/Website/fonts/Poppins-Bold.ttf') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+
 
 /* Apply it to the entire website */
 body {
