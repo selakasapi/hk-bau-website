@@ -669,6 +669,7 @@ function initAnimatedCounters() {
     const slides = Array.from(track.children);
     slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
     const images = track.querySelectorAll('img');
+    images.forEach(img => img.setAttribute('loading', 'eager'));
 
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
