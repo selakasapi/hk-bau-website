@@ -753,6 +753,8 @@ function initAnimatedCounters() {
       isDragging = false;
     });
 
+    let autoScrollId = null;
+
     function autoScrollStep() {
       if (!isHovered && !isDragging) {
         carousel.scrollLeft += currentSpeed * direction;
@@ -763,10 +765,21 @@ function initAnimatedCounters() {
           carousel.scrollLeft += track.scrollWidth / 2;
         }
       }
-      requestAnimationFrame(autoScrollStep);
+      autoScrollId = requestAnimationFrame(autoScrollStep);
     }
 
-    requestAnimationFrame(autoScrollStep);
+    function startAutoScroll() {
+      if (autoScrollId === null) {
+        autoScrollId = requestAnimationFrame(autoScrollStep);
+      }
+    }
+
+    function stopAutoScroll() {
+      if (autoScrollId !== null) {
+        cancelAnimationFrame(autoScrollId);
+        autoScrollId = null;
+      }
+    }
 
 
     function updateCenterZoom() {
@@ -811,8 +824,10 @@ function initAnimatedCounters() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           startZoomLoop();
+          startAutoScroll();
         } else {
           stopZoomLoop();
+          stopAutoScroll();
         }
       });
     }, { threshold: 0 });
