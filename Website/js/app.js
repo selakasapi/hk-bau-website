@@ -746,6 +746,7 @@ function initAnimatedCounters() {
 
     carousel.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
+      e.preventDefault();
       const deltaX = startX - e.touches[0].clientX;
       carousel.scrollLeft = startScroll + deltaX;
     });
