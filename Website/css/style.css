@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/Website/fonts/Poppins-Regular.ttf') format('woff2');
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/Website/fonts/Inter-SemiBold.woff2') format('woff2');
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/Website/fonts/Poppins-Bold.ttf') format('woff2');
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -64,8 +64,6 @@ body {
     /* Default body background */
     color: var(--secondary-color);
     /* Default text color: Dark gray/black */
-    font-family: 'Inter', sans-serif;
-    /* Ensure Inter font is applied */
     overflow-x: hidden;
     /* Prevent horizontal scrolling */
 }
