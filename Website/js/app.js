@@ -676,16 +676,26 @@ function initAnimatedCounters() {
     // Direction control for continuous scrolling
     let direction = 1; // 1 = forward (next), -1 = backward (previous)
 
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const slideWidth = slides[0].offsetWidth + gap;
 
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         direction = -1;
+        carousel.scrollLeft -= slideWidth;
+        if (carousel.scrollLeft < 0) {
+          carousel.scrollLeft += track.scrollWidth / 2;
+        }
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
         direction = 1;
+        carousel.scrollLeft += slideWidth;
+        if (carousel.scrollLeft >= track.scrollWidth / 2) {
+          carousel.scrollLeft -= track.scrollWidth / 2;
+        }
       });
     }
 
@@ -743,6 +753,8 @@ function initAnimatedCounters() {
       isDragging = false;
     });
 
+    let autoScrollId = null;
+
     function autoScrollStep() {
       if (!isHovered && !isDragging) {
         carousel.scrollLeft += currentSpeed * direction;
@@ -753,10 +765,21 @@ function initAnimatedCounters() {
           carousel.scrollLeft += track.scrollWidth / 2;
         }
       }
-      requestAnimationFrame(autoScrollStep);
+      autoScrollId = requestAnimationFrame(autoScrollStep);
     }
 
-    requestAnimationFrame(autoScrollStep);
+    function startAutoScroll() {
+      if (autoScrollId === null) {
+        autoScrollId = requestAnimationFrame(autoScrollStep);
+      }
+    }
+
+    function stopAutoScroll() {
+      if (autoScrollId !== null) {
+        cancelAnimationFrame(autoScrollId);
+        autoScrollId = null;
+      }
+    }
 
 
     function updateCenterZoom() {
@@ -801,8 +824,10 @@ function initAnimatedCounters() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           startZoomLoop();
+          startAutoScroll();
         } else {
           stopZoomLoop();
+          stopAutoScroll();
         }
       });
     }, { threshold: 0 });
