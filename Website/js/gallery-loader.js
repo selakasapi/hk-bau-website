@@ -1,7 +1,6 @@
 const galleryConfigs = {
   "abbruch-referenzen": [{ prefix: "1.abbruch_", count: 19 }],
   "aussenanlagen-referenzen": [{ prefix: "1.aussenanlagen_", count: 19 }],
-  "dach-referenzen": [{ prefix: "1.dach_", count: 5 }],
   "erdbau-referenzen": [
     { prefix: "1.erdbau_", count: 20 },
     { prefix: "2.erdbau_", count: 39 }
