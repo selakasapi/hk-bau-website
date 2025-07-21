@@ -38,6 +38,7 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
   <script src="../js/app.js" defer></script>
+  <script src="../js/gallery-loader.js" defer></script>
   <div class="page-transition-overlay flex items-center justify-center">
     <div class="flex flex-col items-center space-y-4">
       <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
@@ -115,47 +116,8 @@
     <hr class="mt-4 border-t border-gray-300/50 w-24">
   </div>
 
-  <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 gallery px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-    <a href="../images/hero-leistungen.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="50" aria-label="Stahlbetonbau Projekt 1">
-      <img src="../images/hero-leistungen.jpg" loading="lazy" alt="Stahlbetonbau 1"  class="w-full h-auto" />
-      <span class="gallery-caption">1</span>
-    </a>
-    <a href="../images/erdbau.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="100" aria-label="Stahlbetonbau Projekt 2">
-      <img src="../images/erdbau.jpg" alt="Stahlbetonbau 2" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">2</span>
-    </a>
-    <a href="../images/holzbau.webp" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="150" aria-label="Stahlbetonbau Projekt 3">
-      <img src="../images/holzbau.webp" alt="Stahlbetonbau 3" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">3</span>
-    </a>
-    <a href="../images/kanalbau.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="200" aria-label="Stahlbetonbau Projekt 4">
-      <img src="../images/kanalbau.jpg" alt="Stahlbetonbau 4" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">4</span>
-    </a>
-    <a href="../images/mauerwerksbau.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="250" aria-label="Stahlbetonbau Projekt 5">
-      <img src="../images/mauerwerksbau.jpg" alt="Stahlbetonbau 5" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">5</span>
-    </a>
-    <a href="../images/pexels-kawserhamid-176342.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="300" aria-label="Stahlbetonbau Projekt 6">
-      <img src="../images/pexels-kawserhamid-176342.jpg" alt="Stahlbetonbau 6" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">6</span>
-    </a>
-    <a href="../images/pexels-yury-kim-181374-585418.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="350" aria-label="Stahlbetonbau Projekt 7">
-      <img src="../images/pexels-yury-kim-181374-585418.jpg" alt="Stahlbetonbau 7" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">7</span>
-    </a>
-    <a href="../images/stahlbau.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="400" aria-label="Stahlbetonbau Projekt 8">
-      <img src="../images/stahlbau.jpg" alt="Stahlbetonbau 8" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">8</span>
-    </a>
-    <a href="../images/stahlbetonbau.jpg" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="450" aria-label="Stahlbetonbau Projekt 9">
-      <img src="../images/stahlbetonbau.jpg" alt="Stahlbetonbau 9" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">9</span>
-    </a>
-    <a href="../images/unsere_strategie_2.png" class="glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10" data-aos="zoom-in" data-aos-delay="500" aria-label="Stahlbetonbau Projekt 10">
-      <img src="../images/unsere_strategie_2.png" alt="Stahlbetonbau 10" loading="lazy" class="w-full h-auto" />
-      <span class="gallery-caption">10</span>
-    </a>
+  <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 gallery px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-folder="stahlbetonbau-referenzen">
+
   </div>
 </section>
 
