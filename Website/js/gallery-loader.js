@@ -7,8 +7,8 @@ const galleryConfigs = {
     { prefix: "2.erdbau_", count: 51 }
   ],
   "kanalbau-referenzen": [
-    { prefix: "1.erdbau_", count: 20 },
-    { prefix: "2.erdbau_", count: 51 }
+    { prefix: "1.kanalbau_", count: 17 },
+    { prefix: "2.kanalbau_", count: 51 }
   ],
   "holzbau-referenzen": [
     { prefix: "1.holzbau_", count: 85 },
