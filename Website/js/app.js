@@ -786,12 +786,14 @@ if (nextBtn) {
       startScroll = carousel.scrollLeft;
     });
 
-    carousel.addEventListener('touchmove', (e) => {
+    function onMove(e) {
       if (!isDragging) return;
       e.preventDefault();
       const deltaX = startX - e.touches[0].clientX;
       carousel.scrollLeft = startScroll + deltaX;
-    });
+    }
+
+    carousel.addEventListener('touchmove', onMove, { passive: false });
 
     carousel.addEventListener('touchend', () => {
       isDragging = false;
