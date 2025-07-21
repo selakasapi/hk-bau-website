@@ -707,26 +707,40 @@ function initAnimatedCounters() {
     let direction = 1; // 1 = forward (next), -1 = backward (previous)
 
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    const slideWidth = slides[0].offsetWidth + gap;
+    let slideWidth = 0;
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        direction = -1;
-        carousel.scrollLeft -= slideWidth;
-        if (carousel.scrollLeft < 0) {
-          carousel.scrollLeft += track.scrollWidth / 2;
-        }
-      });
+    function addButtonHandlers() {
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          direction = -1;
+          carousel.scrollLeft -= slideWidth;
+          if (carousel.scrollLeft < 0) {
+            carousel.scrollLeft += track.scrollWidth / 2;
+          }
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          direction = 1;
+          carousel.scrollLeft += slideWidth;
+          if (carousel.scrollLeft >= track.scrollWidth / 2) {
+            carousel.scrollLeft -= track.scrollWidth / 2;
+          }
+        });
+      }
     }
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        direction = 1;
-        carousel.scrollLeft += slideWidth;
-        if (carousel.scrollLeft >= track.scrollWidth / 2) {
-          carousel.scrollLeft -= track.scrollWidth / 2;
-        }
-      });
+    function setupWidthAndHandlers() {
+      slideWidth = slides[0].offsetWidth + gap;
+      addButtonHandlers();
+    }
+
+    const firstImage = slides[0].querySelector('img');
+    if (firstImage && !firstImage.complete) {
+      firstImage.addEventListener('load', setupWidthAndHandlers, { once: true });
+    } else {
+      requestAnimationFrame(setupWidthAndHandlers);
     }
 
     let isDragging = false;
