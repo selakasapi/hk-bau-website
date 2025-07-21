@@ -656,6 +656,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+window.addEventListener('pageshow', (e) => {
+  const carousel = document.getElementById('referenzen-carousel');
+  if (carousel && (e.persisted || carousel.dataset.autoScrollActive !== 'true')) {
+    initReferenzenCarousel();
+  }
+});
+
 
 // Animate counters when the section scrolls into view
 function initAnimatedCounters() {
@@ -691,20 +698,25 @@ function initAnimatedCounters() {
   // Initialize the scrolling references carousel
   function initReferenzenCarousel() {
     const carousel = document.getElementById('referenzen-carousel');
-    if (!carousel || carousel.dataset.initialized) return;
-    carousel.dataset.initialized = 'true';
+    if (!carousel) return;
 
-    const track = carousel.querySelector('.flex');
-    const slides = Array.from(track.children);
-    slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
-    const images = track.querySelectorAll('img');
-    images.forEach(img => img.setAttribute('loading', 'eager'));
+    const wasInitialized = carousel.dataset.initialized === 'true';
+
+    // Initial setup only once
+    if (!wasInitialized) {
+      carousel.dataset.initialized = 'true';
+
+      const track = carousel.querySelector('.flex');
+      const slides = Array.from(track.children);
+      slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
+      const images = track.querySelectorAll('img');
+      images.forEach(img => img.setAttribute('loading', 'eager'));
 
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
 
     // Direction control for continuous scrolling
-    let direction = 1; // 1 = forward (next), -1 = backward (previous)
+    carousel._direction = 1; // 1 = forward (next), -1 = backward (previous)
 
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     let slideWidth = 0;
@@ -720,64 +732,67 @@ function initAnimatedCounters() {
         });
       }
 
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          direction = 1;
-          carousel.scrollLeft += slideWidth;
-          if (carousel.scrollLeft >= track.scrollWidth / 2) {
-            carousel.scrollLeft -= track.scrollWidth / 2;
-          }
-        });
-      }
-    }
+carousel._direction = 1; 
 
-    function setupWidthAndHandlers() {
-      slideWidth = slides[0].offsetWidth + gap;
-      addButtonHandlers();
-    }
+const gap = parseFloat(getComputedStyle(track).gap) || 0;
+const slideWidth = slides[0].offsetWidth + gap;
 
-    const firstImage = slides[0].querySelector('img');
-    if (firstImage && !firstImage.complete) {
-      firstImage.addEventListener('load', setupWidthAndHandlers, { once: true });
-    } else {
-      requestAnimationFrame(setupWidthAndHandlers);
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    carousel._direction = -1;
+    carousel.scrollLeft -= slideWidth;
+    if (carousel.scrollLeft < 0) {
+      carousel.scrollLeft += track.scrollWidth / 2;
     }
+  });
+}
+
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    carousel._direction = 1;
+    carousel.scrollLeft += slideWidth;
+    if (carousel.scrollLeft >= track.scrollWidth / 2) {
+      carousel.scrollLeft -= track.scrollWidth / 2;
+    }
+  });
+}
 
     let isDragging = false;
     let startX = 0;
     let startScroll = 0;
-    let isHovered = false;
+    carousel._isHovered = false;
 
     // Determine default scrolling speed from data attribute
     // Example: <div id="referenzen-carousel" data-speed="1.5">
     const attrSpeed = parseFloat(carousel.dataset.speed);
     const defaultSpeed = !isNaN(attrSpeed) && attrSpeed > 0 ? attrSpeed : 1.0; // pixels per frame
 
-    let currentSpeed = defaultSpeed;
+    carousel._defaultSpeed = defaultSpeed;
+    carousel._currentSpeed = defaultSpeed;
 
     function slowDown() {
-      if (currentSpeed > 0) {
-        currentSpeed -= defaultSpeed / 20;
-        if (currentSpeed < 0) currentSpeed = 0;
+      if (carousel._currentSpeed > 0) {
+        carousel._currentSpeed -= carousel._defaultSpeed / 20;
+        if (carousel._currentSpeed < 0) carousel._currentSpeed = 0;
         requestAnimationFrame(slowDown);
       }
     }
 
     function speedUp() {
-      if (currentSpeed < defaultSpeed) {
-        currentSpeed += defaultSpeed / 20;
-        if (currentSpeed > defaultSpeed) currentSpeed = defaultSpeed;
+      if (carousel._currentSpeed < carousel._defaultSpeed) {
+        carousel._currentSpeed += carousel._defaultSpeed / 20;
+        if (carousel._currentSpeed > carousel._defaultSpeed) carousel._currentSpeed = carousel._defaultSpeed;
         requestAnimationFrame(speedUp);
       }
     }
 
     carousel.addEventListener('mouseenter', () => {
-      isHovered = true;
+      carousel._isHovered = true;
       slowDown();
     });
 
     carousel.addEventListener('mouseleave', () => {
-      isHovered = false;
+      carousel._isHovered = false;
       speedUp();
     });
 
@@ -798,11 +813,11 @@ function initAnimatedCounters() {
       isDragging = false;
     });
 
-    let autoScrollId = null;
+    carousel._autoScrollId = null;
 
     function autoScrollStep() {
-      if (!isHovered && !isDragging) {
-        carousel.scrollLeft += currentSpeed * direction;
+      if (!carousel._isHovered && !isDragging) {
+        carousel.scrollLeft += carousel._currentSpeed * carousel._direction;
         if (carousel.scrollLeft >= track.scrollWidth / 2) {
           carousel.scrollLeft -= track.scrollWidth / 2;
         }
@@ -810,19 +825,21 @@ function initAnimatedCounters() {
           carousel.scrollLeft += track.scrollWidth / 2;
         }
       }
-      autoScrollId = requestAnimationFrame(autoScrollStep);
+      carousel._autoScrollId = requestAnimationFrame(autoScrollStep);
     }
 
     function startAutoScroll() {
-      if (autoScrollId === null) {
-        autoScrollId = requestAnimationFrame(autoScrollStep);
+      if (carousel._autoScrollId === null) {
+        carousel._autoScrollId = requestAnimationFrame(autoScrollStep);
+        carousel.dataset.autoScrollActive = 'true';
       }
     }
 
     function stopAutoScroll() {
-      if (autoScrollId !== null) {
-        cancelAnimationFrame(autoScrollId);
-        autoScrollId = null;
+      if (carousel._autoScrollId !== null) {
+        cancelAnimationFrame(carousel._autoScrollId);
+        carousel._autoScrollId = null;
+        carousel.dataset.autoScrollActive = 'false';
       }
     }
 
@@ -845,23 +862,23 @@ function initAnimatedCounters() {
       if (closestImg) closestImg.classList.add('center-zoom');
     }
 
-    let zoomRafId = null;
+    carousel._zoomRafId = null;
 
     function zoomLoop() {
       updateCenterZoom();
-      zoomRafId = requestAnimationFrame(zoomLoop);
+      carousel._zoomRafId = requestAnimationFrame(zoomLoop);
     }
 
     function startZoomLoop() {
-      if (zoomRafId === null) {
+      if (carousel._zoomRafId === null) {
         zoomLoop();
       }
     }
 
     function stopZoomLoop() {
-      if (zoomRafId !== null) {
-        cancelAnimationFrame(zoomRafId);
-        zoomRafId = null;
+      if (carousel._zoomRafId !== null) {
+        cancelAnimationFrame(carousel._zoomRafId);
+        carousel._zoomRafId = null;
       }
     }
 
@@ -896,6 +913,20 @@ function initAnimatedCounters() {
     carousel.querySelectorAll('.snap-center').forEach(el => {
       observer.observe(el);
     });
+
+    carousel.startAutoScroll = startAutoScroll;
+    carousel.stopAutoScroll = stopAutoScroll;
+    carousel.startZoomLoop = startZoomLoop;
+    carousel.stopZoomLoop = stopZoomLoop;
   }
 
+  if (wasInitialized) {
+    if (carousel.startAutoScroll && carousel.dataset.autoScrollActive !== 'true') {
+      carousel.startAutoScroll();
+    }
+    if (carousel.startZoomLoop && carousel._zoomRafId === null) {
+      carousel.startZoomLoop();
+    }
+  }
+  }
 
