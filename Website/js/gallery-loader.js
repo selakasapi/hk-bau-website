@@ -60,5 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
       link.appendChild(img);
       gallery.appendChild(link);
     });
+
+    if (typeof initLightbox === 'function') {
+      initLightbox();
+    }
   });
 });
