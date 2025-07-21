@@ -816,6 +816,7 @@ if (nextBtn) {
 
     function startAutoScroll() {
       if (carousel._autoScrollId === null) {
+        carousel._currentSpeed = carousel._defaultSpeed; // ensure speed resumes
         carousel._autoScrollId = requestAnimationFrame(autoScrollStep);
         carousel.dataset.autoScrollActive = 'true';
       }
