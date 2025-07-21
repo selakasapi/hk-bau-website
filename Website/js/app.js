@@ -719,27 +719,43 @@ function initAnimatedCounters() {
     carousel._direction = 1; // 1 = forward (next), -1 = backward (previous)
 
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    const slideWidth = slides[0].offsetWidth + gap;
+    let slideWidth = 0;
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        carousel._direction = -1;
-        carousel.scrollLeft -= slideWidth;
-        if (carousel.scrollLeft < 0) {
-          carousel.scrollLeft += track.scrollWidth / 2;
-        }
-      });
-    }
+    function addButtonHandlers() {
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          direction = -1;
+          carousel.scrollLeft -= slideWidth;
+          if (carousel.scrollLeft < 0) {
+            carousel.scrollLeft += track.scrollWidth / 2;
+          }
+        });
+      }
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        carousel._direction = 1;
-        carousel.scrollLeft += slideWidth;
-        if (carousel.scrollLeft >= track.scrollWidth / 2) {
-          carousel.scrollLeft -= track.scrollWidth / 2;
-        }
-      });
+carousel._direction = 1; 
+
+const gap = parseFloat(getComputedStyle(track).gap) || 0;
+const slideWidth = slides[0].offsetWidth + gap;
+
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    carousel._direction = -1;
+    carousel.scrollLeft -= slideWidth;
+    if (carousel.scrollLeft < 0) {
+      carousel.scrollLeft += track.scrollWidth / 2;
     }
+  });
+}
+
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    carousel._direction = 1;
+    carousel.scrollLeft += slideWidth;
+    if (carousel.scrollLeft >= track.scrollWidth / 2) {
+      carousel.scrollLeft -= track.scrollWidth / 2;
+    }
+  });
+}
 
     let isDragging = false;
     let startX = 0;
