@@ -610,6 +610,11 @@ function initWirSchaffenCarousel() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+
   if (window.AOS) {
     AOS.init({ once: true, duration: 800 });
   }
