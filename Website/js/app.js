@@ -719,23 +719,7 @@ function initAnimatedCounters() {
     carousel._direction = 1; // 1 = forward (next), -1 = backward (previous)
 
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    let slideWidth = 0;
-
-    function addButtonHandlers() {
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          direction = -1;
-          carousel.scrollLeft -= slideWidth;
-          if (carousel.scrollLeft < 0) {
-            carousel.scrollLeft += track.scrollWidth / 2;
-          }
-        });
-      }
-
-carousel._direction = 1; 
-
-const gap = parseFloat(getComputedStyle(track).gap) || 0;
-const slideWidth = slides[0].offsetWidth + gap;
+    const slideWidth = slides[0].offsetWidth + gap;
 
 if (prevBtn) {
   prevBtn.addEventListener('click', () => {
