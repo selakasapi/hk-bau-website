@@ -206,8 +206,8 @@ function setupPageTransitions() {
         document.body.appendChild(overlay);
     }
 
-    window.addEventListener('pageshow', () => {
-        if (sessionStorage.getItem('isTransitioning') !== 'true') {
+    window.addEventListener('pageshow', (e) => {
+        if (sessionStorage.getItem('isTransitioning') !== 'true' || e.persisted) {
             overlay.classList.remove('is-fading-in', 'is-fading-out');
             Object.assign(overlay.style, {
                 opacity: '0',
@@ -218,13 +218,16 @@ function setupPageTransitions() {
         }
     });
 
-    window.addEventListener('pagehide', () => {
-        overlay.classList.remove('is-fading-in', 'is-fading-out');
-        Object.assign(overlay.style, {
-            opacity: '0',
-            visibility: 'hidden',
-            pointerEvents: 'none'
-        });
+    window.addEventListener('pagehide', (e) => {
+        if (sessionStorage.getItem('isTransitioning') !== 'true' || e.persisted) {
+            overlay.classList.remove('is-fading-in', 'is-fading-out');
+            Object.assign(overlay.style, {
+                opacity: '0',
+                visibility: 'hidden',
+                pointerEvents: 'none'
+            });
+            document.documentElement.classList.remove('is-transitioning');
+        }
     });
 
     if (sessionStorage.getItem("isTransitioning") === "true") {
@@ -607,6 +610,11 @@ function initWirSchaffenCarousel() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
+
   if (window.AOS) {
     AOS.init({ once: true, duration: 800 });
   }
