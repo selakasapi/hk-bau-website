@@ -206,6 +206,27 @@ function setupPageTransitions() {
         document.body.appendChild(overlay);
     }
 
+    window.addEventListener('pageshow', () => {
+        if (sessionStorage.getItem('isTransitioning') !== 'true') {
+            overlay.classList.remove('is-fading-in', 'is-fading-out');
+            Object.assign(overlay.style, {
+                opacity: '0',
+                visibility: 'hidden',
+                pointerEvents: 'none'
+            });
+            document.documentElement.classList.remove('is-transitioning');
+        }
+    });
+
+    window.addEventListener('pagehide', () => {
+        overlay.classList.remove('is-fading-in', 'is-fading-out');
+        Object.assign(overlay.style, {
+            opacity: '0',
+            visibility: 'hidden',
+            pointerEvents: 'none'
+        });
+    });
+
     if (sessionStorage.getItem("isTransitioning") === "true") {
         Object.assign(overlay.style, {
             opacity: "1",
