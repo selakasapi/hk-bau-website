@@ -69,11 +69,10 @@ function initScrollToTop(btnId) {
 
 // ========== Image Fallback for Broken Images ============
 function initImageFallback() {
-    const fallbackImage = "../images/placeholder.png";
     document.querySelectorAll("img").forEach(img => {
         img.addEventListener("error", () => {
             img.onerror = null;
-            img.src = fallbackImage;
+            img.style.display = "none";
         });
     });
 }
