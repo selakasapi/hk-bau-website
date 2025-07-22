@@ -38,5 +38,10 @@ Zur Kompression eignen sich Werkzeuge wie
 [imagemin](https://github.com/imagemin/imagemin) (in Build-Prozesse integrierbar) oder
 [ImageOptim](https://imageoptim.com) für eine manuelle Optimierung.
 
+Werden neue Bilder hinzugefügt, sollten anschließend `scripts/make-thumbnails.sh`
+und `scripts/generate-dimensions.js` ausgeführt werden, um Thumbnails und
+Abmessungsdaten aktuell zu halten. Für `scripts/make-thumbnails.sh` wird
+ImageMagick benötigt.
+
 ## Lizenz
 Veröffentlicht unter der [MIT-Lizenz](LICENSE).
