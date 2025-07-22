@@ -25,6 +25,16 @@ const galleryConfigs = {
 
 const INITIAL_COUNT = 20;
 const BATCH_SIZE = 20;
+const THRESHOLD = 100;
+
+function deriveCounts(total) {
+  if (total > THRESHOLD) {
+    const dynamicBatch = Math.ceil(total / 5);
+    const initial = Math.max(INITIAL_COUNT, dynamicBatch);
+    return { initial, batch: dynamicBatch };
+  }
+  return { initial: INITIAL_COUNT, batch: BATCH_SIZE };
+}
 
 function buildFileList(groups) {
   const files = [];
@@ -83,13 +93,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!config) return;
 
     const files = buildFileList(config);
-    const remaining = files.slice(INITIAL_COUNT);
+    const totalCount = files.length;
+    const { initial, batch } = deriveCounts(totalCount);
+    const remaining = files.slice(initial);
 
     gallery._remainingFiles = remaining;
     gallery._loadedCount = 0;
+    gallery._batchSize = batch;
 
-    appendBatch(gallery, folder, files.slice(0, INITIAL_COUNT), 0);
-    gallery._loadedCount += Math.min(INITIAL_COUNT, files.length);
+    appendBatch(gallery, folder, files.slice(0, initial), 0);
+    gallery._loadedCount += Math.min(initial, files.length);
 
     if (remaining.length > 0) {
       const sentinel = document.createElement('div');
@@ -103,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             observer.unobserve(entry.target);
-            const nextBatch = gallery._remainingFiles.splice(0, BATCH_SIZE);
+            const nextBatch = gallery._remainingFiles.splice(0, gallery._batchSize || BATCH_SIZE);
             if (nextBatch.length) {
               appendBatch(gallery, folder, nextBatch, gallery._loadedCount);
               gallery._loadedCount += nextBatch.length;
