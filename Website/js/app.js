@@ -335,10 +335,15 @@ function loadHeroVideo() {
 
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const isBackForward = navEntry && navEntry.type === 'back_forward';
+
   if ("scrollRestoration" in window.history) {
-    window.history.scrollRestoration = "manual";
+    window.history.scrollRestoration = isBackForward ? "auto" : "manual";
   }
-  window.scrollTo(0, 0);
+  if (!isBackForward) {
+    window.scrollTo(0, 0);
+  }
 
   if (window.AOS) {
     AOS.init({ once: true, duration: 400, easing: 'ease-out' });
