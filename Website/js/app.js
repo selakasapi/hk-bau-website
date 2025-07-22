@@ -855,21 +855,6 @@ if (nextBtn) {
 
     }
 
-    let hasBeenVisible = false;
-    const visibilityObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          hasBeenVisible = true;
-          startZoomLoop();
-          startAutoScroll();
-        } else if (hasBeenVisible) {
-          stopZoomLoop();
-          stopAutoScroll();
-        }
-      });
-    }, { threshold: 0 });
-
-    visibilityObserver.observe(carousel);
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
