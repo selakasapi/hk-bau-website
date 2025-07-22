@@ -276,176 +276,19 @@ function initReferenzenCarousel() {
     const carousel = document.getElementById('referenzen-carousel');
     if (!carousel) return;
 
-    const wasInitialized = carousel.dataset.initialized === 'true';
+    const track = carousel.querySelector('.flex');
+    if (!track) return;
 
-    if (!wasInitialized) {
-        carousel.dataset.initialized = 'true';
-
-        const track = carousel.querySelector('.flex');
+    if (!carousel.dataset.cloned) {
         const slides = Array.from(track.children);
         slides.forEach(slide => track.appendChild(slide.cloneNode(true)));
-        const images = track.querySelectorAll('img');
-        images.forEach(img => img.setAttribute('loading', 'eager'));
-
-        const prevBtn = document.getElementById('carousel-prev');
-        const nextBtn = document.getElementById('carousel-next');
-
-        carousel._direction = 1;
-        const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        const slideWidth = slides[0].offsetWidth + gap;
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                carousel._direction = -1;
-                carousel.scrollLeft -= slideWidth;
-                if (carousel.scrollLeft < 0) {
-                    carousel.scrollLeft += track.scrollWidth / 2;
-                }
-            });
-        }
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                carousel._direction = 1;
-                carousel.scrollLeft += slideWidth;
-                if (carousel.scrollLeft >= track.scrollWidth / 2) {
-                    carousel.scrollLeft -= track.scrollWidth / 2;
-                }
-            });
-        }
-
-        let isDragging = false;
-        let startX = 0;
-        let startScroll = 0;
-
-        const attrSpeed = parseFloat(carousel.dataset.speed);
-        const defaultSpeed = !isNaN(attrSpeed) && attrSpeed > 0 ? attrSpeed : 1.0;
-
-        carousel._defaultSpeed = defaultSpeed;
-        carousel._currentSpeed = defaultSpeed;
-
-        carousel.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            startScroll = carousel.scrollLeft;
-        });
-
-        function onMove(e) {
-            if (!isDragging) return;
-            e.preventDefault();
-            const deltaX = startX - e.touches[0].clientX;
-            carousel.scrollLeft = startScroll + deltaX;
-        }
-
-        carousel.addEventListener('touchmove', onMove, { passive: false });
-
-        carousel.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-
-        carousel._autoScrollId = null;
-
-        function autoScrollStep() {
-            if (!isDragging) {
-                carousel.scrollLeft += carousel._currentSpeed * carousel._direction;
-                if (carousel.scrollLeft >= track.scrollWidth / 2) {
-                    carousel.scrollLeft -= track.scrollWidth / 2;
-                }
-                if (carousel.scrollLeft <= 0) {
-                    carousel.scrollLeft += track.scrollWidth / 2;
-                }
-            }
-            carousel._autoScrollId = requestAnimationFrame(autoScrollStep);
-        }
-
-        function startAutoScroll() {
-            if (carousel._autoScrollId === null) {
-                carousel._currentSpeed = carousel._defaultSpeed;
-                carousel._autoScrollId = requestAnimationFrame(autoScrollStep);
-                carousel.dataset.autoScrollActive = 'true';
-            }
-        }
-
-        function stopAutoScroll() {
-            if (carousel._autoScrollId !== null) {
-                cancelAnimationFrame(carousel._autoScrollId);
-                carousel._autoScrollId = null;
-                carousel.dataset.autoScrollActive = 'false';
-            }
-        }
-
-        function updateCenterZoom() {
-            const carouselRect = carousel.getBoundingClientRect();
-            const centerX = carouselRect.left + carouselRect.width / 2;
-            let closestImg = null;
-            let closestDistance = Infinity;
-            images.forEach(img => {
-                const imgRect = img.getBoundingClientRect();
-                const imgCenter = imgRect.left + imgRect.width / 2;
-                const distance = Math.abs(centerX - imgCenter);
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestImg = img;
-                }
-            });
-            images.forEach(img => img.classList.remove('center-zoom'));
-            if (closestImg) closestImg.classList.add('center-zoom');
-        }
-
-        carousel._zoomRafId = null;
-
-        function zoomLoop() {
-            updateCenterZoom();
-            carousel._zoomRafId = requestAnimationFrame(zoomLoop);
-        }
-
-        function startZoomLoop() {
-            if (carousel._zoomRafId === null) {
-                zoomLoop();
-            }
-        }
-
-        function stopZoomLoop() {
-            if (carousel._zoomRafId !== null) {
-                cancelAnimationFrame(carousel._zoomRafId);
-                carousel._zoomRafId = null;
-            }
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const img = entry.target.querySelector('img');
-                if (entry.isIntersecting) {
-                    img.classList.add('scale-110');
-                } else {
-                    img.classList.remove('scale-110');
-                }
-            });
-        }, {
-            root: carousel,
-            threshold: 0.6
-        });
-
-        carousel.querySelectorAll('.snap-center').forEach(el => {
-            observer.observe(el);
-        });
-
-        carousel.startAutoScroll = startAutoScroll;
-        carousel.stopAutoScroll = stopAutoScroll;
-        carousel.startZoomLoop = startZoomLoop;
-        carousel.stopZoomLoop = stopZoomLoop;
-
-        startAutoScroll();
-        startZoomLoop();
+        carousel.dataset.cloned = 'true';
     }
 
-    if (wasInitialized) {
-        if (carousel.startAutoScroll && carousel.dataset.autoScrollActive !== 'true') {
-            carousel.startAutoScroll();
-        }
-        if (carousel.startZoomLoop && carousel._zoomRafId === null) {
-            carousel.startZoomLoop();
-        }
+    const duration = parseFloat(carousel.dataset.duration);
+    if (!isNaN(duration) && duration > 0) {
+        track.style.setProperty('--scroll-duration', `${duration}s`);
+
     }
 }
 
@@ -469,9 +312,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-window.addEventListener('pageshow', (e) => {
-    const carousel = document.getElementById('referenzen-carousel');
-    if (carousel && (e.persisted || carousel.dataset.autoScrollActive !== 'true')) {
-        initReferenzenCarousel();
-    }
-});
