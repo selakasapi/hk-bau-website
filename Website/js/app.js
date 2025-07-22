@@ -206,27 +206,28 @@ function setupPageTransitions() {
     }
 
     window.addEventListener('pageshow', (e) => {
-        if (sessionStorage.getItem('isTransitioning') !== 'true' || e.persisted) {
-            overlay.classList.remove('is-fading-in', 'is-fading-out');
-            Object.assign(overlay.style, {
-                opacity: '0',
-                visibility: 'hidden',
-                pointerEvents: 'none'
-            });
-            document.documentElement.classList.remove('is-transitioning');
+        if (e.persisted || sessionStorage.getItem('isTransitioning') === 'true') {
+            sessionStorage.removeItem('isTransitioning');
         }
+
+        overlay.classList.remove('is-fading-in', 'is-fading-out');
+        Object.assign(overlay.style, {
+            opacity: '0',
+            visibility: 'hidden',
+            pointerEvents: 'none'
+        });
+        document.documentElement.classList.remove('is-transitioning');
     });
 
-    window.addEventListener('pagehide', (e) => {
-        if (sessionStorage.getItem('isTransitioning') !== 'true' || e.persisted) {
-            overlay.classList.remove('is-fading-in', 'is-fading-out');
-            Object.assign(overlay.style, {
-                opacity: '0',
-                visibility: 'hidden',
-                pointerEvents: 'none'
-            });
-            document.documentElement.classList.remove('is-transitioning');
-        }
+    window.addEventListener('pagehide', () => {
+        sessionStorage.removeItem('isTransitioning');
+        overlay.classList.remove('is-fading-in', 'is-fading-out');
+        Object.assign(overlay.style, {
+            opacity: '0',
+            visibility: 'hidden',
+            pointerEvents: 'none'
+        });
+        document.documentElement.classList.remove('is-transitioning');
     });
 
     if (sessionStorage.getItem("isTransitioning") === "true") {
