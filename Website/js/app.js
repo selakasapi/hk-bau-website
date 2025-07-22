@@ -170,14 +170,8 @@ function initFormValidation(formId) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  initFormValidation("contactForm");
-});
-
-
-
-
-
+// Former standalone DOMContentLoaded listener removed. Form validation is
+// initialized within the main DOMContentLoaded bootstrap below.
 
 // ========== Highlight Active Navigation Links ============
 function markActiveLinks(containerSelector, currentPath) {
