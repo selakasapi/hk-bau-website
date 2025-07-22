@@ -89,7 +89,13 @@ function applyThemeColor() {
 // ======== GLightbox Initialization ============
 function initLightbox() {
   if (typeof window.GLightbox !== 'function') return;
-  GLightbox({
+
+  if (window._glightboxInstance) {
+    window._glightboxInstance.reload();
+    return;
+  }
+
+  window._glightboxInstance = GLightbox({
     selector: '.glightbox',
     openEffect: 'zoom',
     closeEffect: 'fade',
