@@ -852,14 +852,17 @@ if (nextBtn) {
         cancelAnimationFrame(carousel._zoomRafId);
         carousel._zoomRafId = null;
       }
+
     }
 
+    let hasBeenVisible = false;
     const visibilityObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          hasBeenVisible = true;
           startZoomLoop();
           startAutoScroll();
-        } else {
+        } else if (hasBeenVisible) {
           stopZoomLoop();
           stopAutoScroll();
         }
