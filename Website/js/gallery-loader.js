@@ -60,6 +60,10 @@ function createImageLink(folder, file, index) {
 
   const img = document.createElement("img");
   img.src = `../images/${folder}/thumbs/${file}`;
+  img.onerror = () => {
+    img.onerror = null;
+    img.src = `../images/${folder}/${file}`;
+  };
   img.alt = `${folder} ${index + 1}`;
   img.loading = "lazy";
   img.className = "w-full h-auto";
