@@ -1,25 +1,25 @@
 const galleryConfigs = {
-  "abbruch-referenzen": [{ prefix: "1.abbruch_", count: 19 }],
-  "aussenanlagen-referenzen": [{ prefix: "1.aussenanlagen_", count: 19 }],
+  "abbruch-referenzen": [{ prefix: "1.abbruch_", count: 10 }],
+  "aussenanlagen-referenzen": [{ prefix: "1.aussenanlagen_", count: 10 }],
   "erdbau-referenzen": [
-    { prefix: "1.erdbau_", count: 20 },
-    { prefix: "2.erdbau_", count: 39 }
+    { prefix: "1.erdbau_", count: 10 },
+    { prefix: "2.erdbau_", count: 10 }
   ],
   "kanalbau-referenzen": [
-    { prefix: "1.kanalbau_", count: 17 },
-    { prefix: "2.kanalbau_", count: 51 }
+    { prefix: "1.kanalbau_", count: 10 },
+    { prefix: "2.kanalbau_", count: 10 }
   ],
   "holzbau-referenzen": [
-    { prefix: "1.holzbau_", count: 85 },
-    { prefix: "2.holzbau_", count: 61 }
+    { prefix: "1.holzbau_", count: 10 },
+    { prefix: "2.holzbau_", count: 10 }
   ],
   "mauerwerksbau-referenzen": [
     { prefix: "1.mauerwerksbau_", count: 8 },
-    { prefix: "2.mauerwerksbau_", count: 21 }
+    { prefix: "2.mauerwerksbau_", count: 10 }
   ],
   "stahlbetonbau-referenzen": [
-    { prefix: "1.stahlbetonbau_", count: 278 },
-    { prefix: "2.stahlbetonbau_", count: 138 }
+    { prefix: "1.stahlbetonbau_", count: 10 },
+    { prefix: "2.stahlbetonbau_", count: 10 }
   ]
 };
 
@@ -47,7 +47,7 @@ function createImageLink(folder, file, index) {
   link.setAttribute("aria-label", `${folder} Bild ${index + 1}`);
 
   const img = document.createElement("img");
-  img.src = `../images/${folder}/${file}`;
+  img.src = `../images/${folder}/thumbs/${file}`;
   img.alt = `${folder} ${index + 1}`;
   img.loading = "lazy";
   img.className = "w-full h-auto";
