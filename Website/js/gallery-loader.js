@@ -1,27 +1,6 @@
-const galleryConfigs = {
-  "abbruch-referenzen": [{ prefix: "1.abbruch_", count: 10 }],
-  "aussenanlagen-referenzen": [{ prefix: "1.aussenanlagen_", count: 10 }],
-  "erdbau-referenzen": [
-    { prefix: "1.erdbau_", count: 10 },
-    { prefix: "2.erdbau_", count: 10 }
-  ],
-  "kanalbau-referenzen": [
-    { prefix: "1.kanalbau_", count: 10 },
-    { prefix: "2.kanalbau_", count: 10 }
-  ],
-  "holzbau-referenzen": [
-    { prefix: "1.holzbau_", count: 10 },
-    { prefix: "2.holzbau_", count: 10 }
-  ],
-  "mauerwerksbau-referenzen": [
-    { prefix: "1.mauerwerksbau_", count: 8 },
-    { prefix: "2.mauerwerksbau_", count: 10 }
-  ],
-  "stahlbetonbau-referenzen": [
-    { prefix: "1.stahlbetonbau_", count: 10 },
-    { prefix: "2.stahlbetonbau_", count: 10 }
-  ]
-};
+// Optionally specify prefix patterns per folder to filter the loaded files
+// e.g. { "folder-name": [ { prefix: "1.someprefix_" } ] }
+const galleryConfigs = {};
 
 const INITIAL_COUNT = 20;
 const BATCH_SIZE = 20;
@@ -38,14 +17,21 @@ function deriveCounts(total) {
 
 let imageDimensions = {};
 
-function buildFileList(groups) {
-  const files = [];
-  groups.forEach(({ prefix, count }) => {
-    for (let i = 1; i <= count; i++) {
-      files.push(`${prefix}${i}.jpg`);
-    }
-  });
-  return files;
+function naturalSort(a, b) {
+  return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+}
+
+function buildFileList(folder) {
+  const dims = imageDimensions?.[folder];
+  if (!dims) return [];
+  let files = Object.keys(dims);
+
+  const patterns = galleryConfigs[folder];
+  if (Array.isArray(patterns) && patterns.length > 0) {
+    files = files.filter(f => patterns.some(p => f.startsWith(p.prefix)));
+  }
+
+  return files.sort(naturalSort);
 }
 
 function createImageLink(folder, file, index) {
@@ -105,10 +91,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   document.querySelectorAll(".gallery[data-folder]").forEach(gallery => {
     const folder = gallery.dataset.folder;
-    const config = galleryConfigs[folder];
-    if (!config) return;
 
-    const files = buildFileList(config);
+    const files = buildFileList(folder);
+    if (files.length === 0) return;
     const totalCount = files.length;
     const { initial, batch } = deriveCounts(totalCount);
     const remaining = files.slice(initial);
