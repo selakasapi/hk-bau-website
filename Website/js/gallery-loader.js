@@ -39,7 +39,7 @@ function createImageLink(folder, file, index) {
   link.href = `../images/${folder}/${file}`;
   link.className =
     "glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10";
-  link.setAttribute("data-aos", "zoom-in");
+  link.setAttribute("data-aos", "fade-up");
   const delay = Math.min((index + 1) * 50, 1000);
   link.setAttribute("data-aos-delay", `${delay}`);
   link.setAttribute("aria-label", `${folder} Bild ${index + 1}`);
