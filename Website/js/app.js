@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.scrollTo(0, 0);
 
   if (window.AOS) {
-    AOS.init({ once: true, duration: 800 });
+    AOS.init({ once: true, duration: 400, easing: 'ease-out' });
   }
 
   initMobileMenu("mobile-menu-button", "mobile-menu");
