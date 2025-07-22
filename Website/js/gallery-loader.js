@@ -26,6 +26,8 @@ const galleryConfigs = {
 const INITIAL_COUNT = 20;
 const BATCH_SIZE = 20;
 
+let imageDimensions = {};
+
 function buildFileList(groups) {
   const files = [];
   groups.forEach(({ prefix, count }) => {
@@ -51,6 +53,11 @@ function createImageLink(folder, file, index) {
   img.alt = `${folder} ${index + 1}`;
   img.loading = "lazy";
   img.className = "w-full h-auto";
+  const dims = imageDimensions?.[folder]?.[file];
+  if (dims) {
+    img.width = dims.width;
+    img.height = dims.height;
+  }
 
   link.appendChild(img);
   return link;
@@ -76,7 +83,16 @@ function appendBatch(gallery, folder, files, startIndex) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const res = await fetch("../js/image-dimensions.json");
+    if (res.ok) {
+      imageDimensions = await res.json();
+    }
+  } catch (err) {
+    console.error("Failed to load image dimensions", err);
+  }
+
   document.querySelectorAll(".gallery[data-folder]").forEach(gallery => {
     const folder = gallery.dataset.folder;
     const config = galleryConfigs[folder];

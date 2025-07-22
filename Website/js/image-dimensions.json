@@ -1,0 +1,3040 @@
+{
+  "abbruch-referenzen": {
+    "1.abbruch_1.jpg": {
+      "width": 400,
+      "height": 711
+    },
+    "1.abbruch_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_12.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_17.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.abbruch_2.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_3.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_4.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_5.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_6.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_7.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_8.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.abbruch_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "aussenanlagen-referenzen": {
+    "1.aussenanlagen_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.aussenanlagen_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_17.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_2.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.aussenanlagen_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "erdbau-referenzen": {
+    "1.erdbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_12.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_15.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.erdbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_17.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_19.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.erdbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_20.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.erdbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.erdbau_7.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.erdbau_8.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.erdbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_13.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_20.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_21.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_22.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_23.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_24.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_25.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_28.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_29.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_30.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_31.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_32.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_33.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_34.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_35.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_36.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_37.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_38.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_39.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_4.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.erdbau_40.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_41.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_42.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.erdbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "holzbau-referenzen": {
+    "1.holzbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_10.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_11.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_14.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_18.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_19.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_20.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_21.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_22.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_23.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_24.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_25.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_28.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_29.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_3.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_30.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_31.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_32.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_33.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_34.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_35.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_36.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_37.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_38.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_39.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_40.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_41.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_42.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_43.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_44.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_45.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_46.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_47.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_48.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_49.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_50.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_51.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_52.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_53.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_54.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_55.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_56.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_57.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_58.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_59.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_60.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_61.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_62.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_63.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_64.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_65.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_66.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_67.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_68.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_69.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_7.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.holzbau_70.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_71.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_72.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_73.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_74.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_75.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_76.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_77.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_78.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_79.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_80.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_81.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_82.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_83.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_84.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_85.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.holzbau_9.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_12.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_13.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_14.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_15.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_16.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_19.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_2.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_20.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_21.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_22.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_23.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_24.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_25.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_28.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_29.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_3.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_30.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_31.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_32.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_33.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_34.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_35.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_36.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_37.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_38.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_39.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_40.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_41.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_42.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_43.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_44.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_45.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_46.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_47.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_48.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_49.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_5.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_50.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_51.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_52.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_53.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_54.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_55.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_56.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_57.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_58.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_59.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_6.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_60.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_61.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.holzbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.holzbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "kanalbau-referenzen": {
+    "1.kanalbau_1.jpg": {
+      "width": 400,
+      "height": 400
+    },
+    "1.kanalbau_10.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_11.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_13.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.kanalbau_15.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_16.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_2.jpg": {
+      "width": 400,
+      "height": 225
+    },
+    "1.kanalbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.kanalbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.kanalbau_5.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_6.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_7.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_8.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.kanalbau_9.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_13.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_17.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_20.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_21.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_22.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_23.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_24.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_25.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_28.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_29.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_30.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_31.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_32.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_33.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_34.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_35.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_36.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_37.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_38.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_39.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_4.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_40.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_41.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_42.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_43.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_44.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_45.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_46.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_47.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_48.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_49.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.kanalbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_50.jpg": {
+      "width": 400,
+      "height": 400
+    },
+    "2.kanalbau_51.jpg": {
+      "width": 400,
+      "height": 400
+    },
+    "2.kanalbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.kanalbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "mauerwerksbau-referenzen": {
+    "1.mauerwerksbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.mauerwerksbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_12.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_16.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.mauerwerksbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.mauerwerksbau_18.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.mauerwerksbau_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_20.jpg": {
+      "width": 400,
+      "height": 270
+    },
+    "2.mauerwerksbau_21.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.mauerwerksbau_3.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.mauerwerksbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.mauerwerksbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "stahlbetonbau-referenzen": {
+    "1.stahlbetonbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_100.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_101.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_102.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_103.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_104.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_105.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_106.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_107.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_108.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_109.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_110.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_111.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_112.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_113.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_114.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_115.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_116.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_117.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_118.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_119.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_12.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_120.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_121.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_122.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_123.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_124.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_125.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_126.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_127.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_128.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_129.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_130.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_131.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_132.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_133.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_134.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_135.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_136.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_137.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_138.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_139.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_140.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_141.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_142.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_143.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_144.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_145.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_146.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_147.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_148.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_149.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_150.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_151.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_152.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_153.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_154.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_155.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_156.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_157.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_158.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_159.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_160.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_161.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_162.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_163.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_164.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_165.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_166.jpg": {
+      "width": 400,
+      "height": 589
+    },
+    "1.stahlbetonbau_167.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_168.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_169.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_170.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_171.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_172.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_173.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_174.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_175.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_176.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_177.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_178.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_179.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_18.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_180.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_181.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_182.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_183.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_184.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_185.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_186.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_187.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_188.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_189.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_190.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_191.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_192.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_193.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_194.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_195.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_196.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_197.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_198.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_199.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_2.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_20.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_200.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_201.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_202.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_203.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_204.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_205.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_206.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_207.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_208.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_209.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_21.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_210.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_211.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_212.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_213.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_214.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_215.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_216.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_217.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_218.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_219.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_22.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_220.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_221.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_222.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_223.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_224.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_225.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_226.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_227.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_228.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_229.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_23.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_230.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_231.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_232.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_233.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_234.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_235.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_236.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_237.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_238.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_239.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_24.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_240.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_241.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_242.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_243.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_244.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_245.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_246.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_247.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_248.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_249.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_25.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_250.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_251.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_252.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_253.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_254.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_255.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_256.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_257.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_258.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_259.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_260.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_261.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_262.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_263.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_264.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_265.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_266.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_267.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_268.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_269.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_270.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_271.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_272.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_273.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_274.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_275.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_276.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_277.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_278.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_28.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_29.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_30.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_31.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_32.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_33.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_34.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_35.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_36.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_37.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_38.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_39.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_4.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_40.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_41.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_42.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_43.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_44.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_45.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_46.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_47.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_48.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_49.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_5.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_50.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_51.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_52.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_53.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_54.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_55.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_56.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_57.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_58.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_59.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_6.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_60.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_61.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_62.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_63.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_64.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_65.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_66.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_67.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_68.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_69.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_70.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_71.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_72.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_73.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_74.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_75.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_76.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_77.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_78.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_79.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_8.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_80.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_81.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_82.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_83.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_84.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_85.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_86.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_87.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_88.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_89.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_9.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.stahlbetonbau_90.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_91.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_92.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_93.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_94.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_95.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_96.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_97.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_98.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.stahlbetonbau_99.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_100.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_101.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_102.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_103.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_104.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_105.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_106.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_107.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_108.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_109.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_11.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_110.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_111.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_112.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_113.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_114.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_115.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_116.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_117.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_118.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_119.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_120.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_121.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_122.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_123.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_124.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_125.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_126.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_127.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_128.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_129.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_130.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_131.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_132.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_133.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_134.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_135.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_136.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_137.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_138.jpg": {
+      "width": 400,
+      "height": 400
+    },
+    "2.stahlbetonbau_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_17.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_2.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_20.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_21.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_22.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_23.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_24.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_25.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_26.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_27.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_28.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_29.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_3.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_30.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_31.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_32.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_33.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_34.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_35.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_36.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_37.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_38.jpg": {
+      "width": 400,
+      "height": 303
+    },
+    "2.stahlbetonbau_39.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_40.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_41.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_42.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_43.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_44.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_45.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_46.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_47.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_48.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_49.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_50.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_51.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_52.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_53.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_54.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_55.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_56.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_57.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_58.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_59.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_60.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_61.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_62.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_63.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_64.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_65.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_66.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_67.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_68.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_69.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_70.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_71.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_72.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_73.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_74.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_75.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_76.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_77.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_78.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_79.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_8.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_80.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_81.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_82.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_83.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_84.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_85.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_86.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_87.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_88.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_89.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_90.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_91.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_92.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_93.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_94.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_95.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "2.stahlbetonbau_96.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_97.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_98.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "2.stahlbetonbau_99.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  }
+}
