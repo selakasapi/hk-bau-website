@@ -14,8 +14,8 @@ Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CS
 - Persistent page transition overlay
 - Animierte Counter
 - Referenzen-Karussell, das endlos automatisch scrollt und beim Wischen zentriert einrastet
-  (Tempo kann über `data-speed` am Element `#referenzen-carousel` angepasst werden,
-  z.B. `<div id="referenzen-carousel" data-speed="1.0">`)
+  (Dauer der Animation lässt sich über `data-duration` am Element `#referenzen-carousel` anpassen,
+  z.B. `<div id="referenzen-carousel" data-duration="40">`)
 - Thumbnail-Bilder können mit `scripts/make-thumbnails.sh` erzeugt werden (benötigt ImageMagick)
 
 ## Projektstruktur

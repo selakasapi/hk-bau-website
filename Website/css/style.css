@@ -1027,6 +1027,7 @@ img[src*="placeholder"] {
   gap: 2.5rem; /* Increased spacing between slides */
   width: max-content;
   will-change: transform;
+  animation: scroll-left var(--scroll-duration, 40s) linear infinite;
 }
 
 #referenzen-track > * {
@@ -1095,6 +1096,15 @@ img[src*="placeholder"] {
   .gallery > a {
     margin-bottom: 1.25rem;
     display: block;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
