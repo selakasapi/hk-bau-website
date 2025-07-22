@@ -890,6 +890,10 @@ if (nextBtn) {
     carousel.stopAutoScroll = stopAutoScroll;
     carousel.startZoomLoop = startZoomLoop;
     carousel.stopZoomLoop = stopZoomLoop;
+
+    // Start scrolling and zooming immediately after initialization
+    startAutoScroll();
+    startZoomLoop();
   }
 
   if (wasInitialized) {
