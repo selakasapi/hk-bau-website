@@ -288,6 +288,7 @@ function initReferenzenCarousel() {
     const duration = parseFloat(carousel.dataset.duration);
     if (!isNaN(duration) && duration > 0) {
         track.style.setProperty('--scroll-duration', `${duration}s`);
+
     }
 }
 
@@ -310,3 +311,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
