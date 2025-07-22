@@ -754,7 +754,6 @@ if (nextBtn) {
     let isDragging = false;
     let startX = 0;
     let startScroll = 0;
-    carousel._isHovered = false;
 
     // Determine default scrolling speed from data attribute
     // Example: <div id="referenzen-carousel" data-speed="1.5">
@@ -764,31 +763,7 @@ if (nextBtn) {
     carousel._defaultSpeed = defaultSpeed;
     carousel._currentSpeed = defaultSpeed;
 
-    function slowDown() {
-      if (carousel._currentSpeed > 0) {
-        carousel._currentSpeed -= carousel._defaultSpeed / 20;
-        if (carousel._currentSpeed < 0) carousel._currentSpeed = 0;
-        requestAnimationFrame(slowDown);
-      }
-    }
-
-    function speedUp() {
-      if (carousel._currentSpeed < carousel._defaultSpeed) {
-        carousel._currentSpeed += carousel._defaultSpeed / 20;
-        if (carousel._currentSpeed > carousel._defaultSpeed) carousel._currentSpeed = carousel._defaultSpeed;
-        requestAnimationFrame(speedUp);
-      }
-    }
-
-    carousel.addEventListener('mouseenter', () => {
-      carousel._isHovered = true;
-      slowDown();
-    });
-
-    carousel.addEventListener('mouseleave', () => {
-      carousel._isHovered = false;
-      speedUp();
-    });
+    // Continuous auto-scroll without slowing on hover
 
     carousel.addEventListener('touchstart', (e) => {
       isDragging = true;
@@ -812,7 +787,7 @@ if (nextBtn) {
     carousel._autoScrollId = null;
 
     function autoScrollStep() {
-      if (!carousel._isHovered && !isDragging) {
+      if (!isDragging) {
         carousel.scrollLeft += carousel._currentSpeed * carousel._direction;
         if (carousel.scrollLeft >= track.scrollWidth / 2) {
           carousel.scrollLeft -= track.scrollWidth / 2;
