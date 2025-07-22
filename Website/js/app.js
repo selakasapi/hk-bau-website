@@ -242,9 +242,11 @@ function setupPageTransitions() {
         const heroMedia = document.querySelector('[data-hero-media]');
 
         let overlayHidden = false;
+        let overlayTimeout;
         const hideOverlay = () => {
             if (overlayHidden) return;
             overlayHidden = true;
+            clearTimeout(overlayTimeout);
             overlay.classList.remove("is-fading-in");
             overlay.classList.add("is-fading-out");
 
@@ -260,6 +262,9 @@ function setupPageTransitions() {
                 overlay.removeEventListener("transitionend", handler);
             }, { once: true });
         };
+
+        overlayTimeout = setTimeout(hideOverlay, 3000);
+        hideOverlay();
 
         if (heroMedia) {
             if (heroMedia.tagName === 'VIDEO') {
@@ -281,7 +286,7 @@ function setupPageTransitions() {
                 else heroMedia.addEventListener('load', hideOverlay, { once: true });
             }
         } else {
-            window.addEventListener('load', hideOverlay, { once: true });
+            hideOverlay();
         }
     } else {
         Object.assign(overlay.style, {
