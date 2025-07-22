@@ -17,6 +17,13 @@ function deriveCounts(total) {
 
 let imageDimensions = {};
 
+function getAltText(folder, file) {
+  const alt = imageDimensions?.[folder]?.[file]?.alt;
+  if (alt) return alt;
+  const base = file.replace(/\.[^.]+$/, '').replace(/^\d+\./, '');
+  return base.replace(/_/g, ' ');
+}
+
 function naturalSort(a, b) {
   return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 }
@@ -53,7 +60,7 @@ function createImageLink(folder, file, index) {
     img.onerror = null;
     img.src = `../images/${folder}/${file}`;
   };
-  img.alt = `${folder} ${index + 1}`;
+  img.alt = getAltText(folder, file);
   img.loading = "lazy";
   img.className = "w-full h-auto";
   const dims = imageDimensions?.[folder]?.[file];

@@ -43,5 +43,28 @@ und `scripts/generate-dimensions.js` ausgeführt werden, um Thumbnails und
 Abmessungsdaten aktuell zu halten. Für `scripts/make-thumbnails.sh` wird
 ImageMagick benötigt.
 
+## Alt-Texte für Galeriebilder
+Die Alt-Texte der Referenzgalerien werden standardmäßig aus dem Dateinamen
+abgeleitet. Numerische Präfixe wie `1.` und Unterstriche werden entfernt, so dass
+`1.abbruch_1.jpg` den Alt-Text `abbruch 1` erhält. Soll ein Bild einen anderen
+Alt-Text bekommen, kann im JSON `js/image-dimensions.json` ein optionales
+`"alt"`-Feld hinterlegt werden:
+
+```json
+{
+  "abbruch-referenzen": {
+    "1.abbruch_1.jpg": {
+      "width": 400,
+      "height": 711,
+      "alt": "Abriss eines alten Gebäudes"
+    }
+  }
+}
+```
+
+`gallery-loader.js` liest dieses Feld und verwendet es, falls vorhanden. Wird
+`scripts/generate-dimensions.js` erneut ausgeführt, müssen benutzerdefinierte
+Alt-Texte anschließend wieder eingetragen werden.
+
 ## Lizenz
 Veröffentlicht unter der [MIT-Lizenz](LICENSE).
