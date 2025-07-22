@@ -77,84 +77,6 @@
       "height": 300
     }
   },
-  "aussenanlagen-referenzen": {
-    "1.aussenanlagen_1.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_10.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_11.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_12.jpg": {
-      "width": 400,
-      "height": 533
-    },
-    "1.aussenanlagen_13.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_14.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_15.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_16.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_17.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_18.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_19.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_2.jpg": {
-      "width": 400,
-      "height": 533
-    },
-    "1.aussenanlagen_3.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_4.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_5.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_6.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_7.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_8.jpg": {
-      "width": 400,
-      "height": 300
-    },
-    "1.aussenanlagen_9.jpg": {
-      "width": 400,
-      "height": 300
-    }
-  },
   "erdbau-referenzen": {
     "1.erdbau_1.jpg": {
       "width": 400,
@@ -389,6 +311,84 @@
       "height": 300
     },
     "2.erdbau_9.jpg": {
+      "width": 400,
+      "height": 300
+    }
+  },
+  "freianlagen-referenzen": {
+    "1.aussenanlagen_1.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_10.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_11.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_12.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.aussenanlagen_13.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_14.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_15.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_16.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_17.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_18.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_19.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_2.jpg": {
+      "width": 400,
+      "height": 533
+    },
+    "1.aussenanlagen_3.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_4.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_5.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_6.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_7.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_8.jpg": {
+      "width": 400,
+      "height": 300
+    },
+    "1.aussenanlagen_9.jpg": {
       "width": 400,
       "height": 300
     }
