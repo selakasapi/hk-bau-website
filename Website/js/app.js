@@ -403,3 +403,4 @@ function initAnimatedCounters() {
 
 
 
+document.querySelector('.current-year').textContent = new Date().getFullYear();
