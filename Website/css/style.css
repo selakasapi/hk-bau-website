@@ -59,6 +59,7 @@ html {
 
 
 
+
 body {
     background-color: var(--white);
     /* Default body background */
@@ -66,6 +67,19 @@ body {
     /* Default text color: Dark gray/black */
     overflow-x: hidden;
     /* Prevent horizontal scrolling */
+}
+
+/* ===== TYPOGRAPHY & SPACING POLISH ===== */
+h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
 }
 
 /* Page Transition Overlay */
@@ -156,7 +170,7 @@ header#navbar {
     left: 0;
     width: 100%;
     z-index: 50;
-      transition: all 0.3s ease;
+    transition: all 0.3s ease;
     background-color: transparent;
     /* Start transparent */
     backdrop-filter: blur(0px);
@@ -175,9 +189,9 @@ header#navbar {
 }
 
 header#navbar.sticky {
-  background-color: rgba(28, 33, 39, 0.9);
+  background-color: rgba(59, 69, 78, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 header#navbar .flex.items-center a {
@@ -222,35 +236,39 @@ header#navbar nav.hidden.md\:flex a:hover {
 }
 
 
-/* Mobile Menu Styles */
+/* ===== MOBILE NAVIGATION ENHANCEMENT ===== */
 #mobile-menu {
-    position: absolute;
-    top: 100%;
-    /* Position it below the header */
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
     background-color: var(--secondary-color);
-    /* Dark gray/black background */
-    z-index: 50;
-    /* Ensure it's above other content */
-    padding: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    /* Subtle shadow */
+    z-index: 999;
+    padding: 5rem 1.5rem 1.5rem;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
 }
 
 #mobile-menu a {
     color: var(--white) !important;
-    /* White text for better readability */
     padding: 0.75rem 1rem;
     display: block;
     text-decoration: none;
     border-radius: 0.5rem;
-    /* Rounded corners for menu items */
+    transition: all 0.2s ease;
 }
 
 #mobile-menu a:hover {
-    background-color: var(--tertiary-color);
-    /* Medium gray hover effect */
+    background-color: rgba(251, 187, 33, 0.1);
+    transform: translateX(4px);
 }
 
 
@@ -290,6 +308,80 @@ header#navbar.sticky #mobile-menu-button svg {
     background-color: var(--primary-color);
     /* Yellow/Gold for dividers */
     margin: 2rem auto;
+}
+
+/* ===== HERO SECTION CTA BUTTONS ===== */
+.hero-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .hero-cta-buttons {
+        flex-direction: row;
+    }
+}
+
+.hero-cta-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(251, 187, 33, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-cta-primary:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(251, 187, 33, 0.6);
+    background-color: var(--primary-hover);
+}
+
+.hero-cta-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-cta-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* Hero Section (Applies to #home, and hero sections on other pages) */
@@ -359,6 +451,28 @@ a.bg-primary-color:hover {
     color: var(--tertiary-color);
 }
 
+/* ===== SERVICE CARD HOVER EFFECTS ===== */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(251,187,33,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
 
 /* About Section Background */
 #about {
@@ -403,6 +517,57 @@ a.bg-primary-color:hover {
 #projects p {
     /* Project location/date text */
     color: var(--tertiary-color) !important;
+}
+
+/* ===== PROJECT CAROUSEL LIGHTBOX ===== */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.lightbox-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -562,6 +727,30 @@ body, html {
 .btn-lift:hover {
     transform: translateY(-3px) scale(1.05);
     background-color: var(--primary-hover);
+}
+
+/* ===== MICRO-INTERACTIONS ===== */
+/* Button Press Effect */
+button, .btn, a.bg-primary-color, .hero-cta-primary, .hero-cta-secondary {
+    transition: transform 0.1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:active, .btn:active, a.bg-primary-color:active, .hero-cta-primary:active, .hero-cta-secondary:active {
+    transform: scale(0.95) !important;
+}
+
+/* Card Tilt on Hover (3D Effect) */
+.service-card, .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover {
+    transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
 }
 
 
