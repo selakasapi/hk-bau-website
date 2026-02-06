@@ -376,42 +376,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       action="#" 
       method="POST" 
       accept-charset="UTF-8"
-      class="space-y-6 bg-white p-8 rounded-xl shadow-md border border-gray-200"
-      data-aos="fade-up" data-aos-delay="600">
+      class="space-y-6 bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[var(--primary-color)]"
+      data-aos="fade-up" data-aos-delay="400">
 
-  <h3 class="text-2xl font-semibold text-gray-800 mb-4">Kontaktformular</h3>
+  <div class="text-center mb-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-[var(--secondary-color)] mb-2">Kontaktformular</h2>
+    <p class="text-gray-600">Schreiben Sie uns – wir melden uns schnellstmöglich zurück</p>
+  </div>
 
   <div class="grid md:grid-cols-2 gap-6">
     <div>
-      <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+      <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+        <i class="fas fa-user text-[var(--primary-color)] mr-2"></i>Name *
+      </label>
       <input type="text" id="name" name="name" placeholder="Max Mustermann" required
-        class="w-full p-3 rounded-lg border border-gray-300 bg-blue-50" />
+        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
     </div>
     <div>
-      <label for="email" class="block text-sm font-semibold mb-1">E-Mail</label>
+      <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+        <i class="fas fa-envelope text-[var(--primary-color)] mr-2"></i>E-Mail *
+      </label>
       <input type="email" id="email" name="email" placeholder="max.mustermann@email.de" required
-        class="w-full p-3 rounded-lg border border-gray-300 bg-blue-50" />
-    </div>
-    <div>
-      <label for="phone" class="block text-sm font-semibold mb-1">Telefon</label>
-      <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required
-        class="w-full p-3 rounded-lg border border-gray-300 bg-blue-50" />
+        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
     </div>
     <div class="md:col-span-2">
-      <label for="message" class="block text-sm font-semibold mb-1">Nachricht</label>
-      <textarea id="message" name="message" rows="5" placeholder="Wie können wir Ihnen helfen?" required
-        class="w-full p-3 rounded-lg border border-gray-300 resize-none bg-white"></textarea>
+      <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+        <i class="fas fa-phone text-[var(--primary-color)] mr-2"></i>Telefon *
+      </label>
+      <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required
+        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
+    </div>
+    <div class="md:col-span-2">
+      <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+        <i class="fas fa-comment-dots text-[var(--primary-color)] mr-2"></i>Ihre Nachricht *
+      </label>
+      <textarea id="message" name="message" rows="6" placeholder="Wie können wir Ihnen helfen? Beschreiben Sie Ihr Bauprojekt..." required
+        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none resize-none"></textarea>
     </div>
   </div>
 
   <input type="hidden" name="_subject" value="Neue Nachricht über Kontaktformular">
 
   <button type="submit"
-        class="w-full bg-yellow-400 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-500 hover:scale-[1.02] transition-all duration-300">
+        class="w-full bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+        <i class="fas fa-paper-plane"></i>
         Nachricht senden
   </button>
 
-<div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4"></div>
+  <p class="text-sm text-gray-500 text-center mt-4">
+    <i class="fas fa-lock mr-1"></i>
+    Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+  </p>
+
+  <div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4 p-4 rounded-lg"></div>
 </form>
 
 
