@@ -275,15 +275,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
   </svg>
 </button>
-<!-- Backdrop Overlay -->
-<div id="nav-backdrop"
-     class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
 
+<!-- Backdrop Overlay -->
+<div id="nav-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[98] hidden transition-opacity duration-300"></div>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-secondary-color text-white z-[99] p-6">
-
-  <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
+<div id="mobile-menu" class="hidden">
+  <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)] active">Startseite</a>
   <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
   <a href="referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Referenzen</a>
   <a href="karriere.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Karriere</a>
@@ -329,6 +327,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
+<!-- ===== NEW: TRUST STATS SECTION ===== -->
+<section class="stats-section relative py-20" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+      Zahlen & <span class="text-[var(--primary-color)]">Fakten</span>
+    </h2>
+    <p class="text-center text-white/80 mb-12 max-w-2xl mx-auto">
+      Über zwei Jahrzehnte Erfahrung, hunderte erfolgreiche Projekte und zufriedene Kunden sprechen für sich.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Stat 1: Years -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+        <span class="stat-number">25+</span>
+        <p class="stat-label">Jahre Erfahrung</p>
+        <p class="stat-description">Seit 2000 am Markt</p>
+      </div>
+      
+      <!-- Stat 2: Projects -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+        <span class="stat-number">500+</span>
+        <p class="stat-label">Projekte</p>
+        <p class="stat-description">Erfolgreich abgeschlossen</p>
+      </div>
+      
+      <!-- Stat 3: Team -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+        <span class="stat-number">50+</span>
+        <p class="stat-label">Fachkräfte</p>
+        <p class="stat-description">Erfahrenes Team</p>
+      </div>
+      
+      <!-- Stat 4: Satisfaction -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+        <span class="stat-number">98%</span>
+        <p class="stat-label">Kundenzufriedenheit</p>
+        <p class="stat-description">Bewährte Qualität</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Wir schaffen Section -->
@@ -463,7 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="carousel-next-btn carousel-next absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-[var(--primary-color)] text-white rounded-full w-10 h-10 flex items-center justify-center text-lg shadow hover:bg-[var(--primary-hover)] transition">›</button>
 
         <!-- Dots -->
-        <div class="carousel-indicators flex justify-center gap-2 mt-6 sticky bottom-2 z-20 bg-white/80 dark:bg-neutral-900/80 backdrop-blur rounded-full py-2 px-4 w-fit mx-auto shadow-md"></div>
+        <div class="carousel-indicators flex justify-center gap-3 mt-6"></div>
       </div>
     </div>
   </section>
@@ -532,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-   <!-- Unsere Leistungen -->
+   <!-- Unsere Leistungen - ENHANCED WITH NUMBERS -->
 <section class="space-y-16 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
 
   <!-- Headline and Description -->
@@ -548,7 +587,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10 pb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
 
    <!-- Erdbau -->
-<a href="leistungen.html#erdbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#erdbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="01">
+  <span class="service-number-badge">01</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 4L22 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -569,35 +609,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Erdbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Fundament für jedes Bauprojekt.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Fundament für jedes Bauprojekt.</p>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
 </a>
 
 
  <!-- Kanalbau -->
-<a href="leistungen.html#kanalbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#kanalbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="02">
+  <span class="service-number-badge">02</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
       <path d="M232,104H208V56h24a8,8,0,0,0,0-16H205.83A16,16,0,0,0,192,32H176a16,16,0,0,0-13.83,8H144A104.11,104.11,0,0,0,40,144v18.16A16,16,0,0,0,32,176v16a16,16,0,0,0,8,13.84V232a8,8,0,0,0,16,0V208h48v24a8,8,0,0,0,16,0V205.84A16,16,0,0,0,128,192V176a16,16,0,0,0-8-13.84V144a24,24,0,0,1,24-24h18.17A16,16,0,0,0,176,128h16a16,16,0,0,0,13.83-8H232a8,8,0,0,0,0-16ZM112,176v16H48V176Zm-8-32v16H56V144a88.1,88.1,0,0,1,88-88h16v48H144A40,40,0,0,0,104,144Zm72-32V48h16v63.8c0,.07,0,.13,0,.2Z"></path>
     </svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Kanalbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Langlebige Infrastruktur sichern.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Langlebige Infrastruktur sichern.</p>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
 </a>
 
 
     <!-- Stahlbetonbau -->
-    <a href="leistungen.html#stahlbetonbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+    <a href="leistungen.html#stahlbetonbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="03">
+      <span class="service-number-badge">03</span>
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
         <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
           <path d="M4 4h16v16H4z" />
         </svg>
       </div>
       <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbetonbau</h3>
-      <p class="text-sm text-gray-600 group-hover:text-white">Robuste Konstruktionen.</p>
+      <p class="text-sm text-gray-600 group-hover:text-white mb-3">Robuste Konstruktionen.</p>
+      <span class="service-cta-btn text-xs">Mehr erfahren →</span>
     </a>
 
 <!-- Mauerwerksbau -->
-<a href="leistungen.html#mauerwerksbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#mauerwerksbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="04">
+  <span class="service-number-badge">04</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <rect width="18" height="18" x="3" y="3" rx="2"/>
@@ -611,80 +657,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Mauerwerksbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Nachhaltige Gebäude präzise bauen.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Nachhaltige Gebäude präzise bauen.</p>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
 </a>
 
 
     <!-- Holz & Stahlbau -->
-    <a href="leistungen.html#holzbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+    <a href="leistungen.html#holzbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="05">
+      <span class="service-number-badge">05</span>
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
         <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
           <path d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" />
         </svg>
       </div>
       <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Holzbau</h3>
-      <p class="text-sm text-gray-600 group-hover:text-white">Ökologisch und modern.</p>
+      <p class="text-sm text-gray-600 group-hover:text-white mb-3">Ökologisch und modern.</p>
+      <span class="service-cta-btn text-xs">Mehr erfahren →</span>
     </a>
 
     <!-- Stahlbau -->
-    <a href="leistungen.html#stahlbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+    <a href="leistungen.html#stahlbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="06">
+      <span class="service-number-badge">06</span>
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
         <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
           <path d="M6 3v18M18 3v18M3 6h18M3 18h18" />
         </svg>
       </div>
       <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbau</h3>
-      <p class="text-sm text-gray-600 group-hover:text-white">Maßgeschneiderte Industrielösungen.</p>
+      <p class="text-sm text-gray-600 group-hover:text-white mb-3">Maßgeschneiderte Industrielösungen.</p>
+      <span class="service-cta-btn text-xs">Mehr erfahren →</span>
     </a>
 
 <!-- Abbruch und Rückbau -->
-<a href="leistungen.html#abbruch-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#abbruch-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="07">
+  <span class="service-number-badge">07</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Wall bricks -->
       <rect x="2" y="3" width="6" height="4" />
       <rect x="2" y="9" width="6" height="4" />
       <rect x="2" y="15" width="6" height="4" />
-      <!-- Wrecking ball chain -->
       <line x1="18" y1="2" x2="14" y2="8" />
-      <!-- Wrecking ball -->
       <circle cx="13" cy="10" r="2.5" />
-      <!-- Impact line (crack) -->
       <path d="M9 10 L11 10" />
     </svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Abbruch & Rückbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Sicherer Rückbau – präzise und kontrolliert.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Sicherer Rückbau – präzise und kontrolliert.</p>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
 </a>
 
 
 
 <!-- Freianlagen -->
-<div class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<div class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="08">
+  <span class="service-number-badge">08</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Structured Tree -->
       <circle cx="6" cy="6" r="2" />
       <line x1="6" y1="8" x2="6" y2="14" />
       <line x1="5" y1="14" x2="7" y2="14" />
-      <!-- Paved path (tiles or curb stones) -->
       <rect x="10" y="10" width="4" height="2" />
       <rect x="15" y="10" width="4" height="2" />
       <rect x="10" y="13" width="4" height="2" />
       <rect x="15" y="13" width="4" height="2" />
-      <!-- Ground line -->
       <line x1="3" y1="20" x2="21" y2="20" />
     </svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Freianlagen</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Individuelle Gestaltung von Außenanlagen und Freiflächen.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Individuelle Gestaltung von Außenanlagen und Freiflächen.</p>
+  <span class="service-cta-btn text-xs">Anfrage senden →</span>
 </div>
 
 
 <!-- Schlüsselfertigbau -->
-<div class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
-
+<div class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50 relative" data-number="09">
+  <span class="service-number-badge">09</span>
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" 
@@ -694,7 +742,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Schlüsselfertigbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Alles aus einer Hand – bereit zur Schlüsselübergabe.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white mb-3">Alles aus einer Hand – bereit zur Schlüsselübergabe.</p>
+  <span class="service-cta-btn text-xs">Anfrage senden →</span>
 </div>
 
 
@@ -1003,23 +1052,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
  
 
-<section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white mt-24 rounded-3xl shadow-xl">
-  <!-- Background image using inline style for reliability -->
-  <div class="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-30 pointer-events-none"
-     style="background-image: url('images/kontakt-image.png'); background-position: center 40%;"></div>
-
-
-  <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
+<!-- ===== ENHANCED CONTACT CTA WITH WHATSAPP ===== -->
+<section class="contact-cta-enhanced relative overflow-hidden text-center text-white mt-24 mx-4 sm:mx-6 lg:mx-8">
+  <div class="relative z-10 max-w-4xl mx-auto px-6 py-12" data-aos="fade-up">
     <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
       Bereit, Ihr Bauprojekt zu starten?
     </h2>
-    <p class="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">
+    <p class="text-lg md:text-xl mb-4 text-white leading-relaxed">
       Lassen Sie uns gemeinsam Ihr nächstes Projekt realisieren – schnell, zuverlässig und professionell.
     </p>
-    <a href="kontakt.html"
-       class="inline-block bg-white text-[var(--primary-color)] font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition hover:scale-105 btn-lift">
-      Jetzt Kontakt aufnehmen
+    
+    <!-- Direct Phone CTA -->
+    <a href="tel:+4971190652700" class="contact-phone-direct block hover:text-white transition">
+      <i class="fas fa-phone-alt mr-2"></i>0711 / 90 65 270
     </a>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
+      <!-- Primary Button -->
+      <a href="kontakt.html"
+         class="inline-block bg-white text-[var(--primary-color)] font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition hover:scale-105 btn-lift">
+        Jetzt Kontakt aufnehmen
+      </a>
+      
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/4971190652700?text=Hallo%20HK%20Bau,%20ich%20interessiere%20mich%20für%20ein%20Bauprojekt" 
+         target="_blank"
+         rel="noopener noreferrer"
+         class="whatsapp-button">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span>Per WhatsApp kontaktieren</span>
+      </a>
+    </div>
+    
+    <p class="text-sm mt-6 text-white/80">
+      Standorte: Fellbach · Magstadt | Mo-Fr: 08:00 - 17:00 Uhr
+    </p>
   </div>
 </section>
 
@@ -1028,41 +1095,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </main>
 
-<!-- Footer -->
-<footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
-  <div class="space-y-6">
+<!-- ===== IMPROVED FOOTER ===== -->
+<footer class="bg-secondary-color text-text-on-dark py-16" data-aos="fade-in">
+  <div class="max-w-7xl mx-auto px-6">
     
-    <!-- Navigation -->
-    <nav class="flex flex-wrap justify-center gap-4 text-sm">
-      <a href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="referenzen.html">Referenzen</a>
-      <a href="karriere.html">Karriere</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-    <!-- Social Media -->
-    <div class="flex justify-center space-x-6 text-xl mt-2">
-      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+    <!-- Footer Grid -->
+    <div class="footer-grid mb-12">
+      
+      <!-- Column 1: About -->
+      <div class="footer-column">
+        <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-16 mb-4 rounded-full">
+        <h3>HK Bau GmbH</h3>
+        <p class="text-sm leading-relaxed">
+          Ihr verlässlicher Partner für Hoch- und Tiefbau in der Region Stuttgart seit über 25 Jahren.
+        </p>
+        <div class="flex gap-4 mt-4 text-xl">
+          <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Column 2: Quick Links -->
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right text-xs"></i> Startseite</a></li>
+          <li><a href="leistungen.html"><i class="fas fa-chevron-right text-xs"></i> Leistungen</a></li>
+          <li><a href="referenzen.html"><i class="fas fa-chevron-right text-xs"></i> Referenzen</a></li>
+          <li><a href="karriere.html"><i class="fas fa-chevron-right text-xs"></i> Karriere</a></li>
+          <li><a href="kontakt.html"><i class="fas fa-chevron-right text-xs"></i> Kontakt</a></li>
+        </ul>
+      </div>
+      
+      <!-- Column 3: Fellbach Location -->
+      <div class="footer-column">
+        <h3>Standort Fellbach</h3>
+        <ul class="text-sm space-y-2">
+          <li><i class="fas fa-map-marker-alt text-[var(--primary-color)] w-5"></i> Esslinger Straße 91<br>70734 Fellbach</li>
+          <li><a href="tel:+4971190652700"><i class="fas fa-phone text-[var(--primary-color)] w-5"></i> 0711 / 90 65 270</a></li>
+          <li><a href="mailto:info@hk-bau.net"><i class="fas fa-envelope text-[var(--primary-color)] w-5"></i> info@hk-bau.net</a></li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8299858393594!2d9.265033715674234!3d48.80729997928549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc3ec7cc1a5b%3A0x3c3a2e3e3e3e3e3e!2sEsslinger%20Str.%2091%2C%2070734%20Fellbach!5e0!3m2!1sde!2sde!4v1234567890" class="footer-location-map mt-3" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      
+      <!-- Column 4: Magstadt Location -->
+      <div class="footer-column">
+        <h3>Standort Magstadt</h3>
+        <ul class="text-sm space-y-2">
+          <li><i class="fas fa-map-marker-alt text-[var(--primary-color)] w-5"></i> Blumenstraße 33a<br>71106 Magstadt</li>
+          <li><a href="tel:+4971594591823"><i class="fas fa-phone text-[var(--primary-color)] w-5"></i> 07159 / 459 18 23</a></li>
+          <li><a href="mailto:info@hk-bau.net"><i class="fas fa-envelope text-[var(--primary-color)] w-5"></i> info@hk-bau.net</a></li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.5784933494!2d8.991331515668684!3d48.74048997928881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47977f0f0f0f0f0f%3A0x0!2sBlumenstra%C3%9Fe%2033a%2C%2071106%20Magstadt!5e0!3m2!1sde!2sde!4v1234567890" class="footer-location-map mt-3" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      
     </div>
-
-    <!-- Legal Info -->
-    <p class="text-xs mt-4">
-      © <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.
-    </p>
-    <p class="text-xs">
-      <a href="impressum.html" class="underline hover:text-primary-color">Impressum</a> |
-      <a href="datenschutzerklaerung.html" class="underline hover:text-primary-color">Datenschutz</a>
-    </p>
-
+    
+    <!-- Divider -->
+    <div class="border-t border-gray-700 my-8"></div>
+    
+    <!-- Bottom Row -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+      <p>
+        © <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.
+      </p>
+      <div class="flex gap-4">
+        <a href="impressum.html" class="underline hover:text-primary-color">Impressum</a>
+        <span>|</span>
+        <a href="datenschutzerklaerung.html" class="underline hover:text-primary-color">Datenschutz</a>
+      </div>
+    </div>
+    
   </div>
 </footer>
 
@@ -1070,13 +1180,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   <button id="scrollToTopBtn"
-    class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition"
+    class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition z-50"
     aria-label="Nach oben scrollen">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
   </button>
-  <div id="nav-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
 
 </body>
 
