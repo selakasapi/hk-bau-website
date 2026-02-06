@@ -1,0 +1,1302 @@
+/* Global Styles */
+:root {
+    --primary-color: #fbbb21;
+    /* Brand yellow */
+    --primary-hover: #e0a917;
+    /* Slightly darker yellow for hover */
+    --secondary-color: #3B454E;
+    /* Brand dark gray */
+    --tertiary-color: #3B454E;
+    /* Brand dark gray */
+    --light-gray-bg: #F3F4F6;
+    /* Light gray background for sections */
+    --white: #ffffff;
+    --text-on-dark: #d1d5db;
+    /* Light gray text for dark backgrounds (e.g., footer) */
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Apply it to the entire website */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Reusable color utility classes */
+.text-primary-color    { color: var(--primary-color) !important; }
+.text-secondary-color  { color: var(--secondary-color) !important; }
+.text-tertiary-color   { color: var(--tertiary-color) !important; }
+.bg-primary-color      { background-color: var(--primary-color) !important; }
+.bg-secondary-color    { background-color: var(--secondary-color) !important; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+body {
+    background-color: var(--white);
+    /* Default body background */
+    color: var(--secondary-color);
+    /* Default text color: Dark gray/black */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* ===== TYPOGRAPHY & SPACING POLISH ===== */
+h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+}
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 9999;
+  opacity: 0;
+  transform: scale(1.05);
+  visibility: hidden;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+/* Animations for the overlay */
+@keyframes wipeIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes wipeOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.page-transition-overlay.is-fading-in {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.is-transitioning .page-transition-overlay {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.page-transition-overlay.is-fading-out {
+   opacity: 0;
+  transform: scale(1.03);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+
+
+.dot {
+  transition: background-color 0.3s;
+}
+
+.dot.bg-primary-color {
+  background-color: var(--primary-color) !important;
+
+}
+
+/* Navigation Header */
+header#navbar {
+    position: fixed;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    /* Start transparent */
+    backdrop-filter: blur(0px);
+    /* No blur initially */
+    box-shadow: none;
+    /* No shadow initially */
+    color: var(--white);
+    /* Default text color for transparent header */
+}
+
+@media (max-width: 768px) {
+    header#navbar {
+        background-color: rgba(28, 33, 39, 0.9);
+        /* Apply dark background on mobile */
+    }
+}
+
+header#navbar.sticky {
+  background-color: rgba(59, 69, 78, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header#navbar .flex.items-center a {
+    /* Target the logo link */
+    display: flex;
+    align-items: center;
+}
+
+header#navbar .flex.items-center a img {
+    /* Style the logo image */
+    height: 4rem;
+    /* Consistent logo height */
+    width: auto;
+    border-radius: 9999px;
+    /* Full rounded */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+header#navbar .flex.items-center a span {
+    /* Style the logo text */
+    color: var(--white);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+header#navbar nav.hidden.md\:flex a {
+    /* Desktop nav links */
+    color: var(--white);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+header#navbar nav.hidden.md\:flex a:hover {
+    color: var(--primary-color);
+}
+
+.active-link {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+
+/* ===== MOBILE NAVIGATION ENHANCEMENT ===== */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    z-index: 999;
+    padding: 5rem 1.5rem 1.5rem;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
+}
+
+#mobile-menu a {
+    color: var(--white) !important;
+    padding: 0.75rem 1rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+#mobile-menu a:hover {
+    background-color: rgba(251, 187, 33, 0.1);
+    transform: translateX(4px);
+}
+
+
+/* Style the hamburger icon */
+#mobile-menu-button svg {
+    fill: var(--white) !important;
+    /* White fill for the icon */
+}
+
+header#navbar.sticky #mobile-menu-button svg {
+    fill: var(--white) !important;
+    /* Ensure icon is white on sticky header too */
+}
+
+
+/* Sections */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--secondary-color);
+    /* Dark Gray/Black for section titles */
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--tertiary-color);
+    /* Medium gray for subtitles */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-divider {
+    height: 2px;
+    width: 80px;
+    background-color: var(--primary-color);
+    /* Yellow/Gold for dividers */
+    margin: 2rem auto;
+}
+
+/* ===== HERO SECTION CTA BUTTONS ===== */
+.hero-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .hero-cta-buttons {
+        flex-direction: row;
+    }
+}
+
+.hero-cta-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(251, 187, 33, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-cta-primary:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(251, 187, 33, 0.6);
+    background-color: var(--primary-hover);
+}
+
+.hero-cta-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-cta-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Hero Section (Applies to #home, and hero sections on other pages) */
+.hero-content h1 {
+    color: var(--primary-color) !important;
+    /* Make the main heading in Hero yellow */
+}
+
+.hero-content p {
+    /* Ensure paragraph text is white on hero */
+    color: var(--white) !important;
+}
+
+/* Hero Section specific overlays (e.g., on index.html) */
+#home .bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, rgba(28, 33, 39, 0.6), rgba(28, 33, 39, 0.2)) !important;
+    /* Darker overlay for hero */
+}
+
+/* Hero section for leistungen.html and kontakt.html */
+section.parallax .bg-\[var\(--secondary-color\)\]\/60 {
+    background-color: rgba(28, 33, 39, 0.6) !important;
+}
+
+
+
+/* Hero button styling (applies to buttons with bg-primary-color) */
+a.bg-primary-color {
+    /* Hero button */
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+a.bg-primary-color:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+
+/* Services Section Background */
+#services {
+    background-color: var(--light-gray-bg);
+    /* A light gray for contrast */
+    color: var(--secondary-color);
+    /* Dark text on light background */
+}
+
+#services .section-title,
+#services h3 {
+    color: var(--secondary-color);
+    /* Dark gray titles in services */
+}
+
+/* Adjusted padding for service cards to make them smaller */
+#services .p-6 {
+    /* Target the padding directly */
+    padding: 1.25rem;
+    /* Reduced from 1.5rem (p-6) to 1.25rem (p-5) */
+}
+
+#services .bg-white {
+    /* Service cards */
+    background-color: var(--white);
+}
+
+#services p {
+    /* Ensure paragraph text color in service cards */
+    color: var(--tertiary-color);
+}
+
+/* ===== SERVICE CARD HOVER EFFECTS ===== */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(251,187,33,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+
+/* About Section Background */
+#about {
+    background-color: var(--secondary-color);
+    /* Dark Gray/Black background */
+    color: var(--white);
+    /* White text on dark background */
+}
+
+#about .section-title {
+    color: var(--white);
+    /* White title in about section */
+}
+
+#about p {
+    /* Ensure paragraph text color in about section */
+    color: var(--white);
+}
+
+
+/* Projects Section Title */
+#projects {
+    background-color: var(--white);
+    /* White background for projects */
+}
+
+#projects .section-title {
+    color: var(--secondary-color);
+    /* Dark gray title in projects */
+}
+
+#projects h3 {
+    color: var(--secondary-color);
+    /* Dark gray project titles */
+}
+
+#projects .bg-light-gray-bg {
+    /* Project card background */
+    background-color: var(--light-gray-bg);
+}
+
+#projects p {
+    /* Project location/date text */
+    color: var(--tertiary-color) !important;
+}
+
+/* ===== PROJECT CAROUSEL LIGHTBOX ===== */
+.carousel-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.lightbox-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Contact Section Title */
+#contact {
+    background-color: var(--light-gray-bg);
+    /* Light gray background for contact */
+}
+
+#contact .section-title {
+    color: var(--secondary-color);
+    /* Dark gray title in contact */
+}
+
+#contact h3 {
+    color: var(--secondary-color);
+    /* Dark gray contact info titles */
+}
+
+#contact a {
+    /* Contact links */
+    color: var(--secondary-color);
+    /* Default text color for links */
+}
+
+#contact a:hover {
+    color: var(--primary-color);
+    /* Yellow hover for links */
+}
+
+#contact form .bg-white {
+    /* Contact form background */
+    background-color: var(--white);
+}
+
+#contact button {
+    background-color: var(--primary-color) !important;
+    /* Yellow contact button */
+    color: var(--secondary-color) !important;
+    /* Dark text on yellow button */
+}
+
+#contact button:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+#contact form input,
+#contact form textarea {
+    border-color: var(--tertiary-color);
+    /* Border color for form fields */
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    /* Dark Gray/Black footer */
+    color: var(--text-on-dark);
+    /* Light gray text in footer */
+}
+
+footer a {
+    color: var(--text-on-dark);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    background-color: var(--primary-color) !important;
+    /* Yellow scroll to top button */
+    color: var(--secondary-color) !important;
+    /* Dark icon on yellow button */
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+
+/* Effects (No color changes here) */
+.zoom-parallax {
+    animation: zoomParallax 8s ease-in-out infinite alternate;
+}
+
+@keyframes zoomParallax {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1.05) translateY(-10px);
+    }
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll !important;
+        background-position: center !important;
+        background-size: cover !important;
+        overflow-x: hidden !important;
+    }
+
+    .zoom-parallax {
+        transform: none !important;
+        animation: none !important;
+    }
+
+    html, body {
+        overflow-x: hidden !important;
+    }
+}
+
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.lift-hover {
+    transition: transform 0.3s ease;
+}
+
+.lift-hover:hover {
+    transform: translateY(-4px);
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-lift {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-lift:hover {
+    transform: translateY(-3px) scale(1.05);
+    background-color: var(--primary-hover);
+}
+
+/* ===== MICRO-INTERACTIONS ===== */
+/* Button Press Effect */
+button, .btn, a.bg-primary-color, .hero-cta-primary, .hero-cta-secondary {
+    transition: transform 0.1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:active, .btn:active, a.bg-primary-color:active, .hero-cta-primary:active, .hero-cta-secondary:active {
+    transform: scale(0.95) !important;
+}
+
+/* Card Tilt on Hover (3D Effect) */
+.service-card, .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover {
+    transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
+}
+
+
+/* Images (No color changes here) */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img[alt]:not([alt=""]) {
+    border: none;
+}
+
+img[src*="placeholder"] {
+    border: 2px dashed var(--primary-color);
+}
+
+/* Responsive (No color changes here) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .text-lg {
+        font-size: 1rem;
+    }
+
+    .md\:grid-cols-2,
+    .md\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Custom Animations (No color changes here) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#services>div.max-w-7xl>div.grid {
+    max-width: 900px;
+    /* Adjust as needed */
+    margin: 2rem auto;
+}
+
+#services .bg-white {
+    padding: 1.5rem;
+    /* Equivalent to Tailwind's p-6 */
+    border-radius: 0.75rem;
+    /* If you have rounded corners */
+}
+
+.projects-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateX(-100%);
+    /* Start off to the left */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.overflow-hidden:hover .projects-overlay {
+    transform: translateX(0);
+    /* Slide in from left */
+    opacity: 0.8;
+    /* Make it visible */
+}
+
+.projects-overlay .text-white {
+    font-weight: bold;
+}
+
+.projects-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.projects-overlay p {
+    font-size: 0.9rem;
+}
+
+.overflow-hidden .p-4 {
+    /* Style the bottom info area to stay visible */
+    z-index: 10;
+}
+
+/* Ensure it's above the overlay */
+
+.project-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    background-color: var(--light-gray-bg);
+    /* Use light gray background */
+}
+
+.carousel-wrapper {
+    display: flex !important;
+    transition: transform 0.5s ease-in-out;
+   
+}
+.carousel-indicators {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.carousel-indicators::before,
+.carousel-indicators::after {
+  display: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.project-image-container {
+    flex: 0 0 40%;
+    /* Adjusted: Image takes 40% of the width */
+    margin-right: 20px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    display: block;
+}
+
+
+.project-info {
+    flex: 0 0 60%;
+    /* Adjusted: Text takes 60% of the width */
+    text-align: left;
+    padding: 1rem;
+}
+
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    /* Use secondary logo color */
+}
+
+
+.project-description {
+    font-size: 1em;
+    color: var(--tertiary-color);
+    /* Use tertiary color */
+}
+
+
+.carousel-prev-btn,
+.carousel-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    /* Remove background */
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    /* Slightly larger icons */
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.carousel-prev-btn:hover,
+.carousel-next-btn:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    /* Use your primary color on hover */
+}
+
+.carousel-prev-btn svg,
+.carousel-next-btn svg {
+    fill: currentColor;
+    /* Inherit color from the button text */
+}
+
+.carousel-prev-btn {
+    left: 1rem;
+}
+
+.carousel-next-btn {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--tertiary-color);
+}
+
+.carousel-indicator-btn {
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+     background-color: #5a646e; /* Slightly lighter gray */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.project-carousel .carousel-wrapper {
+    display: flex !important;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--primary-color);
+    /* Use your primary color */
+}
+
+.services-carousel .carousel-indicators {
+    position: static;
+    margin-top: 1.5rem;
+    background-color: transparent;
+}
+
+
+.carousel-indicator-btn:hover {
+    background-color: #aaa;
+    /* Slightly darker on hover */
+}
+
+.image-container {
+    width: 300px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Or 'cover' depending on the desired effect */
+    border: 1px solid #ccc;
+    /* Optional: Adds a border to make it look boxier */
+}
+
+.text-container {
+    padding: 10px;
+    /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    }
+
+    .zoom-parallax {
+        transform: scale(1) !important; /* Reset any zoom on mobile */
+    }
+
+    #home img {
+        width: 100%; /* Ensure image doesn't exceed viewport width */
+        max-width: none !important; /* Override any max-width that might be causing issues */
+    }
+}
+
+#contact .grid {
+    grid-template-columns: 1fr 1fr; /* Force side-by-side on wider screens */
+    align-items: start; /* Align items to the top */
+    gap: 6rem; /* Increase the gap */
+}
+
+@media (max-width: 768px) {
+    #contact .grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        gap: 4rem; /* Adjust gap for stacking */
+    }
+}
+
+#contact .space-y-6 > div {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#contact h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+#contact p {
+    line-height: 1.6;
+    color: var(--tertiary-color);
+    margin-bottom: 1rem; /* Add some margin below each info item */
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+#contact form input[type="text"]:focus,
+#contact form input[type="email"]:focus,
+#contact form textarea:focus {
+    border-color: var(--primary-color);
+   box-shadow: 0 0 0 0.1rem rgba(251, 186, 33, 0.25); /* Yellow glow */
+
+    outline: none;
+}
+
+#contact button[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+}
+/* Prevent transparent header on Impressum page */
+.impressum-page #navbar {
+  background-color: #1f1f1f !important;
+}
+
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#parallax-hero {
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+
+.page-transition-overlay img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes spin-slower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slower {
+  animation: spin-slower 4s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-in-out;
+}
+
+.page-transition-overlay > div {
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+.page-transition-overlay.is-fading-in > div {
+  transform: scale(1.03);
+}
+
+.hero-section {
+  padding-top: 4rem; /* match navbar height */
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Swipe support */
+#referenzen-carousel {
+  touch-action: pan-x;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 50%;
+  cursor: grab;
+}
+#referenzen-carousel:active {
+  cursor: grabbing;
+}
+
+#referenzen-track {
+  display: flex;
+  gap: 2.5rem; /* Increased spacing between slides */
+  width: max-content;
+  will-change: transform;
+  animation: scroll-left var(--scroll-duration, 40s) linear infinite;
+}
+
+#referenzen-track > * {
+  scroll-snap-align: center;
+}
+
+/* Center image zoom effect */
+#referenzen-carousel .flex img {
+  transition: transform 0.6s ease-in-out;
+}
+#referenzen-carousel .flex img:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+#referenzen-carousel .flex img.center-zoom {
+  transform: scale(1.15);
+  transition: transform 0.6s ease-in-out;
+  z-index: 1;
+}
+#referenzen-carousel .flex img.center-zoom:hover {
+  transform: scale(1.2);
+}
+
+.carousel-image {
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+}
+
+
+
+.masonry {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.gallery {
+  column-gap: 1rem;
+}
+
+.gallery > a {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 640px) {
+  .gallery > a {
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.fade-parallax {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.95) 100%);
+}

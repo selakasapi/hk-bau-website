@@ -1,0 +1,70 @@
+# HK Bau Website
+
+Professionelle Website für die Baufirma HK Bau – gebaut mit HTML, Tailwind CSS, und JavaScript.
+
+## Features
+- Moderne responsive Gestaltung
+- Parallax Hero Section
+- AOS-Animationen
+- Bild-Fallback für defekte Bilder
+- Scroll-to-Top Button
+- Lazy Loading für Bilder
+- Thumbnail-Bilder für Galerien ("thumbs"-Unterordner)
+- Slide-in Mobile Navigation
+- Persistent page transition overlay
+- Animierte Counter
+- Referenzen-Karussell, das endlos automatisch scrollt und beim Wischen zentriert einrastet
+  (Dauer der Animation lässt sich über `data-duration` am Element `#referenzen-carousel` anpassen,
+  z.B. `<div id="referenzen-carousel" data-duration="40">`)
+- Thumbnail-Bilder können mit `scripts/make-thumbnails.sh` erzeugt werden (benötigt ImageMagick)
+
+## Projektstruktur
+/Website/ (enthält alle HTML-Dateien)
+/css/style.css
+/js/app.js
+/js/init-transition.js
+/images/
+
+## Lokale Entwicklung
+Öffnen Sie `Website/index.html` im Browser (z.B. `file:///pfad/zum/projekt/Website/index.html`) oder hosten Sie das Projekt über Live Server (VSCode).
+
+## Bildoptimierung
+Um kurze Ladezeiten zu gewährleisten, sollten Bilder vor dem Veröffentlichen komprimiert und
+wenn möglich in modernen Formaten wie WebP bereitgestellt werden. Aktivieren Sie
+außerdem serverseitiges Caching (z.B. über geeignete HTTP-Header oder ein CDN), damit
+Bilder nicht bei jedem Seitenaufruf neu übertragen werden müssen.
+
+Zur Kompression eignen sich Werkzeuge wie
+[imagemin](https://github.com/imagemin/imagemin) (in Build-Prozesse integrierbar) oder
+[ImageOptim](https://imageoptim.com) für eine manuelle Optimierung.
+
+Werden neue Bilder hinzugefügt, sollten anschließend `scripts/make-thumbnails.sh`
+und `scripts/generate-dimensions.js` ausgeführt werden, um Thumbnails und
+Abmessungsdaten aktuell zu halten. Für `scripts/make-thumbnails.sh` wird
+ImageMagick benötigt.
+
+## Alt-Texte für Galeriebilder
+Die Alt-Texte der Referenzgalerien werden standardmäßig aus dem Dateinamen
+abgeleitet. Numerische Präfixe wie `1.` und Unterstriche werden entfernt, so dass
+`1.abbruch_1.jpg` den Alt-Text `abbruch 1` erhält. Soll ein Bild einen anderen
+Alt-Text bekommen, kann im JSON `js/image-dimensions.json` ein optionales
+`"alt"`-Feld hinterlegt werden:
+
+```json
+{
+  "abbruch-referenzen": {
+    "1.abbruch_1.jpg": {
+      "width": 400,
+      "height": 711,
+      "alt": "Abriss eines alten Gebäudes"
+    }
+  }
+}
+```
+
+`gallery-loader.js` liest dieses Feld und verwendet es, falls vorhanden. Wird
+`scripts/generate-dimensions.js` erneut ausgeführt, müssen benutzerdefinierte
+Alt-Texte anschließend wieder eingetragen werden.
+
+## Lizenz
+Veröffentlicht unter der [MIT-Lizenz](LICENSE).
