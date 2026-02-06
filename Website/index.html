@@ -13,7 +13,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<!-- Performance: Preload Critical Resources -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="preconnect" href="https://cdn.tailwindcss.com" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preload" href="css/style.css" as="style" />
+<link rel="preload" href="images/icon/logo.png" as="image" />
 
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
     <script type="application/ld+json">
 {
@@ -124,13 +136,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   ]
 }
-</script> 
+</script>
 
-
-
-
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://www.hk-bau.com/"
+    }
+  ]
+}
+</script>
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -149,15 +170,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Open Graph -->
   <meta property="og:title" content="HK Bauunternehmung GmbH" />
   <meta property="og:description" content="Zuverlässiger Partner für Rohbau, Erd- und Betonarbeiten in Stuttgart und Umgebung." />
-  <meta property="og:image" content="images/og-preview.jpg" />
+  <meta property="og:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hk-bau.com/index.html" />
+  <meta property="og:url" content="https://www.hk-bau.com/" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="HK Bau – Hoch- und Tiefbau aus einer Hand" />
   <meta name="twitter:description" content="Ihr Bauunternehmen für Stuttgart & Region. Rohbau, Sanierung, Ausbau." />
-  <meta name="twitter:image" content="images/icon/logo.png" />
+  <meta name="twitter:image" content="https://www.hk-bau.com/images/icon/logo.png" />
 
   <title>HK Bau – Hoch- und Tiefbau aus einer Hand</title>
   <meta name="description" content="HK Bau GmbH steht für hochwertigen Hochbau, Rohbau und schlüsselfertiges Bauen in Stuttgart, Fellbach, Sindelfingen und Umgebung. Zuverlässig. Termintreu. Kompetent.">
@@ -201,6 +222,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <body class="font-[Poppins] overflow-x-hidden">
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
+  Zum Hauptinhalt springen
+</a>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT68K2ZT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -225,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="fixed top-0 left-0 w-full z-30  transition duration-300" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
       <div class="logo-container"> <a href="index.html" class="flex items-center relative z-20">
-          <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" />
+          <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" width="64" height="64" />
           <span class="text-white font-bold ml-2">HK Bau</span>
         </a>
       </div>
@@ -265,7 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
   </header>
-  <main>
+  <main id="main-content">
 
 <!-- Hero Section -->
 <section id="home" class="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
@@ -276,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     muted
     loop
     playsinline
-    preload="auto"
+    preload="metadata"
     poster="images/videos/hero-still.png"
     data-hero-media
     data-load-after
@@ -776,7 +802,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
           <img src="images/projekten/01-wohnhaueser-filderstadt-plattenhardt.JPG" alt="Wohnhäuser in Filderstadt-Plattenhardt" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" />
 
-          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Wohnhäuser in Filderstadt-Plattenhardt</div>
+          <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Wohnhäuser in Filderstadt-Plattenhardt</div>
         </div>
 
 
@@ -899,7 +925,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Lörrach 1 -->
 <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-  <img src="images/projekten/15-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" />
+  <img src="images/projekten/15-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau Villa mit Pool in Lörrach
   </div>
@@ -907,7 +933,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Lörrach 2 -->
 <div class="relative w-[26rem] h-[17rem] snap-center overflow-hidden rounded-lg">
-  <img src="images/projekten/16-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" />
+  <img src="images/projekten/16-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau Villa mit Pool in Lörrach
   </div>
