@@ -6,24 +6,48 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
-            const isHidden = mobileMenu.classList.toggle("hidden");
-            menuBtn.setAttribute("aria-expanded", !isHidden);
-            if (backdrop) backdrop.classList.toggle('hidden', isHidden);
+            const isHidden = mobileMenu.classList.contains("hidden");
+            
+            if (isHidden) {
+                // Opening menu
+                mobileMenu.classList.remove("hidden");
+                mobileMenu.classList.add("active");
+                menuBtn.setAttribute("aria-expanded", "true");
+                if (backdrop) backdrop.classList.remove('hidden');
+            } else {
+                // Closing menu
+                mobileMenu.classList.remove("active");
+                menuBtn.setAttribute("aria-expanded", "false");
+                if (backdrop) backdrop.classList.add('hidden');
+                
+                // Wait for animation to complete before hiding
+                setTimeout(() => {
+                    if (!mobileMenu.classList.contains("active")) {
+                        mobileMenu.classList.add("hidden");
+                    }
+                }, 300);
+            }
         });
 
         if (backdrop) {
             backdrop.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.classList.remove('active');
                 menuBtn.setAttribute('aria-expanded', 'false');
                 backdrop.classList.add('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
             });
         }
 
         mobileMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                mobileMenu.classList.add("translate-x-full");
+                mobileMenu.classList.remove("active");
                 menuBtn.setAttribute("aria-expanded", "false");
                 if (backdrop) backdrop.classList.add('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
             });
 
             link.addEventListener("keydown", (e) => {
@@ -37,7 +61,7 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
 }
 
 
-// ========== Sticky Navbar Scroll Effect ============
+// ========== Sticky Navbar Scroll Effect with Transparency ============
 function initStickyHeader(navbarId) {
     const navbar = document.getElementById(navbarId);
     if (!navbar) return;
@@ -48,8 +72,13 @@ function initStickyHeader(navbarId) {
         return;
     }
 
+    // Start transparent, add sticky class on scroll
     window.addEventListener("scroll", () => {
-        navbar.classList.toggle("sticky", window.scrollY > 50);
+        if (window.scrollY > 50) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
     });
 }
 
@@ -103,6 +132,35 @@ function initLightbox() {
     touchNavigation: true,
     loop: true
   });
+}
+
+// ======== Simple Lightbox for Carousel Images ============
+function initCarouselLightbox() {
+    document.querySelectorAll('.carousel-image').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            // Create lightbox overlay
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox-overlay';
+            lightbox.innerHTML = `
+                <img src="${this.src}" alt="${this.alt}" />
+                <button class="lightbox-close" aria-label="Schließen">&times;</button>
+            `;
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
+            
+            // Close on click anywhere
+            lightbox.addEventListener('click', function() {
+                document.body.style.overflow = '';
+                lightbox.remove();
+            });
+            
+            // Prevent closing when clicking image
+            lightbox.querySelector('img').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    });
 }
 
 
@@ -356,6 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initImageFallback();
   applyThemeColor();
   initLightbox();
+  initCarouselLightbox();
   initFormValidation("contactForm");
   setActiveLink();
   setupPageTransitions();
