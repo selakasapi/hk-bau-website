@@ -527,20 +527,21 @@ header#navbar.sticky #mobile-menu-button svg {
 /* ===== ENHANCED SERVICE CARDS WITH NUMBERS ===== */
 .service-card-enhanced {
     position: relative;
-    overflow: hidden;
+    overflow: visible !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card-enhanced::before {
     content: attr(data-number);
     position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 8rem;
+    top: -10px;
+    right: -10px;
+    font-size: 6rem;
     font-weight: 900;
     color: rgba(251, 187, 33, 0.05);
     line-height: 1;
     transition: all 0.3s ease;
+    z-index: 0;
 }
 
 .service-card-enhanced:hover::before {
@@ -577,6 +578,7 @@ header#navbar.sticky #mobile-menu-button svg {
     text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid var(--primary-color);
+    font-size: 0.875rem;
 }
 
 .service-cta-btn:hover {
@@ -622,7 +624,6 @@ header#navbar.sticky #mobile-menu-button svg {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    margin-top: 1.5rem;
 }
 
 .whatsapp-button:hover {
@@ -637,6 +638,7 @@ header#navbar.sticky #mobile-menu-button svg {
     color: var(--secondary-color);
     margin: 1rem 0;
     display: block;
+    text-decoration: none;
 }
 
 /* ===== IMPROVED FOOTER ===== */
@@ -686,6 +688,7 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
 }
 
 .footer-column a:hover {
@@ -1146,28 +1149,28 @@ img[src*="placeholder"] {
     transition: transform 0.5s ease-in-out;
 }
 
-/* ===== FIXED CAROUSEL INDICATORS ===== */
+/* ===== PROPERLY FIXED CAROUSEL INDICATORS - NO OVERLAP ===== */
 .carousel-indicators {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  padding: 0.75rem 1rem !important;
+  padding: 0.75rem 0 !important;
   margin-top: 1.5rem !important;
-  background-color: transparent !important;
+  background: none !important;
   border: none !important;
   box-shadow: none !important;
+  backdrop-filter: none !important;
   width: auto !important;
-  position: relative !important;
-  z-index: 10 !important;
+  position: static !important;
+  z-index: 1 !important;
 }
 
+/* Remove any pseudo-elements that might cause styling */
 .carousel-indicators::before,
 .carousel-indicators::after {
   display: none !important;
   content: none !important;
-  border: none !important;
-  background: none !important;
 }
 
 .carousel-indicator-btn {
@@ -1182,11 +1185,13 @@ img[src*="placeholder"] {
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   flex-shrink: 0 !important;
+  outline: none !important;
 }
 
 .carousel-indicator-btn:hover {
   background-color: rgba(251, 187, 33, 0.5) !important;
   transform: scale(1.2) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .carousel-indicator-btn.active {
