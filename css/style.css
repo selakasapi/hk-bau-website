@@ -55,8 +55,8 @@ body {
 
 html {
     scroll-behavior: smooth;
-    /* FIX FOR ANCHOR LINKS WITH FIXED HEADER - Increased to 100px */
-    scroll-padding-top: 100px;
+    /* FIX FOR ANCHOR LINKS WITH FIXED HEADER - Increased to 120px */
+    scroll-padding-top: 120px;
 }
 
 
