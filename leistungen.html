@@ -11,7 +11,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Recommended favicon links -->
+
+<!-- Performance: Preload Critical Resources -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preload" href="css/style.css" as="style" />
+<link rel="preload" href="images/icon/logo.png" as="image" />
+
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
   <script type="application/ld+json">
 {
@@ -22,8 +34,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://www.hk-bau.com",
       "name": "HK Bau GmbH \u2013 Fellbach",
       "url": "https://www.hk-bau.com",
-      "logo": "https://www.hk-bau.com/assets/logo.svg",
-      "image": "https://www.hk-bau.com/assets/header-image.jpg",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "HK Bau GmbH ist Ihr Bauunternehmen f\u00fcr Hochbau, Rohbau und schl\u00fcsselfertiges Bauen in Stuttgart, Fellbach, Sindelfingen und Umgebung.",
       "telephone": "+49 711 9065270",
       "email": "info@hk-bau.net",
@@ -71,8 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "LocalBusiness",
       "name": "HK Bau GmbH \u2013 Magstadt",
       "url": "https://www.hk-bau.com",
-      "logo": "https://www.hk-bau.com/assets/logo.svg",
-      "image": "https://www.hk-bau.com/assets/header-image.jpg",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "Zweigniederlassung der HK Bau GmbH in Magstadt \u2013 Bauunternehmen f\u00fcr die Region B\u00f6blingen, Sindelfingen und Umgebung.",
       "telephone": "+49 7159 4591823",
       "email": "info@hk-bau.net",
@@ -118,7 +130,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.hk-bau.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://www.hk-bau.com/leistungen.html"}
+  ]
+}
+</script>
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -127,42 +148,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="apple-mobile-web-app-title" content="HK Bau" />
 <link rel="manifest" href="site.webmanifest" />
 
-    <meta name="description" content="HK Bau \u2013 Ihr Bauunternehmen in Fellbach f\u00fcr Rohbau, Erdarbeiten und schl\u00fcsselfertiges Bauen." />
-    <meta name="keywords" content="Bauleistungen, Rohbau, Erdbau, Kanalbau, Ausbau, Bauunternehmen Stuttgart, HK Bau" />
-    <meta name="author" content="HK Bau GmbH" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.hk-bau.com/leistungen.html" />
+<title>Unsere Leistungen \u2013 Rohbau, Hochbau & Schl\u00fcsselfertigbau | HK Bau GmbH Stuttgart</title>
+<meta name="description" content="HK Bau bietet Erdarbeiten, Hochbau, Rohbau, Stahlbetonbau und schl\u00fcsselfertiges Bauen im Raum Stuttgart, Fellbach, Sindelfingen und ganz Baden-W\u00fcrttemberg." />
+<meta name="keywords" content="Bauleistungen, Rohbau, Erdbau, Kanalbau, Ausbau, Bauunternehmen Stuttgart, HK Bau" />
+<meta name="author" content="HK Bau GmbH" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.hk-bau.com/leistungen.html" />
 
-    <meta property="og:title" content="Leistungen \u2013 HK Bau" />
-    <meta property="og:description" content="Unsere Bauleistungen: Rohbau, Erdarbeiten, Betonbau..." />
-    <meta property="og:image" content="images/og-preview.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.hk-bau.com/leistungen.html" />
+<!-- Open Graph -->
+<meta property="og:title" content="Leistungen \u2013 Rohbau, Erdbau & Schl\u00fcsselfertigbau | HK Bau GmbH" />
+<meta property="og:description" content="Entdecken Sie das Leistungsspektrum von HK Bau: Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holzbau, Stahlbau, Abbruch & schl\u00fcsselfertiges Bauen." />
+<meta property="og:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hk-bau.com/leistungen.html" />
+<meta property="og:site_name" content="HK Bau GmbH" />
+<meta property="og:locale" content="de_DE" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Leistungen \u2013 HK Bau" />
-    <meta name="twitter:description"
-        content="HK Bau bietet umfassende Leistungen im Hoch- und Tiefbau: Erdbau, Rohbau, Ausbau u.v.m." />
-    <meta name="twitter:image" content="images/icon/logo.png" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Leistungen \u2013 HK Bau" />
+<meta name="twitter:description" content="HK Bau bietet umfassende Leistungen im Hoch- und Tiefbau: Erdbau, Rohbau, Ausbau u.v.m." />
+<meta name="twitter:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
 
-<title>Unsere Leistungen \u2013 Rohbau, Hochbau & Schl\u00fcsselfertigbau | HK Bau</title>
-<meta name="description" content="HK Bau bietet Erdarbeiten, Hochbau, Rohbau und schl\u00fcsselfertiges Bauen im Raum Stuttgart, Fellbach, Sindelfingen und Baden-W\u00fcrttemberg.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="theme-color" content="#fbbb21" />
 
-    <link rel="stylesheet" href="css/tailwind.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
- 
-    <!-- Cookie Consent by Osano -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/tailwind.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Cookie Consent -->
 <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script defer>
   window.addEventListener("load", function(){
     window.cookieconsent.initialise({
-      palette: {
-        popup: { background: "#2b2b2b" },
-        button: { background: "var(--primary-color)" }
-      },
+      palette: { popup: { background: "#2b2b2b" }, button: { background: "var(--primary-color)" } },
       theme: "classic",
       content: {
         message: "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.",
@@ -183,14 +204,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
 </script>
 
-  <meta name="theme-color" content="#fbbb21">
 </head>
 
 <body class="font-[Poppins] text-gray-800 overflow-x-hidden">
+<!-- Skip to main content -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
+  Zum Hauptinhalt springen
+</a>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT68K2ZT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
   <script src="js/init-transition.js"></script>
 <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4">
@@ -201,9 +226,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
     <div class="logo-container">
@@ -216,28 +238,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html">Startseite</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="referenzen.html">Referenzen</a>
-      <!-- <a href="wissen.html">Wissen</a> -->
       <a href="karriere.html">Karriere</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-
-    <!-- Hamburger Menu Button -->
-    <button id="mobile-menu-button"
-            class="md:hidden z-[100] p-2 focus:outline-none"
-            aria-label="Men\u00fc \u00f6ffnen"
-            aria-expanded="false">
+    <button id="mobile-menu-button" class="md:hidden z-[100] p-2 focus:outline-none" aria-label="Men\u00fc \u00f6ffnen" aria-expanded="false">
       <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
       </svg>
     </button>
   </div>
-
-  <!-- Backdrop Overlay -->
-  <div id="nav-backdrop"
-       class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
-
-  <!-- Mobile Menu -->
+  <div id="nav-backdrop" class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
   <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6">
     <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
     <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
@@ -247,410 +257,201 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-    <main>
+    <main id="main-content">
        <section class="relative h-screen overflow-hidden flex items-center justify-center parallax leistungen-hero pt-16">
-
-  <!-- Video Background -->
   <div class="absolute inset-0 z-0 overflow-hidden">
-    <video autoplay muted loop playsinline class="w-full h-full object-cover" data-hero-media>
+    <video autoplay muted loop playsinline preload="none" poster="images/icon/logo.png" class="w-full h-full object-cover" data-hero-media>
       <source src="images/hero/hero-leistungen.mp4" type="video/mp4" />
       Ihr Browser unterst\u00fctzt das Video-Tag nicht.
     </video>
     <div class="absolute inset-0 bg-[var(--secondary-color)]/30"></div>
     <div class="absolute inset-0 bg-black/20 z-10"></div>
   </div>
-
-  <!-- Hero Content -->
   <div class="relative z-20 text-center hero-content max-w-3xl text-white" data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-      Stark im Bauen. Verl\u00e4sslich im Umsetzen.
-    </h1>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">
-      Verl\u00e4sslich, pr\u00e4zise und termingerecht \u2013 wir realisieren Ihr Projekt mit h\u00f6chstem Anspruch.
-    </p>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Stark im Bauen. Verl\u00e4sslich im Umsetzen.</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">Verl\u00e4sslich, pr\u00e4zise und termingerecht \u2013 wir realisieren Ihr Projekt mit h\u00f6chstem Anspruch.</p>
   </div>
-
 </section>
 
-
-<!-- Leistungen im uberblick -->
 <div class="max-w-4xl mx-auto px-6 text-center mt-24">
   <h2 class="text-4xl font-bold text-[var(--secondary-color)] mb-4">
     Unsere <span class="text-[var(--primary-color)]">Leistungen</span> im \u00dcberblick
   </h2>
 </div>
 
-<!-- Leistungen Grid Section -->
 <section class="space-y-24 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
-    <!-- Erdbau -->
     <a href="#erdbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Erdbau erfahren">
      <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 4L22 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M3 8.01L3.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M3 16.01L3.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M6 12.01L6.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M6 20.01L6.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9 8.01L9.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9 16.01L9.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M12 12.01L12.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M12 20.01L12.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M15 8.01L15.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M15 16.01L15.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M18 12.01L18.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M18 20.01L18.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M21 8.01L21.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M21 16.01L21.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 4L22 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8.01L3.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16.01L3.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12.01L6.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20.01L6.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8.01L9.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 16.01L9.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.01L12.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20.01L12.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8.01L15.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 16.01L15.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 12.01L18.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 20.01L18.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.01L21.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 16.01L21.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Erdbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Fundament f\u00fcr jedes Bauprojekt.</p>
     </a>
-
-    <!-- Kanalbau -->
     <a href="#kanalbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Kanalbau erfahren">
      <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-      <path d="M232,104H208V56h24a8,8,0,0,0,0-16H205.83A16,16,0,0,0,192,32H176a16,16,0,0,0-13.83,8H144A104.11,104.11,0,0,0,40,144v18.16A16,16,0,0,0,32,176v16a16,16,0,0,0,8,13.84V232a8,8,0,0,0,16,0V208h48v24a8,8,0,0,0,16,0V205.84A16,16,0,0,0,128,192V176a16,16,0,0,0-8-13.84V144a24,24,0,0,1,24-24h18.17A16,16,0,0,0,176,128h16a16,16,0,0,0,13.83-8H232a8,8,0,0,0,0-16ZM112,176v16H48V176Zm-8-32v16H56V144a88.1,88.1,0,0,1,88-88h16v48H144A40,40,0,0,0,104,144Zm72-32V48h16v63.8c0,.07,0,.13,0,.2Z"></path>
-    </svg>
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M232,104H208V56h24a8,8,0,0,0,0-16H205.83A16,16,0,0,0,192,32H176a16,16,0,0,0-13.83,8H144A104.11,104.11,0,0,0,40,144v18.16A16,16,0,0,0,32,176v16a16,16,0,0,0,8,13.84V232a8,8,0,0,0,16,0V208h48v24a8,8,0,0,0,16,0V205.84A16,16,0,0,0,128,192V176a16,16,0,0,0-8-13.84V144a24,24,0,0,1,24-24h18.17A16,16,0,0,0,176,128h16a16,16,0,0,0,13.83-8H232a8,8,0,0,0,0-16ZM112,176v16H48V176Zm-8-32v16H56V144a88.1,88.1,0,0,1,88-88h16v48H144A40,40,0,0,0,104,144Zm72-32V48h16v63.8c0,.07,0,.13,0,.2Z"></path></svg>
   </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Kanalbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Langlebige Infrastruktur sichern.</p>
     </a>
-
-    <!-- Stahlbetonbau -->
     <a href="#stahlbetonbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Stahlbetonbau erfahren">
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4z" />
-        </svg>
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /></svg>
       </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbetonbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Robuste Konstruktionen.</p>
     </a>
-
-    <!-- Mauerwerksbau -->
     <a href="#mauerwerksbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Mauerwerksbau erfahren">
 <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect width="18" height="18" x="3" y="3" rx="2"/>
-      <path d="M12 9v6"/>
-      <path d="M16 15v6"/>
-      <path d="M16 3v6"/>
-      <path d="M3 15h18"/>
-      <path d="M3 9h18"/>
-      <path d="M8 15v6"/>
-      <path d="M8 3v6"/>
-    </svg>
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
   </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Mauerwerksbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Nachhaltige Geb\u00e4ude pr\u00e4zise bauen.</p>
     </a>
-
-    <!-- Holz & Stahlbau -->
     <a href="#holzbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Holz & Stahlbau erfahren">
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <path d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" />
-        </svg>
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" /></svg>
       </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Holzbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">\u00d6kologisch und modern.</p>
     </a>
-
-    <!-- Stahlbau -->
     <a href="#stahlbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Stahlbau erfahren">
       <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <path d="M6 3v18M18 3v18M3 6h18M3 18h18" />
-        </svg>
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M3 6h18M3 18h18" /></svg>
       </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Ma\u00dfgeschneiderte Industriel\u00f6sungen.</p>
     </a>
-
-    <!-- Abbruch & R\u00fcckbau -->
     <a href="leistungen.html#abbruch-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Abbruch & R\u00fcckbau erfahren">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out"
-         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="3" width="6" height="4" />
-      <rect x="2" y="9" width="6" height="4" />
-      <rect x="2" y="15" width="6" height="4" />
-      <line x1="18" y1="2" x2="14" y2="8" />
-      <circle cx="13" cy="10" r="2.5" />
-      <path d="M9 10 L11 10" />
-    </svg>
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="4" /><rect x="2" y="9" width="6" height="4" /><rect x="2" y="15" width="6" height="4" /><line x1="18" y1="2" x2="14" y2="8" /><circle cx="13" cy="10" r="2.5" /><path d="M9 10 L11 10" /></svg>
   </div>
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Abbruch & R\u00fcckbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Sicher, kontrolliert und effizient.</p>
     </a>
-
-<!-- Freianlagen -->
 <a href="leistungen.html#freianlagen-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Freianlagen erfahren">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="6" cy="6" r="2" />
-      <line x1="6" y1="8" x2="6" y2="14" />
-      <line x1="5" y1="14" x2="7" y2="14" />
-      <rect x="10" y="10" width="4" height="2" />
-      <rect x="15" y="10" width="4" height="2" />
-      <rect x="10" y="13" width="4" height="2" />
-      <rect x="15" y="13" width="4" height="2" />
-      <line x1="3" y1="20" x2="21" y2="20" />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2" /><line x1="6" y1="8" x2="6" y2="14" /><line x1="5" y1="14" x2="7" y2="14" /><rect x="10" y="10" width="4" height="2" /><rect x="15" y="10" width="4" height="2" /><rect x="10" y="13" width="4" height="2" /><rect x="15" y="13" width="4" height="2" /><line x1="3" y1="20" x2="21" y2="20" /></svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Freianlagen</h3>
   <p class="text-sm text-gray-600 group-hover:text-white">Individuelle Gestaltung von Au\u00dfenanlagen und Frefl\u00e4chen.</p>
 </a>
-
-<!-- Schl\u00fcsselfertigbau -->
-<a href="leistungen.html#schluesselfertigbau-details" 
-   class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Schl\u00fcsselfertigbau erfahren">
+<a href="leistungen.html#schluesselfertigbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr \u00fcber Schl\u00fcsselfertigbau erfahren">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" 
-         viewBox="0 0 256 256">
-      <path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256"><path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Schl\u00fcsselfertigbau</h3>
-  <p class="text-sm text-gray-600 group-hover:text-white">Alles aus einer Hand \u2013 bereit zur Schl\u00fcsselübergabe.</p>
+  <p class="text-sm text-gray-600 group-hover:text-white">Alles aus einer Hand \u2013 bereit zur Schl\u00fcssel\u00fcbergabe.</p>
 </a>
-
   </div>
 </section>
 
-  <!-- Leistungen im detail -->
 <section class="space-y-24 max-w-6xl mx-auto px-6 py-24">
   <div class="text-center mb-16">
     <h2 class="text-4xl md:text-5xl font-extrabold text-secondary-color" data-aos="fade-up">
       Unsere <span class="text-[var(--primary-color)]">Leistungen</span> im Detail
     </h2>
   </div>
-
-  <!-- Erdbau -->
   <a href="Referenzen/erdbau.html" class="block group" aria-label="Erdbau Referenzen">
   <div id="erdbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up">
     <img src="images/erdbau.jpg" alt="Erdbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Erdbau \u2013 Fundament f\u00fcr Ihr Bauprojekt
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Erdarbeiten sind ein wichtiger Teil des Bauprozesses und erm\u00f6glichen die Errichtung stabiler Fundamente f\u00fcr Geb\u00e4ude und Infrastrukturprojekte.
-        <br><br>
-        Mit unseren Gro\u00dfger\u00e4ten und Transportfahrzeuge k\u00f6nnen wir Baugruben aller Art erstellen.  
-        <br><br>
-        Unsere erfahrenen Mitarbeiter sorgen daf\u00fcr, dass die Erdarbeiten professionell und effizient durchgef\u00fchrt werden, um einen reibungslosen Baufortschritt zu gew\u00e4hrleisten.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 16h10m-6-8h14" /></svg>
-          Pr\u00e4zision, Effizienz & termingerechte Fertigstellung
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Erdbau \u2013 Fundament f\u00fcr Ihr Bauprojekt</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Erdarbeiten sind ein wichtiger Teil des Bauprozesses und erm\u00f6glichen die Errichtung stabiler Fundamente f\u00fcr Geb\u00e4ude und Infrastrukturprojekte.<br><br>Mit unseren Gro\u00dfger\u00e4ten und Transportfahrzeuge k\u00f6nnen wir Baugruben aller Art erstellen.<br><br>Unsere erfahrenen Mitarbeiter sorgen daf\u00fcr, dass die Erdarbeiten professionell und effizient durchgef\u00fchrt werden, um einen reibungslosen Baufortschritt zu gew\u00e4hrleisten.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 16h10m-6-8h14" /></svg>Pr\u00e4zision, Effizienz & termingerechte Fertigstellung</li></ul>
     </div>
   </div>
 </a>
-
-<!-- Kanalbau -->
 <a href="Referenzen/kanalbau.html" class="block group" aria-label="Kanalbau Referenzen">
   <div id="kanalbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="100">
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Kanalbau \u2013 Langlebige Infrastruktur
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Im Rahmen der Kanalbauarbeiten werden Entw\u00e4sserungsleitungen verlegt, Sch\u00e4chte und gro\u00dfe Zisternen versetzt.
-        <br><br>
-        Durch die Expertise und Erfahrung unserer Facharbeiter, k\u00f6nnen wir unseren Kunden eine effiziente und zuverl\u00e4ssige Durchf\u00fchrung der Kanalarbeiten gew\u00e4hrleisten.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h6v4H3v-4zM15 10h6v4h-6v-4zM9 12h6" />
-          </svg>
-          Nachhaltigkeit, Zuverl\u00e4ssigkeit & Fachwissen
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Kanalbau \u2013 Langlebige Infrastruktur</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Im Rahmen der Kanalbauarbeiten werden Entw\u00e4sserungsleitungen verlegt, Sch\u00e4chte und gro\u00dfe Zisternen versetzt.<br><br>Durch die Expertise und Erfahrung unserer Facharbeiter, k\u00f6nnen wir unseren Kunden eine effiziente und zuverl\u00e4ssige Durchf\u00fchrung der Kanalarbeiten gew\u00e4hrleisten.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h6v4H3v-4zM15 10h6v4h-6v-4zM9 12h6" /></svg>Nachhaltigkeit, Zuverl\u00e4ssigkeit & Fachwissen</li></ul>
     </div>
     <img src="images/kanalbau.jpg" alt="Kanalbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
   </div>
 </a>
-
- <!-- STAHLBETONBAU -->
-  <a href="Referenzen/stahlbetonbau.html" class="block group" aria-label="Stahlbetonbau Referenzen">
+<a href="Referenzen/stahlbetonbau.html" class="block group" aria-label="Stahlbetonbau Referenzen">
   <div id="stahlbetonbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="200">
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Stahlbetonbau \u2013 Massive Stabilit\u00e4t
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Stahlbeton als Verbundwerkstoff wird in vielen Bereichen des Hoch- und Tiefbaus eingesetzt.
-        <br><br>
-        Durch die Kombination von Stahl und Beton entstehen stabile und langlebige Bauwerke, die sowohl \u00e4sthetisch ansprechend als auch funktional sind.
-        <br><br>
-        Wir verf\u00fcgen das n\u00f6tige Know-How und die Erfahrung um hochwertige Baukonstruktionen zu errichten und zu sanieren.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z" />
-          </svg>
-          Tragkraft, Brandschutz & Langlebigkeit
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Stahlbetonbau \u2013 Massive Stabilit\u00e4t</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Stahlbeton als Verbundwerkstoff wird in vielen Bereichen des Hoch- und Tiefbaus eingesetzt.<br><br>Durch die Kombination von Stahl und Beton entstehen stabile und langlebige Bauwerke, die sowohl \u00e4sthetisch ansprechend als auch funktional sind.<br><br>Wir verf\u00fcgen das n\u00f6tige Know-How und die Erfahrung um hochwertige Baukonstruktionen zu errichten und zu sanieren.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z" /></svg>Tragkraft, Brandschutz & Langlebigkeit</li></ul>
     </div>
     <img src="images/stahlbetonbau.jpg" alt="Stahlbetonbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
   </div>
 </a>
-
-  <!-- MAUERWERKSBAU -->
-  <a href="Referenzen/mauerwerksbau.html" class="block group" aria-label="Mauerwerksbau Referenzen">
+<a href="Referenzen/mauerwerksbau.html" class="block group" aria-label="Mauerwerksbau Referenzen">
   <div id="mauerwerksbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="250">
     <img src="images/mauerwerksbau.jpg" alt="Mauerwerksbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Mauerwerksbau \u2013 Klassisch & langlebig
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Im Mauerwerksbau werden verschiedene Materialien wie Mauerziegel, Kalksandsteine oder Porenbetonsteine verwendet. Diese Baustoffe kommen je nach Anforderungen und Bauprojekt zum Einsatz und bieten eine hohe Stabilit\u00e4t und Tragf\u00e4higkeit.
-        <br><br>
-        Das Errichten von Mauern erfordert nicht nur handwerkliches Geschick, sondern auch Leidenschaft f\u00fcr das Handwerk.
-        <br><br>
-        Egal ob Mauern der tragenden oder nicht tragenden W\u00e4nde, Sichtmauerwerk oder Verblendmauerwerk \u2013 unsere erfahrenen Maurer beherrschen ihre Aufgabe und sind auf jede neue Herausforderung bereit.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
-          </svg>
-          W\u00e4rmespeicherung & Handwerksqualit\u00e4t
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Mauerwerksbau \u2013 Klassisch & langlebig</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Im Mauerwerksbau werden verschiedene Materialien wie Mauerziegel, Kalksandsteine oder Porenbetonsteine verwendet.<br><br>Das Errichten von Mauern erfordert nicht nur handwerkliches Geschick, sondern auch Leidenschaft f\u00fcr das Handwerk.<br><br>Egal ob tragende oder nicht tragende W\u00e4nde, Sichtmauerwerk oder Verblendmauerwerk \u2013 unsere erfahrenen Maurer beherrschen ihre Aufgabe.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" /></svg>W\u00e4rmespeicherung & Handwerksqualit\u00e4t</li></ul>
     </div>
   </div>
 </a>
-
-  <!-- HOLZBAU -->
- <a href="Referenzen/holzbau.html" class="block group" aria-label="Holz & Stahlbau Referenzen">
+<a href="Referenzen/holzbau.html" class="block group" aria-label="Holz & Stahlbau Referenzen">
   <div id="holzbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="300">
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Holz & Stahlbau \u2013 Nat\u00fcrlich modern
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Bei Holzbauarbeiten im Bereich des Holzbaus werden verschiedene Holzkonstruktionen wie Hybridbau, D\u00e4cher, Hallenbau und Holzst\u00e4nderelemente realisiert. Diese Bauarbeiten umfassen die Planung, Konstruktion und Montage von Holzstrukturen, die sowohl \u00e4sthetisch ansprechend als auch funktional sind.
-        <br><br>
-        Holzbauarbeiten bieten eine nachhaltige und umweltfreundliche Bauweise, die sowohl \u00f6kologisch als auch \u00f6konomisch \u00fcberzeugt.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" />
-          </svg>
-          Nachhaltigkeit & Raumklima
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Holz & Stahlbau \u2013 Nat\u00fcrlich modern</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Bei Holzbauarbeiten werden verschiedene Holzkonstruktionen wie Hybridbau, D\u00e4cher, Hallenbau und Holzst\u00e4nderelemente realisiert.<br><br>Holzbauarbeiten bieten eine nachhaltige und umweltfreundliche Bauweise, die sowohl \u00f6kologisch als auch \u00f6konomisch \u00fcberzeugt.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" /></svg>Nachhaltigkeit & Raumklima</li></ul>
     </div>
     <img src="images/holzbau.webp" alt="Holz & Stahlbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
   </div>
 </a>
-
-  <!-- STAHLBAU -- FIXED: was pointing to Referenzen/holz-und-stahlbau.html (404), now points to Referenzen/holzbau.html -->
-  <a href="Referenzen/holzbau.html" class="block group" aria-label="Stahlbau Referenzen">
+<a href="Referenzen/holzbau.html" class="block group" aria-label="Stahlbau Referenzen">
   <div id="stahlbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="350">
     <img src="images/stahlbau.jpg" alt="Stahlbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
     <div>
-      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">
-        Stahlbau \u2013 Flexible Konstruktionen
-      </h3>
-      <p class="text-lg text-dark-gray leading-relaxed mb-6">
-        Stahlbauarbeiten sind ein wichtiger Bestandteil von Stahlbaukonstruktionen. Diese Arbeiten umfassen die Planung, Fertigung und Montage von Stahlteilen, um robuste und langlebige Bauwerke zu schaffen.
-        <br><br>
-        Stahlbauarbeiten erfordern Fachkenntnisse und Pr\u00e4zision, um die Sicherheit und Stabilit\u00e4t der Konstruktion zu gew\u00e4hrleisten. Durch die Verwendung von Stahl als Baumaterial k\u00f6nnen gro\u00dfe Spannweiten und hohe Traglasten realisiert werden, was Stahlbaukonstruktionen besonders vielseitig und effizient macht.
-      </p>
-      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-        <li class="flex items-center">
-          <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 3v18M18 3v18M3 6h18M3 18h18" />
-          </svg>
-          Ma\u00dfarbeit & Industriequalit\u00e4t
-        </li>
-      </ul>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Stahlbau \u2013 Flexible Konstruktionen</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Stahlbauarbeiten umfassen die Planung, Fertigung und Montage von Stahlteilen, um robuste und langlebige Bauwerke zu schaffen.<br><br>Durch die Verwendung von Stahl k\u00f6nnen gro\u00dfe Spannweiten und hohe Traglasten realisiert werden, was Stahlbaukonstruktionen besonders vielseitig macht.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 3v18M18 3v18M3 6h18M3 18h18" /></svg>Ma\u00dfarbeit & Industriequalit\u00e4t</li></ul>
     </div>
   </div>
-  </a>
-
-   <!-- Abbruch & R\u00fcckbau -->
-  <a href="Referenzen/abbruch-und-ruckbau.html" class="block group" aria-label="Abbruch und R\u00fcckbau Referenzen">
+</a>
+<a href="Referenzen/abbruch-und-ruckbau.html" class="block group" aria-label="Abbruch und R\u00fcckbau Referenzen">
     <div id="abbruch-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="150">
       <img src="images/abbruch.webp" alt="Abbruch und R\u00fcckbau" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
       <div>
-        <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color flex items-center gap-2">Abbruch & R\u00fcckbau \u2013 Sicher, kontrolliert, effizient</h3>
+        <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Abbruch & R\u00fcckbau \u2013 Sicher, kontrolliert, effizient</h3>
         <p class="text-lg text-dark-gray leading-relaxed mb-6">Vom selektiven R\u00fcckbau bis zum vollst\u00e4ndigen Abbruch \u2013 wir \u00fcbernehmen <strong>Abbrucharbeiten jeder Gr\u00f6\u00dfenordnung</strong> unter Ber\u00fccksichtigung aller Umwelt- und Sicherheitsstandards.</p>
-        <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6">
-          <li class="flex items-center">
-            <svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 3l6 6m-6-6l-3 3 6 6 3-3M9 13l-6 6v2h2l6-6" />
-            </svg>
-            Strukturierte Planung, Entsorgung & Sicherheit
-          </li>
-        </ul>
+        <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 3l6 6m-6-6l-3 3 6 6 3-3M9 13l-6 6v2h2l6-6" /></svg>Strukturierte Planung, Entsorgung & Sicherheit</li></ul>
       </div>
     </div>
-  </a>
-
+</a>
 </section>
-
 
 <section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white mt-24 rounded-3xl shadow-xl">
   <div class="absolute inset-0 bg-[url('images/kontakt-image.png')] bg-cover bg-center opacity-10"></div>
   <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-      Bereit, Ihr Bauprojekt zu starten?
-    </h2>
-    <p class="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">
-      Lassen Sie uns gemeinsam Ihr n\u00e4chstes Projekt realisieren \u2013 schnell, zuverl\u00e4ssig und professionell.
-    </p>
-    <a href="kontakt.html"
-       class="inline-block bg-white text-[var(--primary-color)] font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition hover:scale-105 btn-lift">
-      Jetzt Kontakt aufnehmen
-    </a>
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">Bereit, Ihr Bauprojekt zu starten?</h2>
+    <p class="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">Lassen Sie uns gemeinsam Ihr n\u00e4chstes Projekt realisieren \u2013 schnell, zuverl\u00e4ssig und professionell.</p>
+    <a href="kontakt.html" class="inline-block bg-white text-[var(--primary-color)] font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition hover:scale-105 btn-lift">Jetzt Kontakt aufnehmen</a>
   </div>
 </section>
 
-
     </main>
 
-   <!-- Footer -->
 <footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
   <div class="space-y-4">
     <nav class="space-x-4">
       <a href="index.html">Startseite</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="referenzen.html">Referenzen</a>
-      <!-- <a href="wissen.html">Wissen</a> -->
       <a href="karriere.html">Karriere</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
     <div class="flex justify-center space-x-6 text-xl mt-4">
-      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <i aria-hidden="true" class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i aria-hidden="true" class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i aria-hidden="true" class="fab fa-linkedin-in"></i>
-      </a>
+      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
     </div>
-      <p>\u00a9 <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
-    <p class="text-xs">
-      <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
-    </p>
+    <p>\u00a9 <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs"><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a></p>
   </div>
 </footer>
 
@@ -661,11 +462,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
     </button>
-    
 
     <script src="js/app.js" defer></script>
     <script src="js/carousels.js" defer></script>
-    <div id="nav-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 </body>
 
 </html>
