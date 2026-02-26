@@ -10,6 +10,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
+# Redirect old 404 page to referenzen
+Redirect 301 /Referenzen/holz-und-stahlbau.html https://www.hk-bau.com/referenzen.html
+
 # Remove .html extension from URLs (optional - for cleaner URLs)
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteCond %{REQUEST_FILENAME}\.html -f
