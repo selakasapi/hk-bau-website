@@ -11,7 +11,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Recommended favicon links -->
+
+<!-- Performance: Preload Critical Resources -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preload" href="css/style.css" as="style" />
+<link rel="preload" href="images/icon/logo.png" as="image" />
+
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
   <script type="application/ld+json">
 {
@@ -22,8 +34,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://www.hk-bau.com",
       "name": "HK Bau GmbH – Fellbach",
       "url": "https://www.hk-bau.com",
-      "logo": "https://www.hk-bau.com/assets/logo.svg",
-      "image": "https://www.hk-bau.com/assets/header-image.jpg",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "HK Bau GmbH ist Ihr Bauunternehmen für Hochbau, Rohbau und schlüsselfertiges Bauen in Stuttgart, Fellbach, Sindelfingen und Umgebung.",
       "telephone": "+49 711 9065270",
       "email": "info@hk-bau.net",
@@ -64,15 +76,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "sameAs": [
         "https://www.linkedin.com/company/h-k-bau/",
         "https://www.instagram.com/hk.bau",
-        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/"
+        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678"
       ]
     },
     {
       "@type": "LocalBusiness",
       "name": "HK Bau GmbH – Magstadt",
       "url": "https://www.hk-bau.com",
-      "logo": "https://www.hk-bau.com/assets/logo.svg",
-      "image": "https://www.hk-bau.com/assets/header-image.jpg",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "Zweigniederlassung der HK Bau GmbH in Magstadt – Bauunternehmen für die Region Böblingen, Sindelfingen und Umgebung.",
       "telephone": "+49 7159 4591823",
       "email": "info@hk-bau.net",
@@ -111,14 +123,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "sameAs": [
         "https://www.linkedin.com/company/h-k-bau/",
         "https://www.instagram.com/hk.bau",
-        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/"
+        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678"
       ]
     }
   ]
 }
 </script>
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://www.hk-bau.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Karriere",
+      "item": "https://www.hk-bau.com/karriere.html"
+    }
+  ]
+}
+</script>
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -127,31 +158,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="apple-mobile-web-app-title" content="HK Bau" />
 <link rel="manifest" href="site.webmanifest" />
 
-    <meta name="description" content="Karriere bei HK Bau – Jetzt bewerben und Teil eines starken Teams werden." />
-    <meta name="keywords"
-        content="Karriere Bauunternehmen, Bau Jobs Stuttgart, HK Bau Jobs, Bauleiter, Facharbeiter, Ausbildung Bau" />
+    <meta name="description" content="Karriere bei HK Bau GmbH – Jetzt als Polier, Maurer oder Bauleiter bewerben und Teil eines starken Bauunternehmens in Stuttgart & Umgebung werden." />
+    <meta name="keywords" content="Karriere Bauunternehmen, Bau Jobs Stuttgart, HK Bau Jobs, Bauleiter, Facharbeiter, Ausbildung Bau" />
     <meta name="author" content="HK Bau GmbH" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.hk-bau.com/karriere.html" />
 
-    <meta property="og:title" content="Karriere bei HK Bau – Jetzt bewerben" />
-    <meta property="og:description"
-        content="HK Bau – Ihr Arbeitgeber im Bauwesen. Rohbau, Ausbau, Sanierung in Stuttgart & Umgebung." />
-    <meta property="og:image" content="images/icon/logo.png" />
+    <meta property="og:title" content="Karriere bei HK Bau – Jobs im Bauunternehmen Stuttgart" />
+    <meta property="og:description" content="Jetzt bewerben bei HK Bau – Polier, Maurer, Bauleiter gesucht. Sichere Stelle, starkes Team, gute Perspektiven." />
+    <meta property="og:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.hk-bau.com/karriere.html" />
+    <meta property="og:site_name" content="HK Bau GmbH" />
+    <meta property="og:locale" content="de_DE" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Karriere bei HK Bau – Jetzt bewerben" />
-    <meta name="twitter:description"
-        content="HK Bau – Ihr Arbeitgeber im Bauwesen. Rohbau, Ausbau, Sanierung in Stuttgart & Umgebung." />
-    <meta name="twitter:image" content="images/icon/logo.png" />
+    <meta name="twitter:description" content="HK Bau – Ihr Arbeitgeber im Bauwesen. Rohbau, Ausbau, Sanierung in Stuttgart & Umgebung." />
+    <meta name="twitter:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
 
-    <title>Karriere – HK Bau</title>
-
+    <title>Karriere bei HK Bau – Jobs & Stellen im Bauunternehmen Stuttgart | HK Bau GmbH</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="css/tailwind.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
@@ -175,7 +203,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   });
 </script>
-
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
 <script>
@@ -184,9 +211,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
   gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
 </script>
-
   <meta name="theme-color" content="#fbbb21">
-
 
   <style>
    .job-icon {
@@ -228,12 +253,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="text-[var(--secondary-color)] overflow-x-hidden">
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
+  Zum Hauptinhalt springen
+</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT68K2ZT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <script src="js/init-transition.js"></script>
-    
+
 <div id="pageTransitionOverlay" class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4">
     <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
@@ -243,9 +272,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-
-
-    <!-- ✅ NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
     <div class="logo-container">
@@ -258,28 +284,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html">Startseite</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="referenzen.html">Referenzen</a>
-      <!-- <a href="wissen.html">Wissen</a> -->
       <a href="karriere.html">Karriere</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-
-    <!-- Hamburger Menu Button -->
-    <button id="mobile-menu-button"
-            class="md:hidden z-[100] p-2 focus:outline-none"
-            aria-label="Menü öffnen"
-            aria-expanded="false">
+    <button id="mobile-menu-button" class="md:hidden z-[100] p-2 focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
       <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
       </svg>
     </button>
   </div>
-
-  <!-- Backdrop Overlay -->
-  <div id="nav-backdrop"
-       class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
-
-  <!-- Mobile Menu -->
+  <div id="nav-backdrop" class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
   <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6">
     <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
     <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
@@ -289,33 +303,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-    <main>
-
-
-        <!-- Hero Section -->
-         <nav class="your-navbar-class absolute top-0 left-0 w-full z-20 bg-transparent text-white">
-    </nav>
+    <main id="main-content">
 
 <section id="karriere-hero" class="relative h-screen overflow-hidden flex items-center justify-center parallax">
-
     <div class="absolute inset-0 z-0 overflow-hidden">
-  <img src="images/mauerwerksbau.jpg" alt="Hero Hintergrund"
+  <img src="images/mauerwerksbau.jpg" alt="Karriere bei HK Bau"
        class="w-full h-full object-cover zoom-parallax" data-hero-media />
   <div class="absolute inset-0 bg-[var(--secondary-color)]/60"></div>
   <div class="absolute inset-0 bg-black/10 z-10"></div>
 </div>
-
     <div class="relative z-20 text-center hero-content" data-aos="fade-up">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Karriere bei HK Bau</h1>
         <p class="text-lg md:text-xl max-w-2xl mx-auto">Bauen Sie Ihre Zukunft mit uns – in einem starken Team.</p>
     </div>
 </section>
-         
-       
 
-         <!-- Warum HK Bau Section -->
+    <!-- Warum HK Bau Section -->
     <section class="py-20 px-4 bg-gray-50 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5 bg-[url('images/background-pattern-light.svg')] bg-center bg-repeat"></div>
       <div class="max-w-6xl mx-auto relative z-10" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">Warum HK Bau?</h2>
         <div class="grid md:grid-cols-3 gap-10">
@@ -338,13 +342,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-
-       <!-- Job Listings Section -->
+    <!-- Job Listings Section -->
     <section class="max-w-7xl mx-auto px-4 mt-24">
       <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-4">Offene Stellen</h2>
       <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">Werde Teil unseres engagierten Teams! Hier findest du aktuelle Jobangebote mit spannenden Aufgaben und Entwicklungsmöglichkeiten.</p>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Job Card 1 -->
         <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
           <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
             <i class="fas fa-hard-hat"></i>
@@ -353,7 +355,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="text-gray-700 mb-4">Leitung der Baustelle, Koordination der Teams und Qualitätssicherung direkt vor Ort.</p>
           <a href="#contactForm" class="text-[var(--primary-color)] font-medium hover:underline">Jetzt bewerben →</a>
         </div>
-        <!-- Job Card 2 -->
         <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
           <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
             <i class="fas fa-tools"></i>
@@ -362,7 +363,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="text-gray-700 mb-4">Ausführung von Rohbauarbeiten im Hoch- und Tiefbau. Erfahrung und Teamgeist erwünscht.</p>
           <a href="#contactForm" class="text-[var(--primary-color)] font-medium hover:underline">Jetzt bewerben →</a>
         </div>
-        <!-- Job Card 3 -->
         <div class="job-card bg-white shadow-md rounded-lg p-6 border-t-4 border-[var(--primary-color)] hover:shadow-2xl transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
           <div class="text-[var(--primary-color)] text-4xl mb-4 job-icon group-hover:rotate-6 group-hover:scale-125 transition-transform duration-300">
             <i class="fas fa-drafting-compass"></i>
@@ -374,105 +374,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-
-        <!-- Bewerbungsformular -->
-        <section class="py-20 px-4 bg-gray-50">
-          <div class="max-w-3xl mx-auto">
-            <form id="contactForm" 
-                  method="POST" 
-                  accept-charset="UTF-8"
-                  class="space-y-6 bg-white p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-[var(--primary-color)]"
-                  data-aos="fade-up" data-aos-delay="400">
-
-              <div class="text-center mb-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-[var(--secondary-color)] mb-3">Bewerbungsformular</h2>
-                <p class="text-gray-600">Senden Sie uns Ihre Bewerbung und werden Sie Teil unseres Teams</p>
-              </div>
-
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                    <i class="fas fa-user text-[var(--primary-color)] mr-2"></i>Name *
-                  </label>
-                  <input type="text" id="name" name="name" placeholder="Max Mustermann" required
-                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-                </div>
-                <div>
-                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                    <i class="fas fa-envelope text-[var(--primary-color)] mr-2"></i>E-Mail *
-                  </label>
-                  <input type="email" id="email" name="email" placeholder="max.mustermann@email.de" required
-                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-                </div>
-                <div>
-                  <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                    <i class="fas fa-phone text-[var(--primary-color)] mr-2"></i>Telefon *
-                  </label>
-                  <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required
-                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-                </div>
-                <div>
-                  <label for="position" class="block text-sm font-semibold text-gray-700 mb-2">
-                    <i class="fas fa-briefcase text-[var(--primary-color)] mr-2"></i>Gewünschte Position
-                  </label>
-                  <select id="position" name="position"
-                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none">
-                    <option value="">Bitte wählen</option>
-                    <option value="Polier">Polier (m/w/d)</option>
-                    <option value="Maurer">Maurer (m/w/d)</option>
-                    <option value="Bauleiter">Bauleiter (m/w/d)</option>
-                    <option value="Andere">Andere Position</option>
-                  </select>
-                </div>
-                <div class="md:col-span-2">
-                  <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                    <i class="fas fa-comment-dots text-[var(--primary-color)] mr-2"></i>Ihre Nachricht *
-                  </label>
-                  <textarea id="message" name="message" rows="6" placeholder="Warum möchten Sie bei uns arbeiten? Erzählen Sie uns von Ihrer Erfahrung..." required
-                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none resize-none"></textarea>
-                </div>
-              </div>
-
-              <input type="hidden" name="_subject" value="Neue Bewerbung über Karriereformular">
-
-              <button type="submit"
-                    class="w-full bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
-                    <i class="fas fa-paper-plane"></i>
-                    Bewerbung jetzt absenden
-              </button>
-
-              <p class="text-sm text-gray-500 text-center mt-4">
-                <i class="fas fa-lock mr-1"></i>
-                Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-              </p>
-
-              <div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4 p-4 rounded-lg"></div>
-            </form>
+    <!-- Bewerbungsformular -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <form id="contactForm"
+              method="POST"
+              accept-charset="UTF-8"
+              class="space-y-6 bg-white p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-[var(--primary-color)]"
+              data-aos="fade-up" data-aos-delay="400">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-[var(--secondary-color)] mb-3">Bewerbungsformular</h2>
+            <p class="text-gray-600">Senden Sie uns Ihre Bewerbung und werden Sie Teil unseres Teams</p>
           </div>
-        </section>
-
-
-        <!-- CTA Section -->
-        <section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white">
-            <div class="absolute inset-0 opacity-10 bg-[url('images/kontakt-image.png')] bg-cover bg-center"></div>
-            <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-sm">
-                    Noch Fragen?
-                </h2>
-                <p class="text-lg md:text-xl mb-8 text-white/90">
-                    Dann melden Sie sich bei uns – wir freuen uns auf den persönlichen Kontakt.
-                </p>
-                <a href="kontakt.html"
-                    class="inline-block bg-white text-[var(--primary-color)] font-semibold px-8 py-4 rounded-lg shadow-md hover:shadow-xl transition hover:scale-105">
-                    Jetzt Kontakt aufnehmen
-                </a>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-user text-[var(--primary-color)] mr-2"></i>Name *
+              </label>
+              <input type="text" id="name" name="name" placeholder="Max Mustermann" required
+                class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
             </div>
-        </section>
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-envelope text-[var(--primary-color)] mr-2"></i>E-Mail *
+              </label>
+              <input type="email" id="email" name="email" placeholder="max.mustermann@email.de" required
+                class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-phone text-[var(--primary-color)] mr-2"></i>Telefon *
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required
+                class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
+            </div>
+            <div>
+              <label for="position" class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-briefcase text-[var(--primary-color)] mr-2"></i>Gewünschte Position
+              </label>
+              <select id="position" name="position"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none">
+                <option value="">Bitte wählen</option>
+                <option value="Polier">Polier (m/w/d)</option>
+                <option value="Maurer">Maurer (m/w/d)</option>
+                <option value="Bauleiter">Bauleiter (m/w/d)</option>
+                <option value="Andere">Andere Position</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                <i class="fas fa-comment-dots text-[var(--primary-color)] mr-2"></i>Ihre Nachricht *
+              </label>
+              <textarea id="message" name="message" rows="6" placeholder="Warum möchten Sie bei uns arbeiten? Erzählen Sie uns von Ihrer Erfahrung..." required
+                class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <input type="hidden" name="_subject" value="Neue Bewerbung über Karriereformular">
+          <button type="submit"
+                class="w-full bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+                <i class="fas fa-paper-plane"></i>
+                Bewerbung jetzt absenden
+          </button>
+          <p class="text-sm text-gray-500 text-center mt-4">
+            <i class="fas fa-lock mr-1"></i>
+            Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+          </p>
+          <div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4 p-4 rounded-lg"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white">
+        <div class="absolute inset-0 opacity-10 bg-[url('images/kontakt-image.png')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-sm">Noch Fragen?</h2>
+            <p class="text-lg md:text-xl mb-8 text-white/90">Dann melden Sie sich bei uns – wir freuen uns auf den persönlichen Kontakt.</p>
+            <a href="kontakt.html" class="inline-block bg-white text-[var(--primary-color)] font-semibold px-8 py-4 rounded-lg shadow-md hover:shadow-xl transition hover:scale-105">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
     </main>
-
-
-    
-
 
   <!-- Footer -->
 <footer class="bg-secondary-color text-text-on-dark py-10 text-center">
@@ -481,7 +462,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html">Startseite</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="referenzen.html">Referenzen</a>
-      <!-- <a href="wissen.html">Wissen</a> -->
       <a href="karriere.html">Karriere</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
@@ -502,13 +482,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </div>
 </footer>
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 hidden p-3 rounded-full shadow-lg z-50">
-        ↑
+
+    <button id="scrollToTopBtn"
+        class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition z-50"
+        aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
     </button>
 
     <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/app.js" defer></script>
     <script src="js/carousels.js" defer></script>
 </body>
-
 </html>
