@@ -1,14 +1,11 @@
 # Custom 404 Error Page
 ErrorDocument 404 /404.html
 
-# Force HTTPS
+# One-step canonical redirect: force HTTPS + www in a single hop
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-# Force WWW (redirect non-www to www)
+RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^ https://www.hk-bau.com%{REQUEST_URI} [R=301,L]
 
 # Redirect old 404 page to referenzen
 Redirect 301 /Referenzen/holz-und-stahlbau.html https://www.hk-bau.com/referenzen.html
@@ -18,33 +15,25 @@ Redirect 301 /Referenzen/holz-und-stahlbau.html https://www.hk-bau.com/referenze
 # RewriteCond %{REQUEST_FILENAME}\.html -f
 # RewriteRule ^(.*)$ $1.html [L]
 
-# Prevent access to sensitive files
+# Prevent access to sensitive files (Apache 2.4 + fallback for 2.2)
 <FilesMatch "\.(env|log|git|htaccess|htpasswd|ini|bak|sql)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
     Order Allow,Deny
     Deny from all
+  </IfModule>
 </FilesMatch>
 
 # Security Headers
 <IfModule mod_headers.c>
-    # Prevent MIME type sniffing
     Header always set X-Content-Type-Options "nosniff"
-    
-    # Prevent clickjacking attacks
     Header always set X-Frame-Options "SAMEORIGIN"
-    
-    # Enable XSS protection
     Header always set X-XSS-Protection "1; mode=block"
-    
-    # Referrer Policy
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    
-    # Content Security Policy (adjust as needed)
     Header always set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https:; img-src 'self' https: data:; font-src 'self' https: data:; frame-src 'self' https://www.google.com https://www.googletagmanager.com;"
-    
-    # Permissions Policy
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    
-    # Remove X-Powered-By header
     Header unset X-Powered-By
 </IfModule>
 

@@ -20,6 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://unpkg.com" />
 <link rel="preload" href="css/style.css" as="style" />
 <link rel="preload" href="images/icon/logo.png" as="image" />
+<link rel="preload" as="video" href="images/videos/hero-3.mp4" type="video/mp4" />
 
 <!-- Security Headers -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -33,13 +34,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@graph": [
     {
       "@type": "LocalBusiness",
-
-        "@id": "https://hk-bau.com",
-
+      "@id": "https://www.hk-bau.com",
       "name": "HK Bau GmbH – Fellbach",
-      "url": "https://hk-bau.com",
-      "logo": "https://hk-bau.com/assets/logo.svg",
-      "image": "https://hk-bau.com/assets/header-image.jpg",
+      "url": "https://www.hk-bau.com",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "HK Bau GmbH ist Ihr Bauunternehmen für Hochbau, Rohbau und schlüsselfertiges Bauen in Stuttgart, Fellbach, Sindelfingen und Umgebung.",
       "telephone": "+49 711 9065270",
       "email": "info@hk-bau.net",
@@ -80,17 +79,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "sameAs": [
         "https://www.linkedin.com/company/h-k-bau/",
         "https://www.instagram.com/hk.bau",
-
         "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678"
-
       ]
     },
     {
       "@type": "LocalBusiness",
       "name": "HK Bau GmbH – Magstadt",
-      "url": "https://hk-bau.com",
-      "logo": "https://hk-bau.com/assets/logo.svg",
-      "image": "https://hk-bau.com/assets/header-image.jpg",
+      "url": "https://www.hk-bau.com",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
       "description": "Zweigniederlassung der HK Bau GmbH in Magstadt – Bauunternehmen für die Region Böblingen, Sindelfingen und Umgebung.",
       "telephone": "+49 7159 4591823",
       "email": "info@hk-bau.net",
@@ -129,9 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "sameAs": [
         "https://www.linkedin.com/company/h-k-bau/",
         "https://www.instagram.com/hk.bau",
-
         "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678"
-
       ]
     }
   ]
@@ -165,7 +160,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="keywords" content="Bauunternehmen Stuttgart, Hochbau Fellbach, Rohbau Sindelfingen, Schlüsselfertigbau Baden-Württemberg, Stahlbetonbau, Mauerwerksbau, Holzbau, Erdbau, HK Bau, Bauunternehmen Region Stuttgart" />
   <meta name="author" content="HK Bau GmbH" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://hk-bau.com/" />
+  <link rel="canonical" href="https://www.hk-bau.com/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -305,6 +300,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     poster="images/videos/hero-still.png"
     data-hero-media
     data-load-after
+    width="1920"
+    height="1080"
     class="absolute inset-0 w-full h-full object-cover object-center -z-10">    
     <source src="images/videos/hero-3.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -670,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <!-- Freianlagen -->
-<div class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#freianlagen-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="6" cy="6" r="2" />
@@ -685,12 +682,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Freianlagen</h3>
   <p class="text-sm text-gray-600 group-hover:text-white mb-3">Individuelle Gestaltung von Außenanlagen und Freiflächen.</p>
-  <span class="service-cta-btn text-xs">Anfrage senden →</span>
-</div>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
+</a>
 
 
 <!-- Schlüsselfertigbau -->
-<div class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
+<a href="leistungen.html#schluesselfertigbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" 
          class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" 
@@ -701,8 +698,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Schlüsselfertigbau</h3>
   <p class="text-sm text-gray-600 group-hover:text-white mb-3">Alles aus einer Hand – bereit zur Schlüsselübergabe.</p>
-  <span class="service-cta-btn text-xs">Anfrage senden →</span>
-</div>
+  <span class="service-cta-btn text-xs">Mehr erfahren →</span>
+</a>
 
 
 
