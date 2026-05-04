@@ -5,6 +5,7 @@ const galleryConfigs = {};
 const INITIAL_COUNT = 20;
 const BATCH_SIZE = 20;
 const THRESHOLD = 100;
+const USE_THUMBNAILS = false;
 
 function deriveCounts(total) {
   if (total > THRESHOLD) {
@@ -55,11 +56,15 @@ function createImageLink(folder, file, index) {
   link.setAttribute("aria-label", `${folder} Bild ${index + 1}`);
 
   const img = document.createElement("img");
-  img.src = `../images/${folder}/thumbs/${file}`;
-  img.onerror = () => {
-    img.onerror = null;
-    img.src = `../images/${folder}/${file}`;
-  };
+  img.src = USE_THUMBNAILS
+    ? `../images/${folder}/thumbs/${file}`
+    : `../images/${folder}/${file}`;
+  if (USE_THUMBNAILS) {
+    img.onerror = () => {
+      img.onerror = null;
+      img.src = `../images/${folder}/${file}`;
+    };
+  }
   img.alt = getAltText(folder, file);
   img.loading = "lazy";
   img.className = "w-full h-auto";

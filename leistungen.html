@@ -135,6 +135,59 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.hk-bau.com/leistungen.html#leistungen",
+      "name": "Bauleistungen HK Bau GmbH",
+      "url": "https://www.hk-bau.com/leistungen.html",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Erdbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kanalbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stahlbetonbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mauerwerksbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Holz- und Stahlbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Abbruch und Rückbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Schlüsselfertigbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.hk-bau.com/leistungen.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Bauleistungen bietet HK Bau im Raum Stuttgart an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HK Bau übernimmt Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und Rückbau sowie schlüsselfertige Bauleistungen im Raum Stuttgart, Fellbach, Sindelfingen und Böblingen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Begleitet HK Bau Projekte von der Baugrube bis zur Übergabe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Je nach Projektumfang koordiniert HK Bau die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schlüsselfertigen Leistungen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welcher Region ist HK Bau tätig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HK Bau arbeitet vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, Böblingen und der umliegenden Region Baden-Württemberg."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -389,6 +442,28 @@
       </div>
     </div>
 </a>
+</section>
+
+<section id="faq" class="max-w-6xl mx-auto px-6 py-20">
+  <div class="max-w-3xl mb-10">
+    <span class="text-sm font-semibold uppercase tracking-wide text-[var(--primary-color)]">H&auml;ufige Fragen</span>
+    <h2 class="text-3xl md:text-4xl font-bold text-secondary-color mt-3 mb-4">Bauleistungen im Raum Stuttgart klar geplant</h2>
+    <p class="text-lg text-gray-600">Kurze Antworten auf die Fragen, die vor einem Bauprojekt meistens zuerst wichtig werden.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">Welche Leistungen &uuml;bernimmt HK Bau?</h3>
+      <p class="text-gray-600 leading-relaxed">Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und R&uuml;ckbau sowie schl&uuml;sselfertige Bauleistungen.</p>
+    </article>
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">Von der Baugrube bis zur &Uuml;bergabe?</h3>
+      <p class="text-gray-600 leading-relaxed">Ja. Je nach Projektumfang koordinieren wir die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schl&uuml;sselfertigen Leistungen.</p>
+    </article>
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">In welcher Region arbeitet HK Bau?</h3>
+      <p class="text-gray-600 leading-relaxed">Vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, B&ouml;blingen und der umliegenden Region Baden-W&uuml;rttemberg.</p>
+    </article>
+  </div>
 </section>
 
 <section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white mt-24 rounded-3xl shadow-xl">
