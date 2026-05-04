@@ -1384,6 +1384,65 @@ img[src*="placeholder"] {
   background-color: #1f1f1f !important;
 }
 
+.impressum-content {
+  width: min(100% - 2rem, 960px);
+  margin: 0 auto;
+  padding: 7rem 0 5rem;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.impressum-content h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.impressum-content h2 {
+  margin: 1.5rem 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.impressum-content p {
+  margin: 0 0 1rem;
+}
+
+.impressum-content a {
+  color: #222;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.impressum-content a:hover {
+  color: var(--primary-hover);
+}
+
+.privacy-content h3 {
+  margin: 1.15rem 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.privacy-content ul {
+  margin: 0 0 1rem 1.25rem;
+  list-style: disc;
+}
+
+.privacy-content li {
+  margin-bottom: 0.5rem;
+}
+
 .parallax-bg {
   background-attachment: fixed;
   background-size: cover;
