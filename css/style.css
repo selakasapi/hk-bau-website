@@ -533,6 +533,11 @@ header#navbar.sticky #mobile-menu-button svg {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.service-card-enhanced > * {
+    position: relative;
+    z-index: 1;
+}
+
 .service-card-enhanced::before {
     content: attr(data-number);
     position: absolute;
@@ -587,6 +592,20 @@ header#navbar.sticky #mobile-menu-button svg {
     background-color: transparent;
     color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+.service-card-enhanced:hover .service-cta-btn,
+.service-card-enhanced:focus .service-cta-btn {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.service-card-enhanced:hover .service-cta-btn:hover,
+.service-card-enhanced:focus .service-cta-btn:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--secondary-color);
 }
 
 /* ===== IMPROVED CONTACT CTA ===== */
@@ -1026,6 +1045,12 @@ body, html {
 .btn-lift:hover {
     transform: translateY(-3px) scale(1.05);
     background-color: var(--primary-hover);
+    color: var(--secondary-color);
+}
+
+a.bg-white.btn-lift:hover {
+    background-color: #ffffff;
+    color: var(--secondary-color);
 }
 
 /* ===== MICRO-INTERACTIONS ===== */

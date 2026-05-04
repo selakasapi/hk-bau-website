@@ -201,12 +201,10 @@ function initFormValidation(formId) {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("phone", phone);
-    formData.append("message", message);
-    formData.append("_subject", "Neue Nachricht über Kontaktformular");
+    const formData = new FormData(form);
+    if (!formData.get("_subject")) {
+      formData.set("_subject", "Neue Nachricht über Kontaktformular");
+    }
 
     try {
       const response = await fetch("https://formspree.io/f/xblklllg", {
@@ -343,13 +341,17 @@ function setupPageTransitions() {
         });
     }
 
-    document.querySelectorAll('a[href$=".html"]:not(.glightbox), a[href$=".html#"]:not(.glightbox), a[href^="./"]:not(.glightbox), a[href^="../"]:not(.glightbox)').forEach(link => {
+    document.querySelectorAll('a[href]:not(.glightbox)').forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href.startsWith("#") || /^(mailto:|tel:|javascript:)/i.test(href)) return;
+
         const currentUrl = new URL(window.location.href);
         const linkUrl = new URL(link.href);
         const isSameOrigin = linkUrl.origin === currentUrl.origin;
         const isSamePage = linkUrl.pathname === currentUrl.pathname;
+        const isHtmlPage = linkUrl.pathname.endsWith(".html") || linkUrl.pathname.endsWith("/");
 
-        if (isSameOrigin && !isSamePage) {
+        if (isSameOrigin && !isSamePage && isHtmlPage) {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
 
