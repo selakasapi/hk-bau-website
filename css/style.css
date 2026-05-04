@@ -530,7 +530,11 @@ header#navbar.sticky #mobile-menu-button svg {
 .service-card-enhanced {
     position: relative;
     overflow: visible !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.75rem !important;
+    border-color: rgba(43, 43, 43, 0.12) !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 30px rgba(20, 24, 31, 0.08) !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
 }
 
 .service-card-enhanced > * {
@@ -556,6 +560,41 @@ header#navbar.sticky #mobile-menu-button svg {
     color: rgba(251, 187, 33, 0.1);
 }
 
+.service-card-enhanced:hover,
+.service-card-enhanced:focus {
+    background: #ffffff !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 18px 42px rgba(20, 24, 31, 0.13) !important;
+    transform: translateY(-4px) !important;
+}
+
+.service-card-enhanced > div:first-child {
+    border-radius: 0.75rem !important;
+    background: rgba(251, 187, 33, 0.12) !important;
+    box-shadow: none !important;
+}
+
+.service-card-enhanced:hover > div:first-child,
+.service-card-enhanced:focus > div:first-child {
+    background: var(--primary-color) !important;
+}
+
+.service-card-enhanced h3 {
+    color: var(--secondary-color) !important;
+    font-weight: 800;
+}
+
+.service-card-enhanced p {
+    color: #5f6873 !important;
+    line-height: 1.6;
+}
+
+.service-card-enhanced:hover svg,
+.service-card-enhanced:focus svg {
+    color: var(--secondary-color) !important;
+    transform: none !important;
+}
+
 .service-number-badge {
     position: absolute;
     top: 1rem;
@@ -577,14 +616,14 @@ header#navbar.sticky #mobile-menu-button svg {
 .service-cta-btn {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    padding: 0.65rem 1.1rem;
+    background-color: var(--secondary-color);
+    color: #ffffff;
     border-radius: 0.5rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-color);
     font-size: 0.875rem;
 }
 
@@ -596,9 +635,9 @@ header#navbar.sticky #mobile-menu-button svg {
 
 .service-card-enhanced:hover .service-cta-btn,
 .service-card-enhanced:focus .service-cta-btn {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: #ffffff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .service-card-enhanced:hover .service-cta-btn:hover,
