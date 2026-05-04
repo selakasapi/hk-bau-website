@@ -174,9 +174,9 @@ h3 {
 }
 
 .page-transition-overlay.is-fading-out {
-   opacity: 0;
+  opacity: 0;
   transform: scale(1.03);
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none;
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }

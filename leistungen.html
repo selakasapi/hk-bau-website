@@ -2,14 +2,7 @@
 <html lang="de">
 
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NT68K2ZT');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Performance: Preload Critical Resources -->
@@ -178,32 +171,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="css/style.css" />
 
 <!-- Cookie Consent -->
-<script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script defer>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      palette: { popup: { background: "#2b2b2b" }, button: { background: "var(--primary-color)" } },
-      theme: "classic",
-      content: {
-        message: "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.",
-        dismiss: "Verstanden!",
-        link: "Mehr erfahren",
-        href: "datenschutzerklaerung.html"
-      }
-    });
-  });
-</script>
-
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK8HTW1N2L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-VK8HTW1N2L', { 'anonymize_ip': true });
-</script>
-
+<!-- Cookie Consent and opt-in analytics -->
+  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <script src="js/analytics-consent.js" defer></script>
 </head>
 
 <body class="font-[Poppins] text-gray-800 overflow-x-hidden">
@@ -211,12 +182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
   Zum Hauptinhalt springen
 </a>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT68K2ZT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <script src="js/init-transition.js"></script>
+<script src="js/init-transition.js"></script>
 <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4">
     <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
@@ -426,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white mt-24 rounded-3xl shadow-xl">
-  <div class="absolute inset-0 bg-[url('images/kontakt-image.png')] bg-cover bg-center opacity-10"></div>
+  <div class="absolute inset-0 bg-[url('images/kontakt-image.jpg')] bg-cover bg-center opacity-10"></div>
   <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
     <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">Bereit, Ihr Bauprojekt in Stuttgart zu starten?</h2>
     <p class="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">Lassen Sie uns gemeinsam Ihr n&auml;chstes Projekt realisieren &ndash; schnell, zuverl&auml;ssig und professionell.</p>

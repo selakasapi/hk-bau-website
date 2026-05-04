@@ -277,17 +277,6 @@ function setupPageTransitions() {
         document.documentElement.classList.remove('is-transitioning');
     });
 
-    window.addEventListener('pagehide', () => {
-        sessionStorage.removeItem('isTransitioning');
-        overlay.classList.remove('is-fading-in', 'is-fading-out');
-        Object.assign(overlay.style, {
-            opacity: '0',
-            visibility: 'hidden',
-            pointerEvents: 'none'
-        });
-        document.documentElement.classList.remove('is-transitioning');
-    });
-
     if (sessionStorage.getItem("isTransitioning") === "true") {
         Object.assign(overlay.style, {
             opacity: "1",
@@ -323,7 +312,6 @@ function setupPageTransitions() {
         };
 
         overlayTimeout = setTimeout(hideOverlay, 3000);
-        hideOverlay();
 
         if (heroMedia) {
             if (heroMedia.tagName === 'VIDEO') {
@@ -345,7 +333,7 @@ function setupPageTransitions() {
                 else heroMedia.addEventListener('load', hideOverlay, { once: true });
             }
         } else {
-            hideOverlay();
+            setTimeout(hideOverlay, 150);
         }
     } else {
         Object.assign(overlay.style, {
