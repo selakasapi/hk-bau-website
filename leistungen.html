@@ -27,6 +27,7 @@
       "@type": "LocalBusiness",
       "@id": "https://www.hk-bau.com",
       "name": "HK Bau GmbH – Fellbach",
+      "legalName": "H+K Bauunternehmung GmbH",
       "url": "https://www.hk-bau.com",
       "logo": "https://www.hk-bau.com/images/icon/logo.png",
       "image": "https://www.hk-bau.com/images/og-preview.jpg",
@@ -76,6 +77,7 @@
     {
       "@type": "LocalBusiness",
       "name": "HK Bau GmbH – Magstadt",
+      "legalName": "H+K Bauunternehmung GmbH",
       "url": "https://www.hk-bau.com",
       "logo": "https://www.hk-bau.com/images/icon/logo.png",
       "image": "https://www.hk-bau.com/images/og-preview.jpg",
@@ -140,19 +142,657 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "OfferCatalog",
-      "@id": "https://www.hk-bau.com/leistungen.html#leistungen",
-      "name": "Bauleistungen HK Bau GmbH",
+      "@type": "CollectionPage",
+      "@id": "https://www.hk-bau.com/leistungen.html#webpage",
+      "name": "Leistungen von HK Bau",
       "url": "https://www.hk-bau.com/leistungen.html",
+      "isPartOf": {
+        "@id": "https://www.hk-bau.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://www.hk-bau.com/leistungen.html#service-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-list",
+      "name": "Bauleistungen von HK Bau",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 9,
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Erdbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kanalbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stahlbetonbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mauerwerksbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Holz- und Stahlbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Abbruch und Rückbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Schlüsselfertigbau", "areaServed": ["Stuttgart", "Fellbach", "Sindelfingen", "Böblingen"]}}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Erdbau",
+          "url": "https://www.hk-bau.com/leistungen.html#erdbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kanalbau",
+          "url": "https://www.hk-bau.com/leistungen.html#kanalbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Stahlbetonbau",
+          "url": "https://www.hk-bau.com/leistungen.html#stahlbetonbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mauerwerksbau",
+          "url": "https://www.hk-bau.com/leistungen.html#mauerwerksbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Holz- & Stahlbau",
+          "url": "https://www.hk-bau.com/leistungen.html#holzbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Stahlbau",
+          "url": "https://www.hk-bau.com/leistungen.html#stahlbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Abbruch & R?ckbau",
+          "url": "https://www.hk-bau.com/leistungen.html#abbruch-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Freianlagen",
+          "url": "https://www.hk-bau.com/leistungen.html#freianlagen-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Schl?sselfertigbau",
+          "url": "https://www.hk-bau.com/leistungen.html#schluesselfertigbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau"
+          }
+        }
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau",
+      "name": "Erdbau",
+      "serviceType": "Erdbau",
+      "description": "Erdarbeiten, Baugruben und vorbereitende Arbeiten f?r stabile Fundamente und Infrastrukturprojekte.",
+      "url": "https://www.hk-bau.com/leistungen.html#erdbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau",
+      "name": "Kanalbau",
+      "serviceType": "Kanalbau",
+      "description": "Kanalbauarbeiten, Entw?sserungsleitungen, Sch?chte und Zisternen f?r langlebige Infrastruktur.",
+      "url": "https://www.hk-bau.com/leistungen.html#kanalbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau",
+      "name": "Stahlbetonbau",
+      "serviceType": "Stahlbetonbau",
+      "description": "Stahlbetonarbeiten f?r robuste, belastbare und langlebige Baukonstruktionen im Hoch- und Tiefbau.",
+      "url": "https://www.hk-bau.com/leistungen.html#stahlbetonbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau",
+      "name": "Mauerwerksbau",
+      "serviceType": "Mauerwerksbau",
+      "description": "Mauerwerksarbeiten f?r tragende und nicht tragende W?nde, Sichtmauerwerk und Verblendmauerwerk.",
+      "url": "https://www.hk-bau.com/leistungen.html#mauerwerksbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau",
+      "name": "Holz- & Stahlbau",
+      "serviceType": "Holz- & Stahlbau",
+      "description": "Holz- und Stahlbauarbeiten f?r moderne Konstruktionen, Hybridbau, D?cher, Hallenbau und Bauelemente.",
+      "url": "https://www.hk-bau.com/leistungen.html#holzbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau",
+      "name": "Stahlbau",
+      "serviceType": "Stahlbau",
+      "description": "Planung, Fertigung und Montage von Stahlkonstruktionen f?r flexible und belastbare Bauwerke.",
+      "url": "https://www.hk-bau.com/leistungen.html#stahlbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau",
+      "name": "Abbruch & R?ckbau",
+      "serviceType": "Abbruch & R?ckbau",
+      "description": "Selektiver R?ckbau und Abbrucharbeiten unter Ber?cksichtigung von Sicherheit, Umwelt und Projektablauf.",
+      "url": "https://www.hk-bau.com/leistungen.html#abbruch-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen",
+      "name": "Freianlagen",
+      "serviceType": "Freianlagen",
+      "description": "Gestaltung und Ausf?hrung von Au?enanlagen, Freifl?chen und projektbezogenen Au?enbereichen.",
+      "url": "https://www.hk-bau.com/leistungen.html#freianlagen-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau",
+      "name": "Schl?sselfertigbau",
+      "serviceType": "Schl?sselfertigbau",
+      "description": "Koordinierte Bauleistungen aus einer Hand bis zur schl?sselfertigen ?bergabe.",
+      "url": "https://www.hk-bau.com/leistungen.html#schluesselfertigbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
     },
     {
       "@type": "FAQPage",
@@ -163,23 +803,23 @@
           "name": "Welche Bauleistungen bietet HK Bau im Raum Stuttgart an?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HK Bau übernimmt Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und Rückbau sowie schlüsselfertige Bauleistungen im Raum Stuttgart, Fellbach, Sindelfingen und Böblingen."
+            "text": "HK Bau ?bernimmt Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und R?ckbau sowie schl?sselfertige Bauleistungen im Raum Stuttgart, Fellbach, Sindelfingen, B?blingen und der umliegenden Region."
           }
         },
         {
           "@type": "Question",
-          "name": "Begleitet HK Bau Projekte von der Baugrube bis zur Übergabe?",
+          "name": "Begleitet HK Bau Projekte von der Baugrube bis zur ?bergabe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Je nach Projektumfang koordiniert HK Bau die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schlüsselfertigen Leistungen."
+            "text": "Ja. Je nach Projektumfang koordiniert HK Bau die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schl?sselfertigen Leistungen."
           }
         },
         {
           "@type": "Question",
-          "name": "In welcher Region ist HK Bau tätig?",
+          "name": "In welcher Region ist HK Bau t?tig?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HK Bau arbeitet vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, Böblingen und der umliegenden Region Baden-Württemberg."
+            "text": "HK Bau arbeitet vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, B?blingen und der umliegenden Region Baden-W?rttemberg."
           }
         }
       ]
@@ -349,14 +989,14 @@
       <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Abbruch &amp; R&uuml;ckbau</h3>
       <p class="text-sm text-gray-600 group-hover:text-white">Sicher, kontrolliert und effizient.</p>
     </a>
-<a href="leistungen.html#freianlagen-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Freianlagen erfahren">
+<a href="#freianlagen-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Freianlagen erfahren">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2" /><line x1="6" y1="8" x2="6" y2="14" /><line x1="5" y1="14" x2="7" y2="14" /><rect x="10" y="10" width="4" height="2" /><rect x="15" y="10" width="4" height="2" /><rect x="10" y="13" width="4" height="2" /><rect x="15" y="13" width="4" height="2" /><line x1="3" y1="20" x2="21" y2="20" /></svg>
   </div>
   <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Freianlagen</h3>
   <p class="text-sm text-gray-600 group-hover:text-white">Individuelle Gestaltung von Au&szlig;enanlagen und Freifl&auml;chen.</p>
 </a>
-<a href="leistungen.html#schluesselfertigbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Schl&uuml;sselfertigbau erfahren">
+<a href="#schluesselfertigbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Schl&uuml;sselfertigbau erfahren">
   <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256"><path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
   </div>
@@ -445,6 +1085,26 @@
       </div>
     </div>
 </a>
+<a href="Referenzen/freianlagen.html" class="block group" aria-label="Freianlagen Referenzen">
+  <div id="freianlagen-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="200">
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Freianlagen &ndash; Au&szlig;enbereiche mit Struktur</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Freianlagen geben einem Bauprojekt den letzten pr&auml;zisen Rahmen: Wege, Hoffl&auml;chen, Zufahrten, Entw&auml;sserung und nutzbare Au&szlig;enbereiche m&uuml;ssen funktional geplant und sauber ausgef&uuml;hrt werden.<br><br>HK Bau realisiert robuste Freifl&auml;chen f&uuml;r private, gewerbliche und &ouml;ffentliche Projekte &ndash; abgestimmt auf Nutzung, Belastung und das Gesamtbild des Bauvorhabens.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16M6 16h12M8 12h8M10 8h4M12 4v16" /></svg>Saubere Fl&auml;chen, sichere Wege &amp; dauerhafte Ausf&uuml;hrung</li></ul>
+    </div>
+    <img src="images/freianlagen-referenzen/1.aussenanlagen_1.jpg" alt="Freianlagen und Au&szlig;enanlagen Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+  </div>
+</a>
+<a href="kontakt.html" class="block group" aria-label="Schl&uuml;sselfertigbau anfragen">
+  <div id="schluesselfertigbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="250">
+    <img src="images/schafen/wohnbau.jpg" alt="Schl&uuml;sselfertigbau im Wohnungsbau Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Schl&uuml;sselfertigbau &ndash; Koordination bis zur &Uuml;bergabe</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Beim Schl&uuml;sselfertigbau geht es darum, viele Gewerke, Termine und Arbeitsschritte zuverl&auml;ssig zusammenzuf&uuml;hren. HK Bau begleitet Bauvorhaben von der ersten Abstimmung bis zur fertigen &Uuml;bergabe mit klarer Koordination und einem festen Blick auf Qualit&auml;t, Kosten und Baufortschritt.<br><br>So entsteht ein sauber gef&uuml;hrter Prozess, bei dem Planung, Rohbau, Ausbau und Abstimmungen ineinandergreifen.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7h3a3 3 0 0 1 0 6h-3m-6 4H6a3 3 0 0 1 0-6h3m2-4h2m-2 10h2m-1-6v2" /></svg>Ein Ansprechpartner, klare Abl&auml;ufe &amp; verl&auml;ssliche &Uuml;bergabe</li></ul>
+    </div>
+  </div>
+</a>
 </section>
 
 <section id="faq" class="max-w-6xl mx-auto px-6 py-20">
@@ -494,7 +1154,7 @@
       <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
     </div>
-    <p>&copy; <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
     <p class="text-xs"><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a></p>
   </div>
 </footer>
