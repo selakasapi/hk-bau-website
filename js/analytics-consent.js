@@ -93,7 +93,7 @@
 
     window.cookieconsent.initialise({
       type: "opt-in",
-      revokable: false,
+      revokable: true,
       palette: {
         popup: { background: "#2b2b2b" },
         button: { background: "#fbbb21", text: "#111111" }
@@ -124,12 +124,5 @@
     });
   }
 
-  window.addEventListener("load", () => {
-    const start = () => initialiseBanner();
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(start, { timeout: 2500 });
-    } else {
-      window.setTimeout(start, 1800);
-    }
-  });
+  window.addEventListener("load", initialiseBanner);
 })();
