@@ -93,7 +93,7 @@
 
     window.cookieconsent.initialise({
       type: "opt-in",
-      revokable: true,
+      revokable: false,
       palette: {
         popup: { background: "#2b2b2b" },
         button: { background: "#fbbb21", text: "#111111" }
