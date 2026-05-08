@@ -382,6 +382,9 @@ function loadHeroVideo() {
             source.src = source.dataset.src;
             source.removeAttribute('data-src');
         });
+        video.addEventListener('loadeddata', () => {
+            video.style.opacity = '1';
+        }, { once: true });
         video.load();
     }
 }

@@ -124,5 +124,12 @@
     });
   }
 
-  window.addEventListener("load", initialiseBanner);
+  window.addEventListener("load", () => {
+    const start = () => initialiseBanner();
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(start, { timeout: 2500 });
+    } else {
+      window.setTimeout(start, 1800);
+    }
+  });
 })();
