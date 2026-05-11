@@ -450,6 +450,3 @@ function initAnimatedCounters() {
   observer.observe(section);
 }
 
-
-
-document.querySelector('.current-year').textContent = new Date().getFullYear();
