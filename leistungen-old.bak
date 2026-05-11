@@ -1,0 +1,1190 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Performance: Preload Critical Resources -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preload" href="css/style.css" as="style" />
+<link rel="preload" href="images/icon/logo.png" as="image" />
+
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.hk-bau.com",
+      "name": "HK Bau GmbH – Fellbach",
+      "legalName": "H+K Bauunternehmung GmbH",
+      "url": "https://www.hk-bau.com",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
+      "description": "HK Bau GmbH ist Ihr Bauunternehmen für Hochbau, Rohbau und schlüsselfertiges Bauen in Stuttgart, Fellbach, Sindelfingen und Umgebung.",
+      "telephone": "+49 711 9065270",
+      "email": "info@hk-bau.net",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Esslinger Straße 91",
+        "addressLocality": "Fellbach",
+        "postalCode": "70734",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8073,
+        "longitude": 9.2672
+      },
+      "hasMap": "https://www.google.com/maps/place/Esslinger+Str.+91,+70734+Fellbach",
+      "areaServed": [
+        "Stuttgart", "Fellbach", "Magstadt", "Sindelfingen", "Böblingen",
+        "Waiblingen", "Ludwigsburg", "Backnang", "Esslingen am Neckar",
+        "Leinfelden-Echterdingen", "Kornwestheim", "Ditzingen", "Leonberg",
+        "Remseck", "Plüderhausen", "Gerlingen", "Weinstadt", "Korntal-Münchingen"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49 711 9065270",
+        "contactType": "customer service",
+        "areaServed": "DE",
+        "availableLanguage": ["German"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/h-k-bau/",
+        "https://www.instagram.com/hk.bau",
+        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "HK Bau GmbH – Magstadt",
+      "legalName": "H+K Bauunternehmung GmbH",
+      "url": "https://www.hk-bau.com",
+      "logo": "https://www.hk-bau.com/images/icon/logo.png",
+      "image": "https://www.hk-bau.com/images/og-preview.jpg",
+      "description": "Zweigniederlassung der HK Bau GmbH in Magstadt – Bauunternehmen für die Region Böblingen, Sindelfingen und Umgebung.",
+      "telephone": "+49 7159 4591823",
+      "email": "info@hk-bau.net",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Blumenstraße 33a",
+        "addressLocality": "Magstadt",
+        "postalCode": "71106",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.7405,
+        "longitude": 8.9935
+      },
+      "hasMap": "https://www.google.com/maps/place/Blumenstraße+33a,+71106+Magstadt",
+      "areaServed": [
+        "Magstadt", "Sindelfingen", "Böblingen", "Leonberg", "Renningen",
+        "Weil der Stadt", "Aidlingen", "Stuttgart", "Fellbach", "Ludwigsburg"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49 7159 4591823",
+        "contactType": "customer service",
+        "areaServed": "DE",
+        "availableLanguage": ["German"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/h-k-bau/",
+        "https://www.instagram.com/hk.bau",
+        "https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/"
+      ]
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.hk-bau.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://www.hk-bau.com/leistungen.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.hk-bau.com/leistungen.html#webpage",
+      "name": "Leistungen von HK Bau",
+      "url": "https://www.hk-bau.com/leistungen.html",
+      "isPartOf": {
+        "@id": "https://www.hk-bau.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen"
+        },
+        {
+          "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://www.hk-bau.com/leistungen.html#service-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-list",
+      "name": "Bauleistungen von HK Bau",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 9,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Erdbau",
+          "url": "https://www.hk-bau.com/leistungen.html#erdbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kanalbau",
+          "url": "https://www.hk-bau.com/leistungen.html#kanalbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Stahlbetonbau",
+          "url": "https://www.hk-bau.com/leistungen.html#stahlbetonbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mauerwerksbau",
+          "url": "https://www.hk-bau.com/leistungen.html#mauerwerksbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Holz- & Stahlbau",
+          "url": "https://www.hk-bau.com/leistungen.html#holzbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Stahlbau",
+          "url": "https://www.hk-bau.com/leistungen.html#stahlbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Abbruch & R?ckbau",
+          "url": "https://www.hk-bau.com/leistungen.html#abbruch-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Freianlagen",
+          "url": "https://www.hk-bau.com/leistungen.html#freianlagen-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Schl?sselfertigbau",
+          "url": "https://www.hk-bau.com/leistungen.html#schluesselfertigbau-details",
+          "item": {
+            "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-erdbau",
+      "name": "Erdbau",
+      "serviceType": "Erdbau",
+      "description": "Erdarbeiten, Baugruben und vorbereitende Arbeiten f?r stabile Fundamente und Infrastrukturprojekte.",
+      "url": "https://www.hk-bau.com/leistungen.html#erdbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-kanalbau",
+      "name": "Kanalbau",
+      "serviceType": "Kanalbau",
+      "description": "Kanalbauarbeiten, Entw?sserungsleitungen, Sch?chte und Zisternen f?r langlebige Infrastruktur.",
+      "url": "https://www.hk-bau.com/leistungen.html#kanalbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbetonbau",
+      "name": "Stahlbetonbau",
+      "serviceType": "Stahlbetonbau",
+      "description": "Stahlbetonarbeiten f?r robuste, belastbare und langlebige Baukonstruktionen im Hoch- und Tiefbau.",
+      "url": "https://www.hk-bau.com/leistungen.html#stahlbetonbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-mauerwerksbau",
+      "name": "Mauerwerksbau",
+      "serviceType": "Mauerwerksbau",
+      "description": "Mauerwerksarbeiten f?r tragende und nicht tragende W?nde, Sichtmauerwerk und Verblendmauerwerk.",
+      "url": "https://www.hk-bau.com/leistungen.html#mauerwerksbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-holzbau",
+      "name": "Holz- & Stahlbau",
+      "serviceType": "Holz- & Stahlbau",
+      "description": "Holz- und Stahlbauarbeiten f?r moderne Konstruktionen, Hybridbau, D?cher, Hallenbau und Bauelemente.",
+      "url": "https://www.hk-bau.com/leistungen.html#holzbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-stahlbau",
+      "name": "Stahlbau",
+      "serviceType": "Stahlbau",
+      "description": "Planung, Fertigung und Montage von Stahlkonstruktionen f?r flexible und belastbare Bauwerke.",
+      "url": "https://www.hk-bau.com/leistungen.html#stahlbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-abbruch-rueckbau",
+      "name": "Abbruch & R?ckbau",
+      "serviceType": "Abbruch & R?ckbau",
+      "description": "Selektiver R?ckbau und Abbrucharbeiten unter Ber?cksichtigung von Sicherheit, Umwelt und Projektablauf.",
+      "url": "https://www.hk-bau.com/leistungen.html#abbruch-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-freianlagen",
+      "name": "Freianlagen",
+      "serviceType": "Freianlagen",
+      "description": "Gestaltung und Ausf?hrung von Au?enanlagen, Freifl?chen und projektbezogenen Au?enbereichen.",
+      "url": "https://www.hk-bau.com/leistungen.html#freianlagen-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.hk-bau.com/leistungen.html#service-schluesselfertigbau",
+      "name": "Schl?sselfertigbau",
+      "serviceType": "Schl?sselfertigbau",
+      "description": "Koordinierte Bauleistungen aus einer Hand bis zur schl?sselfertigen ?bergabe.",
+      "url": "https://www.hk-bau.com/leistungen.html#schluesselfertigbau-details",
+      "provider": {
+        "@id": "https://www.hk-bau.com"
+      },
+      "areaServed": [
+        "Region Stuttgart",
+        "Rems-Murr-Kreis",
+        "Landkreis Ludwigsburg",
+        "Landkreis B?blingen",
+        "Landkreis Esslingen",
+        "Landkreis G?ppingen",
+        "Stuttgart",
+        "Fellbach",
+        "Magstadt",
+        "Waiblingen",
+        "Kernen im Remstal",
+        "Weinstadt",
+        "Remseck am Neckar",
+        "Ludwigsburg",
+        "Kornwestheim",
+        "Bietigheim-Bissingen",
+        "Marbach am Neckar",
+        "Esslingen am Neckar",
+        "Ostfildern",
+        "Leinfelden-Echterdingen",
+        "Filderstadt",
+        "Plochingen",
+        "N?rtingen",
+        "Kirchheim unter Teck",
+        "Sindelfingen",
+        "B?blingen",
+        "Leonberg",
+        "Ditzingen",
+        "Gerlingen",
+        "Renningen",
+        "Weil der Stadt",
+        "Aidlingen",
+        "Winnenden",
+        "Backnang",
+        "Schorndorf",
+        "G?ppingen",
+        "Herrenberg",
+        "T?bingen",
+        "Reutlingen",
+        "Heilbronn"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.hk-bau.com/kontakt.html",
+        "servicePhone": "+49 711 9065270"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.hk-bau.com/leistungen.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Bauleistungen bietet HK Bau im Raum Stuttgart an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HK Bau ?bernimmt Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und R?ckbau sowie schl?sselfertige Bauleistungen im Raum Stuttgart, Fellbach, Sindelfingen, B?blingen und der umliegenden Region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Begleitet HK Bau Projekte von der Baugrube bis zur ?bergabe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Je nach Projektumfang koordiniert HK Bau die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schl?sselfertigen Leistungen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welcher Region ist HK Bau t?tig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HK Bau arbeitet vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, B?blingen und der umliegenden Region Baden-W?rttemberg."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="HK Bau" />
+<link rel="manifest" href="site.webmanifest" />
+
+<title>Unsere Leistungen &#8211; Rohbau, Hochbau &amp; Schl&uuml;sselfertigbau | HK Bau GmbH Stuttgart</title>
+<meta name="description" content="HK Bau bietet Erdarbeiten, Hochbau, Rohbau, Stahlbetonbau und schl&uuml;sselfertiges Bauen im Raum Stuttgart, Fellbach, Sindelfingen und ganz Baden-W&uuml;rttemberg." />
+<meta name="keywords" content="Bauleistungen, Rohbau Stuttgart, Erdbau Fellbach, Kanalbau, Ausbau, Bauunternehmen Stuttgart, HK Bau" />
+<meta name="author" content="HK Bau GmbH" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://www.hk-bau.com/leistungen.html" />
+<meta name="theme-color" content="#fbbb21" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Leistungen &#8211; Rohbau, Erdbau &amp; Schl&uuml;sselfertigbau | HK Bau GmbH" />
+<meta property="og:description" content="Entdecken Sie das Leistungsspektrum von HK Bau: Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holzbau, Stahlbau, Abbruch &amp; schl&uuml;sselfertiges Bauen." />
+<meta property="og:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hk-bau.com/leistungen.html" />
+<meta property="og:site_name" content="HK Bau GmbH" />
+<meta property="og:locale" content="de_DE" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Leistungen &#8211; HK Bau" />
+<meta name="twitter:description" content="HK Bau bietet umfassende Leistungen im Hoch- und Tiefbau: Erdbau, Rohbau, Ausbau u.v.m." />
+<meta name="twitter:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="css/tailwind.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Cookie Consent -->
+<!-- Cookie Consent and opt-in analytics -->
+  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
+  <script src="js/analytics-consent.js" defer></script>
+</head>
+
+<body class="font-[Poppins] text-gray-800 overflow-x-hidden">
+<!-- Skip to main content -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
+  Zum Hauptinhalt springen
+</a>
+<script src="js/init-transition.js"></script>
+<div class="page-transition-overlay flex items-center justify-center">
+  <div class="flex flex-col items-center space-y-4">
+    <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+      <img height="1263" width="1263" src="images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" />
+    </div>
+  </div>
+</div>
+
+  <header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <div class="logo-container">
+      <a href="index.html" class="flex items-center relative z-20">
+        <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" width="64" height="64" />
+        <span class="text-white font-bold ml-2">HK Bau</span>
+      </a>
+    </div>
+    <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button id="mobile-menu-button" class="md:hidden z-[100] p-2 focus:outline-none" aria-label="Men&uuml; &ouml;ffnen" aria-expanded="false">
+      <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+      </svg>
+    </button>
+  </div>
+  <div id="nav-backdrop" class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6">
+    <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
+    <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
+    <a href="referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Referenzen</a>
+    <a href="karriere.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Karriere</a>
+    <a href="kontakt.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Kontakt</a>
+  </div>
+</header>
+
+    <main id="main-content">
+       <section class="relative h-screen overflow-hidden flex items-center justify-center parallax leistungen-hero pt-16">
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <video autoplay muted loop playsinline preload="none" poster="images/icon/logo.png" class="w-full h-full object-cover" data-hero-media>
+      <source src="images/hero/hero-leistungen.mp4" type="video/mp4" />
+      Ihr Browser unterst&uuml;tzt das Video-Tag nicht.
+    </video>
+    <div class="absolute inset-0 bg-[var(--secondary-color)]/30"></div>
+    <div class="absolute inset-0 bg-black/20 z-10"></div>
+  </div>
+  <div class="relative z-20 text-center hero-content max-w-3xl text-white" data-aos="fade-up">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Bauunternehmen Stuttgart &ndash; Rohbau, Hochbau &amp; Schl&uuml;sselfertigbau</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">Verl&auml;sslich, pr&auml;zise und termingerecht &ndash; HK Bau GmbH realisiert Ihr Projekt in Fellbach, Stuttgart und ganz Baden-W&uuml;rttemberg.</p>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-6 text-center mt-24">
+  <h2 class="text-4xl font-bold text-[var(--secondary-color)] mb-4">
+    Unsere <span class="text-[var(--primary-color)]">Leistungen</span> im &Uuml;berblick
+  </h2>
+</div>
+
+<section class="leistungen-overview space-y-24 max-w-6xl mx-auto px-6 py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-[0_0_40px_rgba(0,0,0,0.05)] rounded-[2rem] relative">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
+    <a href="#erdbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Erdbau erfahren">
+     <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 4L22 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8.01L3.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16.01L3.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12.01L6.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20.01L6.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 8.01L9.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 16.01L9.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.01L12.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20.01L12.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8.01L15.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 16.01L15.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 12.01L18.01 11.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 20.01L18.01 19.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.01L21.01 7.99889" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 16.01L21.01 15.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Erdbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Fundament f&uuml;r jedes Bauprojekt.</p>
+    </a>
+    <a href="#kanalbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Kanalbau erfahren">
+     <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M232,104H208V56h24a8,8,0,0,0,0-16H205.83A16,16,0,0,0,192,32H176a16,16,0,0,0-13.83,8H144A104.11,104.11,0,0,0,40,144v18.16A16,16,0,0,0,32,176v16a16,16,0,0,0,8,13.84V232a8,8,0,0,0,16,0V208h48v24a8,8,0,0,0,16,0V205.84A16,16,0,0,0,128,192V176a16,16,0,0,0-8-13.84V144a24,24,0,0,1,24-24h18.17A16,16,0,0,0,176,128h16a16,16,0,0,0,13.83-8H232a8,8,0,0,0,0-16ZM112,176v16H48V176Zm-8-32v16H56V144a88.1,88.1,0,0,1,88-88h16v48H144A40,40,0,0,0,104,144Zm72-32V48h16v63.8c0,.07,0,.13,0,.2Z"></path></svg>
+  </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Kanalbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Langlebige Infrastruktur sichern.</p>
+    </a>
+    <a href="#stahlbetonbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Stahlbetonbau erfahren">
+      <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /></svg>
+      </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbetonbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Robuste Konstruktionen.</p>
+    </a>
+    <a href="#mauerwerksbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Mauerwerksbau erfahren">
+<div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg>
+  </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Mauerwerksbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Nachhaltige Geb&auml;ude pr&auml;zise bauen.</p>
+    </a>
+    <a href="#holzbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Holz &amp; Stahlbau erfahren">
+      <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" /></svg>
+      </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Holzbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">&Ouml;kologisch und modern.</p>
+    </a>
+    <a href="#stahlbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Stahlbau erfahren">
+      <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+        <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M3 6h18M3 18h18" /></svg>
+      </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Stahlbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Ma&szlig;geschneiderte Industriel&ouml;sungen.</p>
+    </a>
+    <a href="leistungen.html#abbruch-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Abbruch &amp; R&uuml;ckbau erfahren">
+  <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="4" /><rect x="2" y="9" width="6" height="4" /><rect x="2" y="15" width="6" height="4" /><line x1="18" y1="2" x2="14" y2="8" /><circle cx="13" cy="10" r="2.5" /><path d="M9 10 L11 10" /></svg>
+  </div>
+      <h3 class="text-base font-semibold text-secondary-color mt-4 group-hover:text-white">Abbruch &amp; R&uuml;ckbau</h3>
+      <p class="text-sm text-gray-600 group-hover:text-white">Sicher, kontrolliert und effizient.</p>
+    </a>
+<a href="#freianlagen-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Freianlagen erfahren">
+  <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2" /><line x1="6" y1="8" x2="6" y2="14" /><line x1="5" y1="14" x2="7" y2="14" /><rect x="10" y="10" width="4" height="2" /><rect x="15" y="10" width="4" height="2" /><rect x="10" y="13" width="4" height="2" /><rect x="15" y="13" width="4" height="2" /><line x1="3" y1="20" x2="21" y2="20" /></svg>
+  </div>
+  <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Freianlagen</h3>
+  <p class="text-sm text-gray-600 group-hover:text-white">Individuelle Gestaltung von Au&szlig;enanlagen und Freifl&auml;chen.</p>
+</a>
+<a href="#schluesselfertigbau-details" class="group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50" tabindex="0" aria-label="Mehr &uuml;ber Schl&uuml;sselfertigbau erfahren">
+  <div class="p-3 rounded-full bg-gradient-to-br from-white via-white to-[var(--primary-color)/20] shadow-md transition duration-300 group-hover:bg-white">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[var(--primary-color)] fill-current group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300 ease-out" viewBox="0 0 256 256"><path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+  </div>
+  <h3 class="text-lg font-semibold text-secondary-color mt-4 group-hover:text-white">Schl&uuml;sselfertigbau</h3>
+  <p class="text-sm text-gray-600 group-hover:text-white">Alles aus einer Hand &ndash; bereit zur Schl&uuml;ssel&uuml;bergabe.</p>
+</a>
+  </div>
+</section>
+
+<section class="space-y-24 max-w-6xl mx-auto px-6 py-24">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary-color" data-aos="fade-up">
+      Unsere <span class="text-[var(--primary-color)]">Leistungen</span> im Detail
+    </h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      F&uuml;r Bauprojekte in Stuttgart, Fellbach, Sindelfingen, B&ouml;blingen und der umliegenden Region.
+    </p>
+  </div>
+  <a href="Referenzen/erdbau.html" class="block group" aria-label="Erdbau Referenzen">
+  <div id="erdbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up">
+    <img height="1080" width="1920" src="images/erdbau.jpg" alt="Erdbau Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Erdbau &ndash; Fundament f&uuml;r Ihr Bauprojekt</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Erdarbeiten sind ein wichtiger Teil des Bauprozesses und erm&ouml;glichen die Errichtung stabiler Fundamente f&uuml;r Geb&auml;ude und Infrastrukturprojekte.<br><br>Mit unseren Gro&szlig;ger&auml;ten und Transportfahrzeuge k&ouml;nnen wir Baugruben aller Art erstellen.<br><br>Unsere erfahrenen Mitarbeiter sorgen daf&uuml;r, dass die Erdarbeiten professionell und effizient durchgef&uuml;hrt werden, um einen reibungslosen Baufortschritt zu gew&auml;hrleisten.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 16h10m-6-8h14" /></svg>Pr&auml;zision, Effizienz &amp; termingerechte Fertigstellung</li></ul>
+    </div>
+  </div>
+</a>
+<a href="Referenzen/kanalbau.html" class="block group" aria-label="Kanalbau Referenzen">
+  <div id="kanalbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="100">
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Kanalbau &ndash; Langlebige Infrastruktur</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Im Rahmen der Kanalbauarbeiten werden Entw&auml;sserungsleitungen verlegt, Sch&auml;chte und gro&szlig;e Zisternen versetzt.<br><br>Durch die Expertise und Erfahrung unserer Facharbeiter, k&ouml;nnen wir unseren Kunden eine effiziente und zuverl&auml;ssige Durchf&uuml;hrung der Kanalarbeiten gew&auml;hrleisten.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h6v4H3v-4zM15 10h6v4h-6v-4zM9 12h6" /></svg>Nachhaltigkeit, Zuverl&auml;ssigkeit &amp; Fachwissen</li></ul>
+    </div>
+    <img height="534" width="800" src="images/kanalbau.jpg" alt="Kanalbau Fellbach Stuttgart" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+  </div>
+</a>
+<a href="Referenzen/stahlbetonbau.html" class="block group" aria-label="Stahlbetonbau Referenzen">
+  <div id="stahlbetonbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="200">
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Stahlbetonbau &ndash; Massive Stabilit&auml;t</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Stahlbeton als Verbundwerkstoff wird in vielen Bereichen des Hoch- und Tiefbaus eingesetzt.<br><br>Durch die Kombination von Stahl und Beton entstehen stabile und langlebige Bauwerke, die sowohl &auml;sthetisch ansprechend als auch funktional sind.<br><br>Wir verf&uuml;gen das n&ouml;tige Know-How und die Erfahrung um hochwertige Baukonstruktionen zu errichten und zu sanieren.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z" /></svg>Tragkraft, Brandschutz &amp; Langlebigkeit</li></ul>
+    </div>
+    <img height="341" width="512" src="images/stahlbetonbau.jpg" alt="Stahlbetonbau Stuttgart" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+  </div>
+</a>
+<a href="Referenzen/mauerwerksbau.html" class="block group" aria-label="Mauerwerksbau Referenzen">
+  <div id="mauerwerksbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="250">
+    <img height="1960" width="2936" src="images/mauerwerksbau.jpg" alt="Mauerwerksbau Fellbach Stuttgart" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Mauerwerksbau &ndash; Klassisch &amp; langlebig</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Im Mauerwerksbau werden verschiedene Materialien wie Mauerziegel, Kalksandsteine oder Porenbetonsteine verwendet.<br><br>Das Errichten von Mauern erfordert nicht nur handwerkliches Geschick, sondern auch Leidenschaft f&uuml;r das Handwerk.<br><br>Egal ob tragende oder nicht tragende W&auml;nde, Sichtmauerwerk oder Verblendmauerwerk &ndash; unsere erfahrenen Maurer beherrschen ihre Aufgabe.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" /></svg>W&auml;rmespeicherung &amp; Handwerksqualit&auml;t</li></ul>
+    </div>
+  </div>
+</a>
+<a href="Referenzen/holzbau.html" class="block group" aria-label="Holz &amp; Stahlbau Referenzen">
+  <div id="holzbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="300">
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Holz- &amp; Stahlbau &ndash; Nat&uuml;rlich modern</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Bei Holzbauarbeiten werden verschiedene Holzkonstruktionen wie Hybridbau, D&auml;cher, Hallenbau und Holzst&auml;nderelemente realisiert.<br><br>Holzbauarbeiten bieten eine nachhaltige und umweltfreundliche Bauweise, die sowohl &ouml;kologisch als auch &ouml;konomisch &uuml;berzeugt.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10l9-7 9 7M4 10v11h5v-7h6v7h5V10" /></svg>Nachhaltigkeit &amp; Raumklima</li></ul>
+    </div>
+    <img height="734" width="1100" src="images/holzbau.webp" alt="Holzbau Stuttgart" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+  </div>
+</a>
+<a href="Referenzen/holzbau.html" class="block group" aria-label="Stahlbau Referenzen">
+  <div id="stahlbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="350">
+    <img height="600" width="600" src="images/stahlbau.jpg" alt="Stahlbau Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Stahlbau &ndash; Flexible Konstruktionen</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Stahlbauarbeiten umfassen die Planung, Fertigung und Montage von Stahlteilen, um robuste und langlebige Bauwerke zu schaffen.<br><br>Durch die Verwendung von Stahl k&ouml;nnen gro&szlig;e Spannweiten und hohe Traglasten realisiert werden, was Stahlbaukonstruktionen besonders vielseitig macht.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 3v18M18 3v18M3 6h18M3 18h18" /></svg>Ma&szlig;arbeit &amp; Industriequalit&auml;t</li></ul>
+    </div>
+  </div>
+</a>
+<a href="Referenzen/abbruch-und-ruckbau.html" class="block group" aria-label="Abbruch und R&uuml;ckbau Referenzen">
+    <div id="abbruch-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="150">
+      <img height="3024" width="4032" src="images/abbruch.webp" alt="Abbruch R&uuml;ckbau Stuttgart" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+      <div>
+        <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Abbruch &amp; R&uuml;ckbau &ndash; Sicher, kontrolliert, effizient</h3>
+        <p class="text-lg text-dark-gray leading-relaxed mb-6">Vom selektiven R&uuml;ckbau bis zum vollst&auml;ndigen Abbruch &ndash; wir &uuml;bernehmen <strong>Abbrucharbeiten jeder Gr&ouml;&szlig;enordnung</strong> unter Ber&uuml;cksichtigung aller Umwelt- und Sicherheitsstandards.</p>
+        <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 3l6 6m-6-6l-3 3 6 6 3-3M9 13l-6 6v2h2l6-6" /></svg>Strukturierte Planung, Entsorgung &amp; Sicherheit</li></ul>
+      </div>
+    </div>
+</a>
+<a href="Referenzen/freianlagen.html" class="block group" aria-label="Freianlagen Referenzen">
+  <div id="freianlagen-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 even:bg-light-bg" data-aos="fade-up" data-aos-delay="200">
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Freianlagen &ndash; Au&szlig;enbereiche mit Struktur</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Freianlagen geben einem Bauprojekt den letzten pr&auml;zisen Rahmen: Wege, Hoffl&auml;chen, Zufahrten, Entw&auml;sserung und nutzbare Au&szlig;enbereiche m&uuml;ssen funktional geplant und sauber ausgef&uuml;hrt werden.<br><br>HK Bau realisiert robuste Freifl&auml;chen f&uuml;r private, gewerbliche und &ouml;ffentliche Projekte &ndash; abgestimmt auf Nutzung, Belastung und das Gesamtbild des Bauvorhabens.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16M6 16h12M8 12h8M10 8h4M12 4v16" /></svg>Saubere Fl&auml;chen, sichere Wege &amp; dauerhafte Ausf&uuml;hrung</li></ul>
+    </div>
+    <img height="3024" width="4032" src="images/freianlagen-referenzen/1.aussenanlagen_1.jpg" alt="Freianlagen und Au&szlig;enanlagen Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+  </div>
+</a>
+<a href="kontakt.html" class="block group" aria-label="Schl&uuml;sselfertigbau anfragen">
+  <div id="schluesselfertigbau-details" class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-3xl shadow-xl transition duration-300 odd:bg-light-bg" data-aos="fade-up" data-aos-delay="250">
+    <img height="246" width="320" src="images/schafen/wohnbau.jpg" alt="Schl&uuml;sselfertigbau im Wohnungsbau Stuttgart Fellbach" loading="lazy" class="rounded-xl w-full h-72 object-cover shadow-lg group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null;this.style.display='none';" />
+    <div>
+      <h3 class="text-3xl lg:text-4xl font-bold mb-4 text-secondary-color">Schl&uuml;sselfertigbau &ndash; Koordination bis zur &Uuml;bergabe</h3>
+      <p class="text-lg text-dark-gray leading-relaxed mb-6">Beim Schl&uuml;sselfertigbau geht es darum, viele Gewerke, Termine und Arbeitsschritte zuverl&auml;ssig zusammenzuf&uuml;hren. HK Bau begleitet Bauvorhaben von der ersten Abstimmung bis zur fertigen &Uuml;bergabe mit klarer Koordination und einem festen Blick auf Qualit&auml;t, Kosten und Baufortschritt.<br><br>So entsteht ein sauber gef&uuml;hrter Prozess, bei dem Planung, Rohbau, Ausbau und Abstimmungen ineinandergreifen.</p>
+      <ul class="text-primary-color font-semibold text-lg space-y-2 mb-6"><li class="flex items-center"><svg class="h-6 w-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7h3a3 3 0 0 1 0 6h-3m-6 4H6a3 3 0 0 1 0-6h3m2-4h2m-2 10h2m-1-6v2" /></svg>Ein Ansprechpartner, klare Abl&auml;ufe &amp; verl&auml;ssliche &Uuml;bergabe</li></ul>
+    </div>
+  </div>
+</a>
+</section>
+
+<section id="faq" class="max-w-6xl mx-auto px-6 py-20">
+  <div class="max-w-3xl mb-10">
+    <span class="text-sm font-semibold uppercase tracking-wide text-[var(--primary-color)]">H&auml;ufige Fragen</span>
+    <h2 class="text-3xl md:text-4xl font-bold text-secondary-color mt-3 mb-4">Bauleistungen im Raum Stuttgart klar geplant</h2>
+    <p class="text-lg text-gray-600">Kurze Antworten auf die Fragen, die vor einem Bauprojekt meistens zuerst wichtig werden.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">Welche Leistungen &uuml;bernimmt HK Bau?</h3>
+      <p class="text-gray-600 leading-relaxed">Erdbau, Kanalbau, Stahlbetonbau, Mauerwerksbau, Holz- und Stahlbau, Abbruch und R&uuml;ckbau sowie schl&uuml;sselfertige Bauleistungen.</p>
+    </article>
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">Von der Baugrube bis zur &Uuml;bergabe?</h3>
+      <p class="text-gray-600 leading-relaxed">Ja. Je nach Projektumfang koordinieren wir die Arbeiten von Erdarbeiten und Rohbau bis zu abgestimmten schl&uuml;sselfertigen Leistungen.</p>
+    </article>
+    <article class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 class="text-xl font-bold text-secondary-color mb-3">In welcher Region arbeitet HK Bau?</h3>
+      <p class="text-gray-600 leading-relaxed">Vor allem in Stuttgart, Fellbach, Magstadt, Sindelfingen, B&ouml;blingen und der umliegenden Region Baden-W&uuml;rttemberg.</p>
+    </article>
+  </div>
+</section>
+
+<section class="relative bg-[var(--primary-color)] py-20 overflow-hidden text-center text-white mt-24">
+  <div class="absolute inset-0 bg-[url('images/kontakt-image.jpg')] bg-cover bg-center opacity-10"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">Bereit, Ihr Bauprojekt in Stuttgart zu starten?</h2>
+    <p class="text-lg md:text-xl mb-4 text-white/90 leading-relaxed">Lassen Sie uns gemeinsam Ihr n&auml;chstes Projekt realisieren &ndash; schnell, zuverl&auml;ssig und professionell.</p>
+
+    <!-- Direct Phone CTA -->
+    <a href="tel:+4971594591823" class="contact-phone-direct block hover:text-white transition">
+      <i class="fas fa-phone-alt mr-2"></i>07159 / 459 18 23
+    </a>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
+      <a href="kontakt.html" class="inline-block bg-white text-[var(--primary-color)] font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition hover:scale-105 btn-lift">Jetzt Kontakt aufnehmen</a>
+
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/4917631506091?text=Hallo%20HK%20Bau,%20ich%20interessiere%20mich%20für%20ein%20Bauprojekt"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="whatsapp-button">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span>Per WhatsApp kontaktieren</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+<footer class="bg-secondary-color text-text-on-dark py-10 text-center" data-aos="fade-in">
+  <div class="space-y-4">
+    <nav aria-label="Footer-Navigation" class="space-x-4">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="flex justify-center space-x-6 text-xl mt-4">
+      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>&copy; <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
+    <p class="text-xs"><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a></p>
+  </div>
+</footer>
+
+    <button id="scrollToTopBtn"
+        class="hidden fixed bottom-6 right-6 bg-primary-color text-white p-4 rounded-full shadow-lg hover:bg-primary-hover transition duration-300 z-50"
+        aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script src="js/app.js" defer></script>
+    <script src="js/carousels.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+</body>
+
+</html>

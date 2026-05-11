@@ -423,6 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveLink();
   setupPageTransitions();
   initAnimatedCounters();
+  initStaggerReveal();
   loadHeroVideo();
 
   window.addEventListener("hashchange", setActiveLink);
@@ -462,5 +463,29 @@ function initAnimatedCounters() {
   }, { threshold: 0.4 });
 
   observer.observe(section);
+}
+
+function initStaggerReveal() {
+  const lists = document.querySelectorAll('.stagger-list');
+  if (lists.length === 0) return;
+
+  const revealList = (list) => {
+    if (list.dataset.revealed) return;
+    list.dataset.revealed = '1';
+    list.querySelectorAll('.stagger-item').forEach((item, i) => {
+      setTimeout(() => item.classList.add('visible'), i * 150);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        revealList(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  lists.forEach(list => observer.observe(list));
 }
 
