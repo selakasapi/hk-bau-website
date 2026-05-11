@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -157,19 +157,20 @@
 
   <title>Datenschutzerklärung – HK Bau GmbH</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Cookie Consent -->
 <!-- Cookie Consent and opt-in analytics -->
   <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
   <script src="js/analytics-consent.js" defer></script>
 </head>
 
 <body class="font-[Poppins] bg-gray-100 text-gray-900 impressum-page overflow-x-hidden">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
 <script src="js/init-transition.js"></script>
 <div class="page-transition-overlay flex items-center justify-center">
   <div class="flex flex-col items-center space-y-4">
@@ -212,7 +213,7 @@
 
   <div class="h-16"></div>
 
-  <main class="max-w-4xl mx-auto px-4 py-16 space-y-6 leading-relaxed">
+  <main id="main-content" class="max-w-4xl mx-auto px-4 py-16 space-y-6 leading-relaxed">
     <h1 class="text-3xl font-bold mb-6">Datenschutzerklärung</h1>
     <div class="prose prose-gray max-w-none">
       <p><strong>1. Datenschutz auf einen Blick</strong></p>
@@ -346,7 +347,7 @@
 <!-- Footer -->
 <footer class="bg-secondary-color text-text-on-dark py-10 text-center">
   <div class="space-y-4">
-    <nav class="space-x-4">
+    <nav aria-label="Footer-Navigation" class="space-x-4">
       <a href="index.html">Startseite</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="referenzen.html">Referenzen</a>
