@@ -15,7 +15,7 @@ function initProjectCarousel() {
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
-        dot.className = 'carousel-indicator-btn w-4 h-4 rounded-full bg-gray-300 hover:bg-[var(--primary-color)] transition-all duration-300';
+        dot.className = 'carousel-indicator-btn';
         dot.setAttribute('aria-label', `Projekt ${i + 1}`);
         dot.addEventListener('click', () => {
             currentIndex = i;
@@ -30,8 +30,7 @@ function initProjectCarousel() {
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-[var(--primary-color)]', i === currentIndex);
-            dot.classList.toggle('bg-gray-300', i !== currentIndex);
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
 
@@ -105,7 +104,7 @@ function initServicesCarousel() {
         indicatorsContainer.innerHTML = '';
         for (let i = 0; i < totalGroups; i++) {
             const dot = document.createElement('button');
-            dot.className = 'carousel-indicator-btn w-3 h-3 rounded-full bg-gray-300 mx-1';
+            dot.className = 'carousel-indicator-btn';
             dot.setAttribute('aria-label', `Gruppe ${i + 1}`);
             dot.addEventListener('click', () => {
                 currentIndex = i;
@@ -119,8 +118,7 @@ function initServicesCarousel() {
 
     function updateIndicators() {
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-primary-color', i === currentIndex);
-            dot.classList.toggle('bg-gray-300', i !== currentIndex);
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
 
@@ -207,7 +205,7 @@ function initWirSchaffenCarousel() {
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
-        dot.className = 'carousel-indicator-btn w-2.5 h-2.5 rounded-full bg-gray-300';
+        dot.className = 'carousel-indicator-btn';
         dot.setAttribute('aria-label', `Slide ${i + 1}`);
         dot.addEventListener('click', () => {
             currentIndex = i;
@@ -222,8 +220,7 @@ function initWirSchaffenCarousel() {
     function updateCarousel() {
         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((dot, i) => {
-            dot.classList.toggle('bg-primary-color', i === currentIndex);
-            dot.classList.toggle('bg-gray-300', i !== currentIndex);
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
 
@@ -285,11 +282,73 @@ function initReferenzenCarousel() {
         carousel.dataset.cloned = 'true';
     }
 
-    const duration = parseFloat(carousel.dataset.duration);
-    if (!isNaN(duration) && duration > 0) {
-        track.style.setProperty('--scroll-duration', `${duration}s`);
+    let autoScrollId = null;
+    let userInteracting = false;
+    let resumeTimeout = null;
+    const speed = 0.5;
 
+    function autoScroll() {
+        if (!userInteracting) {
+            carousel.scrollLeft += speed;
+            if (carousel.scrollLeft >= track.scrollWidth / 2) {
+                carousel.scrollLeft = 0;
+            }
+        }
+        autoScrollId = requestAnimationFrame(autoScroll);
     }
+
+    function pauseAutoScroll() {
+        userInteracting = true;
+        clearTimeout(resumeTimeout);
+    }
+
+    function resumeAutoScrollAfterDelay() {
+        clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+            userInteracting = false;
+        }, 4000);
+    }
+
+    // Mouse drag
+    let isDragging = false;
+    let dragStartX = 0;
+    let scrollStart = 0;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        dragStartX = e.pageX;
+        scrollStart = carousel.scrollLeft;
+        pauseAutoScroll();
+        carousel.style.cursor = 'grabbing';
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        carousel.scrollLeft = scrollStart - (e.pageX - dragStartX);
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        carousel.style.cursor = 'grab';
+        resumeAutoScrollAfterDelay();
+    });
+
+    // Touch
+    carousel.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+    carousel.addEventListener('touchend', resumeAutoScrollAfterDelay, { passive: true });
+
+    // Mouse wheel horizontal scroll
+    carousel.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY;
+        pauseAutoScroll();
+        resumeAutoScrollAfterDelay();
+    }, { passive: false });
+
+    autoScrollId = requestAnimationFrame(autoScroll);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

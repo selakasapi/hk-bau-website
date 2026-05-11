@@ -702,7 +702,7 @@ header#navbar.sticky #mobile-menu-button svg {
     position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, #f0a719 100%);
     padding: 5rem 2rem;
-    border-radius: 2rem;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -1625,10 +1625,8 @@ img[src*="placeholder"] {
 /* Swipe support */
 #referenzen-carousel {
   touch-action: pan-x;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: 50%;
   cursor: grab;
+  -webkit-overflow-scrolling: touch;
 }
 
 #referenzen-carousel:active {
@@ -1639,12 +1637,10 @@ img[src*="placeholder"] {
   display: flex;
   gap: 2.5rem;
   width: max-content;
-  will-change: transform;
-  animation: scroll-left var(--scroll-duration, 40s) linear infinite;
 }
 
 #referenzen-track > * {
-  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
 /* Center image zoom effect */
@@ -1712,9 +1708,20 @@ img[src*="placeholder"] {
   }
 }
 
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Pause auto-play for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-wrapper {
+    transition: none;
+  }
+}
+
+
+.cc-revoke {
+  display: none !important;
+}
+
+.cc-window.cc-invisible {
+  display: none !important;
 }
 
 .fade-parallax {

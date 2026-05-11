@@ -139,23 +139,37 @@ function initCarouselLightbox() {
     document.querySelectorAll('.carousel-image').forEach(img => {
         img.style.cursor = 'pointer';
         img.addEventListener('click', function() {
-            // Create lightbox overlay
             const lightbox = document.createElement('div');
             lightbox.className = 'lightbox-overlay';
+            lightbox.setAttribute('role', 'dialog');
+            lightbox.setAttribute('aria-modal', 'true');
+            lightbox.setAttribute('aria-label', 'Bildvorschau');
             lightbox.innerHTML = `
                 <img src="${this.src}" alt="${this.alt}" />
                 <button class="lightbox-close" aria-label="Schließen">&times;</button>
             `;
             document.body.appendChild(lightbox);
             document.body.style.overflow = 'hidden';
-            
-            // Close on click anywhere
-            lightbox.addEventListener('click', function() {
+
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+            closeBtn.focus();
+
+            function closeLightbox() {
                 document.body.style.overflow = '';
                 lightbox.remove();
-            });
-            
-            // Prevent closing when clicking image
+                document.removeEventListener('keydown', handleKey);
+            }
+
+            function handleKey(e) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'Tab') {
+                    e.preventDefault();
+                    closeBtn.focus();
+                }
+            }
+
+            document.addEventListener('keydown', handleKey);
+            lightbox.addEventListener('click', closeLightbox);
             lightbox.querySelector('img').addEventListener('click', function(e) {
                 e.stopPropagation();
             });
