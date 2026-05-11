@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Seite nicht gefunden | HK Bau</title>
     <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#fbbb21">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="stylesheet" href="css/tailwind.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .error-container {
             min-height: 100vh;
@@ -47,19 +48,19 @@
                 Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html" 
+                <a href="index.html"
                    class="inline-block bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-105 transition-all">
                     <i class="fas fa-home mr-2"></i>
                     Zur Startseite
                 </a>
-                <a href="kontakt.html" 
-                   class="inline-block bg-white text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105 transition-all">
+                <a href="kontakt.html"
+                   class="inline-block bg-white text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:scale-105 transition-all">
                     <i class="fas fa-envelope mr-2"></i>
                     Kontakt
                 </a>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-700">
-                <p class="text-gray-400 text-sm mb-4">Suchen Sie nach:</p>
+            <div class="mt-12 pt-8" style="border-top:1px solid #374151">
+                <p class="text-gray-300 text-sm mb-4">Suchen Sie nach:</p>
                 <div class="flex flex-wrap justify-center gap-3">
                     <a href="leistungen.html" class="text-[var(--primary-color)] hover:underline">
                         <i class="fas fa-wrench mr-1"></i> Leistungen
@@ -76,5 +77,8 @@
             </div>
         </div>
     </div>
+
+    <script src="js/init-transition.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
