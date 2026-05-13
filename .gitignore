@@ -12,6 +12,12 @@ Thumbs.db
 # Environment files
 .env
 
+# Backup files
+*.bak
+
+# Preview / draft files
+*-preview.html
+
 # Node modules (for future use)
 node_modules/
 dist/
