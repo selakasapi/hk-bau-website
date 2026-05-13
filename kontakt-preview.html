@@ -33,6 +33,7 @@
     <meta name="author" content="HK Bau GmbH" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://www.hk-bau.com/kontakt.html" />
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Kontakt &ndash; HK Bau GmbH | Bauunternehmen Fellbach &amp; Magstadt" />
@@ -205,6 +206,42 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/page-polish.css" />
+<style>
+.page-kontakt-preview .kontakt-preview-wrap { background: linear-gradient(180deg, #f6f7f8 0%, #fff 42%, #f6f7f8 100%); }
+.page-kontakt-preview .kontakt-intro { max-width: 1180px; margin: 0 auto; padding: 5rem 1.25rem 2rem; display: grid; grid-template-columns: minmax(0,1fr) 370px; gap: 2rem; align-items: end; }
+.page-kontakt-preview .kontakt-intro span { display: inline-flex; align-items: center; gap: .5rem; color: var(--primary-color); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; margin-bottom: .8rem; }
+.page-kontakt-preview .kontakt-intro h2 { color: #2f3942; font-size: clamp(2.25rem, 5vw, 4.65rem); line-height: .98; font-weight: 900; max-width: 780px; margin: 0; }
+.page-kontakt-preview .kontakt-intro p { color: #5f6b74; font-size: 1.05rem; line-height: 1.75; max-width: 680px; margin: 1.1rem 0 0; }
+.page-kontakt-preview .kontakt-quick { border: 1px solid rgba(47,57,66,.12); border-radius: 1rem; background: #fff; box-shadow: 0 18px 42px rgba(18,27,35,.08); padding: 1.2rem; }
+.page-kontakt-preview .kontakt-quick strong { display: block; color: #2f3942; font-size: 1.1rem; line-height: 1.25; margin-bottom: .8rem; }
+.page-kontakt-preview .kontakt-quick a { display: flex; align-items: center; gap: .7rem; color: #2f3942; font-weight: 900; padding: .72rem .85rem; border-radius: .75rem; background: #f4f6f7; margin-top: .55rem; transition: .2s ease; }
+.page-kontakt-preview .kontakt-quick a:hover { transform: translateY(-1px); background: rgba(251,187,33,.17); }
+.page-kontakt-preview .kontakt-quick i { color: var(--primary-color); }
+.page-kontakt-preview .kontakt-panel { max-width: 1180px; margin: 0 auto; padding: 1rem 1.25rem 5rem; display: grid; grid-template-columns: minmax(0,1.05fr) minmax(340px,.75fr); gap: 1.35rem; align-items: start; }
+.page-kontakt-preview .kontakt-form-card, .page-kontakt-preview .kontakt-side-card { border: 1px solid rgba(47,57,66,.12); border-radius: 1.05rem; background: #fff; box-shadow: 0 22px 56px rgba(18,27,35,.1); overflow: hidden; }
+.page-kontakt-preview .kontakt-form-top { padding: 1.55rem 1.55rem 1rem; border-bottom: 1px solid rgba(47,57,66,.1); background: linear-gradient(135deg, rgba(251,187,33,.16), rgba(255,255,255,0) 58%); }
+.page-kontakt-preview .kontakt-form-top h2 { color: #2f3942; font-size: clamp(1.65rem, 3.4vw, 2.75rem); line-height: 1.02; font-weight: 900; margin: 0; }
+.page-kontakt-preview .kontakt-form-top p { color: #65717a; line-height: 1.7; margin: .75rem 0 0; max-width: 660px; }
+.page-kontakt-preview #contactForm { padding: 1.55rem; box-shadow: none; border: 0; border-radius: 0; background: transparent; }
+.page-kontakt-preview #contactForm label { color: #2f3942; }
+.page-kontakt-preview #contactForm input, .page-kontakt-preview #contactForm textarea, .page-kontakt-preview .projekt-select { width: 100%; border: 1px solid #d7dde2; border-radius: .72rem; background: #fff; padding: .88rem .95rem; outline: 0; transition: border-color .2s ease, box-shadow .2s ease; }
+.page-kontakt-preview #contactForm input:focus, .page-kontakt-preview #contactForm textarea:focus, .page-kontakt-preview .projekt-select:focus { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(251,187,33,.18); }
+.page-kontakt-preview .kontakt-submit { border-radius: .85rem; background: #fbbb21; color: #18222b; font-weight: 900; padding: 1rem 1.15rem; box-shadow: 0 14px 28px rgba(251,187,33,.24); }
+.page-kontakt-preview .kontakt-side-card { padding: 1.2rem; position: sticky; top: 5.5rem; }
+.page-kontakt-preview .kontakt-side-card > h2 { color: #2f3942; font-size: 1.55rem; line-height: 1.1; font-weight: 900; margin: .15rem 0 1rem; }
+.page-kontakt-preview .office-mini { border: 1px solid rgba(47,57,66,.1); border-radius: .9rem; padding: 1rem; background: #fafbfc; margin-bottom: .85rem; }
+.page-kontakt-preview .office-mini h3 { display:flex; align-items:center; gap:.55rem; color:#2f3942; font-size:1.12rem; font-weight:900; margin:0 0 .7rem; }
+.page-kontakt-preview .office-mini p, .page-kontakt-preview .office-mini a { color:#2f3942; font-weight:700; line-height:1.5; }
+.page-kontakt-preview .office-mini .office-line { display:flex; align-items:flex-start; gap:.62rem; margin:.52rem 0; }
+.page-kontakt-preview .office-mini i { color:var(--primary-color); margin-top:.2rem; }
+.page-kontakt-preview .office-mini iframe { width:100%; height:145px; border-radius:.72rem; margin-top:.75rem; filter:saturate(.9); }
+.page-kontakt-preview .kontakt-note { border-radius: .9rem; padding: 1rem; background: #2f3942; color: #fff; }
+.page-kontakt-preview .kontakt-note span { display:block; color:var(--primary-color); text-transform:uppercase; font-size:.75rem; font-weight:900; letter-spacing:.04em; margin-bottom:.35rem; }
+.page-kontakt-preview .kontakt-note p { margin:0; color:rgba(255,255,255,.86); line-height:1.65; }
+@media(max-width: 980px) { .page-kontakt-preview .kontakt-intro, .page-kontakt-preview .kontakt-panel { grid-template-columns: 1fr; } .page-kontakt-preview .kontakt-intro { padding-top: 4rem; } .page-kontakt-preview .kontakt-side-card { position: static; } }
+@media(max-width: 560px) { .page-kontakt-preview .kontakt-intro { padding-top: 3rem; } .page-kontakt-preview .kontakt-panel { padding-bottom: 3rem; } .page-kontakt-preview #contactForm, .page-kontakt-preview .kontakt-form-top, .page-kontakt-preview .kontakt-side-card { padding: 1rem; } .page-kontakt-preview .kontakt-intro h2 { font-size: 2.45rem; } }
+</style>
+
 
     <!-- Cookie Consent -->
 <!-- Cookie Consent and opt-in analytics -->
@@ -213,7 +250,7 @@
   <script src="js/analytics-consent.js" defer></script>
 </head>
 
-<body class="font-[Poppins] overflow-x-hidden page-kontakt-polish">
+<body class="font-[Poppins] overflow-x-hidden page-kontakt-polish page-kontakt-preview">
 <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
   Zum Hauptinhalt springen
@@ -274,150 +311,86 @@
         </div>
     </section>
 
-    <section class="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-
-  <!-- LEFT COLUMN: Contact Info -->
-  <div class="space-y-8 text-[var(--secondary-color)]" data-aos="fade-right" data-aos-delay="100">
-
-    <!-- B&uuml;ro Fellbach -->
-    <div class="bg-gray-50 p-6 rounded-lg shadow border-l-4 border-[var(--primary-color)]">
-      <h2 class="text-xl font-semibold mb-3 flex items-center gap-2">
-        <i class="fas fa-building text-[var(--primary-color)]"></i> B&uuml;ro Fellbach
-      </h2>
-      <p class="flex items-start gap-2 mb-1">
-        <i class="fas fa-map-marker-alt text-[var(--primary-color)] pt-1"></i>
-        Esslingerstr. 91, 70734 Fellbach
-      </p>
-      <p class="flex items-center gap-2 mb-1">
-        <i class="fas fa-phone-alt text-[var(--primary-color)]"></i>
-        <a href="tel:+4971190652700" class="hover:underline">0711 90 65 27 0</a>
-      </p>
-      <p class="flex items-center gap-2">
-        <i class="fas fa-envelope text-[var(--primary-color)]"></i>
-        <a href="mailto:info@hk-bau.net" class="hover:underline">info@hk-bau.net</a>
-      </p>
-      <div class="aspect-video mt-4">
-        <iframe class="w-full h-full rounded-lg shadow"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.5288137748196!2d9.263819215882937!3d48.80567297928337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799c56915b25815%3A0x404cf104d4d2fbd0!2sEsslinger%20Str.%2091%2C%2070734%20Fellbach!5e0!3m2!1sde!2sde!4v1710000000000"
-          style="border:0;" allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="HK Bau Fellbach Standort"></iframe>
-      </div>
-    </div>
-
-    <!-- B&uuml;ro Magstadt -->
-    <div class="bg-gray-50 p-6 rounded-lg shadow border-l-4 border-[var(--primary-color)]">
-      <h2 class="text-xl font-semibold mb-3 flex items-center gap-2">
-        <i class="fas fa-building text-[var(--primary-color)]"></i> B&uuml;ro Magstadt
-      </h2>
-      <p class="flex items-start gap-2 mb-1">
-        <i class="fas fa-map-marker-alt text-[var(--primary-color)] pt-1"></i>
-        Blumenstr. 33a, 71106 Magstadt
-      </p>
-      <p class="flex items-center gap-2 mb-1">
-        <i class="fas fa-phone-alt text-[var(--primary-color)]"></i>
-        <a href="tel:+4971594591823" class="hover:underline">07159 45 91 823</a>
-      </p>
-      <p class="flex items-center gap-2">
-        <i class="fas fa-envelope text-[var(--primary-color)]"></i>
-        <a href="mailto:info@hk-bau.net" class="hover:underline">info@hk-bau.net</a>
-      </p>
-      <div class="aspect-video mt-4">
-        <iframe class="w-full h-full rounded-lg shadow"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.8472586204564!2d8.972541515883373!3d48.77216397928051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799ce1f6e5e65d5%3A0x71b6f8d6c88a7f47!2sBlumenstra%C3%9Fe%2033a%2C%2071106%20Magstadt!5e0!3m2!1sde!2sde!4v1710000000000"
-          style="border:0;" allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="HK Bau Magstadt Standort"></iframe>
-      </div>
-    </div>
-  </div>
-
-<!-- RIGHT COLUMN: Kontaktformular -->
-<form id="contactForm"
-      action="https://formspree.io/f/xblklllg"
-      method="POST"
-      accept-charset="UTF-8"
-      class="space-y-6 bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[var(--primary-color)]"
-      data-aos="fade-up" data-aos-delay="400">
-
-  <div class="text-center mb-6">
-    <h2 class="text-2xl md:text-3xl font-bold text-[var(--secondary-color)] mb-2">Kontaktformular</h2>
-    <p class="text-gray-600">Schreiben Sie uns &ndash; wir melden uns schnellstm&ouml;glich zur&uuml;ck</p>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-6">
-    <div>
-      <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-        <i class="fas fa-user text-[var(--primary-color)] mr-2"></i>Name *
-      </label>
-      <input type="text" id="name" name="name" placeholder="Max Mustermann" required
-        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-    </div>
-    <div>
-      <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-        <i class="fas fa-envelope text-[var(--primary-color)] mr-2"></i>E-Mail *
-      </label>
-      <input type="email" id="email" name="email" placeholder="max.mustermann@email.de" required
-        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-    </div>
-    <div class="md:col-span-2">
-      <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-        <i class="fas fa-phone text-[var(--primary-color)] mr-2"></i>Telefon *
-      </label>
-      <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required
-        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none" />
-    </div>
-    <div class="md:col-span-2">
-      <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-        <i class="fas fa-comment-dots text-[var(--primary-color)] mr-2"></i>Ihre Nachricht *
-      </label>
-      <textarea id="message" name="message" rows="6" placeholder="Wie k&ouml;nnen wir Ihnen helfen? Beschreiben Sie Ihr Bauprojekt..." required
-        class="w-full p-3 rounded-lg border border-gray-300 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20 transition-all outline-none resize-none"></textarea>
-    </div>
-  </div>
-
-  <input type="hidden" name="_subject" value="Neue Nachricht &uuml;ber Kontaktformular">
-
-  <button type="submit"
-        class="w-full bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
-        <i class="fas fa-paper-plane"></i>
-        Nachricht senden
-  </button>
-
-  <p class="text-sm text-gray-500 text-center mt-4">
-    <i class="fas fa-lock mr-1"></i>
-    Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-  </p>
-
-  <div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4 p-4 rounded-lg"></div>
-</form>
-
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="max-w-7xl mx-auto px-4 mt-16">
-      <div class="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-6 md:p-8 rounded-xl shadow border-l-4 border-[var(--primary-color)] gap-4 md:gap-8" data-aos="fade-up" data-aos-delay="300">
-        <h2 class="text-xl font-semibold flex items-center gap-2 text-[var(--secondary-color)]">
-          <i class="fas fa-share-alt text-[var(--primary-color)]"></i>
-          Folgen Sie uns auf Social Media
-        </h2>
-        <div class="flex space-x-4 text-2xl">
-          <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer"
-            aria-label="Facebook"
-            class="w-10 h-10 flex items-center justify-center bg-[var(--primary-color)] text-white rounded-full hover:scale-110 transition">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-            class="w-10 h-10 flex items-center justify-center bg-[var(--primary-color)] text-white rounded-full hover:scale-110 transition">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-            class="w-10 h-10 flex items-center justify-center bg-[var(--primary-color)] text-white rounded-full hover:scale-110 transition">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+    <div class="kontakt-preview-wrap">
+      <section class="kontakt-intro" aria-label="Kontakt Einleitung">
+        <div data-aos="fade-up">
+          <span><i class="fas fa-paper-plane"></i> Projektanfrage</span>
+          <h2>Kurze Anfrage, klare nächste Schritte.</h2>
+          <p>Beschreiben Sie uns Ihr Vorhaben kurz mit Ort, Leistungsbereich und Zeitrahmen. Wir prüfen die Anfrage und melden uns mit einer realistischen ersten Einschätzung.</p>
         </div>
-      </div>
-    </section>
+        <aside class="kontakt-quick" data-aos="fade-up" data-aos-delay="100">
+          <strong>Direkt erreichbar</strong>
+          <a href="tel:+4971594591823"><i class="fas fa-phone"></i> 07159 / 459 18 23</a>
+          <a href="mailto:info@hk-bau.net"><i class="fas fa-envelope"></i> info@hk-bau.net</a>
+        </aside>
+      </section>
+
+      <section class="kontakt-panel">
+        <div class="kontakt-form-card" data-aos="fade-up" id="kontaktformular">
+          <div class="kontakt-form-top">
+            <h2>Projektanfrage senden</h2>
+            <p>Ein paar Eckdaten reichen für den Start. Für Rückfragen nutzen wir Ihre Telefonnummer oder E-Mail-Adresse.</p>
+          </div>
+
+          <form id="contactForm" action="https://formspree.io/f/xblklllg" method="POST" accept-charset="UTF-8" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-semibold mb-2"><i class="fas fa-user text-[var(--primary-color)] mr-2"></i>Name *</label>
+                <input type="text" id="name" name="name" placeholder="Max Mustermann" required />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold mb-2"><i class="fas fa-envelope text-[var(--primary-color)] mr-2"></i>E-Mail *</label>
+                <input type="email" id="email" name="email" placeholder="max.mustermann@email.de" required />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-semibold mb-2"><i class="fas fa-phone text-[var(--primary-color)] mr-2"></i>Telefon *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" required />
+              </div>
+              <div>
+                <label for="projectType" class="block text-sm font-semibold mb-2"><i class="fas fa-layer-group text-[var(--primary-color)] mr-2"></i>Projektart</label>
+                <select id="projectType" name="projectType" class="projekt-select">
+                  <option value="">Bitte auswählen</option>
+                  <option>Rohbau / Stahlbetonbau</option>
+                  <option>Hochbau / Mauerwerksbau</option>
+                  <option>Tiefbau / Kanalbau / Erdbau</option>
+                  <option>Schlüsselfertigbau</option>
+                  <option>Freianlagen / Rückbau</option>
+                  <option>Noch offen</option>
+                </select>
+              </div>
+              <div class="md:col-span-2">
+                <label for="message" class="block text-sm font-semibold mb-2"><i class="fas fa-comment-dots text-[var(--primary-color)] mr-2"></i>Ihre Nachricht *</label>
+                <textarea id="message" name="message" rows="7" placeholder="Ort, Leistungsbereich, Zeitrahmen und was bereits geplant ist." required></textarea>
+              </div>
+            </div>
+            <input type="hidden" name="_subject" value="Neue Projektanfrage über Kontaktformular">
+            <button type="submit" class="kontakt-submit w-full flex items-center justify-center gap-3 text-lg transition-all duration-300 hover:scale-[1.01]"><i class="fas fa-paper-plane"></i> Projektanfrage senden</button>
+            <p class="text-sm text-gray-500 text-center"><i class="fas fa-lock mr-1"></i> Ihre Angaben werden nur zur Bearbeitung Ihrer Anfrage verwendet.</p>
+            <div id="form-message" class="hidden opacity-0 transition-opacity duration-500 font-semibold mt-4 p-4 rounded-lg"></div>
+          </form>
+        </div>
+
+        <aside class="kontakt-side-card" data-aos="fade-up" data-aos-delay="100">
+          <h2>Standorte & Kontakt</h2>
+          <article class="office-mini">
+            <h3><i class="fas fa-building"></i> Büro Fellbach</h3>
+            <p class="office-line"><i class="fas fa-location-dot"></i><span>Esslingerstr. 91, 70734 Fellbach</span></p>
+            <p class="office-line"><i class="fas fa-phone-alt"></i><a href="tel:+4971190652700">0711 90 65 27 0</a></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.5288137748196!2d9.263819215882937!3d48.80567297928337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799c56915b25815%3A0x404cf104d4d2fbd0!2sEsslinger%20Str.%2091%2C%2070734%20Fellbach!5e0!3m2!1sde!2sde!4v1710000000000" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="HK Bau Fellbach Standort"></iframe>
+          </article>
+          <article class="office-mini">
+            <h3><i class="fas fa-building"></i> Büro Magstadt</h3>
+            <p class="office-line"><i class="fas fa-location-dot"></i><span>Blumenstr. 33a, 71106 Magstadt</span></p>
+            <p class="office-line"><i class="fas fa-phone-alt"></i><a href="tel:+4971594591823">07159 45 91 823</a></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.8472586204564!2d8.972541515883373!3d48.77216397928051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799ce1f6e5e65d5%3A0x71b6f8d6c88a7f47!2sBlumenstra%C3%9Fe%2033a%2C%2071106%20Magstadt!5e0!3m2!1sde!2sde!4v1710000000000" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="HK Bau Magstadt Standort"></iframe>
+          </article>
+          <div class="kontakt-note">
+            <span>Hinweis</span>
+            <p>Für eine erste Einschätzung helfen Projektort, Leistungsbereich und geplanter Zeitraum.</p>
+          </div>
+        </aside>
+      </section>
+    </div>
 
     </main>
 
