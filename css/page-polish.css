@@ -524,8 +524,10 @@
 .city-hero__inner,
 .city-snapshot,
 .city-copy,
+.city-about,
 .city-service-band,
 .city-radius,
+.city-neighbors,
 .city-faq {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -647,6 +649,7 @@
 }
 
 .city-copy,
+.city-about,
 .city-radius {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -655,8 +658,10 @@
 }
 
 .city-copy h2,
+.city-about h2,
 .city-service-band h2,
 .city-radius h2,
+.city-neighbors h2,
 .city-faq h2 {
   margin: .45rem 0 0;
   color: #2f3942;
@@ -666,8 +671,10 @@
 }
 
 .city-copy p,
+.city-about p,
 .city-service-band p,
 .city-radius p,
+.city-neighbors p,
 .city-faq p {
   color: #5f6870;
   font-size: 1.03rem;
@@ -760,6 +767,45 @@
   font-weight: 900;
 }
 
+.city-neighbors {
+  padding: 4.5rem 0 2rem;
+}
+
+.city-neighbors__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+.city-neighbors__grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.2rem;
+  border: 1px solid rgba(47,57,66,.1);
+  border-radius: .9rem;
+  background: #fff;
+  padding: .75rem 1rem;
+  color: #2f3942;
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(18,27,35,.05);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.city-neighbors__grid a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(251,187,33,.65);
+  box-shadow: 0 14px 32px rgba(18,27,35,.09);
+  color: #fbbb21;
+}
+
+.city-about {
+  padding: 3rem 0 1rem;
+}
+
 .city-hub-section {
   width: min(1180px, calc(100% - 3rem));
   margin: 0 auto;
@@ -836,14 +882,17 @@
   .city-hero__inner,
   .city-snapshot,
   .city-copy,
+  .city-about,
   .city-service-band,
   .city-radius,
+  .city-neighbors,
   .city-faq {
     width: min(100% - 2rem, 1180px);
   }
 
   .city-hero__inner,
   .city-copy,
+  .city-about,
   .city-radius {
     grid-template-columns: 1fr;
   }

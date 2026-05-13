@@ -240,7 +240,7 @@ function initFormValidation(formId) {
       }
     } catch (error) {
       showMessage(msg, "Netzwerkfehler. Bitte später erneut versuchen.", false);
-      console.error(error);
+      // error silenced in production
     }
   });
 }

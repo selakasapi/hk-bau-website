@@ -2160,3 +2160,85 @@ img[src*="placeholder"] {
   text-decoration: none;
   font-weight: 900;
 }
+
+/* ========== Print Styles ========== */
+@media print {
+  /* Reset backgrounds & colors for ink-friendly output */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide non-essential UI */
+  nav,
+  .mobile-menu,
+  #nav-backdrop,
+  .page-transition-overlay,
+  .cookie-consent-overlay,
+  footer,
+  .premium-footer,
+  .scroll-top-btn,
+  .wave-divider,
+  .wave-divider-bottom,
+  video,
+  .carousel-prev-btn,
+  .carousel-next-btn,
+  .carousel-indicators,
+  [data-aos] {
+    display: none !important;
+  }
+
+  /* Show links inline */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    font-weight: normal;
+    color: #555 !important;
+  }
+  a[href^="#"]::after,
+  a[href^="javascript"]::after,
+  nav a::after {
+    content: "" !important;
+  }
+
+  /* Ensure images print and don't break across pages */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Prevent orphan headings */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Full-width layout */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container,
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Reset AOS transforms so content is visible */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

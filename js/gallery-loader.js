@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       imageDimensions = await res.json();
     }
   } catch (err) {
-    console.error("Failed to load image dimensions", err);
+    // silenced in production
   }
 
   document.querySelectorAll(".gallery[data-folder]").forEach(gallery => {
