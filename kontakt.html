@@ -10,10 +10,9 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 <link rel="preconnect" href="https://unpkg.com" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-<link rel="preconnect" href="https://maps.googleapis.com" />
-<link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
 <link rel="preload" href="css/style.css" as="style" />
 <link rel="preload" href="images/icon/logo.png" as="image" />
+<link rel="preload" href="images/hero-kontakt.webp" as="image" fetchpriority="high" />
 
 <!-- Security Headers -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -209,6 +208,7 @@
     <link rel="stylesheet" href="css/tailwind.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/page-polish.css" />
 
     <!-- Cookie Consent -->
 <!-- Cookie Consent and opt-in analytics -->
@@ -217,7 +217,7 @@
   <script src="js/analytics-consent.js" defer></script>
 </head>
 
-<body class="font-[Poppins] overflow-x-hidden">
+<body class="font-[Poppins] overflow-x-hidden page-kontakt-polish">
 <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
   Zum Hauptinhalt springen
@@ -266,15 +266,15 @@
    <main id="main-content">
     <section class="relative h-screen overflow-hidden flex items-center justify-center parallax leistungen-hero">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <img loading="lazy" src="images/hero-kontakt.webp" alt="Kontakt HK Bau GmbH Stuttgart"
+            <img loading="eager" fetchpriority="high" src="images/hero-kontakt.webp" alt="Kontakt HK Bau GmbH Stuttgart"
                 class="w-full h-full object-cover zoom-parallax" data-hero-media
                 width="1920" height="1080" />
             <div class="absolute inset-0 bg-[var(--secondary-color)]/60"></div>
             <div class="absolute inset-0 bg-black/10 z-10"></div>
         </div>
         <div class="relative z-20 text-center hero-content text-white" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Bauunternehmen Stuttgart kontaktieren &ndash; HK Bau GmbH</h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto">Wir freuen uns auf Ihre Nachricht und Ihr Bauprojekt in Fellbach, Stuttgart und Umgebung.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Lassen Sie uns Ihr Bauprojekt besprechen</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Direkt erreichbar, klar in der Einsch&auml;tzung und nah an Ihrem Projekt in Stuttgart und Umgebung.</p>
         </div>
     </section>
 
@@ -426,30 +426,72 @@
     </main>
 
     <!-- Footer -->
-<footer class="bg-secondary-color text-text-on-dark py-10 text-center mt-16" data-aos="fade-in">
-  <div class="space-y-4">
-    <nav aria-label="Footer-Navigation" class="space-x-4">
-      <a href="index.html">Startseite</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="referenzen.html">Referenzen</a>
-      <a href="karriere.html">Karriere</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <div class="flex justify-center space-x-6 text-xl mt-4">
-      <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <i aria-hidden="true" class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i aria-hidden="true" class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i aria-hidden="true" class="fab fa-linkedin-in"></i>
-      </a>
+<footer class="premium-footer" data-aos="fade-in">
+  <div class="premium-footer__top">
+    <div class="premium-footer__brand">
+      <div class="premium-footer__logo-row">
+        <img src="images/icon/logo.png" alt="HK Bau Logo" width="64" height="64">
+        <div>
+          <span>HK Bau</span>
+          <strong>Wo Vision auf Fundament trifft.</strong>
+        </div>
+      </div>
+      <p>Bauunternehmen für Rohbau, Hochbau, Tiefbau und schlüsselfertiges Bauen in Stuttgart und Umgebung. Zwei Standorte, direkte Ansprechpartner und echte Projektbeispiele aus der Region.</p>
+      <div class="premium-footer__badges" aria-label="HK Bau Schwerpunkte">
+        <span>2 Standorte</span>
+        <span>Region Stuttgart</span>
+        <span>Rohbau &amp; Hochbau</span>
+        <span>Schlüsselfertigbau</span>
+      </div>
     </div>
-    <p>&copy; <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
-    <p class="text-xs">
-      <a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutz</a>
-    </p>
+  </div>
+
+  <div class="premium-footer__main">
+    <nav class="premium-footer__column" aria-label="Footer Leistungen">
+      <h3>Leistungen</h3>
+      <a href="leistungen.html#erdbau-details">Erdbau</a>
+      <a href="leistungen.html#kanalbau-details">Kanalbau</a>
+      <a href="leistungen.html#stahlbetonbau-details">Stahlbetonbau</a>
+      <a href="leistungen.html#mauerwerksbau-details">Mauerwerksbau</a>
+      <a href="leistungen.html#schluesselfertigbau-details">Schlüsselfertigbau</a>
+    </nav>
+
+    <nav class="premium-footer__column" aria-label="Footer Referenzen">
+      <h3>Referenzen</h3>
+      <a href="Referenzen/stahlbetonbau.html">Stahlbetonbau Referenzen</a>
+      <a href="Referenzen/kanalbau.html">Kanalbau Referenzen</a>
+      <a href="Referenzen/erdbau.html">Erdbau Referenzen</a>
+      <a href="Referenzen/holzbau.html">Holz- &amp; Stahlbau Referenzen</a>
+      <a href="referenzen.html">Alle Bauprojekte</a>
+    </nav>
+
+    <div class="premium-footer__column premium-footer__regions">
+      <h3>Region</h3>
+      <p>Stuttgart, Fellbach, Waiblingen, Esslingen, Ludwigsburg, Böblingen, Sindelfingen, Leonberg, Backnang, Schorndorf, Kirchheim unter Teck, Nürtingen, Pforzheim und weitere Orte im Umkreis von ca. 75 km.</p>
+      <a href="kontakt.html" class="premium-footer__text-link">Projektstandort anfragen</a>
+      <div class="premium-footer__seo-links"><a href="einsatzgebiet/bauunternehmen-stuttgart.html">Bauunternehmen Stuttgart</a><a href="einsatzgebiet/rohbau-stuttgart.html">Rohbau Stuttgart</a><a href="einsatzgebiet/tiefbau-stuttgart.html">Tiefbau Stuttgart</a><a href="einsatzgebiet/schluesselfertigbau-stuttgart.html">Schl&uuml;sselfertigbau Stuttgart</a><a href="einsatzgebiet/bauunternehmen-region-stuttgart.html">Einsatzgebiet 75 km</a></div>
+    </div>
+
+    <div class="premium-footer__column premium-footer__contact">
+      <h3>Kontakt</h3>
+      <a href="mailto:info@hk-bau.net"><i class="fas fa-envelope"></i> info@hk-bau.net</a>
+      <a href="tel:+497119065270"><i class="fas fa-phone"></i> 0711 / 906527-0</a>
+      <span><i class="fas fa-location-dot"></i> Esslinger Str. 91, 70734 Fellbach</span>
+      <span><i class="fas fa-location-dot"></i> Blumenstraße 33a, 71106 Magstadt</span>
+      <div class="premium-footer__socials">
+        <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="premium-footer__bottom">
+    <p>© <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
+    <nav aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutzerklaerung.html">Datenschutz</a>
+    </nav>
   </div>
 </footer>
 

@@ -3,6 +3,11 @@ ErrorDocument 404 /404.html
 
 # One-step canonical redirect: force HTTPS + www in a single hop
 RewriteEngine On
+
+# Regional landing pages live in /einsatzgebiet/. Keep old root URLs as clean 301 redirects.
+RewriteRule ^seo/(.+\.html)$ https://www.hk-bau.com/einsatzgebiet/$1 [R=301,L]
+RewriteRule ^(bauunternehmen-[^/]+\.html|rohbau-stuttgart\.html|tiefbau-stuttgart\.html|hochbau-stuttgart\.html|schluesselfertigbau-stuttgart\.html)$ https://www.hk-bau.com/einsatzgebiet/$1 [R=301,L]
+
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.hk-bau.com%{REQUEST_URI} [R=301,L]

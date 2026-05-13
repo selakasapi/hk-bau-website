@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -10,11 +10,11 @@
 <!-- Performance: Preload Critical Resources -->
 <link rel="preconnect" href="https://www.googletagmanager.com" />
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-<link rel="preconnect" href="https://cdn.tailwindcss.com" />
 <link rel="preconnect" href="https://unpkg.com" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preload" href="css/style.css" as="style" />
 <link rel="preload" href="images/icon/logo.png" as="image" />
+<link rel="preload" href="images/videos/hero-still.webp" as="image" fetchpriority="high" />
 
 <!-- Security Headers -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -177,6 +177,7 @@
   <link rel="stylesheet" href="css/tailwind.min.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/page-polish.css" />
   <!-- Cookie Consent and opt-in analytics -->
   <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
@@ -184,7 +185,7 @@
 </head>
 
 
-<body class="font-[Poppins] overflow-x-hidden">
+<body class="font-[Poppins] overflow-x-hidden page-index-polish">
 <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">
   Zum Hauptinhalt springen
@@ -313,14 +314,14 @@
       <!-- Card 2 -->
       <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
         <img src="images/schafen/gewerblichen_hochbau.webp" alt="Gewerblicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" width="384" height="192">
-        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Gewerblichen Hochbau</h3>
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Gewerblicher Hochbau</h3>
         <p class="text-sm text-gray-600 dark:text-gray-300">Bürogebäude, Einkaufshäuser, Industriebauten</p>
       </div>
 
       <!-- Card 3 -->
       <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
         <img src="images/schafen/offentlichen_hochbau.webp" alt="Öffentlicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" width="384" height="192">
-        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Öffentlichen Hochbau</h3>
+        <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Öffentlicher Hochbau</h3>
         <p class="text-sm text-gray-600 dark:text-gray-300">Rathäuser, Gesundheitszentren, Schulgebäude</p>
       </div>
 
@@ -369,13 +370,13 @@
               <!-- Card 2 -->
               <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center transition hover:shadow-lg w-full max-w-xs">
                 <img src="images/schafen/gewerblichen_hochbau.webp" alt="Gewerblicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" width="288" height="192">
-                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Gewerblichen Hochbau</h3>
+                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Gewerblicher Hochbau</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-300">Bürogebäude, Einkaufshäuser, Industriebauten</p>
               </div>
               <!-- Card 3 -->
               <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center transition hover:shadow-lg w-full max-w-xs">
                 <img src="images/schafen/offentlichen_hochbau.webp" alt="Öffentlicher Hochbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" width="288" height="192">
-                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Öffentlichen Hochbau</h3>
+                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">Öffentlicher Hochbau</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-300">Rathäuser, Gesundheitszentren, Schulgebäude</p>
               </div>
             </div>
@@ -667,9 +668,6 @@
 
   </div>
 </section>
-
-
-
 
 <!-- Warum HK Bau Section (Unified Design) -->
 <section class="bg-[var(--secondary-color)] text-white py-20 px-4" data-aos="fade-up">
@@ -1012,83 +1010,72 @@
   </main>
 
 <!-- ===== IMPROVED FOOTER ===== -->
-<footer class="bg-secondary-color text-text-on-dark py-16" data-aos="fade-in">
-  <div class="max-w-7xl mx-auto px-6">
-    
-    <!-- Footer Grid -->
-    <div class="footer-grid mb-12">
-      
-      <!-- Column 1: About -->
-      <div class="footer-column">
-        <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-16 mb-4 rounded-full">
-        <h3>HK Bau GmbH</h3>
-        <p class="text-sm leading-relaxed">
-          Ihr verlässlicher Partner für Hoch- und Tiefbau in der Region Stuttgart.
-        </p>
-        <div class="flex gap-4 mt-4 text-xl">
-          <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+<footer class="premium-footer" data-aos="fade-in">
+  <div class="premium-footer__top">
+    <div class="premium-footer__brand">
+      <div class="premium-footer__logo-row">
+        <img src="images/icon/logo.png" alt="HK Bau Logo" width="64" height="64">
+        <div>
+          <span>HK Bau</span>
+          <strong>Wo Vision auf Fundament trifft.</strong>
         </div>
       </div>
-      
-      <!-- Column 2: Quick Links -->
-      <div class="footer-column">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="index.html"><i class="fas fa-chevron-right text-xs"></i> Startseite</a></li>
-          <li><a href="leistungen.html"><i class="fas fa-chevron-right text-xs"></i> Leistungen</a></li>
-          <li><a href="referenzen.html"><i class="fas fa-chevron-right text-xs"></i> Referenzen</a></li>
-          <li><a href="karriere.html"><i class="fas fa-chevron-right text-xs"></i> Karriere</a></li>
-          <li><a href="kontakt.html"><i class="fas fa-chevron-right text-xs"></i> Kontakt</a></li>
-        </ul>
-      </div>
-      
-      <!-- Column 3: Fellbach Location -->
-      <div class="footer-column">
-        <h3>Standort Fellbach</h3>
-        <ul class="text-sm space-y-2">
-          <li><i class="fas fa-map-marker-alt text-[var(--primary-color)] w-5"></i> Esslinger Straße 91<br>70734 Fellbach</li>
-          <li><a href="tel:+4971190652700"><i class="fas fa-phone text-[var(--primary-color)] w-5"></i> 0711 / 90 65 270</a></li>
-          <li><a href="mailto:info@hk-bau.net"><i class="fas fa-envelope text-[var(--primary-color)] w-5"></i> info@hk-bau.net</a></li>
-        </ul>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8299858393594!2d9.265033715674234!3d48.80729997928549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc3ec7cc1a5b%3A0x3c3a2e3e3e3e3e3e!2sEsslinger%20Str.%2091%2C%2070734%20Fellbach!5e0!3m2!1sde!2sde!4v1234567890" class="footer-location-map mt-3" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps – Standort Fellbach"></iframe>
-      </div>
-      
-      <!-- Column 4: Magstadt Location -->
-      <div class="footer-column">
-        <h3>Standort Magstadt</h3>
-        <ul class="text-sm space-y-2">
-          <li><i class="fas fa-map-marker-alt text-[var(--primary-color)] w-5"></i> Blumenstraße 33a<br>71106 Magstadt</li>
-          <li><a href="tel:+4971594591823"><i class="fas fa-phone text-[var(--primary-color)] w-5"></i> 07159 / 459 18 23</a></li>
-          <li><a href="mailto:info@hk-bau.net"><i class="fas fa-envelope text-[var(--primary-color)] w-5"></i> info@hk-bau.net</a></li>
-        </ul>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.5784933494!2d8.991331515668684!3d48.74048997928881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47977f0f0f0f0f0f%3A0x0!2sBlumenstra%C3%9Fe%2033a%2C%2071106%20Magstadt!5e0!3m2!1sde!2sde!4v1234567890" class="footer-location-map mt-3" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps – Standort Magstadt"></iframe>
-      </div>
-      
-    </div>
-    
-    <!-- Divider -->
-    <div class="border-t border-gray-700 my-8"></div>
-    
-    <!-- Bottom Row -->
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-      <p>
-        © <span class="current-year"></span> HK Bau GmbH. Alle Rechte vorbehalten.
-      </p>
-      <div class="flex gap-4">
-        <a href="impressum.html" class="underline hover:text-primary-color">Impressum</a>
-        <span>|</span>
-        <a href="datenschutzerklaerung.html" class="underline hover:text-primary-color">Datenschutz</a>
+      <p>Bauunternehmen für Rohbau, Hochbau, Tiefbau und schlüsselfertiges Bauen in Stuttgart und Umgebung. Zwei Standorte, direkte Ansprechpartner und echte Projektbeispiele aus der Region.</p>
+      <div class="premium-footer__badges" aria-label="HK Bau Schwerpunkte">
+        <span>2 Standorte</span>
+        <span>Region Stuttgart</span>
+        <span>Rohbau &amp; Hochbau</span>
+        <span>Schlüsselfertigbau</span>
       </div>
     </div>
-    
+  </div>
+
+  <div class="premium-footer__main">
+    <nav class="premium-footer__column" aria-label="Footer Leistungen">
+      <h3>Leistungen</h3>
+      <a href="leistungen.html#erdbau-details">Erdbau</a>
+      <a href="leistungen.html#kanalbau-details">Kanalbau</a>
+      <a href="leistungen.html#stahlbetonbau-details">Stahlbetonbau</a>
+      <a href="leistungen.html#mauerwerksbau-details">Mauerwerksbau</a>
+      <a href="leistungen.html#schluesselfertigbau-details">Schlüsselfertigbau</a>
+    </nav>
+
+    <nav class="premium-footer__column" aria-label="Footer Referenzen">
+      <h3>Referenzen</h3>
+      <a href="Referenzen/stahlbetonbau.html">Stahlbetonbau Referenzen</a>
+      <a href="Referenzen/kanalbau.html">Kanalbau Referenzen</a>
+      <a href="Referenzen/erdbau.html">Erdbau Referenzen</a>
+      <a href="Referenzen/holzbau.html">Holz- &amp; Stahlbau Referenzen</a>
+      <a href="referenzen.html">Alle Bauprojekte</a>
+    </nav>
+
+    <div class="premium-footer__column premium-footer__regions">
+      <h3>Region</h3>
+      <p>Stuttgart, Fellbach, Waiblingen, Esslingen, Ludwigsburg, Böblingen, Sindelfingen, Leonberg, Backnang, Schorndorf, Kirchheim unter Teck, Nürtingen, Pforzheim und weitere Orte im Umkreis von ca. 75 km.</p>
+      <a href="kontakt.html" class="premium-footer__text-link">Projektstandort anfragen</a>
+      <div class="premium-footer__seo-links"><a href="einsatzgebiet/bauunternehmen-stuttgart.html">Bauunternehmen Stuttgart</a><a href="einsatzgebiet/rohbau-stuttgart.html">Rohbau Stuttgart</a><a href="einsatzgebiet/tiefbau-stuttgart.html">Tiefbau Stuttgart</a><a href="einsatzgebiet/schluesselfertigbau-stuttgart.html">Schl&uuml;sselfertigbau Stuttgart</a><a href="einsatzgebiet/bauunternehmen-region-stuttgart.html">Einsatzgebiet 75 km</a></div>
+    </div>
+
+    <div class="premium-footer__column premium-footer__contact">
+      <h3>Kontakt</h3>
+      <a href="mailto:info@hk-bau.net"><i class="fas fa-envelope"></i> info@hk-bau.net</a>
+      <a href="tel:+497119065270"><i class="fas fa-phone"></i> 0711 / 906527-0</a>
+      <span><i class="fas fa-location-dot"></i> Esslinger Str. 91, 70734 Fellbach</span>
+      <span><i class="fas fa-location-dot"></i> Blumenstraße 33a, 71106 Magstadt</span>
+      <div class="premium-footer__socials">
+        <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="premium-footer__bottom">
+    <p>© <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
+    <nav aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutzerklaerung.html">Datenschutz</a>
+    </nav>
   </div>
 </footer>
 

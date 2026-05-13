@@ -5,50 +5,48 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
     const backdrop = document.getElementById('nav-backdrop');
 
     if (menuBtn && mobileMenu) {
+        const closeMenu = () => {
+            mobileMenu.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Menü öffnen");
+            document.body.classList.remove("mobile-menu-open");
+            if (backdrop) {
+                backdrop.classList.remove("active");
+                setTimeout(() => backdrop.classList.add("hidden"), 250);
+            }
+
+            setTimeout(() => {
+                if (!mobileMenu.classList.contains("active")) {
+                    mobileMenu.classList.add("hidden");
+                }
+            }, 300);
+        };
+
         menuBtn.addEventListener("click", () => {
             const isHidden = mobileMenu.classList.contains("hidden");
             
             if (isHidden) {
                 // Opening menu
                 mobileMenu.classList.remove("hidden");
-                mobileMenu.classList.add("active");
+                requestAnimationFrame(() => mobileMenu.classList.add("active"));
                 menuBtn.setAttribute("aria-expanded", "true");
-                if (backdrop) backdrop.classList.remove('hidden');
+                menuBtn.setAttribute("aria-label", "Menü schließen");
+                document.body.classList.add("mobile-menu-open");
+                if (backdrop) {
+                    backdrop.classList.remove("hidden");
+                    requestAnimationFrame(() => backdrop.classList.add("active"));
+                }
             } else {
-                // Closing menu
-                mobileMenu.classList.remove("active");
-                menuBtn.setAttribute("aria-expanded", "false");
-                if (backdrop) backdrop.classList.add('hidden');
-                
-                // Wait for animation to complete before hiding
-                setTimeout(() => {
-                    if (!mobileMenu.classList.contains("active")) {
-                        mobileMenu.classList.add("hidden");
-                    }
-                }, 300);
+                closeMenu();
             }
         });
 
         if (backdrop) {
-            backdrop.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuBtn.setAttribute('aria-expanded', 'false');
-                backdrop.classList.add('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
+            backdrop.addEventListener('click', closeMenu);
         }
 
         mobileMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-                menuBtn.setAttribute("aria-expanded", "false");
-                if (backdrop) backdrop.classList.add('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            });
+            link.addEventListener("click", closeMenu);
 
             link.addEventListener("keydown", (e) => {
                 if (["Enter", " "].includes(e.key)) {
@@ -56,6 +54,13 @@ function initMobileMenu(menuBtnId, mobileMenuId) {
                     link.click();
                 }
             });
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+                closeMenu();
+                menuBtn.focus();
+            }
         });
     }
 }
@@ -245,12 +250,12 @@ function initFormValidation(formId) {
 
 // ========== Highlight Active Navigation Links ============
 function markActiveLinks(containerSelector, currentPath) {
+    const normalizedPath = currentPath || "index.html";
     document.querySelectorAll(`${containerSelector} a`).forEach(link => {
         const href = link.getAttribute("href");
         const isActive =
-            (currentPath === "index.html" && href === "index.html") ||
-            (currentPath === "" && href === "index.html") ||
-            (href.includes(currentPath) && currentPath !== "index.html");
+            (normalizedPath === "index.html" && href === "index.html") ||
+            (normalizedPath !== "index.html" && href.includes(normalizedPath));
 
         link.classList.toggle("active-link", isActive);
     });
