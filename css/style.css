@@ -2012,7 +2012,8 @@ img[src*="placeholder"] {
   transform: translateY(-1px);
 }
 
-.premium-footer__contact i {
+.premium-footer__contact > a > i,
+.premium-footer__contact > span > i {
   color: #fbbb21;
   width: 1rem;
   margin-top: 0.18rem;
@@ -2020,25 +2021,37 @@ img[src*="placeholder"] {
 
 .premium-footer__socials {
   display: flex;
-  gap: 0.65rem;
-  margin-top: 1rem;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
 }
 
 .premium-footer__socials a {
-  display: grid;
-  place-items: center;
-  width: 2.45rem;
-  height: 2.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  margin: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.premium-footer__socials a i {
+  color: inherit;
+  width: auto;
+  margin-top: 0;
 }
 
 .premium-footer__socials a:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   background: #fbbb21;
+  border-color: #fbbb21;
   color: #18222b;
+  box-shadow: 0 6px 20px rgba(251, 187, 33, 0.35);
 }
 
 .premium-footer__bottom {
