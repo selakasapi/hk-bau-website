@@ -4,8 +4,8 @@
   "description": "HK Bau Website Optimization",
   "scripts": {
     "audit:site": "node scripts/audit-site.js",
-    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify",
-    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --watch"
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.min.css --minify",
+    "watch:css": "tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.min.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const root = path.resolve(__dirname, "..");
+const root = path.resolve(__dirname, "..", "public");
 const errors = [];
 const warnings = [];
 const forbiddenPatterns = [
@@ -28,7 +28,7 @@ function walk(dir) {
   return entries.flatMap((entry) => {
     const filePath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (entry.name === ".git" || entry.name === "node_modules" || entry.name === "components") return [];
+      if (entry.name === ".git" || entry.name === "node_modules" || entry.name === "components" || entry.name === "public-upload") return [];
       return walk(filePath);
     }
     return entry.isFile() ? [filePath] : [];

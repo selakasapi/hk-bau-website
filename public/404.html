@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden | HK Bau</title>
+    <meta name="description" content="Die angeforderte Seite wurde nicht gefunden. Zurück zu HK Bau, Leistungen, Referenzen oder Kontakt." />
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.hk-bau.com/404.html" />
+    <meta name="theme-color" content="#fbbb21">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+        }
+        .error-404 {
+            font-size: 10rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-shadow: 0 5px 15px rgba(251, 187, 33, 0.3);
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .error-404 {
+                font-size: 6rem;
+            }
+        }
+    </style>
+
+  <!-- Cookie Consent and opt-in analytics -->
+  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
+  <script src="js/analytics-consent.js" defer></script>
+</head>
+<body>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
+    <main id="main-content" class="error-container">
+        <div class="text-center px-6 max-w-2xl">
+            <h1 class="error-404 mb-6">404</h1>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Seite nicht gefunden
+            </h2>
+            <p class="text-gray-300 text-lg mb-8">
+                Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html"
+                   class="inline-block bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-105 transition-all">
+                    <i class="fas fa-home mr-2"></i>
+                    Zur Startseite
+                </a>
+                <a href="kontakt.html"
+                   class="inline-block bg-white text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:scale-105 transition-all">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Kontakt
+                </a>
+            </div>
+            <div class="mt-12 pt-8" style="border-top:1px solid #374151">
+                <p class="text-gray-300 text-sm mb-4">Suchen Sie nach:</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="leistungen.html" class="text-[var(--primary-color)] hover:underline">
+                        <i class="fas fa-wrench mr-1"></i> Leistungen
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline">
+                        <i class="fas fa-images mr-1"></i> Referenzen
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <a href="karriere.html" class="text-[var(--primary-color)] hover:underline">
+                        <i class="fas fa-briefcase mr-1"></i> Karriere
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/init-transition.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

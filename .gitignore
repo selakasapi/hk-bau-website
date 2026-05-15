@@ -20,4 +20,5 @@ Thumbs.db
 
 # Node modules (for future use)
 node_modules/
+public-upload/
 dist/
