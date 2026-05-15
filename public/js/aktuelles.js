@@ -4,7 +4,7 @@
  *   - aktuelles.html  →  #aktuelles-list   (all posts – featured first)
  *   - index.html      →  #aktuelles-home   (latest 3)
  *
- * Each card links directly to the Facebook post.
+ * Each card links to its own post page with full text + gallery.
  */
 (function () {
   'use strict';
@@ -22,28 +22,31 @@
     return d.getDate() + '. ' + months[d.getMonth()] + ' ' + d.getFullYear();
   }
 
+  function imgCountBadge(post) {
+    var count = (post.bilder && post.bilder.length > 1) ? post.bilder.length : 0;
+    if (!count) return '';
+    return '<span class="aktuelles-card__img-count"><i class="fas fa-camera"></i> ' + count + '</span>';
+  }
+
   /* ── card builder ────────────────────────────── */
 
   function buildCard(post, isHome) {
     var wrapper = document.createElement('a');
     wrapper.className = 'aktuelles-card' + (isHome ? ' aktuelles-card--home' : '');
     wrapper.setAttribute('data-aos', 'fade-up');
-    if (post.fb) {
-      wrapper.href = post.fb;
-      wrapper.target = '_blank';
-      wrapper.rel = 'noopener noreferrer';
-    }
+    wrapper.href = (isHome ? '' : '') + 'aktuelles/post.html?id=' + encodeURIComponent(post.id);
 
     wrapper.innerHTML =
       '<div class="aktuelles-card__img-wrap">' +
         '<img src="' + post.bild + '" alt="' + post.titel + '" loading="lazy" />' +
+        imgCountBadge(post) +
       '</div>' +
       '<div class="aktuelles-card__body">' +
         '<time datetime="' + post.datum + '"><i class="far fa-calendar-alt"></i> ' + formatDate(post.datum) + '</time>' +
         '<h3>' + post.titel + '</h3>' +
-        '<p>' + post.text + '</p>' +
+        '<p>' + (post.kurz || post.text) + '</p>' +
         '<div class="aktuelles-card__footer">' +
-          '<span class="aktuelles-card__fb-hint"><i class="fab fa-facebook-f"></i> Auf Facebook ansehen</span>' +
+          '<span class="aktuelles-card__fb-hint"><i class="fas fa-arrow-right"></i> Weiterlesen</span>' +
         '</div>' +
       '</div>';
 
@@ -56,24 +59,24 @@
     var wrapper = document.createElement('a');
     wrapper.className = 'aktuelles-featured';
     wrapper.setAttribute('data-aos', 'fade-up');
-    if (post.fb) {
-      wrapper.href = post.fb;
-      wrapper.target = '_blank';
-      wrapper.rel = 'noopener noreferrer';
-    }
+    wrapper.href = 'aktuelles/post.html?id=' + encodeURIComponent(post.id);
+
+    var imgCount = (post.bilder && post.bilder.length > 1) ? post.bilder.length : 0;
+    var imgBadge = imgCount ? '<span class="aktuelles-featured__img-count"><i class="fas fa-camera"></i> ' + imgCount + ' Bilder</span>' : '';
 
     wrapper.innerHTML =
       '<div class="aktuelles-featured__img">' +
         '<img src="' + post.bild + '" alt="' + post.titel + '" loading="eager" />' +
         '<div class="aktuelles-featured__overlay"></div>' +
         '<div class="aktuelles-featured__label"><i class="fas fa-star"></i> Neuester Beitrag</div>' +
+        imgBadge +
       '</div>' +
       '<div class="aktuelles-featured__body">' +
         '<time datetime="' + post.datum + '"><i class="far fa-calendar-alt"></i> ' + formatDate(post.datum) + '</time>' +
         '<h2>' + post.titel + '</h2>' +
-        '<p>' + post.text + '</p>' +
+        '<p>' + (post.kurz || post.text) + '</p>' +
         '<div class="aktuelles-featured__actions">' +
-          '<span class="aktuelles-featured__fb-btn"><i class="fab fa-facebook-f"></i> Auf Facebook ansehen</span>' +
+          '<span class="aktuelles-featured__fb-btn"><i class="fas fa-arrow-right"></i> Weiterlesen</span>' +
         '</div>' +
       '</div>';
 

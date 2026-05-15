@@ -175,7 +175,7 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/page-polish.css" />
-  <link rel="stylesheet" href="css/aktuelles.css" />
+  <link rel="stylesheet" href="css/aktuelles.css?v=2" />
   <!-- Cookie Consent and opt-in analytics -->
   <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
@@ -192,7 +192,7 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script src="js/app.js" defer></script>
-  <script src="js/aktuelles.js" defer></script>
+  <script src="js/aktuelles.js?v=2" defer></script>
   <script src="js/carousels.js" defer></script>
 
   <div class="page-transition-overlay flex items-center justify-center">
@@ -286,6 +286,20 @@
 
 </section>
 
+<!-- ===== AKTUELLES (NEWS) SECTION ===== -->
+<section class="aktuelles-section">
+  <div class="aktuelles-section__head" data-aos="fade-up">
+    <span class="aktuelles-section__kicker">Aktuelles</span>
+    <h2 class="aktuelles-section__title">Neues von der Baustelle.</h2>
+    <p class="aktuelles-section__subtitle">Aktuelle Projekte, Teamupdates und Einblicke – direkt von unseren Baustellen.</p>
+  </div>
+  <div class="aktuelles-grid" id="aktuelles-home">
+    <!-- Latest 3 posts rendered by js/aktuelles.js -->
+  </div>
+  <div class="aktuelles-section__more" data-aos="fade-up">
+    <a href="aktuelles.html">Alle Beiträge ansehen <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
 
 <!-- Wir schaffen Section -->
 <section class="bg-gray-50 dark:bg-neutral-900 py-16 w-full">
@@ -432,23 +446,6 @@
       </div>
     </div>
   </section>
-
-<!-- ===== AKTUELLES (NEWS) SECTION ===== -->
-<section class="aktuelles-section">
-  <div class="aktuelles-section__head" data-aos="fade-up">
-    <span class="aktuelles-section__kicker">Aktuelles</span>
-    <h2 class="aktuelles-section__title">Neues von der Baustelle.</h2>
-    <p class="aktuelles-section__subtitle">Aktuelle Projekte, Teamupdates und Einblicke – direkt von unseren Baustellen.</p>
-  </div>
-  <div class="aktuelles-grid" id="aktuelles-home">
-    <!-- Latest 3 posts rendered by js/aktuelles.js -->
-  </div>
-  <div class="aktuelles-section__more" data-aos="fade-up">
-    <a href="aktuelles.html">Alle Beiträge ansehen <i class="fas fa-arrow-right"></i></a>
-  </div>
-</section>
-
-
 
 
  <section class="bg-[var(--secondary-color)] text-white py-24">
