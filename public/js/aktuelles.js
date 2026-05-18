@@ -13,6 +13,16 @@
 
   /* ── helpers ──────────────────────────────────── */
 
+  function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function formatDate(iso) {
     var d = new Date(iso + 'T00:00:00');
     var months = [
@@ -38,13 +48,13 @@
 
     wrapper.innerHTML =
       '<div class="aktuelles-card__img-wrap">' +
-        '<img src="' + post.bild + '" alt="' + post.titel + '" loading="lazy" />' +
+        '<img src="' + escapeHTML(post.bild) + '" alt="' + escapeHTML(post.titel) + '" width="640" height="400" loading="lazy" />' +
         imgCountBadge(post) +
       '</div>' +
       '<div class="aktuelles-card__body">' +
-        '<time datetime="' + post.datum + '"><i class="far fa-calendar-alt"></i> ' + formatDate(post.datum) + '</time>' +
-        '<h3>' + post.titel + '</h3>' +
-        '<p>' + (post.kurz || post.text) + '</p>' +
+        '<time datetime="' + escapeHTML(post.datum) + '"><i class="far fa-calendar-alt"></i> ' + escapeHTML(formatDate(post.datum)) + '</time>' +
+        '<h3>' + escapeHTML(post.titel) + '</h3>' +
+        '<p>' + escapeHTML(post.kurz || post.text) + '</p>' +
         '<div class="aktuelles-card__footer">' +
           '<span class="aktuelles-card__fb-hint"><i class="fas fa-arrow-right"></i> Weiterlesen</span>' +
         '</div>' +
@@ -66,15 +76,15 @@
 
     wrapper.innerHTML =
       '<div class="aktuelles-featured__img">' +
-        '<img src="' + post.bild + '" alt="' + post.titel + '" loading="eager" />' +
+        '<img src="' + escapeHTML(post.bild) + '" alt="' + escapeHTML(post.titel) + '" width="800" height="600" loading="eager" fetchpriority="high" />' +
         '<div class="aktuelles-featured__overlay"></div>' +
         '<div class="aktuelles-featured__label"><i class="fas fa-star"></i> Neuester Beitrag</div>' +
         imgBadge +
       '</div>' +
       '<div class="aktuelles-featured__body">' +
-        '<time datetime="' + post.datum + '"><i class="far fa-calendar-alt"></i> ' + formatDate(post.datum) + '</time>' +
-        '<h2>' + post.titel + '</h2>' +
-        '<p>' + (post.kurz || post.text) + '</p>' +
+        '<time datetime="' + escapeHTML(post.datum) + '"><i class="far fa-calendar-alt"></i> ' + escapeHTML(formatDate(post.datum)) + '</time>' +
+        '<h2>' + escapeHTML(post.titel) + '</h2>' +
+        '<p>' + escapeHTML(post.kurz || post.text) + '</p>' +
         '<div class="aktuelles-featured__actions">' +
           '<span class="aktuelles-featured__fb-btn"><i class="fas fa-arrow-right"></i> Weiterlesen</span>' +
         '</div>' +

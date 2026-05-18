@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Seite nicht gefunden | HK Bau</title>
+    <meta name="theme-color" content="#fbbb21">
+
+    <title>404 – Seite nicht gefunden | HK Bau</title>
     <meta name="description" content="Die angeforderte Seite wurde nicht gefunden. Zurück zu HK Bau, Leistungen, Referenzen oder Kontakt." />
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://www.hk-bau.com/404.html" />
-    <meta name="theme-color" content="#fbbb21">
 
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -17,24 +18,29 @@
     <!-- Performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preload" href="css/style.css?v=2" as="style" />
+    <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="images/icon/logo.png" as="image" />
 
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="preload" href="css/style.css" as="style" />
-    <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="css/tailwind.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/style.css?v=2">
     <style>
-        .error-container {
-            min-height: 100vh;
+        .error-section {
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a1a 100%);
+            padding: 6rem 1.5rem 4rem;
         }
         .error-404 {
             font-size: 10rem;
@@ -44,60 +50,187 @@
             line-height: 1;
         }
         @media (max-width: 768px) {
-            .error-404 {
-                font-size: 6rem;
-            }
+            .error-404 { font-size: 6rem; }
+        }
+        body.error-page #navbar {
+            background-color: rgba(59, 69, 78, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
     </style>
 
-  <!-- Cookie Consent and opt-in analytics -->
-  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
-  <script src="js/analytics-consent.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
+    <script src="js/analytics-consent.js" defer></script>
 </head>
-<body>
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
-    <main id="main-content" class="error-container">
-        <div class="text-center px-6 max-w-2xl">
-            <h1 class="error-404 mb-6">404</h1>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                Seite nicht gefunden
-            </h2>
-            <p class="text-gray-300 text-lg mb-8">
-                Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html"
-                   class="inline-block bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-105 transition-all">
-                    <i class="fas fa-home mr-2"></i>
-                    Zur Startseite
-                </a>
-                <a href="kontakt.html"
-                   class="inline-block bg-white text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:scale-105 transition-all">
-                    <i class="fas fa-envelope mr-2"></i>
-                    Kontakt
+
+<body class="font-[Poppins] overflow-x-hidden error-page">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Hauptinhalt springen</a>
+    <script src="js/init-transition.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+    <div class="page-transition-overlay flex items-center justify-center">
+        <div class="flex flex-col items-center" aria-label="Seite wird geladen">
+            <div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg">
+                <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" width="128" height="128" />
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="logo-container">
+                <a href="index.html" class="flex items-center relative z-20">
+                    <img src="images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" width="64" height="64" />
+                    <span class="text-white font-bold ml-2">HK Bau</span>
                 </a>
             </div>
-            <div class="mt-12 pt-8" style="border-top:1px solid #374151">
-                <p class="text-gray-300 text-sm mb-4">Suchen Sie nach:</p>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a href="leistungen.html" class="text-[var(--primary-color)] hover:underline">
-                        <i class="fas fa-wrench mr-1"></i> Leistungen
+            <nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html">Startseite</a>
+                <a href="leistungen.html">Leistungen</a>
+                <a href="referenzen.html">Referenzen</a>
+                <a href="aktuelles.html">Aktuelles</a>
+                <a href="karriere.html">Karriere</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden z-[100] p-2 focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
+                <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div id="nav-backdrop" class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div>
+        <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6">
+            <a href="index.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Startseite</a>
+            <a href="leistungen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Leistungen</a>
+            <a href="referenzen.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Referenzen</a>
+            <a href="aktuelles.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Aktuelles</a>
+            <a href="karriere.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Karriere</a>
+            <a href="kontakt.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Kontakt</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="error-section">
+            <div class="text-center max-w-2xl">
+                <h1 class="error-404 mb-6">404</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Seite nicht gefunden
+                </h2>
+                <p class="text-gray-300 text-lg mb-8">
+                    Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html"
+                       class="inline-block bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-105 transition-all">
+                        <i class="fas fa-home mr-2"></i>
+                        Zur Startseite
                     </a>
-                    <span class="text-gray-600">|</span>
-                    <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline">
-                        <i class="fas fa-images mr-1"></i> Referenzen
+                    <a href="kontakt.html"
+                       class="inline-block bg-white text-[var(--secondary-color)] font-bold px-8 py-4 rounded-lg shadow-lg hover:scale-105 transition-all">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Kontakt
                     </a>
-                    <span class="text-gray-600">|</span>
-                    <a href="karriere.html" class="text-[var(--primary-color)] hover:underline">
-                        <i class="fas fa-briefcase mr-1"></i> Karriere
-                    </a>
+                </div>
+                <div class="mt-12 pt-8" style="border-top:1px solid #374151">
+                    <p class="text-gray-300 text-sm mb-4">Suchen Sie nach:</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="leistungen.html" class="text-[var(--primary-color)] hover:underline">
+                            <i class="fas fa-wrench mr-1"></i> Leistungen
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="referenzen.html" class="text-[var(--primary-color)] hover:underline">
+                            <i class="fas fa-images mr-1"></i> Referenzen
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="aktuelles.html" class="text-[var(--primary-color)] hover:underline">
+                            <i class="fas fa-newspaper mr-1"></i> Aktuelles
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="karriere.html" class="text-[var(--primary-color)] hover:underline">
+                            <i class="fas fa-briefcase mr-1"></i> Karriere
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer" data-aos="fade-in">
+        <div class="premium-footer__top">
+            <div class="premium-footer__brand">
+                <div class="premium-footer__logo-row">
+                    <img src="images/icon/logo.png" alt="HK Bau Logo" width="64" height="64">
+                    <div>
+                        <span>HK Bau</span>
+                        <strong>Wo Vision auf Fundament trifft.</strong>
+                    </div>
+                </div>
+                <p>Bauunternehmen für Rohbau, Hochbau, Tiefbau und schlüsselfertiges Bauen in Stuttgart und Umgebung. Zwei Standorte, direkte Ansprechpartner und echte Projektbeispiele aus der Region.</p>
+                <div class="premium-footer__badges" aria-label="HK Bau Schwerpunkte">
+                    <span>2 Standorte</span>
+                    <span>Region Stuttgart</span>
+                    <span>Rohbau &amp; Hochbau</span>
+                    <span>Schlüsselfertigbau</span>
                 </div>
             </div>
         </div>
-    </main>
 
-    <script src="js/init-transition.js"></script>
-    <script src="js/app.js"></script>
+        <div class="premium-footer__main">
+            <nav class="premium-footer__column" aria-label="Footer Leistungen">
+                <h3>Leistungen</h3>
+                <a href="leistungen.html#erdbau-details">Erdbau</a>
+                <a href="leistungen.html#kanalbau-details">Kanalbau</a>
+                <a href="leistungen.html#stahlbetonbau-details">Stahlbetonbau</a>
+                <a href="leistungen.html#mauerwerksbau-details">Mauerwerksbau</a>
+                <a href="leistungen.html#schluesselfertigbau-details">Schlüsselfertigbau</a>
+            </nav>
+
+            <nav class="premium-footer__column" aria-label="Footer Referenzen">
+                <h3>Referenzen</h3>
+                <a href="referenzen-galerie/stahlbetonbau.html">Stahlbetonbau Referenzen</a>
+                <a href="referenzen-galerie/kanalbau.html">Kanalbau Referenzen</a>
+                <a href="referenzen-galerie/erdbau.html">Erdbau Referenzen</a>
+                <a href="referenzen-galerie/holzbau.html">Holz- &amp; Stahlbau Referenzen</a>
+                <a href="referenzen.html">Alle Bauprojekte</a>
+                <a href="aktuelles.html">Aktuelles</a>
+            </nav>
+
+            <div class="premium-footer__column premium-footer__regions">
+                <h3>Region</h3>
+                <p>Stuttgart, Fellbach, Waiblingen, Esslingen, Ludwigsburg, Böblingen, Sindelfingen, Leonberg, Backnang, Schorndorf, Kirchheim unter Teck, Nürtingen, Pforzheim und weitere Orte im Umkreis von ca. 75 km.</p>
+                <a href="kontakt.html" class="premium-footer__text-link">Projektstandort anfragen</a>
+                <div class="premium-footer__seo-links"><a href="einsatzgebiet/bauunternehmen-stuttgart.html">Bauunternehmen Stuttgart</a><a href="einsatzgebiet/rohbau-stuttgart.html">Rohbau Stuttgart</a><a href="einsatzgebiet/tiefbau-stuttgart.html">Tiefbau Stuttgart</a><a href="einsatzgebiet/schluesselfertigbau-stuttgart.html">Schlüsselfertigbau Stuttgart</a><a href="einsatzgebiet/bauunternehmen-region-stuttgart.html">Einsatzgebiet 75 km</a></div>
+            </div>
+
+            <div class="premium-footer__column premium-footer__contact">
+                <h3>Kontakt</h3>
+                <a href="mailto:info@hk-bau.net"><i class="fas fa-envelope"></i> info@hk-bau.net</a>
+                <a href="tel:+4971594591823"><i class="fas fa-phone"></i> 07159 / 459 18 23</a>
+                <span><i class="fas fa-location-dot"></i> Esslinger Str. 91, 70734 Fellbach</span>
+                <span><i class="fas fa-location-dot"></i> Blumenstraße 33a, 71106 Magstadt</span>
+                <div class="premium-footer__socials">
+                    <a href="https://www.facebook.com/people/HK-Bauunternehmung-GmbH/100087217129678/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hk.bau/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/h-k-bau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="premium-footer__bottom">
+            <p>&copy; <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p>
+            <nav aria-label="Rechtliches">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutzerklaerung.html">Datenschutz</a>
+            </nav>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition z-50" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 </body>
 </html>

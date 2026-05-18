@@ -7,6 +7,23 @@
   'use strict';
 
   var DATA_URL = '../data/aktuelles.json';
+  var SITE_ORIGIN = 'https://www.hk-bau.com';
+
+  /* HTML escape — prevents broken layout / XSS when post text contains <, >, &, ", ' */
+  function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  /* Escape for use inside double-quoted HTML attributes */
+  function escapeAttr(str) {
+    return escapeHTML(str);
+  }
 
   function formatDate(iso) {
     var d = new Date(iso + 'T00:00:00');
@@ -20,6 +37,55 @@
   function getPostId() {
     var params = new URLSearchParams(window.location.search);
     return params.get('id');
+  }
+
+  function updateSEO(post) {
+    var url = SITE_ORIGIN + '/aktuelles/post.html?id=' + encodeURIComponent(post.id);
+    var title = post.titel + ' – HK Bau';
+    var desc = post.kurz || (post.text || '').substring(0, 160);
+    var img = SITE_ORIGIN + '/' + (post.bild || 'images/og-preview.jpg');
+
+    document.title = title;
+
+    function setAttr(id, attr, val) {
+      var el = document.getElementById(id);
+      if (el) el.setAttribute(attr, val);
+    }
+    function setMeta(name, val) {
+      var el = document.querySelector('meta[name="' + name + '"]');
+      if (el) el.content = val;
+    }
+
+    setMeta('description', desc);
+    setAttr('post-canonical', 'href', url);
+    setAttr('og-url', 'content', url);
+    setAttr('og-title', 'content', title);
+    setAttr('og-description', 'content', desc);
+    setAttr('og-image', 'content', img);
+    setAttr('tw-title', 'content', title);
+    setAttr('tw-description', 'content', desc);
+    setAttr('tw-image', 'content', img);
+
+    /* JSON-LD NewsArticle */
+    var jsonld = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": post.titel,
+      "description": desc,
+      "image": img,
+      "datePublished": post.datum,
+      "dateModified": post.datum,
+      "url": url,
+      "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+      "author": { "@type": "Organization", "name": "HK Bau GmbH", "url": SITE_ORIGIN },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HK Bau GmbH",
+        "logo": { "@type": "ImageObject", "url": SITE_ORIGIN + "/images/icon/logo.png" }
+      }
+    };
+    var ldEl = document.getElementById('post-jsonld');
+    if (ldEl) ldEl.textContent = JSON.stringify(jsonld);
   }
 
   function buildShareButtons() {
@@ -54,7 +120,7 @@
         '<span class="post-nav__icon"><i class="fas fa-arrow-left"></i></span>' +
         '<span class="post-nav__text">' +
           '<span class="post-nav__label">Vorheriger Beitrag</span>' +
-          '<span class="post-nav__title">' + prev.titel + '</span>' +
+          '<span class="post-nav__title">' + escapeHTML(prev.titel) + '</span>' +
         '</span>' +
       '</a>';
     } else {
@@ -66,7 +132,7 @@
         '<span class="post-nav__icon"><i class="fas fa-arrow-right"></i></span>' +
         '<span class="post-nav__text">' +
           '<span class="post-nav__label">Nächster Beitrag</span>' +
-          '<span class="post-nav__title">' + next.titel + '</span>' +
+          '<span class="post-nav__title">' + escapeHTML(next.titel) + '</span>' +
         '</span>' +
       '</a>';
     } else {
@@ -95,10 +161,8 @@
     var el = document.getElementById('post-content');
     if (!el) return;
 
-    /* Update page title */
-    document.title = post.titel + ' – HK Bau';
-    var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = post.kurz || post.text.substring(0, 160);
+    /* Update SEO meta + JSON-LD */
+    updateSEO(post);
 
     /* Populate hero header */
     var heroDate = document.getElementById('post-hero-date');
@@ -110,17 +174,19 @@
     var images = post.bilder || [post.bild];
     var galleryHTML = '';
 
+    var titleAttr = escapeAttr(post.titel);
+
     if (images.length === 1) {
       galleryHTML =
         '<div class="post-hero-img">' +
-          '<img src="../' + images[0] + '" alt="' + post.titel + '" />' +
+          '<img src="../' + escapeAttr(images[0]) + '" alt="' + titleAttr + '" width="1200" height="800" loading="eager" fetchpriority="high" />' +
         '</div>';
     } else {
       /* Main image */
       galleryHTML =
         '<div class="post-gallery">' +
           '<div class="post-gallery__main">' +
-            '<img id="gallery-main" src="../' + images[0] + '" alt="' + post.titel + '" />' +
+            '<img id="gallery-main" src="../' + escapeAttr(images[0]) + '" alt="' + titleAttr + '" width="1200" height="800" loading="eager" fetchpriority="high" />' +
             '<button class="post-gallery__nav post-gallery__nav--prev" onclick="galleryNav(-1)" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>' +
             '<button class="post-gallery__nav post-gallery__nav--next" onclick="galleryNav(1)" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>' +
             '<span class="post-gallery__counter" id="gallery-counter">1 / ' + images.length + '</span>' +
@@ -129,24 +195,24 @@
 
       for (var i = 0; i < images.length; i++) {
         galleryHTML +=
-          '<img src="../' + images[i] + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" data-index="' + i + '" onclick="galleryGo(' + i + ')" loading="lazy" />';
+          '<img src="../' + escapeAttr(images[i]) + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" width="76" height="56" data-index="' + i + '" onclick="galleryGo(' + i + ')" loading="lazy" />';
       }
 
       galleryHTML += '</div></div>';
     }
 
-    /* Format text with line breaks */
-    var formattedText = post.text
+    /* Format text with line breaks (escape first, then convert newlines to <br>) */
+    var formattedText = (post.text || '')
       .split('\n\n')
       .map(function (para) {
-        return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
+        return '<p>' + escapeHTML(para).replace(/\n/g, '<br>') + '</p>';
       })
       .join('');
 
     el.innerHTML =
       '<div class="post-header" data-aos="fade-up">' +
-        '<time datetime="' + post.datum + '"><i class="far fa-calendar-alt"></i> ' + formatDate(post.datum) + '</time>' +
-        '<h1>' + post.titel + '</h1>' +
+        '<time datetime="' + escapeAttr(post.datum) + '"><i class="far fa-calendar-alt"></i> ' + escapeHTML(formatDate(post.datum)) + '</time>' +
+        '<h1>' + escapeHTML(post.titel) + '</h1>' +
       '</div>' +
       galleryHTML +
       '<div class="post-body" data-aos="fade-up">' +
@@ -154,7 +220,7 @@
       '</div>' +
       (post.fb ?
         '<div class="post-fb" data-aos="fade-up">' +
-          '<a href="' + post.fb + '" target="_blank" rel="noopener noreferrer">' +
+          '<a href="' + escapeAttr(post.fb) + '" target="_blank" rel="noopener noreferrer">' +
             '<i class="fab fa-facebook-f"></i> Diesen Beitrag auf Facebook ansehen' +
           '</a>' +
         '</div>' : '') +

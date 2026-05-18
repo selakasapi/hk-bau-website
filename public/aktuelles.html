@@ -10,10 +10,16 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://unpkg.com" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="preload" href="css/style.css?v=2" as="style" />
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="images/icon/logo.png" as="image" />
   <link rel="preload" href="images/og-preview.jpg" as="image" fetchpriority="high" />
+  <link rel="preload" as="image" type="image/webp"
+        imagesrcset="images/projekten/04-neubau-mfh-3-we-remshalden-800w.webp 800w,
+                     images/projekten/04-neubau-mfh-3-we-remshalden-1200w.webp 1200w,
+                     images/projekten/04-neubau-mfh-3-we-remshalden-1920w.webp 1920w"
+        imagesizes="100vw"
+        fetchpriority="high" />
 
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
@@ -78,9 +84,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/tailwind.min.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/page-polish.css" />
-  <link rel="stylesheet" href="css/aktuelles.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/aktuelles.css?v=6" />
   <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
   <script src="js/analytics-consent.js" defer></script>
@@ -138,7 +143,20 @@
     <!-- ═══ Hero ═══ -->
     <section class="aktuelles-hero">
       <div class="aktuelles-hero__bg">
-        <img src="images/projekten/04-neubau-mfh-3-we-remshalden.JPG" alt="HK Bau Baustelle" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/projekten/04-neubau-mfh-3-we-remshalden-800w.webp 800w,
+                    images/projekten/04-neubau-mfh-3-we-remshalden-1200w.webp 1200w,
+                    images/projekten/04-neubau-mfh-3-we-remshalden-1920w.webp 1920w"
+            sizes="100vw" />
+          <img
+            src="images/projekten/04-neubau-mfh-3-we-remshalden-1200w.webp"
+            alt="HK Bau Baustelle"
+            width="1920" height="1280"
+            loading="eager"
+            fetchpriority="high" />
+        </picture>
       </div>
       <div class="aktuelles-hero__content" data-aos="fade-up">
         <span class="aktuelles-section__kicker">Aktuelles</span>
@@ -179,7 +197,7 @@
     </section>
 
   </main>
-  <script src="js/aktuelles.js?v=2" defer></script>
+  <script src="js/aktuelles.js?v=6" defer></script>
 
   <footer class="premium-footer" data-aos="fade-in">
     <div class="premium-footer__top">
@@ -213,10 +231,10 @@
 
       <nav class="premium-footer__column" aria-label="Footer Referenzen">
         <h3>Referenzen</h3>
-        <a href="Referenzen/stahlbetonbau.html">Stahlbetonbau Referenzen</a>
-        <a href="Referenzen/kanalbau.html">Kanalbau Referenzen</a>
-        <a href="Referenzen/erdbau.html">Erdbau Referenzen</a>
-        <a href="Referenzen/holzbau.html">Holz- &amp; Stahlbau Referenzen</a>
+        <a href="referenzen-galerie/stahlbetonbau.html">Stahlbetonbau Referenzen</a>
+        <a href="referenzen-galerie/kanalbau.html">Kanalbau Referenzen</a>
+        <a href="referenzen-galerie/erdbau.html">Erdbau Referenzen</a>
+        <a href="referenzen-galerie/holzbau.html">Holz- &amp; Stahlbau Referenzen</a>
         <a href="referenzen.html">Alle Bauprojekte</a>
         <a href="aktuelles.html">Aktuelles</a>
       </nav>

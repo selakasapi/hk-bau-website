@@ -40,6 +40,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.hk-bau.com/aktuelles/post.html?id=fundament-oberderdingen</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.hk-bau.com/aktuelles/post.html?id=aufstockung-holzrahmenbau</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.hk-bau.com/aktuelles/post.html?id=baustart-stuttgart-vaihingen</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.hk-bau.com/impressum.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
@@ -388,49 +406,49 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/stahlbetonbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/stahlbetonbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/mauerwerksbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/mauerwerksbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/erdbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/erdbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/kanalbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/kanalbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/holzbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/holzbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/abbruch-und-ruckbau.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/abbruch-und-ruckbau.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/freianlagen.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/freianlagen.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hk-bau.com/Referenzen/aussenanlagen.html</loc>
+    <loc>https://www.hk-bau.com/referenzen-galerie/aussenanlagen.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

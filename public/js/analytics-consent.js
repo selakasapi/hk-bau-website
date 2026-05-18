@@ -82,7 +82,8 @@
   }
 
   function initialiseBanner() {
-    const privacyUrl = window.location.pathname.includes("/Referenzen/")
+    const isSubdir = /\/(referenzen-galerie|aktuelles|einsatzgebiet)\//.test(window.location.pathname);
+    const privacyUrl = isSubdir
       ? "../datenschutzerklaerung.html"
       : "datenschutzerklaerung.html";
 
