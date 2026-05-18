@@ -1,0 +1,28 @@
+# Normalize line endings — eliminates the "LF will be replaced by CRLF" warnings
+# on Windows. Text files are stored as LF in git, checked out as platform-native.
+* text=auto
+
+# Explicit: always LF in repo for these
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.svg   text eol=lf
+*.htaccess text eol=lf
+*.webmanifest text eol=lf
+
+# Binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.JPG   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.pdf   binary

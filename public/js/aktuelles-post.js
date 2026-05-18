@@ -143,7 +143,7 @@
     return html;
   }
 
-  window.copyPostLink = function (btn) {
+  function copyPostLink(btn) {
     var url = window.location.href;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url).then(function () {
@@ -155,7 +155,7 @@
         }, 2000);
       });
     }
-  };
+  }
 
   function renderPost(post, allPosts) {
     var el = document.getElementById('post-content');
@@ -229,8 +229,8 @@
 
     /* Gallery state */
     if (images.length > 1) {
-      window._galleryImages = images.map(function (img) { return '../' + img; });
-      window._galleryIndex = 0;
+      galleryImages = images.map(function (img) { return '../' + img; });
+      galleryIndex = 0;
     }
 
     /* Wire up event handlers (CSP-friendly — no inline onclick) */
@@ -257,27 +257,28 @@
     });
   }
 
-  /* Gallery navigation */
-  window.galleryNav = function (dir) {
-    var imgs = window._galleryImages;
-    if (!imgs) return;
-    var idx = window._galleryIndex + dir;
-    if (idx < 0) idx = imgs.length - 1;
-    if (idx >= imgs.length) idx = 0;
-    galleryGo(idx);
-  };
+  /* Gallery state (module-local — no longer on window) */
+  var galleryImages = null;
+  var galleryIndex = 0;
 
-  window.galleryGo = function (idx) {
-    var imgs = window._galleryImages;
-    if (!imgs) return;
-    window._galleryIndex = idx;
+  function galleryNav(dir) {
+    if (!galleryImages) return;
+    var idx = galleryIndex + dir;
+    if (idx < 0) idx = galleryImages.length - 1;
+    if (idx >= galleryImages.length) idx = 0;
+    galleryGo(idx);
+  }
+
+  function galleryGo(idx) {
+    if (!galleryImages) return;
+    galleryIndex = idx;
 
     var main = document.getElementById('gallery-main');
     var counter = document.getElementById('gallery-counter');
     var thumbs = document.querySelectorAll('.post-gallery__thumb');
 
-    if (main) main.src = imgs[idx];
-    if (counter) counter.textContent = (idx + 1) + ' / ' + imgs.length;
+    if (main) main.src = galleryImages[idx];
+    if (counter) counter.textContent = (idx + 1) + ' / ' + galleryImages.length;
     thumbs.forEach(function (t, i) {
       t.classList.toggle('active', i === idx);
     });
@@ -286,11 +287,11 @@
     if (thumbs[idx]) {
       thumbs[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
-  };
+  }
 
   /* Keyboard navigation */
   document.addEventListener('keydown', function (e) {
-    if (!window._galleryImages) return;
+    if (!galleryImages) return;
     if (e.key === 'ArrowLeft') galleryNav(-1);
     if (e.key === 'ArrowRight') galleryNav(1);
   });

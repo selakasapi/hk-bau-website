@@ -44,7 +44,7 @@
     var wrapper = document.createElement('a');
     wrapper.className = 'aktuelles-card' + (isHome ? ' aktuelles-card--home' : '');
     wrapper.setAttribute('data-aos', 'fade-up');
-    wrapper.href = (isHome ? '' : '') + 'aktuelles/post.html?id=' + encodeURIComponent(post.id);
+    wrapper.href = 'aktuelles/' + encodeURIComponent(post.id) + '.html';
 
     wrapper.innerHTML =
       '<div class="aktuelles-card__img-wrap">' +
@@ -69,7 +69,7 @@
     var wrapper = document.createElement('a');
     wrapper.className = 'aktuelles-featured';
     wrapper.setAttribute('data-aos', 'fade-up');
-    wrapper.href = 'aktuelles/post.html?id=' + encodeURIComponent(post.id);
+    wrapper.href = 'aktuelles/' + encodeURIComponent(post.id) + '.html';
 
     var imgCount = (post.bilder && post.bilder.length > 1) ? post.bilder.length : 0;
     var imgBadge = imgCount ? '<span class="aktuelles-featured__img-count"><i class="fas fa-camera"></i> ' + imgCount + ' Bilder</span>' : '';

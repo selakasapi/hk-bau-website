@@ -18,6 +18,10 @@ Redirect 301 /Referenzen/holz-und-stahlbau.html https://www.hk-bau.com/referenze
 # Redirect old /Referenzen/* (capital R) paths to new /referenzen-galerie/* (case-sensitive Linux hosting)
 RewriteRule ^Referenzen/(.+)$ /referenzen-galerie/$1 [R=301,L,NC]
 
+# Redirect old dynamic post URLs (?id=xxx) to static pre-rendered pages (better SEO)
+RewriteCond %{QUERY_STRING} ^id=([a-z0-9\-]+)$
+RewriteRule ^aktuelles/post\.html$ /aktuelles/%1.html? [R=301,L]
+
 # Remove .html extension from URLs (optional - for cleaner URLs)
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteCond %{REQUEST_FILENAME}\.html -f
