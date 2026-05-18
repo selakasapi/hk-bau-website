@@ -42,27 +42,44 @@ function buildFileList(folder) {
   return files.sort(naturalSort);
 }
 
+/* Convert .jpg/.jpeg/.JPG path to .webp counterpart */
+function toWebp(file) {
+  return file.replace(/\.(jpe?g)$/i, '.webp');
+}
+
 function createImageLink(folder, file, index) {
+  const webpFile = toWebp(file);
+  const webpPath = `../images/${folder}/${webpFile}`;
+  const jpgPath = `../images/${folder}/${file}`;
+
   const link = document.createElement("a");
-  link.href = `../images/${folder}/${file}`;
+  /* GLightbox modal loads the WebP (smaller, faster) */
+  link.href = webpPath;
   link.className =
     "glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10";
   link.setAttribute("data-aos", "fade-up");
 
-
   const delay = Math.min((index + 1) * 30, 900);
-
   link.setAttribute("data-aos-delay", `${delay}`);
   link.setAttribute("aria-label", `${folder} Bild ${index + 1}`);
+
+  /* <picture> with WebP source + JPG fallback (defensive — if WebP missing, browser uses JPG) */
+  const picture = document.createElement("picture");
+  const source = document.createElement("source");
+  source.type = "image/webp";
+  source.srcset = USE_THUMBNAILS
+    ? `../images/${folder}/thumbs/${webpFile}`
+    : webpPath;
+  picture.appendChild(source);
 
   const img = document.createElement("img");
   img.src = USE_THUMBNAILS
     ? `../images/${folder}/thumbs/${file}`
-    : `../images/${folder}/${file}`;
+    : jpgPath;
   if (USE_THUMBNAILS) {
     img.onerror = () => {
       img.onerror = null;
-      img.src = `../images/${folder}/${file}`;
+      img.src = jpgPath;
     };
   }
   img.alt = getAltText(folder, file);
@@ -73,8 +90,9 @@ function createImageLink(folder, file, index) {
     img.width = dims.width;
     img.height = dims.height;
   }
+  picture.appendChild(img);
 
-  link.appendChild(img);
+  link.appendChild(picture);
   return link;
 }
 

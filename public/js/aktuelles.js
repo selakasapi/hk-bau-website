@@ -133,8 +133,10 @@
   /* ── fetch ───────────────────────────────────── */
 
   function init() {
+    /* Cache-bust by current date so newly added posts appear within 24h */
+    var cacheBust = DATA_URL + '?d=' + (new Date()).toISOString().slice(0, 10);
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', DATA_URL, true);
+    xhr.open('GET', cacheBust, true);
     xhr.onload = function () {
       if (xhr.status >= 200 && xhr.status < 300) {
         try {
