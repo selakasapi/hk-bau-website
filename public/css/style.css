@@ -1732,6 +1732,26 @@ img[src*="placeholder"] {
   margin-bottom: 1.5rem;
 }
 
+/* Gallery image smooth fade-in on load
+   — replaces AOS staggered animations (which felt janky during scroll).
+   The image starts invisible, fades to full opacity once decoded. */
+.gallery .gallery-img {
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.gallery .gallery-img.is-loaded {
+  opacity: 1;
+}
+
+/* Respect prefers-reduced-motion — skip the fade for users who opt out */
+@media (prefers-reduced-motion: reduce) {
+  .gallery .gallery-img {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 @media (max-width: 640px) {
   .gallery > a {
     margin-bottom: 1.25rem;

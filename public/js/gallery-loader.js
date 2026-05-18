@@ -55,12 +55,10 @@ function createImageLink(folder, file, index) {
   const link = document.createElement("a");
   /* GLightbox modal loads the WebP (smaller, faster) */
   link.href = webpPath;
+  /* No AOS — image fade-in via gallery-img-loaded CSS class on img.load gives a
+     smoother, less janky experience than staggered card animations during scroll. */
   link.className =
-    "glightbox block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10";
-  link.setAttribute("data-aos", "fade-up");
-
-  const delay = Math.min((index + 1) * 30, 900);
-  link.setAttribute("data-aos-delay", `${delay}`);
+    "glightbox gallery-thumb block overflow-hidden rounded-xl transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:z-10";
   link.setAttribute("aria-label", `${folder} Bild ${index + 1}`);
 
   /* <picture> with WebP source + JPG fallback (defensive — if WebP missing, browser uses JPG) */
@@ -84,11 +82,21 @@ function createImageLink(folder, file, index) {
   }
   img.alt = getAltText(folder, file);
   img.loading = "lazy";
-  img.className = "w-full h-auto";
+  img.decoding = "async";
+  img.className = "w-full h-auto gallery-img";
   const dims = imageDimensions?.[folder]?.[file];
   if (dims) {
     img.width = dims.width;
     img.height = dims.height;
+  }
+
+  /* Smooth fade-in when the image actually finishes loading */
+  const markLoaded = () => img.classList.add('is-loaded');
+  if (img.complete && img.naturalHeight > 0) {
+    markLoaded();
+  } else {
+    img.addEventListener('load', markLoaded, { once: true });
+    img.addEventListener('error', markLoaded, { once: true });
   }
   picture.appendChild(img);
 
@@ -109,10 +117,6 @@ function appendBatch(gallery, folder, files, startIndex) {
 
   if (typeof initLightbox === 'function') {
     initLightbox();
-  }
-
-  if (window.AOS && typeof AOS.refresh === 'function') {
-    AOS.refresh();
   }
 }
 
