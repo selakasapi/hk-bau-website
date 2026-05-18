@@ -97,7 +97,7 @@
       '<a href="' + whatsappUrl + '" target="_blank" rel="noopener noreferrer" class="post-share__btn post-share__btn--whatsapp">' +
         '<i class="fab fa-whatsapp"></i> WhatsApp' +
       '</a>' +
-      '<button class="post-share__btn post-share__btn--copy" onclick="copyPostLink(this)">' +
+      '<button class="post-share__btn post-share__btn--copy" type="button">' +
         '<i class="fas fa-link"></i> Link kopieren' +
       '</button>' +
     '</div>';
@@ -187,15 +187,15 @@
         '<div class="post-gallery">' +
           '<div class="post-gallery__main">' +
             '<img id="gallery-main" src="../' + escapeAttr(images[0]) + '" alt="' + titleAttr + '" width="1200" height="800" loading="eager" fetchpriority="high" />' +
-            '<button class="post-gallery__nav post-gallery__nav--prev" onclick="galleryNav(-1)" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>' +
-            '<button class="post-gallery__nav post-gallery__nav--next" onclick="galleryNav(1)" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>' +
+            '<button class="post-gallery__nav post-gallery__nav--prev" type="button" data-gallery-dir="-1" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>' +
+            '<button class="post-gallery__nav post-gallery__nav--next" type="button" data-gallery-dir="1" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>' +
             '<span class="post-gallery__counter" id="gallery-counter">1 / ' + images.length + '</span>' +
           '</div>' +
           '<div class="post-gallery__thumbs" id="gallery-thumbs">';
 
       for (var i = 0; i < images.length; i++) {
         galleryHTML +=
-          '<img src="../' + escapeAttr(images[i]) + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" width="76" height="56" data-index="' + i + '" onclick="galleryGo(' + i + ')" loading="lazy" />';
+          '<img src="../' + escapeAttr(images[i]) + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" width="76" height="56" data-index="' + i + '" loading="lazy" />';
       }
 
       galleryHTML += '</div></div>';
@@ -233,8 +233,28 @@
       window._galleryIndex = 0;
     }
 
+    /* Wire up event handlers (CSP-friendly — no inline onclick) */
+    wireUpHandlers(el);
+
     /* Trigger AOS */
     if (typeof AOS !== 'undefined') AOS.refresh();
+  }
+
+  /* Single delegated click handler on post-content covers share, gallery nav, thumbs */
+  function wireUpHandlers(root) {
+    root.addEventListener('click', function (e) {
+      /* Share: copy link */
+      var copyBtn = e.target.closest('.post-share__btn--copy');
+      if (copyBtn) { copyPostLink(copyBtn); return; }
+
+      /* Gallery prev/next */
+      var navBtn = e.target.closest('[data-gallery-dir]');
+      if (navBtn) { galleryNav(parseInt(navBtn.getAttribute('data-gallery-dir'), 10)); return; }
+
+      /* Gallery thumb */
+      var thumb = e.target.closest('.post-gallery__thumb');
+      if (thumb) { galleryGo(parseInt(thumb.getAttribute('data-index'), 10)); return; }
+    });
   }
 
   /* Gallery navigation */

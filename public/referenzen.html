@@ -424,7 +424,7 @@
 
     <div class="references-spotlight" data-aos="fade-up">
       <a href="referenzen-galerie/stahlbetonbau.html" class="spotlight-media">
-        <img src="images/stahlbetonbau-referenzen/1.stahlbetonbau_189.jpg" alt="Stahlbetonbau Projekt von HK Bau" width="2000" height="1500" loading="lazy">
+        <img src="images/stahlbetonbau-referenzen/1.stahlbetonbau_189.webp" alt="Stahlbetonbau Projekt von HK Bau" width="2000" height="1500" loading="lazy">
         <span>Ausgewähltes Projekt</span>
       </a>
       <div class="spotlight-content">
@@ -465,7 +465,7 @@
 
     <div class="references-card-grid">
       <article class="reference-card" data-category="tiefbau" data-aos="fade-up" style="--card-index:'01'">
-        <img src="images/erdbau.jpg" alt="Erdbau Referenzen von HK Bau" width="1920" height="1080" loading="lazy">
+        <img src="images/erdbau.webp" alt="Erdbau Referenzen von HK Bau" width="1920" height="1080" loading="lazy">
         <div class="reference-card-overlay"></div>
         <a href="referenzen-galerie/erdbau.html" class="reference-card-arrow" aria-label="Erdbau Projektgalerie ansehen"><i class="fas fa-arrow-right"></i></a>
         <div class="reference-card-content">
@@ -480,7 +480,7 @@
       </article>
 
       <article class="reference-card" data-category="rohbau" data-aos="fade-up" data-aos-delay="80" style="--card-index:'02'">
-        <img src="images/stahlbetonbau.jpg" alt="Stahlbetonbau Referenzen von HK Bau" width="512" height="341" loading="lazy">
+        <img src="images/stahlbetonbau.webp" alt="Stahlbetonbau Referenzen von HK Bau" width="512" height="341" loading="lazy">
         <div class="reference-card-overlay"></div>
         <a href="referenzen-galerie/stahlbetonbau.html" class="reference-card-arrow" aria-label="Stahlbetonbau Projektgalerie ansehen"><i class="fas fa-arrow-right"></i></a>
         <div class="reference-card-content">
@@ -495,7 +495,7 @@
       </article>
 
       <article class="reference-card" data-category="tiefbau" data-aos="fade-up" data-aos-delay="120" style="--card-index:'03'">
-        <img src="images/kanalbau.jpg" alt="Kanalbau Referenzen von HK Bau" width="800" height="534" loading="lazy">
+        <img src="images/kanalbau.webp" alt="Kanalbau Referenzen von HK Bau" width="800" height="534" loading="lazy">
         <div class="reference-card-overlay"></div>
         <a href="referenzen-galerie/kanalbau.html" class="reference-card-arrow" aria-label="Kanalbau Projektgalerie ansehen"><i class="fas fa-arrow-right"></i></a>
         <div class="reference-card-content">
@@ -510,7 +510,7 @@
       </article>
 
       <article class="reference-card" data-category="rohbau" data-aos="fade-up" style="--card-index:'04'">
-        <img src="images/mauerwerksbau.jpg" alt="Mauerwerksbau Referenzen von HK Bau" width="2936" height="1960" loading="lazy">
+        <img src="images/mauerwerksbau.webp" alt="Mauerwerksbau Referenzen von HK Bau" width="2936" height="1960" loading="lazy">
         <div class="reference-card-overlay"></div>
         <a href="referenzen-galerie/mauerwerksbau.html" class="reference-card-arrow" aria-label="Mauerwerksbau Projektgalerie ansehen"><i class="fas fa-arrow-right"></i></a>
         <div class="reference-card-content">
@@ -555,7 +555,7 @@
       </article>
 
       <article class="reference-card" data-category="freianlagen" data-aos="fade-up" style="--card-index:'07'">
-        <img src="images/freianlagen-referenzen/1.aussenanlagen_10.jpg" alt="Freianlagen Referenzen von HK Bau" width="4032" height="3024" loading="lazy">
+        <img src="images/freianlagen-referenzen/1.aussenanlagen_10.webp" alt="Freianlagen Referenzen von HK Bau" width="4032" height="3024" loading="lazy">
         <div class="reference-card-overlay"></div>
         <a href="referenzen-galerie/freianlagen.html" class="reference-card-arrow" aria-label="Freianlagen Projektgalerie ansehen"><i class="fas fa-arrow-right"></i></a>
         <div class="reference-card-content">
@@ -1144,23 +1144,7 @@
   }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const filters = document.querySelectorAll('.ref-filter');
-    const cards = document.querySelectorAll('.reference-card');
-    filters.forEach((button) => {
-      button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-        filters.forEach((item) => item.classList.remove('active'));
-        button.classList.add('active');
-        cards.forEach((card) => {
-          const show = filter === 'all' || card.dataset.category === filter;
-          card.classList.toggle('is-hidden', !show);
-        });
-      });
-    });
-  });
-</script>
+<script src="js/referenzen-filter.js" defer></script>
 
 </body>
 </html>
