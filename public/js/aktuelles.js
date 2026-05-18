@@ -45,10 +45,13 @@
     wrapper.className = 'aktuelles-card' + (isHome ? ' aktuelles-card--home' : '');
     wrapper.setAttribute('data-aos', 'fade-up');
     wrapper.href = 'aktuelles/' + encodeURIComponent(post.id) + '.html';
+    var cardImage = post.thumb || post.bild;
+    var loading = isHome ? 'eager' : 'lazy';
+    var fetchPriority = isHome ? ' fetchpriority="low"' : '';
 
     wrapper.innerHTML =
       '<div class="aktuelles-card__img-wrap">' +
-        '<img src="' + escapeHTML(post.bild) + '" alt="' + escapeHTML(post.titel) + '" width="640" height="400" loading="lazy" />' +
+        '<img src="' + escapeHTML(cardImage) + '" alt="' + escapeHTML(post.titel) + '" width="720" height="450" loading="' + loading + '" decoding="async"' + fetchPriority + ' />' +
         imgCountBadge(post) +
       '</div>' +
       '<div class="aktuelles-card__body">' +
@@ -126,6 +129,8 @@
         homeEl.parentElement.style.display = 'none';
         return;
       }
+      /* index.html ships a static fallback so cards are visible before JSON loads. */
+      homeEl.innerHTML = '';
       latest.forEach(function (p) { homeEl.appendChild(buildCard(p, true)); });
     }
   }
@@ -134,7 +139,7 @@
 
   function init() {
     /* Cache-bust by current date so newly added posts appear within 24h */
-    var cacheBust = DATA_URL + '?d=' + (new Date()).toISOString().slice(0, 10);
+    var cacheBust = DATA_URL + '?v=20260518-2&d=' + (new Date()).toISOString().slice(0, 10);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', cacheBust, true);
     xhr.onload = function () {

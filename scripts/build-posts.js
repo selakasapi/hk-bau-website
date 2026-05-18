@@ -15,7 +15,7 @@
  *   - Hero header (date + title) baked in
  *   - Gallery markup baked in (JS only wires up click handlers)
  *   - Body text baked in (paragraphs)
- *   - Share buttons + post nav baked in
+ *   - Post nav baked in
  *
  * aktuelles-post.js is replaced with a smaller `aktuelles-post-static.js`
  * that only handles gallery interactivity (click handlers + keyboard nav).
@@ -89,19 +89,6 @@ function buildFBHTML(post) {
         <a href="${escapeHTML(post.fb)}" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-facebook-f"></i> Diesen Beitrag auf Facebook ansehen
         </a>
-      </div>`;
-}
-
-function buildShareHTML(post, url) {
-  const whatsappUrl = 'https://wa.me/?text=' + encodeURIComponent(post.titel + ' – HK Bau ' + url);
-  return `      <div class="post-share" data-aos="fade-up">
-        <span class="post-share__label">Teilen:</span>
-        <a href="${escapeHTML(whatsappUrl)}" target="_blank" rel="noopener noreferrer" class="post-share__btn post-share__btn--whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <button class="post-share__btn post-share__btn--copy" type="button">
-          <i class="fas fa-link"></i> Link kopieren
-        </button>
       </div>`;
 }
 
@@ -190,14 +177,9 @@ function buildPostPage(post, allPosts, template) {
 
   /* Replace article placeholder with full rendered content */
   const articleContent = `<article class="post-article" id="post-content">
-      <div class="post-header" data-aos="fade-up">
-        <time datetime="${escapeHTML(post.datum)}"><i class="far fa-calendar-alt"></i> ${escapeHTML(formattedDate)}</time>
-        <h1>${escapeHTML(post.titel)}</h1>
-      </div>
 ${buildGalleryHTML(post)}
       <div class="post-body" data-aos="fade-up">${buildBodyHTML(post)}</div>
 ${buildFBHTML(post)}
-${buildShareHTML(post, url)}
 ${buildPostNavHTML(allPosts, post.id)}
     </article>`;
 

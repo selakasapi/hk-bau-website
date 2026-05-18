@@ -81,7 +81,10 @@ function createImageLink(folder, file, index) {
     };
   }
   img.alt = getAltText(folder, file);
-  img.loading = "lazy";
+  img.loading = index < 12 ? "eager" : "lazy";
+  if (index === 0) {
+    img.fetchPriority = "high";
+  }
   img.decoding = "async";
   img.className = "w-full h-auto gallery-img";
   const dims = imageDimensions?.[folder]?.[file];

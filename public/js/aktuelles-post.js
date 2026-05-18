@@ -88,21 +88,6 @@
     if (ldEl) ldEl.textContent = JSON.stringify(jsonld);
   }
 
-  function buildShareButtons() {
-    var url = window.location.href;
-    var whatsappUrl = 'https://wa.me/?text=' + encodeURIComponent(document.title + ' ' + url);
-
-    return '<div class="post-share" data-aos="fade-up">' +
-      '<span class="post-share__label">Teilen:</span>' +
-      '<a href="' + whatsappUrl + '" target="_blank" rel="noopener noreferrer" class="post-share__btn post-share__btn--whatsapp">' +
-        '<i class="fab fa-whatsapp"></i> WhatsApp' +
-      '</a>' +
-      '<button class="post-share__btn post-share__btn--copy" type="button">' +
-        '<i class="fas fa-link"></i> Link kopieren' +
-      '</button>' +
-    '</div>';
-  }
-
   function buildPostNav(posts, currentId) {
     var idx = -1;
     for (var i = 0; i < posts.length; i++) {
@@ -141,20 +126,6 @@
 
     html += '</nav>';
     return html;
-  }
-
-  function copyPostLink(btn) {
-    var url = window.location.href;
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(url).then(function () {
-        btn.classList.add('copied');
-        btn.innerHTML = '<i class="fas fa-check"></i> Kopiert!';
-        setTimeout(function () {
-          btn.classList.remove('copied');
-          btn.innerHTML = '<i class="fas fa-link"></i> Link kopieren';
-        }, 2000);
-      });
-    }
   }
 
   function renderPost(post, allPosts) {
@@ -210,10 +181,6 @@
       .join('');
 
     el.innerHTML =
-      '<div class="post-header" data-aos="fade-up">' +
-        '<time datetime="' + escapeAttr(post.datum) + '"><i class="far fa-calendar-alt"></i> ' + escapeHTML(formatDate(post.datum)) + '</time>' +
-        '<h1>' + escapeHTML(post.titel) + '</h1>' +
-      '</div>' +
       galleryHTML +
       '<div class="post-body" data-aos="fade-up">' +
         formattedText +
@@ -224,7 +191,6 @@
             '<i class="fab fa-facebook-f"></i> Diesen Beitrag auf Facebook ansehen' +
           '</a>' +
         '</div>' : '') +
-      buildShareButtons() +
       buildPostNav(allPosts, post.id);
 
     /* Gallery state */
@@ -243,23 +209,35 @@
   /* Single delegated click handler on post-content covers share, gallery nav, thumbs */
   function wireUpHandlers(root) {
     root.addEventListener('click', function (e) {
-      /* Share: copy link */
-      var copyBtn = e.target.closest('.post-share__btn--copy');
-      if (copyBtn) { copyPostLink(copyBtn); return; }
 
       /* Gallery prev/next */
       var navBtn = e.target.closest('[data-gallery-dir]');
-      if (navBtn) { galleryNav(parseInt(navBtn.getAttribute('data-gallery-dir'), 10)); return; }
+      if (navBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        galleryNav(parseInt(navBtn.getAttribute('data-gallery-dir'), 10));
+        return;
+      }
 
       /* Gallery thumb */
       var thumb = e.target.closest('.post-gallery__thumb');
-      if (thumb) { galleryGo(parseInt(thumb.getAttribute('data-index'), 10)); return; }
+      if (thumb) {
+        e.preventDefault();
+        e.stopPropagation();
+        galleryGo(parseInt(thumb.getAttribute('data-index'), 10));
+        return;
+      }
     });
   }
 
   /* Gallery state (module-local — no longer on window) */
   var galleryImages = null;
   var galleryIndex = 0;
+
+  function resetHorizontalScroll() {
+    document.documentElement.scrollLeft = 0;
+    document.body.scrollLeft = 0;
+  }
 
   function galleryNav(dir) {
     if (!galleryImages) return;
@@ -285,8 +263,16 @@
 
     /* Scroll active thumb into view */
     if (thumbs[idx]) {
-      thumbs[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      var scroller = thumbs[idx].parentElement;
+      if (scroller && typeof scroller.scrollTo === 'function') {
+        scroller.scrollTo({
+          left: thumbs[idx].offsetLeft - (scroller.clientWidth / 2) + (thumbs[idx].clientWidth / 2),
+          behavior: 'smooth'
+        });
+      }
     }
+
+    resetHorizontalScroll();
   }
 
   /* Keyboard navigation */

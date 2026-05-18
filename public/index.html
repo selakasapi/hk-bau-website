@@ -191,7 +191,7 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script src="js/app.js" defer></script>
-  <script src="js/aktuelles.js?v=7" defer></script>
+  <script src="js/aktuelles.js?v=8" defer></script>
   <script src="js/carousels.js" defer></script>
 
   <div class="page-transition-overlay flex items-center justify-center">
@@ -293,7 +293,47 @@
     <p class="aktuelles-section__subtitle">Aktuelle Projekte, Teamupdates und Einblicke – direkt von unseren Baustellen.</p>
   </div>
   <div class="aktuelles-grid" id="aktuelles-home">
-    <!-- Latest 3 posts rendered by js/aktuelles.js -->
+    <!-- Static fallback; refreshed by js/aktuelles.js after data/aktuelles.json loads. -->
+    <a class="aktuelles-card aktuelles-card--home" data-aos="fade-up" href="aktuelles/fundament-oberderdingen.html">
+      <div class="aktuelles-card__img-wrap">
+        <img src="images/aktuelles/thumbs/2026.02.27-1-card.webp" alt="Fundament fertiggestellt – Projekt Oberderdingen" width="720" height="450" loading="eager" decoding="async" fetchpriority="low" />
+        <span class="aktuelles-card__img-count"><i class="fas fa-camera"></i> 10</span>
+      </div>
+      <div class="aktuelles-card__body">
+        <time datetime="2026-02-27"><i class="far fa-calendar-alt"></i> 27. Februar 2026</time>
+        <h3>Fundament fertiggestellt – Projekt Oberderdingen</h3>
+        <p>Was viele nicht sehen, ist das Entscheidende. Bevor Wände entstehen, entsteht das, was alles trägt – das Fundament. Baugrube, Planum, Bewehrung, Schalung und Betonage – alles fachgerecht ausgeführt in Oberderdingen.</p>
+        <div class="aktuelles-card__footer">
+          <span class="aktuelles-card__fb-hint"><i class="fas fa-arrow-right"></i> Weiterlesen</span>
+        </div>
+      </div>
+    </a>
+    <a class="aktuelles-card aktuelles-card--home" data-aos="fade-up" href="aktuelles/aufstockung-holzrahmenbau.html">
+      <div class="aktuelles-card__img-wrap">
+        <img src="images/aktuelles/thumbs/2-card.webp" alt="Aufstockung in Holzrahmenbauweise – Mehr Raum, mehr Zukunft" width="720" height="450" loading="eager" decoding="async" fetchpriority="low" />
+      </div>
+      <div class="aktuelles-card__body">
+        <time datetime="2026-02-10"><i class="far fa-calendar-alt"></i> 10. Februar 2026</time>
+        <h3>Aufstockung in Holzrahmenbauweise – Mehr Raum, mehr Zukunft</h3>
+        <p>Durch den Rückbau des Satteldachgeschosses und die Aufstockung in Holzrahmenbauweise wurde zusätzlicher Wohnraum geschaffen. Ein anspruchsvolles Projekt im Bestand – sauber geplant und präzise umgesetzt.</p>
+        <div class="aktuelles-card__footer">
+          <span class="aktuelles-card__fb-hint"><i class="fas fa-arrow-right"></i> Weiterlesen</span>
+        </div>
+      </div>
+    </a>
+    <a class="aktuelles-card aktuelles-card--home" data-aos="fade-up" href="aktuelles/baustart-stuttgart-vaihingen.html">
+      <div class="aktuelles-card__img-wrap">
+        <img src="images/aktuelles/thumbs/3-card.webp" alt="Baustart in Stuttgart-Vaihingen – MFH mit 4 Wohneinheiten" width="720" height="450" loading="eager" decoding="async" fetchpriority="low" />
+      </div>
+      <div class="aktuelles-card__body">
+        <time datetime="2025-11-05"><i class="far fa-calendar-alt"></i> 5. November 2025</time>
+        <h3>Baustart in Stuttgart-Vaihingen – MFH mit 4 Wohneinheiten</h3>
+        <p>Hier entsteht ein neues Mehrfamilienhaus mit 4 Wohneinheiten, schlüsselfertig von HK-BAU. Das alte Gebäude ist Geschichte – jetzt schaffen wir modernen Wohnraum.</p>
+        <div class="aktuelles-card__footer">
+          <span class="aktuelles-card__fb-hint"><i class="fas fa-arrow-right"></i> Weiterlesen</span>
+        </div>
+      </div>
+    </a>
   </div>
   <div class="aktuelles-section__more" data-aos="fade-up">
     <a href="aktuelles.html">Alle Beiträge ansehen <i class="fas fa-arrow-right"></i></a>
@@ -316,7 +356,7 @@
 
     
     <!-- Mobile/Tablet Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:hidden">
+    <div class="mobile-swipe-rail mobile-wir-schaffen-scroll grid grid-cols-1 md:grid-cols-2 gap-6 px-4 lg:hidden">
       <!-- Card 1 -->
       <div class="bg-white dark:bg-neutral-800 p-5 rounded-xl shadow text-center">
         <img src="images/schafen/wohnbau.webp" alt="Wohnungsbau" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy" width="384" height="192">
@@ -459,10 +499,10 @@
     </div>
 
     <!-- Image -->
-    <div data-aos="fade-right" class="flex items-center justify-center mb-12 md:mb-0">
+    <div data-aos="fade-right" class="strategy-image-wrap flex items-center justify-center mb-12 md:mb-0">
       <img src="images/unsere_strategie_2.webp"
            alt="Strategie bei HK Bau"
-           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
+           class="strategy-image rounded-2xl shadow-lg w-full max-w-md md:max-w-none h-auto md:h-full object-cover"
            loading="lazy" width="600" height="400" />
     </div>
 
@@ -519,7 +559,7 @@
   </div>
 
   <!-- Icon Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10 pb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
+  <div class="mobile-swipe-rail mobile-services-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10 pb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-in-out">
 
    <!-- Erdbau -->
 <a href="leistungen.html#erdbau-details" class="service-card-enhanced group p-6 bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(251,187,33,0.6)] hover:-translate-y-1 transition duration-300 transform flex flex-col items-center text-center border border-gray-200 hover:bg-[var(--primary-color)] focus:outline-none focus:ring-4 focus:ring-[var(--primary-color)] focus:ring-opacity-50">
@@ -924,7 +964,7 @@
     Unsere <span class="text-[var(--primary-color)]">Kunden</span>
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="mobile-swipe-rail mobile-customers-scroll grid grid-cols-1 md:grid-cols-3 gap-8">
     
     <!-- Privatkunden -->
     <div class="flex flex-col bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">

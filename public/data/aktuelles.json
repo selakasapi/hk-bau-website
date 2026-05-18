@@ -18,7 +18,8 @@
       "images/aktuelles/2026.02.27-9.webp",
       "images/aktuelles/2026.02.27-10.webp"
     ],
-    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid0TFq42st5eadKSCQsVtTCNfEDajaQJpfQToQjdAC8EjhZpLHXvhxxP2y2DSDgJcUAl&id=100087217129678"
+    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid0TFq42st5eadKSCQsVtTCNfEDajaQJpfQToQjdAC8EjhZpLHXvhxxP2y2DSDgJcUAl&id=100087217129678",
+    "thumb": "images/aktuelles/thumbs/2026.02.27-1-card.webp"
   },
   {
     "id": "aufstockung-holzrahmenbau",
@@ -27,8 +28,11 @@
     "text": "Mehr Raum. Mehr Qualität. Mehr Zukunft.\nDurch den Rückbau des bestehenden Satteldachgeschosses und die Aufstockung eines neuen Geschosses in Holzrahmenbauweise wurde zusätzlicher Wohnraum geschaffen.\n\nUm die neue Konstruktion dauerhaft sicher zu tragen, wurden die Wände im Erd- und Untergeschoss gezielt verstärkt.\n\nIm gleichen Zuge konnten auch die Abdichtungsarbeiten vollständig abgeschlossen werden.\n\nEin anspruchsvolles Projekt im Bestand – sauber geplant und präzise umgesetzt von HK-Bau.",
     "kurz": "Durch den Rückbau des Satteldachgeschosses und die Aufstockung in Holzrahmenbauweise wurde zusätzlicher Wohnraum geschaffen. Ein anspruchsvolles Projekt im Bestand – sauber geplant und präzise umgesetzt.",
     "bild": "images/aktuelles/2.webp",
-    "bilder": ["images/aktuelles/2.webp"],
-    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid0vM9JPdNKBzpn9TvVcJrfdtjwR8Qx6oSBkN1pCqLRcYaobr5BXk8H3KaCsn2jWsN8l&id=100087217129678"
+    "bilder": [
+      "images/aktuelles/2.webp"
+    ],
+    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid0vM9JPdNKBzpn9TvVcJrfdtjwR8Qx6oSBkN1pCqLRcYaobr5BXk8H3KaCsn2jWsN8l&id=100087217129678",
+    "thumb": "images/aktuelles/thumbs/2-card.webp"
   },
   {
     "id": "baustart-stuttgart-vaihingen",
@@ -37,7 +41,10 @@
     "text": "Baustart in Stuttgart-Vaihingen!\nHier entsteht ein neues Mehrfamilienhaus mit 4 Wohneinheiten, schlüsselfertig von HK-BAU.\n\nDas alte Gebäude ist Geschichte – jetzt schaffen wir modernen Wohnraum.\n\nNach dem Abbruch startet der Erdaushub, anschließend beginnt der Rohbau.\n\nWir halten euch über den Fortschritt auf dem Laufenden!",
     "kurz": "Hier entsteht ein neues Mehrfamilienhaus mit 4 Wohneinheiten, schlüsselfertig von HK-BAU. Das alte Gebäude ist Geschichte – jetzt schaffen wir modernen Wohnraum.",
     "bild": "images/aktuelles/3.webp",
-    "bilder": ["images/aktuelles/3.webp"],
-    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid04iN9fJZ9NGMAkg2Cj3bxLVUnag9AzRs5nhBcMjBjZNaR6C5VcbMpomTvb12Du7Avl&id=100087217129678"
+    "bilder": [
+      "images/aktuelles/3.webp"
+    ],
+    "fb": "https://www.facebook.com/permalink.php?story_fbid=pfbid04iN9fJZ9NGMAkg2Cj3bxLVUnag9AzRs5nhBcMjBjZNaR6C5VcbMpomTvb12Du7Avl&id=100087217129678",
+    "thumb": "images/aktuelles/thumbs/3-card.webp"
   }
 ]

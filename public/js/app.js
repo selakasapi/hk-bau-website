@@ -401,6 +401,14 @@ function loadHeroVideo() {
     }
 }
 
+function scheduleHeroVideoLoad() {
+    const video = document.querySelector('[data-hero-media][data-load-after]');
+    if (!video) return;
+
+    const delay = window.matchMedia('(max-width: 767px)').matches ? 2200 : 900;
+    window.setTimeout(loadHeroVideo, delay);
+}
+
 // ========== DOMContentLoaded Bootstrap ============
 document.addEventListener("DOMContentLoaded", () => {
   const navEntry = performance.getEntriesByType('navigation')[0];
@@ -429,7 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupPageTransitions();
   initAnimatedCounters();
   initStaggerReveal();
-  loadHeroVideo();
+  scheduleHeroVideoLoad();
 
   window.addEventListener("hashchange", setActiveLink);
 
@@ -493,4 +501,3 @@ function initStaggerReveal() {
 
   lists.forEach(list => observer.observe(list));
 }
-
