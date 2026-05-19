@@ -25,6 +25,14 @@
     return escapeHTML(str);
   }
 
+  /* Derive the small strip-thumbnail path: foo.webp -> foo-thumb.webp.
+     The dynamic renderer can't check disk existence, so it always assumes
+     the -thumb file exists. (For posts built before scripts/build-aktuelles-thumbs.js
+     ran, the browser would 404 on the thumb. In practice the script has been run.) */
+  function toThumbPath(imagePath) {
+    return imagePath.replace(/(\.[^.\/]+)$/, '-thumb.webp');
+  }
+
   function formatDate(iso) {
     var d = new Date(iso + 'T00:00:00');
     var months = [
@@ -166,7 +174,8 @@
 
       for (var i = 0; i < images.length; i++) {
         galleryHTML +=
-          '<img src="../' + escapeAttr(images[i]) + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" width="76" height="56" data-index="' + i + '" loading="lazy" />';
+          /* Use small strip thumb if it exists, fall back to full image. */
+          '<img src="../' + escapeAttr(toThumbPath(images[i])) + '" alt="Bild ' + (i + 1) + '" class="post-gallery__thumb' + (i === 0 ? ' active' : '') + '" width="76" height="56" data-index="' + i + '" data-full="../' + escapeAttr(images[i]) + '" loading="lazy" />';
       }
 
       galleryHTML += '</div></div>';

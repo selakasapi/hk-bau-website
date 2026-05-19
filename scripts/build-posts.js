@@ -49,6 +49,17 @@ function formatDate(iso) {
   return d.getDate() + '. ' + months[d.getMonth()] + ' ' + d.getFullYear();
 }
 
+/* Derive the small strip-thumbnail path from a full image path.
+   e.g. images/aktuelles/2026.02.27-1.webp -> images/aktuelles/2026.02.27-1-thumb.webp
+   Falls back to the full image if the -thumb file doesn't exist on disk. */
+function toThumb(imagePath) {
+  const fullDiskPath = path.join(ROOT, imagePath);
+  const ext = path.extname(imagePath);
+  const thumbPath = imagePath.slice(0, -ext.length) + '-thumb.webp';
+  const thumbDiskPath = path.join(ROOT, thumbPath);
+  return fs.existsSync(thumbDiskPath) ? thumbPath : imagePath;
+}
+
 function buildGalleryHTML(post) {
   const titleAttr = escapeHTML(post.titel);
   const images = post.bilder || [post.bild];
@@ -61,7 +72,10 @@ function buildGalleryHTML(post) {
 
   let thumbs = '';
   for (let i = 0; i < images.length; i++) {
-    thumbs += `          <img src="../${escapeHTML(images[i])}" alt="Bild ${i + 1}" class="post-gallery__thumb${i === 0 ? ' active' : ''}" width="76" height="56" data-index="${i}" loading="lazy" />\n`;
+    /* Use the small thumb variant — was downloading the full 200-450 KB image
+       just to display a 76x56 strip thumbnail */
+    const thumbSrc = toThumb(images[i]);
+    thumbs += `          <img src="../${escapeHTML(thumbSrc)}" alt="Bild ${i + 1}" class="post-gallery__thumb${i === 0 ? ' active' : ''}" width="76" height="56" data-index="${i}" data-full="../${escapeHTML(images[i])}" loading="lazy" />\n`;
   }
 
   return `      <div class="post-gallery">

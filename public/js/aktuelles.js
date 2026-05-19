@@ -77,9 +77,12 @@
     var imgCount = (post.bilder && post.bilder.length > 1) ? post.bilder.length : 0;
     var imgBadge = imgCount ? '<span class="aktuelles-featured__img-count"><i class="fas fa-camera"></i> ' + imgCount + ' Bilder</span>' : '';
 
+    /* Prefer the small card thumb (~50-80 KB) over the full-res image
+       (200-450 KB). Featured card displays ~600x400 so the 720x450 thumb is plenty. */
+    var featuredImage = post.thumb || post.bild;
     wrapper.innerHTML =
       '<div class="aktuelles-featured__img">' +
-        '<img src="' + escapeHTML(post.bild) + '" alt="' + escapeHTML(post.titel) + '" width="800" height="600" loading="eager" fetchpriority="high" />' +
+        '<img src="' + escapeHTML(featuredImage) + '" alt="' + escapeHTML(post.titel) + '" width="800" height="600" loading="eager" fetchpriority="high" />' +
         '<div class="aktuelles-featured__overlay"></div>' +
         '<div class="aktuelles-featured__label"><i class="fas fa-star"></i> Neuester Beitrag</div>' +
         imgBadge +

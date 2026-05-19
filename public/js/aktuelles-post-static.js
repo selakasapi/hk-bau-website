@@ -11,11 +11,14 @@
 (function () {
   'use strict';
 
-  /* Gather gallery state from the DOM (built by scripts/build-posts.js) */
+  /* Gather gallery state from the DOM (built by scripts/build-posts.js).
+     Prefer data-full (the full-res image) over t.src (which is now the small
+     200x140 strip thumb — we don't want to display the tiny thumb as the
+     main image when the user clicks it). */
   var thumbs = document.querySelectorAll('.post-gallery__thumb');
   var galleryImages = [];
   if (thumbs.length > 1) {
-    thumbs.forEach(function (t) { galleryImages.push(t.src); });
+    thumbs.forEach(function (t) { galleryImages.push(t.getAttribute('data-full') || t.src); });
   }
   var galleryIndex = 0;
 
