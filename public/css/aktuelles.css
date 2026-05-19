@@ -1013,6 +1013,26 @@
   .post-back { padding: 5rem 1rem 0; }
   .post-article { padding: 1rem 1rem 2rem; }
   .post-header h1 { font-size: 1.5rem; }
+
+  /* Mobile post hero — was eating entire viewport with 2.2rem title.
+     Tighten padding, shrink title, tighten the date/back button. */
+  .post-page-hero {
+    padding: 5rem 1.1rem 1.5rem;
+  }
+  .post-page-hero__title {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+  .post-page-hero__date {
+    font-size: .76rem;
+    margin-bottom: .45rem;
+  }
+  .post-page-hero__back a {
+    font-size: .78rem;
+    padding: .35rem .75rem;
+    margin-bottom: .9rem;
+  }
+
   .post-gallery__main img { max-height: 350px; }
   .post-gallery__nav {
     width: 2.55rem;
@@ -1022,6 +1042,12 @@
   .post-gallery__nav--next { right: .45rem; }
   .post-gallery__thumb { width: 56px; height: 42px; }
   .post-body { padding: 1.5rem 1.2rem; font-size: 1rem; }
+}
+
+/* Small phones — German post titles can be long, shrink one more step */
+@media (max-width: 480px) {
+  .post-page-hero { padding: 4.75rem 1rem 1.25rem; }
+  .post-page-hero__title { font-size: 1.35rem; }
 
   .post-nav { grid-template-columns: 1fr; }
   .post-nav__link--next { text-align: left; flex-direction: row; justify-self: start; }
