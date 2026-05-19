@@ -18,9 +18,37 @@ function deriveCounts(total) {
 
 let imageDimensions = {};
 
+/* Map gallery folder to a descriptive German service label.
+   Used by getAltText() to generate alts like "Stahlbetonbau-Projekt von HK Bau – Foto 7"
+   instead of the bare "stahlbetonbau 7" — better for image search + screen readers. */
+const FOLDER_LABELS = {
+  'abbruch-referenzen':       'Abbruch- und Rückbau-Projekt',
+  'erdbau-referenzen':        'Erdbau-Projekt',
+  'freianlagen-referenzen':   'Freianlagen- und Außenanlagen-Projekt',
+  'holzbau-referenzen':       'Holzbau-Projekt',
+  'kanalbau-referenzen':      'Kanalbau-Projekt',
+  'mauerwerksbau-referenzen': 'Mauerwerksbau-Projekt',
+  'stahlbetonbau-referenzen': 'Stahlbetonbau-Projekt'
+};
+
 function getAltText(folder, file) {
-  const alt = imageDimensions?.[folder]?.[file]?.alt;
-  if (alt) return alt;
+  /* Per-image override from image-dimensions.json wins if present */
+  const explicitAlt = imageDimensions?.[folder]?.[file]?.alt;
+  if (explicitAlt) return explicitAlt;
+
+  /* Extract trailing photo number, e.g. "1.stahlbetonbau_7.jpg" -> 7 */
+  const numMatch = file.match(/_(\d+)\.[^.]+$/);
+  const photoNum = numMatch ? numMatch[1] : null;
+
+  /* Use the mapped label when available — fall back to the legacy filename-derived alt */
+  const label = FOLDER_LABELS[folder];
+  if (label) {
+    return photoNum
+      ? `${label} von HK Bau – Foto ${photoNum}`
+      : `${label} von HK Bau`;
+  }
+
+  /* Fallback: original behavior (strip leading "1.", drop ext, _ -> space) */
   const base = file.replace(/\.[^.]+$/, '').replace(/^\d+\./, '');
   return base.replace(/_/g, ' ');
 }
