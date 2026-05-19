@@ -60,18 +60,29 @@ function processFile(htmlPath) {
   let content = fs.readFileSync(htmlPath, 'utf8');
   const original = content;
 
-  // Match img/source/link with src/href/srcset attributes containing jpg URLs.
-  // Capture: opening tag prefix, attribute name, quote, url, quote, rest.
-  // Conservative — one attribute at a time.
-  const attrRegex = /(<(?:img|source|link)\b[^>]*?\b(?:src|href|srcset)\s*=\s*)(["'])([^"']+?\.jpe?g)(\2)/gi;
+  // Two-pass: find every img/source/link tag, then swap ALL jpg-bearing attrs within it.
+  // Handles multiple jpg attrs on one tag (e.g. <img src="a.jpg" srcset="b.jpg, c.jpg 2x">)
+  // and comma-separated srcset URLs (each URL with optional descriptor like "1x"/"720w").
+  const tagRegex = /<(?:img|source|link)\b[^>]*?>/gi;
+  const attrRegex = /(\b(?:src|href|srcset)\s*=\s*)(["'])([^"']+?)(\2)/gi;
 
-  content = content.replace(attrRegex, (match, prefix, q1, url, q2) => {
-    // Skip og:image / twitter:image meta tags — those are <meta> not img/source/link, so already excluded by regex.
-    // Also skip <link rel="preload" ...> for the OG image specifically — covered by og-preview.jpg living outside any folder.
-    const swapped = resolveWebpSibling(dir, url);
-    if (!swapped) { stats.skipped++; return match; }
-    stats.swapsApplied++;
-    return prefix + q1 + swapped + q2;
+  content = content.replace(tagRegex, (tag) => {
+    return tag.replace(attrRegex, (attrMatch, prefix, q1, value, q2) => {
+      // Fast skip: if value has no jpg/jpeg, leave the attribute byte-for-byte
+      if (!/\.jpe?g/i.test(value)) return attrMatch;
+
+      // srcset can hold multiple comma-separated URLs each with an optional descriptor
+      const parts = value.split(',').map(s => s.trim());
+      const newParts = parts.map(part => {
+        const m = part.match(/^(\S+?\.jpe?g)(\s.+)?$/i);
+        if (!m) return part;
+        const swapped = resolveWebpSibling(dir, m[1]);
+        if (!swapped) { stats.skipped++; return part; }
+        stats.swapsApplied++;
+        return swapped + (m[2] || '');
+      });
+      return prefix + q1 + newParts.join(', ') + q2;
+    });
   });
 
   if (content !== original) {
