@@ -8,7 +8,8 @@
     "watch:css": "tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.min.css --watch",
     "build:posts": "node scripts/build-posts.js",
     "build:webp": "node scripts/convert-webp.js",
-    "swap:webp": "node scripts/swap-jpg-to-webp.js"
+    "swap:webp": "node scripts/swap-jpg-to-webp.js",
+    "audit:sitemap": "node scripts/audit-sitemap.js"
   },
   "devDependencies": {
     "sharp": "^0.34.5",
