@@ -313,9 +313,15 @@ function initReferenzenCarousel() {
     let isDragging = false;
     let dragStartX = 0;
     let scrollStart = 0;
+    /* True once the pointer has moved far enough to count as a scroll-drag
+       rather than a tap. Used to suppress the click that would otherwise
+       open the lightbox at the end of a drag. */
+    var dragMoved = false;
+    var DRAG_THRESHOLD = 6;
 
     carousel.addEventListener('mousedown', (e) => {
         isDragging = true;
+        dragMoved = false;
         dragStartX = e.pageX;
         scrollStart = carousel.scrollLeft;
         pauseAutoScroll();
@@ -325,6 +331,7 @@ function initReferenzenCarousel() {
 
     document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
+        if (Math.abs(e.pageX - dragStartX) > DRAG_THRESHOLD) dragMoved = true;
         carousel.scrollLeft = scrollStart - (e.pageX - dragStartX);
     });
 
@@ -335,9 +342,28 @@ function initReferenzenCarousel() {
         resumeAutoScrollAfterDelay();
     });
 
-    // Touch
-    carousel.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+    // Touch — native scroll handles movement; we only track distance so a
+    // swipe doesn't end up opening the lightbox.
+    var touchStartX = 0;
+    carousel.addEventListener('touchstart', (e) => {
+        dragMoved = false;
+        touchStartX = e.touches[0].clientX;
+        pauseAutoScroll();
+    }, { passive: true });
+    carousel.addEventListener('touchmove', (e) => {
+        if (Math.abs(e.touches[0].clientX - touchStartX) > DRAG_THRESHOLD) dragMoved = true;
+    }, { passive: true });
     carousel.addEventListener('touchend', resumeAutoScrollAfterDelay, { passive: true });
+
+    // Suppress the click that follows a drag/swipe (capture phase, before
+    // GLightbox's own click handler on the .glightbox link runs).
+    carousel.addEventListener('click', (e) => {
+        if (dragMoved) {
+            e.preventDefault();
+            e.stopPropagation();
+            dragMoved = false;
+        }
+    }, true);
 
     // Mouse wheel horizontal scroll
     carousel.addEventListener('wheel', (e) => {
