@@ -7,9 +7,6 @@
 
 <!-- Performance: Preload Critical Resources -->
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-<link rel="preconnect" href="https://unpkg.com" />
-<link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preload" href="css/style.css?v=5" as="style" />
 <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="images/icon/logo.png" as="image" />
@@ -251,9 +248,9 @@
 
     <title>Karriere bei HK Bau – Jobs im Bauunternehmen | Stuttgart</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/tailwind.min.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="lib/aos/aos.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/style.css?v=5" />
 
     <!-- Cookie Consent -->
@@ -296,8 +293,8 @@
 
 
   <!-- Cookie Consent and opt-in analytics -->
-  <script defer src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print" onload="this.media='all'" />
+  <script src="lib/cookieconsent/cookieconsent.min.js" defer></script>
+  <link rel="stylesheet" href="lib/cookieconsent/cookieconsent.min.css" media="print" onload="this.media='all'" />
   <script src="js/analytics-consent.js" defer></script>
 </head>
 
@@ -478,6 +475,14 @@
             </div>
           </div>
           <input type="hidden" name="_subject" value="Neue Bewerbung über Karriereformular">
+          <!-- Honeypot spam trap: must stay empty. Bots fill it; Formspree silently drops those. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+          <div class="form-consent flex items-start gap-3 text-left mb-2">
+            <input type="checkbox" id="privacyConsent" name="privacyConsent" required class="mt-1 shrink-0 w-4 h-4 accent-[var(--primary-color)]" />
+            <label for="privacyConsent" class="text-sm text-gray-600">
+              Ich habe die <a href="datenschutzerklaerung.html" target="_blank" rel="noopener" class="underline text-[var(--primary-color)] hover:text-[var(--secondary-color)]">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Bewerbung zu. *
+            </label>
+          </div>
           <button type="submit"
                 class="w-full bg-[var(--primary-color)] text-[var(--secondary-color)] font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[var(--primary-hover)] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
                 <i class="fas fa-paper-plane"></i>
@@ -586,7 +591,7 @@
         </svg>
     </button>
 
-    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="lib/aos/aos.js" defer></script>
     <script src="js/app.js" defer></script>
     
 </body>
