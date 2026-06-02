@@ -48,7 +48,9 @@
   }
 
   function updateSEO(post) {
-    var url = SITE_ORIGIN + '/aktuelles/post.html?id=' + encodeURIComponent(post.id);
+    /* Canonical points at the pre-rendered static page (the preferred URL),
+       not this dynamic fallback. */
+    var url = SITE_ORIGIN + '/aktuelles/' + encodeURIComponent(post.id) + '.html';
     var title = post.titel + ' – HK Bau';
     var desc = post.kurz || (post.text || '').substring(0, 160);
     var img = SITE_ORIGIN + '/' + (post.bild || 'images/og-preview.jpg');
@@ -202,94 +204,13 @@
         '</div>' : '') +
       buildPostNav(allPosts, post.id);
 
-    /* Gallery state */
-    if (images.length > 1) {
-      galleryImages = images.map(function (img) { return '../' + img; });
-      galleryIndex = 0;
-    }
-
-    /* Wire up event handlers (CSP-friendly — no inline onclick) */
-    wireUpHandlers(el);
+    /* Wire up shared gallery interactivity (gallery-core.js reads the
+       full-res URLs from each thumb's data-full attribute). */
+    if (window.HKGallery) window.HKGallery.init();
 
     /* Trigger AOS */
     if (typeof AOS !== 'undefined') AOS.refresh();
   }
-
-  /* Single delegated click handler on post-content covers share, gallery nav, thumbs */
-  function wireUpHandlers(root) {
-    root.addEventListener('click', function (e) {
-
-      /* Gallery prev/next */
-      var navBtn = e.target.closest('[data-gallery-dir]');
-      if (navBtn) {
-        e.preventDefault();
-        e.stopPropagation();
-        galleryNav(parseInt(navBtn.getAttribute('data-gallery-dir'), 10));
-        return;
-      }
-
-      /* Gallery thumb */
-      var thumb = e.target.closest('.post-gallery__thumb');
-      if (thumb) {
-        e.preventDefault();
-        e.stopPropagation();
-        galleryGo(parseInt(thumb.getAttribute('data-index'), 10));
-        return;
-      }
-    });
-  }
-
-  /* Gallery state (module-local — no longer on window) */
-  var galleryImages = null;
-  var galleryIndex = 0;
-
-  function resetHorizontalScroll() {
-    document.documentElement.scrollLeft = 0;
-    document.body.scrollLeft = 0;
-  }
-
-  function galleryNav(dir) {
-    if (!galleryImages) return;
-    var idx = galleryIndex + dir;
-    if (idx < 0) idx = galleryImages.length - 1;
-    if (idx >= galleryImages.length) idx = 0;
-    galleryGo(idx);
-  }
-
-  function galleryGo(idx) {
-    if (!galleryImages) return;
-    galleryIndex = idx;
-
-    var main = document.getElementById('gallery-main');
-    var counter = document.getElementById('gallery-counter');
-    var thumbs = document.querySelectorAll('.post-gallery__thumb');
-
-    if (main) main.src = galleryImages[idx];
-    if (counter) counter.textContent = (idx + 1) + ' / ' + galleryImages.length;
-    thumbs.forEach(function (t, i) {
-      t.classList.toggle('active', i === idx);
-    });
-
-    /* Scroll active thumb into view */
-    if (thumbs[idx]) {
-      var scroller = thumbs[idx].parentElement;
-      if (scroller && typeof scroller.scrollTo === 'function') {
-        scroller.scrollTo({
-          left: thumbs[idx].offsetLeft - (scroller.clientWidth / 2) + (thumbs[idx].clientWidth / 2),
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    resetHorizontalScroll();
-  }
-
-  /* Keyboard navigation */
-  document.addEventListener('keydown', function (e) {
-    if (!galleryImages) return;
-    if (e.key === 'ArrowLeft') galleryNav(-1);
-    if (e.key === 'ArrowRight') galleryNav(1);
-  });
 
   function showError(msg) {
     var el = document.getElementById('post-content');
@@ -323,7 +244,12 @@
         } catch (e) {
           showError('Fehler beim Laden des Beitrags.');
         }
+      } else {
+        showError('Fehler beim Laden des Beitrags.');
       }
+    };
+    xhr.onerror = function () {
+      showError('Beitrag konnte nicht geladen werden. Bitte später erneut versuchen.');
     };
     xhr.send();
   }

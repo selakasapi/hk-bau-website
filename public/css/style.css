@@ -1268,9 +1268,9 @@ footer a:hover {
     }
 }
 
-body, html {
-    overflow-x: hidden;
-}
+/* NOTE: the global horizontal-overflow guard lives once on html (L~74) and
+   body (L~233). The homepage Referenzen carousel is correctly clipped by its
+   own `overflow-x: auto` container, so no extra page-level guards are needed. */
 
 .parallax {
     background-attachment: fixed;
@@ -1284,16 +1284,11 @@ body, html {
         background-attachment: scroll !important;
         background-position: center !important;
         background-size: cover !important;
-        overflow-x: hidden !important;
     }
 
     .zoom-parallax {
         transform: none !important;
         animation: none !important;
-    }
-
-    html, body {
-        overflow-x: hidden !important;
     }
 }
 

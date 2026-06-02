@@ -17,8 +17,9 @@
  *   - Body text baked in (paragraphs)
  *   - Post nav baked in
  *
- * aktuelles-post.js is replaced with a smaller `aktuelles-post-static.js`
- * that only handles gallery interactivity (click handlers + keyboard nav).
+ * The dynamic renderer (aktuelles-post.js) is dropped from static pages;
+ * they keep gallery-core.js, which auto-inits the gallery interactivity
+ * (click handlers + keyboard nav) from the baked-in DOM.
  *
  * Run: node scripts/build-posts.js
  */
@@ -200,7 +201,9 @@ ${buildPostNavHTML(allPosts, post.id)}
   html = html.replace(/<article class="post-article" id="post-content">[\s\S]*?<\/article>/, articleContent);
 
   /* Swap the dynamic renderer for the static interactivity-only script */
-  html = html.replace(/<script src="\.\.\/js\/aktuelles-post\.js[^"]*" defer><\/script>/, `<script src="../js/aktuelles-post-static.js?v=1" defer></script>`);
+  /* Static pages don't need the dynamic XHR renderer — content is baked in.
+     They keep gallery-core.js (auto-inits the gallery) and drop aktuelles-post.js. */
+  html = html.replace(/\s*<script src="\.\.\/js\/aktuelles-post\.js[^"]*" defer><\/script>/, '');
 
   return html;
 }
@@ -219,4 +222,4 @@ for (const post of data) {
 }
 
 console.log(`\nDone. ${data.length} files written.`);
-console.log(`Next: ensure public/js/aktuelles-post-static.js exists (interactivity only).`);
+console.log(`Static pages load gallery-core.js (auto-init) only — no dynamic renderer.`);
