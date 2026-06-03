@@ -794,7 +794,15 @@
   overflow-x: auto;
   overscroll-behavior-x: contain;
   padding: .25rem 0;
-  scrollbar-width: thin;
+  /* Hide the native scrollbar (Chromium on Windows rendered it as a chunky
+     stepper-arrow bar). Strip stays scrollable via thumb clicks, the main
+     image ‹ › arrows, drag/swipe, trackpad, and active-thumb auto-centering. */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* old Edge/IE */
+}
+
+.post-gallery__thumbs::-webkit-scrollbar {
+  display: none;                  /* Chrome / Safari / Chromium */
 }
 
 .post-gallery__thumb {
