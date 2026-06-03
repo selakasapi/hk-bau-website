@@ -58,6 +58,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.hk-bau.com/aktuelles/mfh-boeblingen.html</loc>
+    <lastmod>2025-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.hk-bau.com/aktuelles/seniorenwohnen-oberderdingen.html</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.hk-bau.com/aktuelles/pflasterbau.html</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.hk-bau.com/impressum.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>yearly</changefreq>
