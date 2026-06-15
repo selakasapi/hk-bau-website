@@ -51,8 +51,10 @@
     /* Canonical points at the pre-rendered static page (the preferred URL),
        not this dynamic fallback. */
     var url = SITE_ORIGIN + '/aktuelles/' + encodeURIComponent(post.id) + '.html';
-    var title = post.titel + ' – HK Bau';
-    var desc = post.kurz || (post.text || '').substring(0, 160);
+    var title = post.titel;
+    var descRaw = post.kurz || post.text || '';
+    var desc = descRaw.length <= 157 ? descRaw
+      : descRaw.slice(0, 154).replace(/\s+\S*$/, '').replace(/[\s.,;:–-]+$/, '') + '…';
     var img = SITE_ORIGIN + '/' + (post.bild || 'images/og-preview.jpg');
 
     document.title = title;

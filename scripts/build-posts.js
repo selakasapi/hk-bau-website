@@ -43,6 +43,16 @@ function escapeHTML(s) {
     .replace(/'/g, '&#39;');
 }
 
+/* Trim a string to a clean ~155-char meta description (word boundary + ellipsis)
+   so it doesn't get cut off mid-word in search results. */
+function metaDesc(s) {
+  s = (s || '').trim();
+  if (s.length <= 157) return s;
+  let cut = s.slice(0, 154);
+  cut = cut.slice(0, cut.lastIndexOf(' '));
+  return cut.replace(/[\s.,;:–-]+$/, '') + '…';
+}
+
 function formatDate(iso) {
   const months = ['Januar','Februar','März','April','Mai','Juni',
                   'Juli','August','September','Oktober','November','Dezember'];
@@ -146,8 +156,10 @@ function buildPostNavHTML(posts, currentId) {
 
 function buildPostPage(post, allPosts, template) {
   const url = `${SITE_ORIGIN}/aktuelles/${post.id}.html`;
-  const title = `${post.titel} – HK Bau`;
-  const desc = post.kurz || (post.text || '').substring(0, 160);
+  // Brand lives in og:site_name; keep the <title>/og:title as just the headline
+  // so it doesn't truncate in SERPs.
+  const title = post.titel;
+  const desc = metaDesc(post.kurz || post.text);
   const img = `${SITE_ORIGIN}/${post.bild || 'images/og-preview.jpg'}`;
   const formattedDate = formatDate(post.datum);
 
