@@ -2355,6 +2355,24 @@ img[src*="placeholder"] {
   text-underline-offset: 3px;
 }
 
+/* Cookie-settings re-open control — a <button> styled to match the legal links */
+.footer-legal-cookie {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-legal-cookie:hover {
+  color: var(--primary-color);
+}
+
 @media (max-width: 980px) {
   .premium-footer__main {
     grid-template-columns: 1fr 1fr;

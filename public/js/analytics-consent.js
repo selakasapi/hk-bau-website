@@ -125,5 +125,26 @@
     });
   }
 
+  /* Re-open the consent banner so visitors can withdraw or change consent
+     as easily as they gave it (DSGVO Art. 7(3)). Triggered by any
+     [data-cookie-settings] control in the footer. */
+  function reopenConsentBanner() {
+    expireCookie(CONSENT_COOKIE);
+    document.querySelectorAll(".cc-window").forEach(function (el) {
+      el.remove();
+    });
+    if (window.cookieconsent && window.cookieconsent.hasInitialised) {
+      window.cookieconsent.hasInitialised = false;
+    }
+    initialiseBanner();
+  }
+
+  document.addEventListener("click", function (e) {
+    var trigger = e.target.closest("[data-cookie-settings]");
+    if (!trigger) return;
+    e.preventDefault();
+    reopenConsentBanner();
+  });
+
   window.addEventListener("load", initialiseBanner);
 })();
