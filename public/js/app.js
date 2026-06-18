@@ -149,10 +149,17 @@ function initCarouselLightbox() {
             lightbox.setAttribute('role', 'dialog');
             lightbox.setAttribute('aria-modal', 'true');
             lightbox.setAttribute('aria-label', 'Bildvorschau');
-            lightbox.innerHTML = `
-                <img src="${this.src}" alt="${this.alt}" />
-                <button class="lightbox-close" aria-label="Schließen">&times;</button>
-            `;
+
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+
+            const closeBtnEl = document.createElement('button');
+            closeBtnEl.className = 'lightbox-close';
+            closeBtnEl.setAttribute('aria-label', 'Schließen');
+            closeBtnEl.innerHTML = '&times;';
+
+            lightbox.append(lightboxImg, closeBtnEl);
             document.body.appendChild(lightbox);
             document.body.style.overflow = 'hidden';
 
