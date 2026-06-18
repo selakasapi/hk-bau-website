@@ -7,7 +7,7 @@
 
 <!-- Performance: Preload Critical Resources -->
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preload" href="css/style.css?v=5" as="style" />
+<link rel="preload" href="css/style.css?v=7" as="style" />
 <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="images/icon/logo.png" as="image" />
 <link rel="preload" href="images/hero-kontakt.webp" as="image" fetchpriority="high" />
@@ -205,7 +205,7 @@
 <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="css/tailwind.min.css">
     <link rel="stylesheet" href="lib/aos/aos.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="css/style.css?v=5" />
+    <link rel="stylesheet" href="css/style.css?v=7" />
 <style>
 .page-kontakt-polish .contact-lab { background: #f5f7f8; color: #1f2b35; padding: 0 1.25rem 5.5rem; }
 .page-kontakt-polish .contact-intro-v2 { max-width: 1180px; margin: 0 auto; padding: 5rem 0 1.6rem; display: grid; grid-template-columns: minmax(0,1fr) 360px; gap: 2rem; align-items: end; }
@@ -368,7 +368,7 @@
             <!-- Honeypot spam trap: must stay empty. Bots fill it; Formspree silently drops those. -->
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
             <div class="form-consent flex items-start gap-3 text-left">
-              <input type="checkbox" id="privacyConsent" name="privacyConsent" required class="mt-1 shrink-0 w-4 h-4 accent-[var(--primary-color)]" />
+              <input type="checkbox" id="privacyConsent" name="privacyConsent" required class="form-consent__check shrink-0" />
               <label for="privacyConsent" class="text-sm text-gray-600">
                 Ich habe die <a href="datenschutzerklaerung.html" target="_blank" rel="noopener" class="underline text-[var(--primary-color)] hover:text-[var(--secondary-color)]">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *
               </label>

@@ -3847,3 +3847,56 @@ img[src*="placeholder"] {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Form consent checkbox (kontakt + karriere) =====
+   Custom-styled to match the brand instead of the plain OS checkbox:
+   larger, rounded, gold when checked with a dark check, aligned to the
+   first line of the label. */
+.form-consent {
+  align-items: flex-start;
+}
+
+/* Scoped via #contactForm #privacyConsent (both forms share these IDs) so it
+   outranks `.page-kontakt-polish #contactForm input` which sets radius/bg with
+   !important. !important kept on conflicting props to win the cascade. */
+#contactForm #privacyConsent.form-consent__check {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  min-width: 1.25rem !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0.15rem 0 0 0 !important;   /* nudge to align with first text line */
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 0.3rem !important;
+  background-color: #fff !important;
+  background-image: none !important;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+#contactForm #privacyConsent.form-consent__check:hover {
+  border-color: var(--primary-color) !important;
+}
+
+#contactForm #privacyConsent.form-consent__check:checked {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  /* dark checkmark (secondary color) for contrast on the gold fill */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13 4.5L6.2 11.5L3 8.3' stroke='%233B454E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-size: 0.95rem !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+#contactForm #privacyConsent.form-consent__check:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 187, 33, 0.35) !important;
+}
+
+.form-consent label {
+  cursor: pointer;
+  line-height: 1.5;
+}
