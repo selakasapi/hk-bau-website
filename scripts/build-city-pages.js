@@ -34,16 +34,16 @@ function page(c) {
   const areaJson = JSON.stringify([c.name, ...c.neighborsText]);
   const faq = [
     {
+      q: `Bietet HK Bau alle Bauleistungen aus einer Hand?`,
+      a: `Ja. HK Bau übernimmt das komplette Bauspektrum – Rohbau, Hochbau, Tiefbau, Stahlbetonbau, Mauerwerksbau und schlüsselfertiges Bauen. Besonders im Hochbau und Rohbau begleiten wir Projekte in ${c.name} von der Gründung bis zum fertigen Bauwerk – alles aus einer Hand.`,
+    },
+    {
       q: `Arbeitet HK Bau direkt in ${c.name}?`,
       a: `HK Bau prüft Projekte in ${c.name} und Umgebung je nach Umfang, Bauphase und Terminplanung. Gerade größere Rohbau-, Tiefbau- und Hochbauprojekte können im erweiterten Radius sinnvoll sein.`,
     },
     {
       q: `Welche Orte rund um ${c.name} sind relevant?`,
       a: `Zum Umfeld gehören unter anderem ${c.neighborsText.join(", ")}. Weitere Orte im Radius können je nach Projekt angefragt werden.`,
-    },
-    {
-      q: `Wie läuft eine Anfrage ab?`,
-      a: `Senden Sie uns Standort, Leistungsbereich, groben Zeitrahmen und vorhandene Pläne oder Fotos. Danach prüfen wir, ob Umfang und Terminplanung zu unseren Kapazitäten passen.`,
     },
   ];
   const faqJson = JSON.stringify({

@@ -7,6 +7,9 @@ const fs = require("fs");
 const path = require("path");
 const OUT = path.join(__dirname, "..", "public", "einsatzgebiet");
 
+const FULLSERVICE_Q = "Bietet HK Bau alle Bauleistungen aus einer Hand?";
+const FULLSERVICE_A = "Ja. HK Bau übernimmt das komplette Bauspektrum – Rohbau, Hochbau, Tiefbau, Stahlbetonbau, Mauerwerksbau und schlüsselfertiges Bauen. Besonders im Hochbau und Rohbau begleiten wir Projekte von der Gründung bis zum fertigen Bauwerk – alles aus einer Hand.";
+
 const SERVICES = {
   rohbau: {
     label: "Rohbau",
@@ -112,7 +115,7 @@ function page(svcKey, cityKey) {
   const url = `https://www.hk-bau.com/einsatzgebiet/${slug}.html`;
   const title = `${s.label} ${city} | HK Bau GmbH`;
   const areaServed = JSON.stringify([city, ...c.region]);
-  const faq = s.faq(city);
+  const faq = [[FULLSERVICE_Q, FULLSERVICE_A], ...s.faq(city).filter((f) => f[0] !== FULLSERVICE_Q)].slice(0, 3);
   const serviceJson = `{"@context":"https://schema.org","@type":"Service","name":"${s.label} ${city}","serviceType":${JSON.stringify(s.serviceType)},"areaServed":${areaServed},"provider":{"@type":"LocalBusiness","name":"HK Bau GmbH","legalName":"H+K Bauunternehmung GmbH","url":"https://www.hk-bau.com","telephone":"+49 7159 4591823","email":"info@hk-bau.net","image":"https://www.hk-bau.com/images/og-preview.jpg","logo":"https://www.hk-bau.com/images/icon/logo.png","address":{"@type":"PostalAddress","streetAddress":"Esslinger Str. 91","postalCode":"70734","addressLocality":"Fellbach","addressCountry":"DE"}}}`;
   const breadcrumbJson = `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://www.hk-bau.com/"},{"@type":"ListItem","position":2,"name":"Einsatzgebiet","item":"https://www.hk-bau.com/einsatzgebiet/bauunternehmen-region-stuttgart.html"},{"@type":"ListItem","position":3,"name":"${s.label} ${city}"}]}`;
   const faqJson = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f[0], acceptedAnswer: { "@type": "Answer", text: f[1] } })) });
