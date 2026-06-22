@@ -25,7 +25,7 @@ const SERVICES = {
     serviceType: ["Rohbau", "Stahlbetonbau", "Mauerwerksbau", "Hochbau"],
     faq: (c) => [
       [`Übernimmt HK Bau Rohbauarbeiten in ${c}?`, `Ja. HK Bau führt Rohbau-, Stahlbeton- und Mauerwerksarbeiten in ${c} und Umgebung aus – je nach Umfang, Bauphase und Terminplanung.`],
-      [`Welche Rohbau-Leistungen sind möglich?`, `Dazu zählen Fundamente, Bodenplatten, Stahlbetonbau, Mauerwerksbau, tragende Bauteile sowie koordinierte Rohbauphasen.`],
+      [`Bietet HK Bau alle Bauleistungen aus einer Hand?`, `Ja. HK Bau übernimmt das komplette Bauspektrum – Rohbau, Hochbau, Tiefbau, Stahlbetonbau, Mauerwerksbau und schlüsselfertiges Bauen. Besonders im Hochbau und Rohbau begleiten wir Projekte von der Gründung bis zum fertigen Bauwerk – alles aus einer Hand.`],
       [`Wie frage ich ein Rohbauprojekt an?`, `Senden Sie uns Standort, Leistungsumfang und groben Zeitrahmen. Danach prüfen wir, ob Umfang und Termin zu unseren Kapazitäten passen.`],
     ],
   },
@@ -46,7 +46,7 @@ const SERVICES = {
     serviceType: ["Tiefbau", "Erdbau", "Kanalbau"],
     faq: (c) => [
       [`Macht HK Bau Tiefbau in ${c}?`, `Ja. HK Bau übernimmt Erdarbeiten, Baugruben und Kanalbau in ${c} und Umgebung – abhängig von Umfang, Bauphase und Termin.`],
-      [`Welche Tiefbau-Leistungen sind möglich?`, `Dazu zählen Aushub, Erdarbeiten, Baugruben, Kanal- und Leitungsbau sowie die Vorbereitung tragfähiger Baugrundlagen.`],
+      [`Bietet HK Bau alle Bauleistungen aus einer Hand?`, `Ja. HK Bau übernimmt das komplette Bauspektrum – Rohbau, Hochbau, Tiefbau, Stahlbetonbau, Mauerwerksbau und schlüsselfertiges Bauen. Besonders im Hochbau und Rohbau begleiten wir Projekte von der Gründung bis zum fertigen Bauwerk – alles aus einer Hand.`],
       [`Wie frage ich ein Tiefbauprojekt an?`, `Senden Sie uns Standort, Leistungsumfang und groben Zeitrahmen. Danach prüfen wir, ob Umfang und Termin zu unseren Kapazitäten passen.`],
     ],
   },
@@ -67,7 +67,7 @@ const SERVICES = {
     serviceType: ["Hochbau", "Mauerwerksbau", "Stahlbetonbau"],
     faq: (c) => [
       [`Übernimmt HK Bau Hochbau in ${c}?`, `Ja. HK Bau führt Hochbau- und Mauerwerksarbeiten in ${c} und Umgebung aus – je nach Umfang, Bauphase und Terminplanung.`],
-      [`Welche Hochbau-Leistungen sind möglich?`, `Dazu zählen Mauerwerksbau, Stahlbeton im Aufgehenden, Geschossdecken und die Koordination der Hochbauphasen.`],
+      [`Bietet HK Bau alle Bauleistungen aus einer Hand?`, `Ja. HK Bau übernimmt das komplette Bauspektrum – Rohbau, Hochbau, Tiefbau, Stahlbetonbau, Mauerwerksbau und schlüsselfertiges Bauen. Besonders im Hochbau und Rohbau begleiten wir Projekte von der Gründung bis zum fertigen Bauwerk – alles aus einer Hand.`],
       [`Wie frage ich ein Hochbauprojekt an?`, `Senden Sie uns Standort, Leistungsumfang und groben Zeitrahmen. Danach prüfen wir, ob Umfang und Termin zu unseren Kapazitäten passen.`],
     ],
   },
@@ -133,7 +133,7 @@ function page(svcKey, cityKey) {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#fbbb21" />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preload" href="../css/style.css?v=9" as="style" />
+<link rel="preload" href="../css/style.css?v=10" as="style" />
 <link rel="preload" href="../fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../images/icon/logo.png" as="image" />
 <link rel="preload" href="../images/${s.img}" as="image" fetchpriority="high" />
@@ -161,7 +161,7 @@ function page(svcKey, cityKey) {
 <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
 <link rel="stylesheet" href="../css/tailwind.min.css" />
 <link rel="stylesheet" href="../lib/aos/aos.css" media="print" onload="this.media='all'" />
-<link rel="stylesheet" href="../css/style.css?v=9" />
+<link rel="stylesheet" href="../css/style.css?v=10" />
 <script src="../lib/cookieconsent/cookieconsent.min.js" defer></script>
 <link rel="stylesheet" href="../lib/cookieconsent/cookieconsent.min.css" media="print" onload="this.media='all'" />
 <script src="../js/analytics-consent.js?v=2" defer></script>
