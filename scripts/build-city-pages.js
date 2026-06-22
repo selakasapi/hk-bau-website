@@ -1,0 +1,282 @@
+/*
+ * Generates new einsatzgebiet city landing pages from the established city-* template.
+ * Data-driven so future cities are a one-line addition. Only writes the slugs listed in CITIES.
+ */
+const fs = require("fs");
+const path = require("path");
+
+const OUT = path.join(__dirname, "..", "public", "einsatzgebiet");
+
+// service cards (same trio used across the cluster) -> point at the canonical service pages
+const serviceCards = (city) => `
+    <a href="rohbau-stuttgart.html" data-aos="fade-up"><img src="../images/stahlbetonbau.webp" alt="Rohbau ${city}" width="900" height="650" loading="lazy" /><span>Rohbau</span><h3>Rohbau ${city}</h3><p>Tragende Strukturen, Fundamente, Beton- und Mauerwerksarbeiten.</p></a>
+    <a href="tiefbau-stuttgart.html" data-aos="fade-up" data-aos-delay="100"><img src="../images/erdbau.webp" alt="Tiefbau ${city}" width="900" height="650" loading="lazy" /><span>Tiefbau</span><h3>Tiefbau ${city}</h3><p>Erdarbeiten, Baugruben, Kanalbau und Vorbereitung der Infrastruktur.</p></a>
+    <a href="schluesselfertigbau-stuttgart.html" data-aos="fade-up" data-aos-delay="200"><img src="../images/pexels-sevenstormphotography-439416.webp" alt="Schlüsselfertigbau ${city}" width="900" height="650" loading="lazy" /><span>Komplettleistung</span><h3>Schlüsselfertigbau ${city}</h3><p>Koordination, Schnittstellen und klare Umsetzung bis zur Übergabe.</p></a>`;
+
+const neighborsBlock = (city, neighbors) => `<section class="city-neighbors" data-aos="fade-up"><div class="seo-section-head"><span class="seo-kicker">Weitere Einsatzgebiete</span><h2>Bauunternehmen auch in der Nähe von ${city}.</h2><p>HK Bau ist auch in diesen Städten und Gemeinden für Bauprojekte verfügbar.</p></div><div class="city-neighbors__grid">${neighbors
+  .map((n) => `<a href="${n.href}">${n.label}</a>`)
+  .join("")}</div></section>`;
+
+// optional real-project proof section -> the differentiator that keeps these pages non-thin
+const proofBlock = (city, projects) =>
+  !projects || projects.length === 0
+    ? ""
+    : `<section class="city-service-band"><div class="seo-section-head" data-aos="fade-up"><span class="seo-kicker">Referenzen aus ${city}</span><h2>Projekte von HK Bau in ${city}.</h2><p>Echte Bauvorhaben aus ${city} – dokumentiert Schritt für Schritt in unseren Baustellenupdates.</p></div><div class="city-service-band__grid">${projects
+        .map(
+          (p, i) =>
+            `<a href="${p.href}" data-aos="fade-up"${i ? ` data-aos-delay="${i * 100}"` : ""}><img src="${p.img}" alt="${p.label}" width="900" height="650" loading="lazy" /><span>Referenz</span><h3>${p.label}</h3><p>${p.desc}</p></a>`
+        )
+        .join("")}</div></section>`;
+
+function page(c) {
+  const slug = `bauunternehmen-${c.slug}`;
+  const url = `https://www.hk-bau.com/einsatzgebiet/${slug}.html`;
+  const areaJson = JSON.stringify([c.name, ...c.neighborsText]);
+  const faq = [
+    {
+      q: `Arbeitet HK Bau direkt in ${c.name}?`,
+      a: `HK Bau prüft Projekte in ${c.name} und Umgebung je nach Umfang, Bauphase und Terminplanung. Gerade größere Rohbau-, Tiefbau- und Hochbauprojekte können im erweiterten Radius sinnvoll sein.`,
+    },
+    {
+      q: `Welche Orte rund um ${c.name} sind relevant?`,
+      a: `Zum Umfeld gehören unter anderem ${c.neighborsText.join(", ")}. Weitere Orte im Radius können je nach Projekt angefragt werden.`,
+    },
+    {
+      q: `Wie läuft eine Anfrage ab?`,
+      a: `Senden Sie uns Standort, Leistungsbereich, groben Zeitrahmen und vorhandene Pläne oder Fotos. Danach prüfen wir, ob Umfang und Terminplanung zu unseren Kapazitäten passen.`,
+    },
+  ];
+  const faqJson = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
+  const serviceJson = `{"@context":"https://schema.org","@type":"Service","name":"Bauunternehmen ${c.name}","serviceType":["Rohbau","Hochbau","Tiefbau","Stahlbetonbau","Schlüsselfertigbau"],"areaServed":${areaJson},"provider":{"@type":"LocalBusiness","name":"HK Bau GmbH","legalName":"H+K Bauunternehmung GmbH","url":"https://www.hk-bau.com","telephone":"+49 7159 4591823","email":"info@hk-bau.net","logo":"https://www.hk-bau.com/images/icon/logo.png","address":{"@type":"PostalAddress","streetAddress":"Esslinger Str. 91","postalCode":"70734","addressLocality":"Fellbach","addressCountry":"DE"}}}`;
+  const breadcrumbJson = `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://www.hk-bau.com/"},{"@type":"ListItem","position":2,"name":"Einsatzgebiet","item":"https://www.hk-bau.com/einsatzgebiet/bauunternehmen-region-stuttgart.html"},{"@type":"ListItem","position":3,"name":"Bauunternehmen ${c.name}"}]}`;
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#fbbb21" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preload" href="../css/style.css?v=9" as="style" />
+<link rel="preload" href="../fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../images/icon/logo.png" as="image" />
+<link rel="preload" href="../images/hero/hero-referenzen.webp" as="image" fetchpriority="high" />
+<title>Bauunternehmen ${c.name} | HK Bau GmbH</title>
+<meta name="description" content="Bauunternehmen für ${c.name} und Umgebung: HK Bau unterstützt Rohbau, Hochbau, Tiefbau, Stahlbetonbau und schlüsselfertige Leistungen im Umkreis." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="${url}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="${url}" />
+<meta property="og:site_name" content="HK Bau GmbH" />
+<meta property="og:title" content="Bauunternehmen ${c.name} | HK Bau GmbH" />
+<meta property="og:description" content="Rohbau, Hochbau, Tiefbau und koordinierte Bauleistungen für ${c.name} und Umgebung." />
+<meta property="og:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
+<meta property="og:locale" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bauunternehmen ${c.name} | HK Bau GmbH" />
+<meta name="twitter:description" content="Rohbau, Hochbau, Tiefbau und koordinierte Bauleistungen für ${c.name} und Umgebung." />
+<meta name="twitter:image" content="https://www.hk-bau.com/images/og-preview.jpg" />
+<script type="application/ld+json">${serviceJson}</script>
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<link rel="stylesheet" href="../lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="../css/tailwind.min.css" />
+<link rel="stylesheet" href="../lib/aos/aos.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="../css/style.css?v=9" />
+<script src="../lib/cookieconsent/cookieconsent.min.js" defer></script>
+<link rel="stylesheet" href="../lib/cookieconsent/cookieconsent.min.css" media="print" onload="this.media='all'" />
+<script src="../js/analytics-consent.js?v=2" defer></script>
+<script type="application/ld+json">${breadcrumbJson}</script>
+<script type="application/ld+json">${faqJson}</script>
+</head>
+<body class="city-seo-page font-[Poppins] overflow-x-hidden">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Hauptinhalt springen</a>
+<script src="../js/init-transition.js"></script><script src="../lib/aos/aos.js" defer></script><script src="../js/app.js" defer></script>
+<div id="pageTransitionOverlay" class="page-transition-overlay flex items-center justify-center"><div class="flex flex-col items-center space-y-4"><div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg"><img height="128" width="128" src="../images/icon/logo.png" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" /></div></div></div>
+<header class="fixed top-0 left-0 w-full z-30 transition duration-300" id="navbar"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16"><div class="logo-container"><a href="../index.html" class="flex items-center relative z-20"><img src="../images/icon/logo.png" alt="HK Bau Logo" class="h-16 w-auto rounded-full shadow logo" width="64" height="64" /><span class="text-white font-bold ml-2">HK Bau</span></a></div><nav aria-label="Hauptnavigation" class="hidden md:flex space-x-8 font-medium"><a href="../index.html">Startseite</a><a href="../leistungen.html">Leistungen</a><a href="../referenzen.html">Referenzen</a><a href="../aktuelles.html">Aktuelles</a><a href="../karriere.html">Karriere</a><a href="../kontakt.html">Kontakt</a></nav><button id="mobile-menu-button" class="md:hidden z-[100] p-2 focus:outline-none" aria-label="Menü öffnen" aria-expanded="false"><svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" /></svg></button></div><div id="nav-backdrop" class="fixed inset-0 bg-black/70 z-[98] hidden transition-opacity duration-300"></div><div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-white z-[99] p-6"><a href="../index.html">Startseite</a><a href="../leistungen.html">Leistungen</a><a href="../referenzen.html">Referenzen</a><a href="../aktuelles.html" class="block py-2 px-3 text-base font-medium hover:text-[var(--primary-color)]">Aktuelles</a><a href="../karriere.html">Karriere</a><a href="../kontakt.html">Kontakt</a></div></header>
+<main id="main-content">
+<section class="city-hero"><img src="../images/hero/hero-referenzen.webp" alt="HK Bau Bauunternehmen für ${c.name} und Umgebung" width="1920" height="1080" data-hero-media /><div class="city-hero__overlay"></div><div class="city-hero__inner" data-aos="fade-up"><div><span>Bauunternehmen ${c.name}</span><h1>HK Bau für Bauprojekte in ${c.name} und Umgebung.</h1><p>Rohbau, Hochbau, Tiefbau und koordinierte Bauleistungen für Bauherren, Projektpartner und Unternehmen in ${c.name}, ${c.kreisPhrase} und im erweiterten Radius der Region Stuttgart.</p><div class="city-hero__actions"><a href="../kontakt.html">Projekt in ${c.name} anfragen</a><a href="../leistungen.html">Leistungen ansehen</a></div></div><aside><strong>Geeignet für</strong><ul><li>Rohbau &amp; Stahlbetonbau</li><li>Tiefbau &amp; Kanalbau</li><li>Hochbau &amp; Koordination</li><li>Schlüsselfertige Leistungen</li></ul></aside></div></section>
+<section class="city-snapshot" aria-label="${c.name} Einsatzgebiet"><article><span>Einsatzgebiet</span><strong>${c.name} + Umgebung</strong></article><article><span>Umkreis</span><strong>bis ca. 75 km</strong></article><article><span>Standorte</span><strong>Fellbach / Magstadt</strong></article><article><span>Anfrage</span><strong>Projektbezogen</strong></article></section>
+<section class="city-copy"><div data-aos="fade-up"><span class="seo-kicker">Einsatzgebiet</span><h2>Bauleistungen für ${c.name} und Umgebung.</h2></div><div data-aos="fade-up" data-aos-delay="100"><p>Ob Rohbau, Tiefbau, Stahlbetonbau oder koordinierte Hochbauleistungen: Bei Projekten in ${c.name} kommt es auf saubere Vorbereitung, klare Abstimmung und verlässliche Ausführung an.</p><p>HK Bau prüft Anfragen aus ${c.name} sowie aus ${c.neighborsText.join(", ")}. Je nach Umfang, Terminplan und Leistungsbereich begleiten wir Bauvorhaben im erweiterten Umkreis der Region Stuttgart.</p></div><section class="city-about" data-aos="fade-up"><div><span class="seo-kicker">${c.name} im Überblick</span><h2>Bauen in ${c.name} – Standort und Rahmenbedingungen.</h2></div><div data-aos="fade-up" data-aos-delay="100">${c.about
+    .map((p) => `<p>${p}</p>`)
+    .join("")}</div></section>
+</section>
+<section class="city-service-band"><div class="seo-section-head" data-aos="fade-up"><span class="seo-kicker">Leistungen für ${c.name}</span><h2>Leistungsbereiche für Ihr Bauprojekt.</h2><p>Direkte Einstiege zu Rohbau, Tiefbau und schlüsselfertigen Leistungen mit passenden Referenzen.</p></div><div class="city-service-band__grid">${serviceCards(c.name)}</div></section>
+${proofBlock(c.name, c.projects)}
+<section class="city-radius"><div><span class="seo-kicker">Umkreis</span><h2>Projektanfragen aus ${c.name} und der Region.</h2><p>Für größere Bauvorhaben prüfen wir den Einsatz im erweiterten Umkreis von ${c.name}. Entscheidend sind Leistungsumfang, Bauphase und Terminplan.</p></div><div class="city-radius__chips"><span>${c.name}</span>${c.neighborsText
+    .map((n) => `<span>${n}</span>`)
+    .join("")}</div></section>
+<section class="city-faq"><div class="seo-section-head"><span class="seo-kicker">FAQ</span><h2>Fragen zu Bauprojekten in ${c.name}.</h2></div><details open><summary>${faq[0].q}</summary><p>${faq[0].a}</p></details><details><summary>${faq[1].q}</summary><p>${faq[1].a}</p></details><details><summary>${faq[2].q}</summary><p>${faq[2].a}</p></details></section>
+${neighborsBlock(c.name, c.neighbors)}
+<section class="seo-cta" data-aos="fade-up"><div><span class="seo-kicker">${c.name} oder Umgebung?</span><h2>Projekt kurz beschreiben.</h2><p>Adresse, Leistungsumfang und Zeitrahmen reichen für eine erste Einschätzung.</p></div><a href="../kontakt.html">Anfrage senden</a></section>
+</main>
+<footer class="premium-footer" data-aos="fade-in"><div class="premium-footer__top"><div class="premium-footer__brand"><div class="premium-footer__logo-row"><img src="../images/icon/logo.png" alt="HK Bau Logo" width="64" height="64" /><div><span>HK Bau</span><strong>Wo Vision auf Fundament trifft.</strong></div></div><p>Bauunternehmen für Rohbau, Hochbau, Tiefbau und schlüsselfertiges Bauen in Stuttgart und Umgebung. Zwei Standorte, direkte Ansprechpartner und echte Projektbeispiele aus der Region.</p></div></div><div class="premium-footer__main"><nav class="premium-footer__column" aria-label="Footer Leistungen"><h3>Leistungen</h3><a href="../leistungen.html#erdbau-details">Erdbau</a><a href="../leistungen.html#kanalbau-details">Kanalbau</a><a href="../leistungen.html#stahlbetonbau-details">Stahlbetonbau</a><a href="../leistungen.html#mauerwerksbau-details">Mauerwerksbau</a><a href="../leistungen.html#schluesselfertigbau-details">Schlüsselfertigbau</a></nav><nav class="premium-footer__column" aria-label="Footer Referenzen"><h3>Referenzen</h3><a href="../referenzen-galerie/stahlbetonbau.html">Stahlbetonbau Referenzen</a><a href="../referenzen-galerie/kanalbau.html">Kanalbau Referenzen</a><a href="../referenzen-galerie/erdbau.html">Erdbau Referenzen</a><a href="../referenzen-galerie/holzbau.html">Holz- & Stahlbau Referenzen</a><a href="../referenzen.html">Alle Bauprojekte</a><a href="../aktuelles.html">Aktuelles</a></nav><div class="premium-footer__column premium-footer__contact"><h3>Kontakt</h3><a href="mailto:info@hk-bau.net"><i class="fas fa-envelope"></i> info@hk-bau.net</a><span><i class="fas fa-location-dot"></i> Esslinger Str. 91, 70734 Fellbach</span><a href="tel:+4971190652700"><i class="fas fa-phone"></i> 0711 / 90 65 27 0</a><span><i class="fas fa-location-dot"></i> Blumenstraße 33a, 71106 Magstadt</span><a href="tel:+4971594591823"><i class="fas fa-phone"></i> 07159 / 459 18 23</a></div></div><div class="premium-footer__bottom"><p>&copy; <span class="current-year"></span> H+K Bauunternehmung GmbH. Alle Rechte vorbehalten.</p><nav aria-label="Rechtliches"><a href="../impressum.html">Impressum</a><a href="../datenschutzerklaerung.html">Datenschutz</a><button type="button" class="footer-legal-cookie" data-cookie-settings>Cookie-Einstellungen</button></nav></div></footer>
+<button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-primary-color text-secondary-color p-3 rounded-full shadow-lg hover:bg-primary-hover transition z-50" aria-label="Nach oben scrollen"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></button>
+</body>
+</html>
+`;
+}
+
+const CITIES = [
+  {
+    slug: "magstadt",
+    name: "Magstadt",
+    kreisPhrase: "im Landkreis Böblingen",
+    neighborsText: ["Sindelfingen", "Renningen", "Weil der Stadt", "Aidlingen", "Leonberg", "Böblingen"],
+    about: [
+      "Magstadt ist – neben Fellbach – der zweite Standort von HK Bau. Von der Blumenstraße 33a aus betreuen wir Bauprojekte in Magstadt und der gesamten Region Böblingen.",
+      "Als Standortgemeinde kennen wir die örtlichen Gegebenheiten, Bebauungspläne und Ansprechpartner besonders gut – ein kurzer Draht, der gerade bei der Abstimmung von Rohbau- und Tiefbauprojekten zählt.",
+      "Magstadt liegt im Landkreis Böblingen (Region Stuttgart) mit rund 9.700 Einwohnern. Projekte prüfen wir nach Umfang, Leistungsbereich und Terminplanung – eine erste Einschätzung erfolgt kurzfristig.",
+    ],
+    neighbors: [
+      { href: "bauunternehmen-sindelfingen.html", label: "Sindelfingen" },
+      { href: "bauunternehmen-boeblingen.html", label: "Böblingen" },
+      { href: "bauunternehmen-renningen.html", label: "Renningen" },
+      { href: "bauunternehmen-weil-der-stadt.html", label: "Weil der Stadt" },
+      { href: "bauunternehmen-leonberg.html", label: "Leonberg" },
+    ],
+    projects: null,
+  },
+  {
+    slug: "neckartailfingen",
+    name: "Neckartailfingen",
+    kreisPhrase: "im Landkreis Esslingen",
+    neighborsText: ["Nürtingen", "Neckartenzlingen", "Bempflingen", "Aichtal", "Schlaitdorf", "Wolfschlugen"],
+    about: [
+      "Neckartailfingen liegt im Landkreis Esslingen am Aileswasensee, eingebettet im Neckartal südlich von Stuttgart.",
+      "Hier hat HK Bau ein größeres Wohnbauprojekt über viele Monate begleitet – vom Baubeginn mit Erdarbeiten und Gründung bis zur bewehrten Geschossdecke.",
+      "Die Gemeinde zählt rund 6.400 Einwohner. Projekte in Neckartailfingen und Umgebung prüfen wir nach Umfang, Bauphase und Terminplanung.",
+    ],
+    neighbors: [
+      { href: "bauunternehmen-nuertingen.html", label: "Nürtingen" },
+      { href: "bauunternehmen-wendlingen-am-neckar.html", label: "Wendlingen am Neckar" },
+      { href: "bauunternehmen-kirchheim-unter-teck.html", label: "Kirchheim unter Teck" },
+      { href: "bauunternehmen-plochingen.html", label: "Plochingen" },
+      { href: "bauunternehmen-esslingen.html", label: "Esslingen am Neckar" },
+    ],
+    projects: [
+      {
+        href: "../aktuelles/baubeginn-neckartailfingen.html",
+        img: "../images/erdbau.webp",
+        label: "Baubeginn Neckartailfingen",
+        desc: "Erdarbeiten und Gründung – der Start eines mehrmonatigen Wohnbauprojekts.",
+      },
+      {
+        href: "../aktuelles/geschossdecke-neckartailfingen.html",
+        img: "../images/stahlbetonbau.webp",
+        label: "Geschossdecke Neckartailfingen",
+        desc: "Bewehrte Filigrandecke, bereit zur Betonage – Fortschritt bis in die Obergeschosse.",
+      },
+    ],
+  },
+  {
+    slug: "waldenbuch",
+    name: "Waldenbuch",
+    kreisPhrase: "im Landkreis Böblingen",
+    neighborsText: ["Steinenbronn", "Schönaich", "Dettenhausen", "Aichtal", "Leinfelden-Echterdingen", "Holzgerlingen"],
+    about: [
+      "Waldenbuch liegt am Rand des Naturparks Schönbuch im Landkreis Böblingen, südlich von Stuttgart.",
+      "Hier hat HK Bau ein modernes Mehrfamilienhaus realisiert – vom Rohbau bis zum fertigen, klar gegliederten Neubau mit Außenanlagen.",
+      "Die Stadt zählt rund 8.800 Einwohner. Bauvorhaben in Waldenbuch und Umgebung prüfen wir nach Umfang, Leistungsbereich und Terminplanung.",
+    ],
+    neighbors: [
+      { href: "bauunternehmen-leinfelden-echterdingen.html", label: "Leinfelden-Echterdingen" },
+      { href: "bauunternehmen-ostfildern.html", label: "Ostfildern" },
+      { href: "bauunternehmen-boeblingen.html", label: "Böblingen" },
+      { href: "bauunternehmen-sindelfingen.html", label: "Sindelfingen" },
+      { href: "bauunternehmen-nuertingen.html", label: "Nürtingen" },
+    ],
+    projects: [
+      {
+        href: "../aktuelles/mehrfamilienhaus-waldenbuch.html",
+        img: "../images/pexels-sevenstormphotography-439416.webp",
+        label: "Mehrfamilienhaus Waldenbuch",
+        desc: "Moderner Wohnungsneubau – fertiggestellt, mit abschließenden Außenanlagen.",
+      },
+    ],
+  },
+  {
+    slug: "oberderdingen",
+    name: "Oberderdingen",
+    kreisPhrase: "im Landkreis Karlsruhe",
+    neighborsText: ["Bretten", "Knittlingen", "Sulzfeld", "Kürnbach", "Maulbronn", "Sternenfels"],
+    about: [
+      "Oberderdingen liegt im Kraichgau im Landkreis Karlsruhe, am westlichen Rand des erweiterten Einsatzradius von HK Bau.",
+      "Hier hat HK Bau mehrere Bauabschnitte umgesetzt – vom Fundament bis zu einem Projekt für seniorengerechtes Wohnen.",
+      "Die Gemeinde zählt rund 11.300 Einwohner. Projekte in Oberderdingen und Umgebung prüfen wir nach Umfang, Bauphase und Terminplanung.",
+    ],
+    neighbors: [
+      { href: "bauunternehmen-muehlacker.html", label: "Mühlacker" },
+      { href: "bauunternehmen-vaihingen-an-der-enz.html", label: "Vaihingen an der Enz" },
+      { href: "bauunternehmen-pforzheim.html", label: "Pforzheim" },
+      { href: "bauunternehmen-bietigheim-bissingen.html", label: "Bietigheim-Bissingen" },
+      { href: "bauunternehmen-markgroeningen.html", label: "Markgröningen" },
+    ],
+    projects: [
+      {
+        href: "../aktuelles/fundament-oberderdingen.html",
+        img: "../images/stahlbetonbau.webp",
+        label: "Fundament Oberderdingen",
+        desc: "Baugrube, Bewehrung, Schalung und Betonage – fachgerecht ausgeführtes Fundament.",
+      },
+      {
+        href: "../aktuelles/seniorenwohnen-oberderdingen.html",
+        img: "../images/pexels-sevenstormphotography-439416.webp",
+        label: "Seniorenwohnen Oberderdingen",
+        desc: "Wohnbauprojekt für seniorengerechtes Wohnen – begleitet von HK Bau.",
+      },
+    ],
+  },
+  {
+    slug: "niefern-oeschelbronn",
+    name: "Niefern-Öschelbronn",
+    kreisPhrase: "im Enzkreis",
+    neighborsText: ["Pforzheim", "Mühlacker", "Eisingen", "Kieselbronn", "Königsbach-Stein", "Remchingen"],
+    about: [
+      "Niefern-Öschelbronn liegt im Enztal im Enzkreis, direkt bei Pforzheim am westlichen Rand der Region.",
+      "Hier hat HK Bau Erd- und Rohbauarbeiten ausgeführt – von den Erdarbeiten bis zum aufgehenden Stahlbeton-Rohbau.",
+      "Die Gemeinde zählt rund 11.800 Einwohner. Bauvorhaben in Niefern-Öschelbronn und Umgebung prüfen wir nach Umfang, Leistungsbereich und Terminplanung.",
+    ],
+    neighbors: [
+      { href: "bauunternehmen-pforzheim.html", label: "Pforzheim" },
+      { href: "bauunternehmen-muehlacker.html", label: "Mühlacker" },
+      { href: "bauunternehmen-vaihingen-an-der-enz.html", label: "Vaihingen an der Enz" },
+      { href: "bauunternehmen-calw.html", label: "Calw" },
+      { href: "bauunternehmen-nagold.html", label: "Nagold" },
+    ],
+    projects: [
+      {
+        href: "../aktuelles/erdbau-niefern-oeschelbronn.html",
+        img: "../images/erdbau.webp",
+        label: "Erdbau Niefern-Öschelbronn",
+        desc: "Erdarbeiten und Vorbereitung des Baugrunds für das folgende Bauvorhaben.",
+      },
+      {
+        href: "../aktuelles/rohbau-niefern-oeschelbronn.html",
+        img: "../images/stahlbetonbau.webp",
+        label: "Rohbau Niefern-Öschelbronn",
+        desc: "Aufgehender Stahlbeton-Rohbau – tragende Strukturen Geschoss für Geschoss.",
+      },
+    ],
+  },
+];
+
+let written = 0;
+for (const c of CITIES) {
+  const file = path.join(OUT, `bauunternehmen-${c.slug}.html`);
+  fs.writeFileSync(file, page(c));
+  console.log("wrote", path.basename(file));
+  written++;
+}
+console.log(`\n${written} city pages written.`);
