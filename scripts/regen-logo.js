@@ -67,8 +67,9 @@ function buildIco(items) {
       .toBuffer();
   }
 
-  // 1) main logo — transparent, matches how the old logo sits on header/footer/spinner
-  await sharp(await contain(256, TRANSPARENT)).toFile(path.join(ICON, "logo.png"));
+  // 1) main logo — transparent, with a little breathing room (emblem ~82% of canvas)
+  //    so it doesn't sit edge-to-edge in the header/footer/spinner
+  fs.writeFileSync(path.join(ICON, "logo.png"), await padded(256, 0.82, TRANSPARENT));
 
   // 2) browser-tab pngs — transparent
   fs.writeFileSync(path.join(PUB, "favicon-96x96.png"), await contain(96, TRANSPARENT));
