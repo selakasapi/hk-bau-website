@@ -177,7 +177,7 @@ function buildPostPage(post, allPosts, template) {
     publisher: {
       '@type': 'Organization',
       name: 'HK Bau GmbH',
-      logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/images/icon/logo.png' }
+      logo: { '@type': 'ImageObject', url: SITE_ORIGIN + '/images/icon/logo.png?v=2' }
     }
   };
 
