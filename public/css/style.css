@@ -4059,7 +4059,7 @@ img[src*="placeholder"] {
 
 /* why / trust row */
 .eg-why{padding:1rem 0 5rem}
-.eg-why__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.7rem;margin-top:2.4rem}
+.eg-why__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.7rem;margin-top:2.4rem}
 .eg-feat__ico{width:46px;height:46px;color:var(--secondary-color);margin-bottom:.85rem}
 .eg-feat h3{font-size:1.08rem;color:#2f3942;margin:0}
 .eg-feat p{margin-top:.4rem;color:#5f6870;font-size:.94rem;line-height:1.6}
@@ -4081,10 +4081,8 @@ img[src*="placeholder"] {
   .eg-intro,.eg-about{grid-template-columns:1fr;gap:2rem}
   .eg-v2 .city-snapshot{grid-template-columns:repeat(2,1fr)}
   .eg-v2 .city-snapshot article:nth-child(2n){border-right:0}
-  .eg-why__grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:520px){
   .eg-v2 .city-snapshot{grid-template-columns:1fr}
   .eg-v2 .city-snapshot article{border-right:0;border-bottom:1px solid rgba(38,45,51,.16)}
-  .eg-why__grid{grid-template-columns:1fr}
 }
