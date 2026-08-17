@@ -3152,9 +3152,28 @@ img[src*="placeholder"] {
 .city-about,
 .city-radius {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
   gap: 4rem;
   padding: 5.5rem 0 3rem;
+}
+
+/* .city-about is nested inside .city-copy's grid -> let it span the full width
+   instead of being squeezed into a single column. */
+.city-copy > .city-about {
+  grid-column: 1 / -1;
+  padding-top: 0;
+}
+
+/* Below the desktop range the big headings can't share a row with the text
+   column without squeezing it to a sliver — stack to a single column. */
+@media (max-width: 1023px) {
+  .city-copy,
+  .city-about,
+  .city-radius {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 3.5rem 0 2rem;
+  }
 }
 
 .city-copy h2,
