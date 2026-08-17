@@ -136,7 +136,7 @@ function page(svcKey, cityKey) {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#fbbb21" />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preload" href="../css/style.css?v=11" as="style" />
+<link rel="preload" href="../css/style.css?v=13" as="style" />
 <link rel="preload" href="../fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../images/icon/logo.png?v=2" as="image" />
 <link rel="preload" href="../images/${s.img}" as="image" fetchpriority="high" />
@@ -164,14 +164,14 @@ function page(svcKey, cityKey) {
 <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
 <link rel="stylesheet" href="../css/tailwind.min.css" />
 <link rel="stylesheet" href="../lib/aos/aos.css" media="print" onload="this.media='all'" />
-<link rel="stylesheet" href="../css/style.css?v=11" />
+<link rel="stylesheet" href="../css/style.css?v=13" />
 <script src="../lib/cookieconsent/cookieconsent.min.js" defer></script>
 <link rel="stylesheet" href="../lib/cookieconsent/cookieconsent.min.css" media="print" onload="this.media='all'" />
 <script src="../js/analytics-consent.js?v=2" defer></script>
 <script type="application/ld+json">${breadcrumbJson}</script>
 <script type="application/ld+json">${faqJson}</script>
 </head>
-<body class="page-seo-preview font-[Poppins] overflow-x-hidden">
+<body class="page-seo-preview eg-v2 font-[Poppins] overflow-x-hidden">
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[var(--primary-color)] focus:text-white focus:px-4 focus:py-2 focus:rounded">Zum Hauptinhalt springen</a>
 <script src="../js/init-transition.js"></script><script src="../lib/aos/aos.js" defer></script><script src="../js/app.js" defer></script>
 <div id="pageTransitionOverlay" class="page-transition-overlay flex items-center justify-center"><div class="flex flex-col items-center space-y-4"><div class="h-20 w-20 rounded-full bg-white border-4 border-[var(--primary-color)] flex items-center justify-center shadow-lg"><img height="128" width="128" src="../images/icon/logo.png?v=2" alt="HK Bau Logo" class="h-12 w-12 animate-spin-slower" /></div></div></div>

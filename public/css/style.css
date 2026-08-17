@@ -4096,3 +4096,31 @@ img[src*="placeholder"] {
   .eg-v2 .city-snapshot article{border-right:0;border-bottom:1px solid rgba(38,45,51,.16)}
   .eg-v2 .city-snapshot article:last-child{border-bottom:0}
 }
+
+/* ---- combo (seo-*) pages: harmonise to the eg-v2 look ---- */
+/* yellow stat band (was white) */
+.eg-v2 .seo-proof{background:var(--primary-color);border:0;box-shadow:0 24px 52px -28px rgba(32,39,45,.55)}
+.eg-v2 .seo-proof article{background:transparent;border-right:1px solid rgba(38,45,51,.16);padding:1.7rem 1.5rem}
+.eg-v2 .seo-proof article:last-child{border-right:0}
+.eg-v2 .seo-proof span{color:rgba(38,45,51,.72)}
+.eg-v2 .seo-proof strong{color:#241d05;font-size:1.4rem;font-weight:900;letter-spacing:-.02em}
+/* heading scale (were 4vw) */
+.eg-v2 .seo-split h2,.eg-v2 .seo-region h2,.eg-v2 .seo-faq h2{font-size:clamp(1.8rem,2.7vw,2.5rem);letter-spacing:-.02em;line-height:1.12}
+/* eyebrow leading line, matching .eg-eyebrow */
+.eg-v2 .seo-kicker{display:inline-flex;align-items:center;gap:.55rem}
+.eg-v2 .seo-kicker::before{content:"";width:24px;height:2px;background:currentColor;border-radius:2px}
+/* service-card hover lift */
+.eg-v2 .seo-services__grid a,.eg-v2 .seo-service-grid a{transition:transform .18s,box-shadow .18s}
+.eg-v2 .seo-services__grid a:hover,.eg-v2 .seo-service-grid a:hover{transform:translateY(-6px);box-shadow:0 26px 52px -28px rgba(32,39,45,.5)}
+@media (max-width:1023px){
+  .eg-v2 .seo-split,.eg-v2 .seo-region{grid-template-columns:1fr;gap:1.75rem;padding:3.5rem 0 2rem}
+}
+@media (max-width:640px){
+  .eg-v2 .seo-proof{grid-template-columns:repeat(2,1fr)}
+  .eg-v2 .seo-proof article:nth-child(2n){border-right:0}
+}
+@media (max-width:460px){
+  .eg-v2 .seo-proof{grid-template-columns:1fr}
+  .eg-v2 .seo-proof article{border-right:0;border-bottom:1px solid rgba(38,45,51,.16)}
+  .eg-v2 .seo-proof article:last-child{border-bottom:0}
+}
