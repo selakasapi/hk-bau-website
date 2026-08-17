@@ -4059,6 +4059,15 @@ img[src*="placeholder"] {
 .eg-feat h3{font-size:1.08rem;color:#2f3942;margin:0}
 .eg-feat p{margin-top:.4rem;color:#5f6870;font-size:.94rem;line-height:1.6}
 
+/* harmonise all section headings to the redesign scale (were oversized 4vw) */
+.eg-v2 .seo-section-head h2,
+.eg-v2 .city-service-band h2,
+.eg-v2 .city-radius h2,
+.eg-v2 .city-neighbors h2,
+.eg-v2 .city-faq h2,
+.eg-v2 .seo-cta h2{font-size:clamp(1.8rem,2.7vw,2.5rem);letter-spacing:-.02em;line-height:1.12}
+.eg-v2 .seo-section-head p,.eg-v2 .city-radius p{max-width:60ch}
+
 /* Leistungen section — more breathing room */
 .eg-v2 .city-service-band{padding:5.5rem 0}
 .eg-v2 .city-service-band__grid{gap:1.6rem;margin-top:2.8rem}
