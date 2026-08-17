@@ -4072,8 +4072,7 @@ img[src*="placeholder"] {
 .eg-v2 .city-service-band{padding:5.5rem 0}
 .eg-v2 .city-service-band__grid{gap:1.6rem;margin-top:2.8rem}
 .eg-v2 .city-service-band__grid span,.eg-v2 .city-service-band__grid h3,.eg-v2 .city-service-band__grid p{margin-left:1.6rem;margin-right:1.6rem}
-.eg-v2 .city-service-band__grid span{margin-top:1.5rem}
-.eg-v2 .city-service-band__grid h3{margin-top:.5rem}
+.eg-v2 .city-service-band__grid h3{margin-top:1.5rem}
 .eg-v2 .city-service-band__grid p{padding-bottom:1.7rem;margin-top:.6rem}
 
 /* service cards — hover lift + accent bar */

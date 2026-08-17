@@ -9,9 +9,9 @@ const OUT = path.join(__dirname, "..", "public", "einsatzgebiet");
 
 // service cards (same trio used across the cluster) -> point at the canonical service pages
 const serviceCards = (city) => `
-    <a href="rohbau-stuttgart.html" data-aos="fade-up"><img src="../images/stahlbetonbau.webp" alt="Rohbau ${city}" width="900" height="650" loading="lazy" /><span>Rohbau</span><h3>Rohbau ${city}</h3><p>Tragende Strukturen, Fundamente, Beton- und Mauerwerksarbeiten.</p></a>
-    <a href="tiefbau-stuttgart.html" data-aos="fade-up" data-aos-delay="100"><img src="../images/erdbau.webp" alt="Tiefbau ${city}" width="900" height="650" loading="lazy" /><span>Tiefbau</span><h3>Tiefbau ${city}</h3><p>Erdarbeiten, Baugruben, Kanalbau und Vorbereitung der Infrastruktur.</p></a>
-    <a href="schluesselfertigbau-stuttgart.html" data-aos="fade-up" data-aos-delay="200"><img src="../images/pexels-sevenstormphotography-439416.webp" alt="Schlüsselfertigbau ${city}" width="900" height="650" loading="lazy" /><span>Komplettleistung</span><h3>Schlüsselfertigbau ${city}</h3><p>Koordination, Schnittstellen und klare Umsetzung bis zur Übergabe.</p></a>`;
+    <a href="rohbau-stuttgart.html" data-aos="fade-up"><img src="../images/stahlbetonbau.webp" alt="Rohbau ${city}" width="900" height="650" loading="lazy" /><h3>Rohbau</h3><p>Tragende Strukturen, Fundamente, Beton- und Mauerwerksarbeiten.</p></a>
+    <a href="tiefbau-stuttgart.html" data-aos="fade-up" data-aos-delay="100"><img src="../images/erdbau.webp" alt="Tiefbau ${city}" width="900" height="650" loading="lazy" /><h3>Tiefbau</h3><p>Erdarbeiten, Baugruben, Kanalbau und Vorbereitung der Infrastruktur.</p></a>
+    <a href="schluesselfertigbau-stuttgart.html" data-aos="fade-up" data-aos-delay="200"><img src="../images/pexels-sevenstormphotography-439416.webp" alt="Schlüsselfertigbau ${city}" width="900" height="650" loading="lazy" /><h3>Schlüsselfertigbau</h3><p>Koordination, Schnittstellen und klare Umsetzung bis zur Übergabe.</p></a>`;
 
 const neighborsBlock = (city, neighbors) => `<section class="city-neighbors" data-aos="fade-up"><div class="seo-section-head"><span class="seo-kicker">Weitere Einsatzgebiete</span><h2>Bauunternehmen auch in der Nähe von ${city}.</h2><p>HK Bau ist auch in diesen Städten und Gemeinden für Bauprojekte verfügbar.</p></div><div class="city-neighbors__grid">${neighbors
   .map((n) => `<a href="${n.href}">${n.label}</a>`)
