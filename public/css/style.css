@@ -4014,3 +4014,77 @@ img[src*="placeholder"] {
   border-color: var(--primary-color) !important;
   box-shadow: 0 0 0 3px rgba(251, 187, 33, 0.25) !important;
 }
+
+/* ==========================================================================
+   EINSATZGEBIET REDESIGN — pilot, scoped to .eg-v2 pages only
+   New eg-* classes + scoped upgrades to existing city-* sections.
+   ========================================================================== */
+
+/* shared eyebrow label */
+.eg-eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--primary-hover)}
+.eg-eyebrow::before{content:"";width:24px;height:2px;background:var(--primary-color);border-radius:2px}
+.eg-eyebrow.on-dark{color:var(--primary-color)}
+
+/* stat band (restyle of .city-snapshot) */
+.eg-v2 .city-snapshot{background:var(--primary-color);gap:0;border-radius:16px;overflow:hidden;box-shadow:0 24px 52px -28px rgba(32,39,45,.55)}
+.eg-v2 .city-snapshot article{background:transparent;padding:1.7rem 1.6rem;border-right:1px solid rgba(38,45,51,.16)}
+.eg-v2 .city-snapshot article:nth-child(4n){border-right:0}
+.eg-v2 .city-snapshot span{color:rgba(38,45,51,.72);font-size:.73rem;letter-spacing:.08em}
+.eg-v2 .city-snapshot strong{color:#241d05;font-size:1.5rem;font-weight:900;letter-spacing:-.02em;margin-top:.3rem}
+
+/* shared container width */
+.eg-intro,.eg-about,.eg-why{width:min(1180px,calc(100% - 3rem));margin:0 auto}
+
+/* intro + fact card */
+.eg-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:3.5rem;align-items:start;padding:5rem 0 3rem}
+.eg-intro h2{font-size:clamp(1.9rem,2.9vw,2.7rem);color:#2f3942;font-weight:800;letter-spacing:-.02em;margin:.9rem 0 0;line-height:1.1}
+.eg-intro .eg-lead{font-size:1.16rem;color:#3f4750;font-weight:500;margin:1.2rem 0 0;line-height:1.6}
+.eg-intro p{color:#5f6870;margin-top:1rem;line-height:1.8;max-width:60ch}
+.eg-factcard{background:var(--secondary-color);color:#fff;border-radius:16px;padding:1.7rem 1.7rem 1.6rem;box-shadow:0 24px 52px -28px rgba(32,39,45,.6)}
+.eg-factcard dl{margin:1.3rem 0 0}
+.eg-factcard dl>div{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.eg-factcard dl>div:last-child{border-bottom:0}
+.eg-factcard dt{color:#aeb7bf;font-size:.92rem}
+.eg-factcard dd{margin:0;font-weight:700;text-align:right}
+.eg-factcard__cta{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.5rem;background:var(--primary-color);color:#241d05;font-weight:800;text-decoration:none;padding:.72rem 1.2rem;border-radius:10px;transition:background .15s,transform .15s}
+.eg-factcard__cta:hover{background:var(--primary-hover);transform:translateY(-2px)}
+
+/* about + checklist */
+.eg-about{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center;padding:2.5rem 0 4rem}
+.eg-about h2{font-size:clamp(1.9rem,2.9vw,2.7rem);color:#2f3942;font-weight:800;letter-spacing:-.02em;margin:.9rem 0 0;line-height:1.1}
+.eg-about p{color:#5f6870;margin-top:1rem;line-height:1.8;max-width:58ch}
+.eg-checklist{list-style:none;margin:0;padding:1.8rem;background:#fff;border:1px solid rgba(32,39,45,.1);border-radius:16px;display:grid;gap:1rem;box-shadow:0 20px 44px -30px rgba(32,39,45,.5)}
+.eg-checklist li{display:flex;gap:.8rem;align-items:flex-start;font-weight:600;color:#2f3942}
+.eg-checklist li svg{flex:0 0 24px;width:24px;height:24px;color:var(--primary-hover);margin-top:1px}
+
+/* why / trust row */
+.eg-why{padding:1rem 0 5rem}
+.eg-why__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.7rem;margin-top:2.4rem}
+.eg-feat__ico{width:46px;height:46px;color:var(--secondary-color);margin-bottom:.85rem}
+.eg-feat h3{font-size:1.08rem;color:#2f3942;margin:0}
+.eg-feat p{margin-top:.4rem;color:#5f6870;font-size:.94rem;line-height:1.6}
+
+/* service cards — hover lift + accent bar */
+.eg-v2 .city-service-band__grid a{position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.eg-v2 .city-service-band__grid a::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:var(--primary-color);transform:scaleX(0);transform-origin:left;transition:transform .25s;z-index:3}
+.eg-v2 .city-service-band__grid a:hover{transform:translateY(-6px);box-shadow:0 26px 52px -28px rgba(32,39,45,.5)}
+.eg-v2 .city-service-band__grid a:hover::after{transform:scaleX(1)}
+
+/* CTA — dark band with hazard-stripe texture */
+.eg-v2 .seo-cta{position:relative;background:var(--secondary-color);border-radius:18px;overflow:hidden}
+.eg-v2 .seo-cta::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(251,187,33,.09) 0 16px,transparent 16px 32px);pointer-events:none}
+.eg-v2 .seo-cta>*{position:relative;z-index:1}
+.eg-v2 .seo-cta h2,.eg-v2 .seo-cta .seo-kicker{color:#fff}
+.eg-v2 .seo-cta p{color:#c9d1d7}
+
+@media (max-width:900px){
+  .eg-intro,.eg-about{grid-template-columns:1fr;gap:2rem}
+  .eg-v2 .city-snapshot{grid-template-columns:repeat(2,1fr)}
+  .eg-v2 .city-snapshot article:nth-child(2n){border-right:0}
+  .eg-why__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .eg-v2 .city-snapshot{grid-template-columns:1fr}
+  .eg-v2 .city-snapshot article{border-right:0;border-bottom:1px solid rgba(38,45,51,.16)}
+  .eg-why__grid{grid-template-columns:1fr}
+}
