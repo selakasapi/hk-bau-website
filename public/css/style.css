@@ -4088,8 +4088,13 @@ img[src*="placeholder"] {
 .eg-v2 .seo-cta h2,.eg-v2 .seo-cta .seo-kicker{color:#fff}
 .eg-v2 .seo-cta p{color:#c9d1d7}
 
+/* mobile: let grid tracks shrink and break long German compound words
+   (e.g. "Rahmenbedingungen") instead of overflowing the viewport */
+.eg-v2 h1,.eg-v2 h2,.eg-v2 h3,.eg-v2 p,.eg-v2 li,.eg-v2 dd{overflow-wrap:break-word}
+.eg-v2 .eg-intro h2,.eg-v2 .eg-about h2,.eg-v2 .eg-why h2,.eg-v2 .seo-section-head h2,.eg-v2 .seo-split h2,.eg-v2 .seo-region h2,.eg-v2 .seo-faq h2{hyphens:auto}
+
 @media (max-width:900px){
-  .eg-about{grid-template-columns:1fr;gap:2rem}
+  .eg-about{grid-template-columns:minmax(0,1fr);gap:2rem}
 }
 @media (max-width:640px){
   .eg-v2 .city-snapshot{grid-template-columns:1fr}
@@ -4113,7 +4118,7 @@ img[src*="placeholder"] {
 .eg-v2 .seo-services__grid a,.eg-v2 .seo-service-grid a{transition:transform .18s,box-shadow .18s}
 .eg-v2 .seo-services__grid a:hover,.eg-v2 .seo-service-grid a:hover{transform:translateY(-6px);box-shadow:0 26px 52px -28px rgba(32,39,45,.5)}
 @media (max-width:1023px){
-  .eg-v2 .seo-split,.eg-v2 .seo-region{grid-template-columns:1fr;gap:1.75rem;padding:3.5rem 0 2rem}
+  .eg-v2 .seo-split,.eg-v2 .seo-region{grid-template-columns:minmax(0,1fr);gap:1.75rem;padding:3.5rem 0 2rem}
 }
 @media (max-width:640px){
   .eg-v2 .seo-proof{grid-template-columns:repeat(2,1fr)}
