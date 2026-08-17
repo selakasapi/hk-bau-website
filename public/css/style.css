@@ -3152,7 +3152,9 @@ img[src*="placeholder"] {
 .city-about,
 .city-radius {
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  /* flexible tracks: the heading column widens to fit long German words
+     instead of overflowing into the text column. Stacks below 1024px. */
+  grid-template-columns: .9fr 1.1fr;
   gap: 4rem;
   padding: 5.5rem 0 3rem;
 }
