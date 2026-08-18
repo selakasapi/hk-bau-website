@@ -442,7 +442,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFormValidation("contactForm");
   setActiveLink();
   setupPageTransitions();
-  initAnimatedCounters();
   initStaggerReveal();
   scheduleHeroVideoLoad();
 
@@ -453,37 +452,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
-// Animate counters when the section scrolls into view
-function initAnimatedCounters() {
-  const section = document.querySelector('.counter-section');
-  const counters = document.querySelectorAll('.counter');
-  if (!section || counters.length === 0) return;
-
-  const animate = (counter) => {
-    const target = parseInt(counter.dataset.target, 10);
-    const duration = 2000;
-    let start = null;
-
-    const step = (timestamp) => {
-      if (!start) start = timestamp;
-      const progress = Math.min((timestamp - start) / duration, 1);
-      counter.textContent = Math.floor(progress * target);
-      if (progress < 1) requestAnimationFrame(step);
-    };
-
-    requestAnimationFrame(step);
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      counters.forEach(animate);
-      observer.disconnect();
-    }
-  }, { threshold: 0.4 });
-
-  observer.observe(section);
-}
 
 function initStaggerReveal() {
   const lists = document.querySelectorAll('.stagger-list');
