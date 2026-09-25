@@ -23,10 +23,11 @@ console.log('Non-https URLs:', nonHttps.length, nonHttps.length ? '— ' + nonHt
 const nonWww = urls.filter(u => !u.startsWith('https://www.hk-bau.com'));
 console.log('Non-www URLs:', nonWww.length, nonWww.length ? '— ' + nonWww.join(', ') : '');
 
-const today = '2026-05-18';
-const stale = dates.filter(d => d < '2026-05-01');
+const today = new Date().toISOString().slice(0, 10);
+const yearAgo = new Date(Date.now() - 365 * 864e5).toISOString().slice(0, 10);
+const stale = dates.filter(d => d < yearAgo);
 const future = dates.filter(d => d > today);
-console.log('Pre-May dates (>17 days old):', stale.length, stale.length ? '— ' + [...new Set(stale)].join(', ') : '');
+console.log('lastmod older than 12 months (info only — old posts are expected):', stale.length);
 console.log('Future dates:', future.length, future.length ? '— ' + future.join(', ') : '');
 
 const missing = [];
