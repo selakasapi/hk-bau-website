@@ -10,10 +10,12 @@
     "build:webp": "node scripts/convert-webp.js",
     "build:aktuelles-thumbs": "node scripts/build-aktuelles-thumbs.js",
     "swap:webp": "node scripts/swap-jpg-to-webp.js",
-    "audit:sitemap": "node scripts/audit-sitemap.js"
+    "audit:sitemap": "node scripts/audit-sitemap.js",
+    "build:icons": "node scripts/subset-icons.js"
   },
   "devDependencies": {
     "sharp": "^0.34.5",
+    "subset-font": "^2.9.0",
     "tailwindcss": "^3.4.1"
   }
 }

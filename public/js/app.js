@@ -404,8 +404,11 @@ function setupPageTransitions() {
 function loadHeroVideo() {
     const video = document.querySelector('[data-hero-media][data-load-after]');
     if (!video) return;
+    // Upright phones only see the middle strip of the frame, so they get a
+    // cropped, lighter encode when the source offers one.
+    const portraitPhone = window.matchMedia('(max-width: 767px) and (orientation: portrait)').matches;
     video.querySelectorAll('source[data-src]').forEach(source => {
-        source.src = source.dataset.src;
+        source.src = (portraitPhone && source.dataset.srcMobile) || source.dataset.src;
         source.removeAttribute('data-src');
     });
     // play() straight after load() is aborted by the load itself, so start on canplay
