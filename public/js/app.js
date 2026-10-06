@@ -421,16 +421,17 @@ function scheduleHeroVideoLoad() {
     const video = document.querySelector('[data-hero-media][data-load-after]');
     if (!video) return;
 
-    // Phones, data-saver and reduced-motion visitors keep the poster image:
-    // the video is several MB and would dominate the page weight there.
+    // Data-saver, very slow connections and reduced-motion visitors keep the
+    // poster image; everyone else (phones included) gets the video.
     const connection = navigator.connection || {};
-    const skipVideo = window.matchMedia('(max-width: 767px)').matches
-        || window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const skipVideo = window.matchMedia('(prefers-reduced-motion: reduce)').matches
         || connection.saveData === true
         || /(^|-)2g$/.test(connection.effectiveType || '');
     if (skipVideo) return;
 
-    window.setTimeout(loadHeroVideo, 900);
+    // Phones wait a little longer so text, poster and fonts arrive first.
+    const delay = window.matchMedia('(max-width: 767px)').matches ? 2200 : 900;
+    window.setTimeout(loadHeroVideo, delay);
 }
 
 // ========== DOMContentLoaded Bootstrap ============
