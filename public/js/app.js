@@ -151,7 +151,7 @@ function initCarouselLightbox() {
             lightbox.setAttribute('aria-label', 'Bildvorschau');
 
             const lightboxImg = document.createElement('img');
-            lightboxImg.src = this.src;
+            lightboxImg.src = this.dataset.full || this.src;
             lightboxImg.alt = this.alt;
 
             const closeBtnEl = document.createElement('button');
@@ -403,17 +403,34 @@ function setupPageTransitions() {
 // ======== Delayed Hero Video Load ===========
 function loadHeroVideo() {
     const video = document.querySelector('[data-hero-media][data-load-after]');
-    if (video) {
-        video.load();
-    }
+    if (!video) return;
+    video.querySelectorAll('source[data-src]').forEach(source => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+    });
+    // play() straight after load() is aborted by the load itself, so start on canplay
+    video.autoplay = true;
+    video.addEventListener('canplay', () => {
+        const playing = video.play();
+        if (playing && playing.catch) playing.catch(() => {});
+    }, { once: true });
+    video.load();
 }
 
 function scheduleHeroVideoLoad() {
     const video = document.querySelector('[data-hero-media][data-load-after]');
     if (!video) return;
 
-    const delay = window.matchMedia('(max-width: 767px)').matches ? 2200 : 900;
-    window.setTimeout(loadHeroVideo, delay);
+    // Phones, data-saver and reduced-motion visitors keep the poster image:
+    // the video is several MB and would dominate the page weight there.
+    const connection = navigator.connection || {};
+    const skipVideo = window.matchMedia('(max-width: 767px)').matches
+        || window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        || connection.saveData === true
+        || /(^|-)2g$/.test(connection.effectiveType || '');
+    if (skipVideo) return;
+
+    window.setTimeout(loadHeroVideo, 900);
 }
 
 // ========== DOMContentLoaded Bootstrap ============

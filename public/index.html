@@ -9,7 +9,7 @@
 
 <!-- Performance: Preload Critical Resources -->
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preload" href="css/style.css?v=15" as="style" />
+<link rel="preload" href="css/style.css?v=16" as="style" />
 <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="images/icon/logo.png?v=2" as="image" />
 <link rel="preload" href="images/videos/hero-still.webp" as="image" fetchpriority="high" />
@@ -158,7 +158,7 @@
     <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/tailwind.min.css?v=2">
   <link rel="stylesheet" href="lib/aos/aos.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="css/style.css?v=15" />
+  <link rel="stylesheet" href="css/style.css?v=16" />
   <link rel="stylesheet" href="css/aktuelles.css?v=10" />
   <!-- Cookie Consent and opt-in analytics -->
   <script src="lib/cookieconsent/cookieconsent.min.js" defer></script>
@@ -175,7 +175,7 @@
 <script src="js/init-transition.js"></script>
 
   <script src="lib/aos/aos.js" defer></script>
-  <script src="js/app.js?v=3" defer></script>
+  <script src="js/app.js?v=4" defer></script>
   <script src="js/aktuelles.js?v=8" defer></script>
   <script src="js/carousels.js?v=3" defer></script>
 
@@ -238,18 +238,17 @@
 
   <!-- Video Background -->
   <video
-    autoplay
     muted
     loop
     playsinline
-    preload="metadata"
+    preload="none"
     poster="images/videos/hero-still.webp"
     data-hero-media
     data-load-after
     width="1920"
     height="1080"
     class="absolute inset-0 w-full h-full object-cover object-center -z-10">    
-    <source src="images/videos/hero-3.mp4" type="video/mp4" />
+    <source data-src="images/videos/hero-3.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
@@ -265,6 +264,11 @@
     <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-10 text-[var(--primary-color)] leading-tight text-balance max-w-full sm:max-w-[90%] md:max-w-[80%] xl:max-w-[70%] mx-auto">
   <span class="block sm:inline">Wo Vision auf</span> <span class="block sm:inline">Fundament trifft.</span>
 </h1>
+
+    <div class="home-hero-actions">
+      <a href="kontakt.html" class="home-hero-btn home-hero-btn--primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Projekt anfragen</a>
+      <a href="tel:+4971594591823" class="home-hero-btn home-hero-btn--ghost"><i class="fas fa-phone" aria-hidden="true"></i> 07159 45 91 823</a>
+    </div>
 
   </div>
 
@@ -797,7 +801,7 @@
         <!-- Images -->
         <!-- Filderstadt-Plattenhardt -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/01-wohnhaueser-filderstadt-plattenhardt.webp" alt="Wohnhäuser in Filderstadt-Plattenhardt" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/01-wohnhaueser-filderstadt-plattenhardt-carousel.webp" data-full="images/projekten/01-wohnhaueser-filderstadt-plattenhardt.webp" alt="Wohnhäuser in Filderstadt-Plattenhardt" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
 
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Wohnhäuser in Filderstadt-Plattenhardt</div>
         </div>
@@ -806,14 +810,14 @@
             <!-- Waiblingen -->
 
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/02-neubau-mfh-waibingen.webp" alt="Neubau MFH in Waiblingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/02-neubau-mfh-waibingen-carousel.webp" data-full="images/projekten/02-neubau-mfh-waibingen.webp" alt="Neubau MFH in Waiblingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2"> Neubau MFH in Waiblingen</div>
         </div>
 
 
         <!-- Fellbach-Öffingen (3x same image) -->
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/18-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/18-neubau-3-mfh-fellbach-oeffingen-carousel.webp" data-full="images/projekten/18-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau von 3 MFH in Fellbach-Öffingen
   </div>
@@ -823,7 +827,7 @@
     <!-- Fellbach-Öffingen -->
 
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/19-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/19-neubau-3-mfh-fellbach-oeffingen-carousel.webp" data-full="images/projekten/19-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau von 3 MFH in Fellbach-Öffingen
   </div>
@@ -833,7 +837,7 @@
 
     <!-- Fellbach-Öffingen -->
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/20-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/20-neubau-3-mfh-fellbach-oeffingen-carousel.webp" data-full="images/projekten/20-neubau-3-mfh-fellbach-oeffingen.webp" alt="Neubau von 3 MFH in Fellbach-Öffingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau von 3 MFH in Fellbach-Öffingen
   </div>
@@ -842,79 +846,79 @@
 
         <!-- Neubau MFH in Waldenbuch -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/03-neubau-mfh-waldenbuch.webp" alt="Neubau MFH in Waldenbuch" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/03-neubau-mfh-waldenbuch-carousel.webp" data-full="images/projekten/03-neubau-mfh-waldenbuch.webp" alt="Neubau MFH in Waldenbuch" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Waldenbuch</div>
         </div>
 
 
         <!-- Remshalden -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/04-neubau-mfh-3-we-remshalden.webp" alt="Neubau MFH in Remshalden" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/04-neubau-mfh-3-we-remshalden-carousel.webp" data-full="images/projekten/04-neubau-mfh-3-we-remshalden.webp" alt="Neubau MFH in Remshalden" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Remshalden</div>
         </div>
 
 
         <!-- Remshalden -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/05-neubau-mfh-3-we-remshalden.webp" alt="Neubau MFH in Remshalden 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/05-neubau-mfh-3-we-remshalden-carousel.webp" data-full="images/projekten/05-neubau-mfh-3-we-remshalden.webp" alt="Neubau MFH in Remshalden 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Remshalden</div>
         </div>
 
 
         <!-- Aichwald -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/06-neubau-mfh-5-we-aichwald.webp" alt="Neubau MFH in Aichwald" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/06-neubau-mfh-5-we-aichwald-carousel.webp" data-full="images/projekten/06-neubau-mfh-5-we-aichwald.webp" alt="Neubau MFH in Aichwald" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Aichwald</div>
         </div>
 
 
         <!-- Weinstadt -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/07-neubau-mfh-5-we-weinstadt.webp" alt="Neubau MFH in Weinstadt" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/07-neubau-mfh-5-we-weinstadt-carousel.webp" data-full="images/projekten/07-neubau-mfh-5-we-weinstadt.webp" alt="Neubau MFH in Weinstadt" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Weinstadt</div>
         </div>
 
 
         <!-- Weinstadt -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/08-neubau-mfh-5-we-weinstadt.webp" alt="Neubau MFH in Weinstadt 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/08-neubau-mfh-5-we-weinstadt-carousel.webp" data-full="images/projekten/08-neubau-mfh-5-we-weinstadt.webp" alt="Neubau MFH in Weinstadt 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Weinstadt</div>
         </div>
 
         <!-- Sindelfingen -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/09-neubau-mfh-8-we-tg-sindelfingen.webp" alt="Neubau MFH in Sindelfingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/09-neubau-mfh-8-we-tg-sindelfingen-carousel.webp" data-full="images/projekten/09-neubau-mfh-8-we-tg-sindelfingen.webp" alt="Neubau MFH in Sindelfingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Sindelfingen</div>
         </div>
 
          <!-- Sindelfingen -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/10-neubau-mfh-8-we-tg-sindelfingen.webp" alt="Neubau MFH in Sindelfingen 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/10-neubau-mfh-8-we-tg-sindelfingen-carousel.webp" data-full="images/projekten/10-neubau-mfh-8-we-tg-sindelfingen.webp" alt="Neubau MFH in Sindelfingen 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Sindelfingen</div>
         </div>
 
          <!-- Neckartailfingen -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/11-neubau-mfh-14-we-tg-neckartailfingen.webp" alt="Neubau MFH in Neckartailfingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/11-neubau-mfh-14-we-tg-neckartailfingen-carousel.webp" data-full="images/projekten/11-neubau-mfh-14-we-tg-neckartailfingen.webp" alt="Neubau MFH in Neckartailfingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Neckartailfingen</div>
         </div>
 
         <!-- Winneden -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/12-neubau-mfh-18-we-tg-winnenden.webp" alt="Neubau MFH in Winnenden" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/12-neubau-mfh-18-we-tg-winnenden-carousel.webp" data-full="images/projekten/12-neubau-mfh-18-we-tg-winnenden.webp" alt="Neubau MFH in Winnenden" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Winnenden</div>
         </div>
 
 
             <!-- Winneden -->
         <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-          <img src="images/projekten/13-neubau-mfh-18-we-tg-winnenden.webp" alt="Neubau MFH in Winnenden 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+          <img src="images/projekten/13-neubau-mfh-18-we-tg-winnenden-carousel.webp" data-full="images/projekten/13-neubau-mfh-18-we-tg-winnenden.webp" alt="Neubau MFH in Winnenden 2" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
           <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">Neubau MFH in Winnenden</div>
         </div>
         
         <!-- Uhingen -->
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/14-neubau-3-wohnhaeuser-uhingen.webp" alt="Neubau Wohnhäuser in Uhingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/14-neubau-3-wohnhaeuser-uhingen-carousel.webp" data-full="images/projekten/14-neubau-3-wohnhaeuser-uhingen.webp" alt="Neubau Wohnhäuser in Uhingen" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau Wohnhäuser in Uhingen
   </div>
@@ -922,7 +926,7 @@
 
 <!-- Lörrach 1 -->
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/15-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/15-neubau-villa-pool-loerrach-carousel.webp" data-full="images/projekten/15-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau Villa mit Pool in Lörrach
   </div>
@@ -930,7 +934,7 @@
 
 <!-- Lörrach 2 -->
 <div class="relative w-[26rem] h-[17rem] overflow-hidden rounded-lg">
-  <img src="images/projekten/16-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
+  <img src="images/projekten/16-neubau-villa-pool-loerrach-carousel.webp" data-full="images/projekten/16-neubau-villa-pool-loerrach.webp" alt="Neubau Villa mit Pool in Lörrach" class="carousel-image w-full h-full object-cover rounded-lg shadow transition-transform duration-700"  loading="lazy" width="416" height="272" />
   <div class="carousel-caption absolute bottom-0 left-0 right-0 w-full bg-black/80 backdrop-blur-sm text-white text-base sm:text-lg text-center p-2">
     Neubau Villa mit Pool in Lörrach
   </div>
